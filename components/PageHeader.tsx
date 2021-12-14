@@ -18,7 +18,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 	const toggleMenuPanel = () => setMenuPanelIsOpened(!menuPanelIsOpened)
 
 	return (
-		<header className={ styles.root }>
+		<header className={ styles.pageHeader }>
 			<hgroup>
 				<h1>
 					<Link href="/">

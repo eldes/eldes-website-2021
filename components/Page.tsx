@@ -19,14 +19,14 @@ type Props = {
 
 const Page: FunctionComponent<Props> = ({ title, description, section, children }) => {
 	return (
-		<div className={styles.root}>
+		<div className={ styles.page }>
 			<Head>
 				<title>{ title }</title>
 				description && <meta name="description" content={ description } />
 			</Head>
 			<a className={ styles.skipToMain } href="#main">Skip to main content</a>
 			<PageHeader section={ section } />
-			<main role="main" id="main" className={styles.pageMain}>
+			<main role="main" id="main" className={ styles.pageMain }>
 				<article>
 					{ children }
 				</article>
