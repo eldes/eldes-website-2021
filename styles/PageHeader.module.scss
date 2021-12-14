@@ -1,9 +1,6 @@
 @import "./common.module";
 
 .root {
-	$header_height: 64px;
-	$header_max_width: 900px;
-	$header_max_left: calc( (100% - #{$header_max_width} ) / 2 );
 	$h2_min_width: 120px;
 	$h2_padding: 12px;
 	$main_menu_min_width: 540px;

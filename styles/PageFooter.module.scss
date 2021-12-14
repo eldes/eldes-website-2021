@@ -1,0 +1,22 @@
+@import "./common.module";
+
+.root {
+	color: #666;
+	background-color: #ccc;
+	padding-top: $inset_m;
+	padding-bottom: $inset_m;
+	padding-left: $inset_m;
+	padding-right: $inset_m;
+
+	@media (min-width: $header_max_width) {
+		& {
+			padding-left: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
+			padding-right: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
+		}
+	}
+	
+	.disclaimer {
+		text-align: center;
+		font-size: 0.7em;
+	}
+}

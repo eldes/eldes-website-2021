@@ -1,5 +1,27 @@
+@import "./common.module";
+
 .root {
+	
 	.skipToMain {
-		display: block;
+		display: none;
 	}
+
+	.pageMain {
+		color: #000;
+		background-color: #fff;
+		min-height: $header_height;
+
+		article {
+	
+			padding: $inset_m;
+	
+			@media (min-width: $header_max_width) {
+				& {
+					margin-left: $header_max_left;
+					width: $header_max_width;
+				}
+			}
+		}
+	}
+	
 }
