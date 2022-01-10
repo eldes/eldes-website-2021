@@ -9,16 +9,31 @@
 	.pageMain {
 		color: #000;
 		background-color: #fff;
-		min-height: $header_height;
+		padding-top: #{$header_height + $inset_m};
 
 		article {
-	
-			padding: $inset_m;
+			// padding: $article_padding;
 	
 			@media (min-width: $header_max_width) {
 				& {
-					margin-left: $header_max_left;
-					width: $header_max_width;
+					// margin-left: $header_max_left;
+					// width: $header_max_width;
+				}
+			}
+
+			header {
+				margin-bottom: $inset_m;
+				text-align: center;
+
+				h1 {
+					display: flex;
+					flex-direction: column;
+					font-size: 1.8rem;
+
+					small {
+						margin-top: 0.5em;
+						font-size: 0.5em;
+					}
 				}
 			}
 		}

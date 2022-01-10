@@ -1,0 +1,42 @@
+@import "./common.module";
+
+.categoriesList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&>* {
+		$bg_size: calc(100vmin - #{$article_padding} - #{$article_padding});
+
+		box-sizing: border-box;
+		margin-bottom: $inset_xxl;
+		padding-top: calc(#{$bg_size} + #{$inset_s});
+		width: $bg_size;
+		min-height: $bg_size;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: $bg_size $bg_size;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		font-weight: 400;
+
+		@media (min-width: calc(400px + #{$article_padding} + #{$article_padding})) {
+			$bg_size: calc(400px - #{$article_padding} - #{$article_padding});
+
+			box-sizing: border-box;
+
+			padding-top: calc(#{$bg_size} + #{$inset_s});
+			width: $bg_size;
+			height: $bg_size;
+			background-size: $bg_size $bg_size;
+
+			// &+* {
+			// 	margin-left: $inset_m;
+			// }
+		}
+		
+		background-image: url('./images/portfolio--childrens-book-and-textbook.jpg');
+	}
+}

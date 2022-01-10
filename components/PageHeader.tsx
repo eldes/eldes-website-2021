@@ -17,6 +17,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 	const [menuPanelIsOpened, setMenuPanelIsOpened] = useState(false)
 	const toggleMenuPanel = () => setMenuPanelIsOpened(!menuPanelIsOpened)
 
+	//TODO: Remove TAGs H1 and H2. Exchange of HGROUP for DIV.masthead, remove H1, and exchange of H2 for DIV.subtitle.
 	return (
 		<header className={ styles.pageHeader }>
 			<hgroup>

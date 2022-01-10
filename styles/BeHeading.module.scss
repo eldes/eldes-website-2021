@@ -1,0 +1,12 @@
+@import 'common.module';
+
+.beHeading {
+	font-size: 1.8rem;
+	text-align: center;
+	margin: $inset_l 0px;
+	text-transform: lowercase;
+
+	strong {
+		font-weight: 400;
+	}
+}
