@@ -223,11 +223,8 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				]} cols={2} backgroundColor={ backgroundColor } />
 
 				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
-					<strong>Festas</strong> da cultura brasileira:
+					<strong>Festas</strong> da cultura brasileira:<br/><small>[desenhos para colorir]</small>
 				</BeHeading>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
-					[desenhos para colorir]
-				</BeParagaph>
 				<BePhotoGrid images={[
 					{
 						src: boiBumbaImage,
