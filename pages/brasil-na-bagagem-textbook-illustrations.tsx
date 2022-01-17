@@ -67,7 +67,8 @@ import BeEmbed from '../components/BeEmbed'
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
-	const backgroundColor = '#E0C531'
+	const backgroundColor = '#fcaf17'
+	const foregroundColor = '#ffffff'
 
 	return (
 		<Page title="Brasil na Bagagem" subtitle="textbook illustrations" section={ PageSection.Portfolio }>
@@ -82,7 +83,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					backgroundColor={ backgroundColor }
 					fill={ true }
 				/>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: '#fff',  }}>
+				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor,  }}>
 					O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil. É voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
 				</BeParagaph>
 				<BeImage
@@ -91,10 +92,10 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					backgroundColor={ backgroundColor }
 					fill={ true }
 				/>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: '#fff' }}>
+				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
 					O processo começa com a definição de todas as ilustrações do livro, composta pelo código, o número de página e a descrição da cena de cada uma delas.
 				</BeParagaph>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: '#fff' }}>
+				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
 					E, na sequência, são elaborados os rascunhos de todas as ilustrações, de acordo com a cena e o layout definido pelo designer.
 				</BeParagaph>
 				<BePhotoGrid images={[
@@ -123,7 +124,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						alt: 'Rough of Werewolf Names page',
 					},
 				]} cols={3} backgroundColor={ backgroundColor } />
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: '#fff' }}>
+				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
 					Aprovados os rascunhos, a ilustrações são então arte-finalizadas — podendo sofrer alguns ajustes durante a pintura digital.
 				</BeParagaph>
 				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
@@ -224,7 +225,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
 					<strong>Festas</strong> da cultura brasileira:
 				</BeHeading>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: '#fff' }}>
+				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
 					[desenhos para colorir]
 				</BeParagaph>
 				<BePhotoGrid images={[
