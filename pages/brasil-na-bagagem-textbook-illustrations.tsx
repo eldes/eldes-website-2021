@@ -78,17 +78,17 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					alt="Book cover mockup"
 				/>
 				<BeParagaph>
-					O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil. É voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
+					O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil e voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
 				</BeParagaph>
 				<BeImage
 					src={ bookMockupImage }
 					alt="Book mockup"
 				/>
 				<BeParagaph>
-					O processo começa com a definição de todas as ilustrações do livro, composta pelo código, o número de página e a descrição da cena de cada uma delas.
+					O processo começa com a definição de cada uma das ilustrações do livro: código, número de página e descrição da cena.
 				</BeParagaph>
 				<BeParagaph>
-					E, na sequência, são elaborados os rascunhos de todas as ilustrações, de acordo com a cena e o layout definido pelo designer.
+					Em seguida, de acordo com a cena e o layout definido pelo designer, são então elaborados os rascunhos de todas as ilustrações.
 				</BeParagaph>
 				<BePhotoGrid images={[
 					{
@@ -115,7 +115,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: roughWerewolf,
 						alt: 'Rough of Werewolf Names page',
 					},
-				]} cols={3} />
+				]} cols={ 3 } />
 				<BeParagaph>
 					Aprovados os rascunhos, a ilustrações são então arte-finalizadas — podendo sofrer alguns ajustes durante a pintura digital.
 				</BeParagaph>
@@ -135,7 +135,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: saci3Image,
 						alt: 'Illustration of saci',
 					},
-				]} cols={3} />
+				]} cols={ 3 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: curupiraImage,
@@ -145,7 +145,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: werewolfImage,
 						alt: 'Illustration of werewolf',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: boitataRoughImage,
@@ -159,7 +159,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: boitataImage,
 						alt: 'Illustration of boitata',
 					},
-				]} cols={3} />
+				]} cols={ 3 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: mulaSemCabeca1Image,
@@ -169,13 +169,13 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: vitoriaRegiaImage,
 						alt: 'Illustration of vitoria regia',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: mulaSemCabeca2Image,
 						alt: 'Illustration of mula sem cabeca',
 					},
-				]} cols={1} />
+				]} cols={ 1 } />
 				<BeEmbed aspectRatioPercent={56.25}>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/OoVGZsGJ33E" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 				</BeEmbed>
@@ -191,7 +191,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: cravoRosaImage,
 						alt: 'Illustration of O Cravo e a Rosa',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 				<BeHeading>
 					<strong>Brincadeiras</strong> tradicionais:
 				</BeHeading>
@@ -212,7 +212,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: playAliveOrDeadImage,
 						alt: 'Illustration of Alive or Dead',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true }/>
 
 				<BeHeading>
 					<strong>Festas</strong> da cultura brasileira:<br/><small>[desenhos para colorir]</small>
@@ -230,7 +230,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: carnavalImage,
 						alt: 'Illustration of Carnaval',
 					},
-				]} cols={3} />
+				]} cols={ 3 } fill={ true } />
 
 				<BeHeading>
 					<strong>Povos originários</strong> do Brasil:
@@ -244,7 +244,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: indigenousImage,
 						alt: 'Illustration of a Brazilian indigenous',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: ocaImage,
@@ -254,7 +254,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: tupiImage,
 						alt: 'Illustration about Brazilian linguistic family Tupi',
 					},
-				]} cols={1} />
+				]} cols={ 1 } />
 
 				<BeHeading>
 					<strong>Diversos:</strong>
@@ -272,7 +272,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: cuicaImage,
 						alt: 'illustration of a typical Brazilian musical instrument: cuica',
 					},
-				]} cols={3} cellBackgroundColor="#fff" />
+				]} cols={ 3 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: locucoesLugarImage,
@@ -282,7 +282,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: reguaImage,
 						alt: 'Illustration of a ruler',
 					},
-				]} cols={2} cellBackgroundColor="#fff" />
+				]} cols={ 2 } fill={ true } />
 				<BePhotoGrid images={[
 					{
 						src: tremBImage,
@@ -348,7 +348,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: tremTImage,
 						alt: 'Illustration of a train',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 
 				<BePhotoGrid images={[
 					{
@@ -359,7 +359,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: ventriloquistImage,
 						alt: 'Illustration of a ventriloquist',
 					},
-				]} cols={2} />
+				]} cols={ 2 } fill={ true } />
 
 				<BeImage
 					src={ fingerNamesImage }
