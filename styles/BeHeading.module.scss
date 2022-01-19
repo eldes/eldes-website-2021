@@ -1,16 +1,18 @@
 @import 'common.module';
 
 .beHeading {
-	font-size: 1.8rem;
-	text-align: center;
-	margin: $inset_xxl 0px $inset_l 0px;
-	text-transform: lowercase;
+	h2 {
+		margin: $inset_xxl 0px $inset_l 0px;
+		font-size: 1.8rem;
+		text-align: center;
+		text-transform: lowercase;
 
-	strong {
-		font-weight: 400;
-	}
-
-	small {
-		font-size: 1rem;
+		strong {
+			font-weight: 400;
+		}
+	
+		small {
+			font-size: 1rem;
+		}
 	}
 }

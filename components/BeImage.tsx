@@ -1,23 +1,25 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import { BeImageData } from './BeBody'
-import BeComponent, { BeComponentProps } from './BeComponent'
+import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
 import styles from '../styles/BeImage.module.scss'
 
-type Props = BeComponentProps & BeImageData & {
-	fill?: boolean
-}
+type Props = BeComponentProps & BeImageData
 
-const BeImage: FunctionComponent<Props> = ({ src, alt, fill, backgroundColor }) => {
+const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, src, alt }) => {
 	return (
-		<BeComponent backgroundColor={ backgroundColor } fill={ fill }>
-			<Image className={ styles.beImage }
+		<BeComponent subClassName={ styles.beImage } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor }>
+			<Image
 				src={ src }
 				alt={ alt }
 				layout={ fill ? 'responsive' : 'intrinsic' }
 			/>
 		</BeComponent>
 	)
+}
+
+BeImage.defaultProps = {
+	...BeComponentDefaultProps
 }
 
 export default BeImage

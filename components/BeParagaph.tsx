@@ -1,22 +1,33 @@
 import { FunctionComponent, ReactNode } from 'react'
-import CSS from 'csstype'
 import styles from '../styles/BeParagraph.module.scss'
-import BeComponent, { BeComponentProps } from './BeComponent'
+import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
 
 type Props = BeComponentProps & {
-	style: CSS.Properties
+	align?: BeParagaphAlign
 	children: ReactNode
 }
 
-const BeParagaph: FunctionComponent<Props> = ({ style, children, backgroundColor }) => {
+export enum BeParagaphAlign {
+	Left = 'left',
+	Center = 'center',
+	Right = 'right',
+	Justify = 'justify',
+}
+
+const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, align, children }) => {
 
 	return (
-		<BeComponent backgroundColor={ backgroundColor }>
-			<p className={ styles.beParagraph } style={ style }>
+		<BeComponent subClassName={ styles.beParagraph } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor }>
+			<p style={{ color: foregroundColor, textAlign: align }}>
 				{ children }
 			</p>
 		</BeComponent>
 	)
+}
+
+BeParagaph.defaultProps = {
+	align: BeParagaphAlign.Justify,
+	...BeComponentDefaultProps
 }
 
 export default BeParagaph

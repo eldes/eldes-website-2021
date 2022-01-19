@@ -1,28 +1,16 @@
 @import 'common.module.scss';
 
 .beParagraph {
-	padding: $inset_m;
-	font-size: 1rem;
-	line-height: 2;
-	margin: $inset_m 0px $inset_l 0px;
+	p {
+		padding: $inset_l 0px;
+		font-size: 1rem;
+		line-height: 2;
 
-	&.center {
-		text-align: center;
-	}
-	&.left {
-		text-align: left;
-	}
-	&.right {
-		text-align: right;
-	}
-	&.justify {
-		text-align: justify;
-	}
-
-	.normal {
-		font-size: 1em;
-	}
-	.small {
-		font-size: 0.5em;
+		.normal {
+			font-size: 1em;
+		}
+		.small {
+			font-size: 0.5em;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import BeImage from '../components/BeImage'
-import BeParagaph from '../components/BeParagaph'
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import Page, { PageSection } from '../components/Page'
 
 import brokenTelephoneImage from '../public/content/brasil-na-bagagem-textbook-illustrations/broken-telephone.jpg'
@@ -58,7 +58,6 @@ import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustra
 import cuicaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/cuica.jpg'
 import reguaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/regua.jpg'
 import locucoesLugarImage from '../public/content/brasil-na-bagagem-textbook-illustrations/locucoes-lugar.jpg'
-
 import fingerNamesImage from '../public/content/brasil-na-bagagem-textbook-illustrations/finger-names.jpg'
 import BeBody from '../components/BeBody'
 import BePhotoGrid from '../components/BePhotoGrid'
@@ -66,9 +65,6 @@ import BeHeading from '../components/BeHeading'
 import BeEmbed from '../components/BeEmbed'
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
-
-	const backgroundColor = '#fcaf17'
-	const foregroundColor = '#ffffff'
 
 	return (
 		<Page title="Brasil na Bagagem" subtitle="textbook illustrations" section={ PageSection.Portfolio }>
@@ -80,22 +76,18 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				<BeImage
 					src={ bookCoverMockupImage }
 					alt="Book cover mockup"
-					backgroundColor={ backgroundColor }
-					fill={ true }
 				/>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor,  }}>
+				<BeParagaph>
 					O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil. É voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
 				</BeParagaph>
 				<BeImage
 					src={ bookMockupImage }
 					alt="Book mockup"
-					backgroundColor={ backgroundColor }
-					fill={ true }
 				/>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
+				<BeParagaph>
 					O processo começa com a definição de todas as ilustrações do livro, composta pelo código, o número de página e a descrição da cena de cada uma delas.
 				</BeParagaph>
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
+				<BeParagaph>
 					E, na sequência, são elaborados os rascunhos de todas as ilustrações, de acordo com a cena e o layout definido pelo designer.
 				</BeParagaph>
 				<BePhotoGrid images={[
@@ -123,11 +115,11 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: roughWerewolf,
 						alt: 'Rough of Werewolf Names page',
 					},
-				]} cols={3} backgroundColor={ backgroundColor } />
-				<BeParagaph backgroundColor={ backgroundColor } style={{ textAlign: 'center', color: foregroundColor }}>
+				]} cols={3} />
+				<BeParagaph>
 					Aprovados os rascunhos, a ilustrações são então arte-finalizadas — podendo sofrer alguns ajustes durante a pintura digital.
 				</BeParagaph>
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				<BeHeading>
 					<strong>Folclore</strong> brasileiro:
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -143,7 +135,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: saci3Image,
 						alt: 'Illustration of saci',
 					},
-				]} cols={3} backgroundColor={ backgroundColor } />
+				]} cols={3} />
 				<BePhotoGrid images={[
 					{
 						src: curupiraImage,
@@ -153,7 +145,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: werewolfImage,
 						alt: 'Illustration of werewolf',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 				<BePhotoGrid images={[
 					{
 						src: boitataRoughImage,
@@ -167,7 +159,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: boitataImage,
 						alt: 'Illustration of boitata',
 					},
-				]} cols={3} backgroundColor={ backgroundColor } />
+				]} cols={3} />
 				<BePhotoGrid images={[
 					{
 						src: mulaSemCabeca1Image,
@@ -177,17 +169,17 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: vitoriaRegiaImage,
 						alt: 'Illustration of vitoria regia',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 				<BePhotoGrid images={[
 					{
 						src: mulaSemCabeca2Image,
 						alt: 'Illustration of mula sem cabeca',
 					},
-				]} cols={1} backgroundColor={ backgroundColor } />
-				<BeEmbed aspectRatioPercent={56.25} backgroundColor={ backgroundColor }>
+				]} cols={1} />
+				<BeEmbed aspectRatioPercent={56.25}>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/OoVGZsGJ33E" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 				</BeEmbed>
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				<BeHeading>
 					<strong>Parlendas e cantigas</strong> da cultura brasileira:
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -199,8 +191,8 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: cravoRosaImage,
 						alt: 'Illustration of O Cravo e a Rosa',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				]} cols={2} />
+				<BeHeading>
 					<strong>Brincadeiras</strong> tradicionais:
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -220,9 +212,9 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: playAliveOrDeadImage,
 						alt: 'Illustration of Alive or Dead',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				<BeHeading>
 					<strong>Festas</strong> da cultura brasileira:<br/><small>[desenhos para colorir]</small>
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -238,9 +230,9 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: carnavalImage,
 						alt: 'Illustration of Carnaval',
 					},
-				]} cols={3} backgroundColor={ backgroundColor } />
+				]} cols={3} />
 
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				<BeHeading>
 					<strong>Povos originários</strong> do Brasil:
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -252,7 +244,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: indigenousImage,
 						alt: 'Illustration of a Brazilian indigenous',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 				<BePhotoGrid images={[
 					{
 						src: ocaImage,
@@ -262,9 +254,9 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: tupiImage,
 						alt: 'Illustration about Brazilian linguistic family Tupi',
 					},
-				]} cols={1} backgroundColor={ backgroundColor } />
+				]} cols={1} />
 
-				<BeHeading backgroundColor={ backgroundColor } color="#ffffff">
+				<BeHeading>
 					<strong>Diversos:</strong>
 				</BeHeading>
 				<BePhotoGrid images={[
@@ -280,7 +272,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: cuicaImage,
 						alt: 'illustration of a typical Brazilian musical instrument: cuica',
 					},
-				]} cols={3} cellBackgroundColor="#fff" backgroundColor={ backgroundColor } />
+				]} cols={3} cellBackgroundColor="#fff" />
 				<BePhotoGrid images={[
 					{
 						src: locucoesLugarImage,
@@ -290,7 +282,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: reguaImage,
 						alt: 'Illustration of a ruler',
 					},
-				]} cols={2} cellBackgroundColor="#fff" backgroundColor={ backgroundColor } />
+				]} cols={2} cellBackgroundColor="#fff" />
 				<BePhotoGrid images={[
 					{
 						src: tremBImage,
@@ -356,7 +348,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: tremTImage,
 						alt: 'Illustration of a train',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 
 				<BePhotoGrid images={[
 					{
@@ -367,15 +359,13 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 						src: ventriloquistImage,
 						alt: 'Illustration of a ventriloquist',
 					},
-				]} cols={2} backgroundColor={ backgroundColor } />
+				]} cols={2} />
 
 				<BeImage
 					src={ fingerNamesImage }
 					alt="Finger names illutration"
-					backgroundColor={ backgroundColor }
-					fill={ true }
 				/>
-				<BeParagaph style={{ textAlign: 'center' }}>
+				<BeParagaph align={ BeParagaphAlign.Center }>
 					Obrigado por dar uma olhada no meu trabalho!
 				</BeParagaph>
 			</BeBody>

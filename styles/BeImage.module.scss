@@ -1,5 +1,7 @@
 @import 'common.module';
 
 .beImage {
-	padding: #{$inset_s} / 2;
+	&>* {
+		padding: #{$inset_s} / 2;
+	}
 }
