@@ -2,7 +2,7 @@
 
 .bePhotoGrid {
 
-	$items_inset: $inset_s;
+	$items_inset: $inset_xxl;
 
 	ul {
 		display: flex;
@@ -15,17 +15,19 @@
 		padding-bottom: calc(#{$items_inset} / 2);
 
 		.bePhotoGridItem {
-			flex-basis: calc(100% / 2 - #{$items_inset});
+			flex-basis: calc(100% - #{$items_inset});
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 		}
 
-		@media (min-width: $header_max_width) {
+		@media (min-width: 540px) {
 			.bePhotoGridItem {
-				flex-basis: calc(100%);
+				flex-basis: calc(100% / 2 - 2 * #{$items_inset} / 3);
 			}
+		}
 
+		@media (min-width: $header_max_width) {
 			&.cols-3 {
 				.bePhotoGridItem {
 					flex-basis: calc(100% / 3 - 3 * #{$items_inset} / 4);
