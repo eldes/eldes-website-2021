@@ -12,17 +12,9 @@
 		padding-top: #{$header_height + $inset_m};
 
 		article {
-			// padding: $article_padding;
-	
-			@media (min-width: $header_max_width) {
-				& {
-					// margin-left: $header_max_left;
-					// width: $header_max_width;
-				}
-			}
 
 			header {
-				margin-bottom: $inset_m;
+				padding: $inset_xxl 0px;
 				text-align: center;
 
 				h1 {
@@ -32,7 +24,7 @@
 
 					small {
 						margin-top: 0.5em;
-						font-size: 0.5em;
+						font-size: 0.4em;
 						text-transform: uppercase;
 					}
 				}

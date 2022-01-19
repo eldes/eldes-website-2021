@@ -2,9 +2,14 @@
 
 .beParagraph {
 	p {
-		padding: $inset_l 0px;
+		padding: $inset_l $inset_m;
 		font-size: 1rem;
-		line-height: 2;
+
+		@media (min-width: $header_max_width) {
+			& {
+				padding: $inset_l 0px;
+			}
+		}
 
 		.normal {
 			font-size: 1em;

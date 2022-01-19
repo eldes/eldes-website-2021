@@ -26,7 +26,7 @@ const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroun
 }
 
 BeParagaph.defaultProps = {
-	align: BeParagaphAlign.Justify,
+	align: BeParagaphAlign.Left,
 	...BeComponentDefaultProps
 }
 
