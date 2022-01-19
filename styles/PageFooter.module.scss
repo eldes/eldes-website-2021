@@ -7,6 +7,7 @@
 	padding-bottom: $inset_m;
 	padding-left: $inset_m;
 	padding-right: $inset_m;
+	font-size: 18px;
 
 	@media (min-width: $header_max_width) {
 		& {
