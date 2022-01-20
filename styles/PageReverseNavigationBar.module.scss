@@ -1,0 +1,21 @@
+@import "./common.module";
+
+.pageReverseNavigationBar {
+	padding-left: calc((100% - #{$header_max_width}) / 2);
+	padding-right: calc((100% - #{$header_max_width}) / 2);
+	background-color: #fff;
+	color: #ccc;
+	font-size: 12px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+
+	a.backwardLink {
+		padding-top: $inset_m;
+		padding-bottom: $inset_m;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		color: #999;
+	}
+}

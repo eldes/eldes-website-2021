@@ -65,9 +65,13 @@ import BeHeading from '../components/BeHeading'
 import BeEmbed from '../components/BeEmbed'
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
+	const backwardLink = {
+		text: 'Children\'s books and textbooks',
+		href: '/childrens-books-and-textbooks',	
+	}
 
 	return (
-		<Page title="Brasil na Bagagem" subtitle="textbook illustrations" section={ PageSection.Portfolio }>
+		<Page title="Brasil na Bagagem" subtitle="textbook illustrations" section={ PageSection.Portfolio }  backwardLink={ backwardLink }>
 			<BeBody>
 				<BeImage
 					src={ brokenTelephoneImage }
