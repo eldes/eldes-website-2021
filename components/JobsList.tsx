@@ -6,7 +6,7 @@ import styles from '../styles/JobList.module.scss'
 import brasilNaBagagemTextbookIllustrationsHighlight from '../public/content/brasil-na-bagagem-textbook-illustrations/highlight.jpg'
 import ajudarisHighlight from '../public/content/ajudaris-20-childrens-book-illustrations/highlight.jpg'
 
-const JobList: FunctionComponent = () => {
+const JobsList: FunctionComponent = () => {
 	return (
 		<ul className={ styles.jobList }>
 			<li className={ styles.item }>
@@ -29,4 +29,4 @@ const JobList: FunctionComponent = () => {
 	)
 }
 
-export default JobList
+export default JobsList
