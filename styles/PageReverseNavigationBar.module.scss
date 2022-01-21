@@ -1,4 +1,4 @@
-@import "./common.module";
+@import "./variables";
 
 .pageReverseNavigationBar {
 	padding-left: calc((100% - #{$header_max_width}) / 2);
