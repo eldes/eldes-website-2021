@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Link from 'next/link'
+import JobList from '../components/JobList'
 import Page, { PageSection } from '../components/Page'
 
 const ChildrensBooksAndTextbooksPage: NextPage = () => {
@@ -11,7 +11,7 @@ const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
 	return (
 		<Page title="Children's Books and Textbooks" section={ PageSection.Portfolio } backwardLink={ backwardLink }>
-			<Link href="/brasil-na-bagagem-textbook-illustrations"><a >Brasil na Bagagem textbook illustrations</a></Link>
+			<JobList />
 		</Page>
 	)
 }

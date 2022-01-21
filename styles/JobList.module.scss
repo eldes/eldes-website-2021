@@ -1,0 +1,38 @@
+@import 'common.module';
+
+.jobList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: $inset_m;
+
+	.item {
+		padding-bottom: $inset_l;
+		width: 256px;
+		height: auto;
+
+		a {
+			display: flex;
+			flex-direction: column;
+			box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000033;
+    		border-radius: $inset_s;
+			overflow: hidden;
+	
+			.textLabel {
+				padding: $inset_s 0px;
+				text-align: center;
+				font-size: 0.8rem;
+				
+				display: flex;
+				flex-direction: column;
+				row-gap: 0.3em;
+
+				small {
+					font-size: 0.5em;
+					text-transform: uppercase;
+				}
+	
+			}
+		}
+	}
+}
