@@ -1,6 +1,10 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import JobsList from '../components/JobsList'
 import Page, { PageSection } from '../components/Page'
+import Job from '../entities/Job'
+
+import brasilNaBagagemTextbookIllustrationsHighlight from '../public/content/brasil-na-bagagem-textbook-illustrations/highlight.jpg'
+import ajudarisChildrensBookIllustrationsHighlight from '../public/content/ajudaris-20-childrens-book-illustrations/highlight.jpg'
 
 const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
@@ -11,9 +15,22 @@ const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
 	return (
 		<Page title="Children's Books and Textbooks" section={ PageSection.Portfolio } backwardLink={ backwardLink }>
-			<JobsList />
+			<JobsList jobs={ jobs }/>
 		</Page>
 	)
 }
+
+const jobs: Job[] = [
+	{
+		title: 'Brasil na Bagagem2',
+		subtitle: 'textbook illustrations',
+		image: brasilNaBagagemTextbookIllustrationsHighlight
+	},
+	{
+		title: 'Histórias da Ajudaris\'20',
+		subtitle: 'children\'s book illustrations',
+		image: ajudarisChildrensBookIllustrationsHighlight
+	},
+]
 
 export default ChildrensBooksAndTextbooksPage
