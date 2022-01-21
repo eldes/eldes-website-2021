@@ -1,5 +1,5 @@
-import { GetStaticProps, NextPage } from 'next'
-import JobsList from '../components/JobsList'
+import { NextPage } from 'next'
+import JobList from '../components/JobList'
 import Page, { PageSection } from '../components/Page'
 import Job from '../entities/Job'
 
@@ -15,7 +15,7 @@ const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
 	return (
 		<Page title="Children's Books and Textbooks" section={ PageSection.Portfolio } backwardLink={ backwardLink }>
-			<JobsList jobs={ jobs }/>
+			<JobList jobs={ jobs }/>
 		</Page>
 	)
 }

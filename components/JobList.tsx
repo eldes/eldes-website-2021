@@ -8,7 +8,7 @@ type Props = {
 	jobs: Job[]
 }
 
-const JobsList: FunctionComponent<Props> = ({ jobs }) => {
+const JobList: FunctionComponent<Props> = ({ jobs }) => {
 	return (
 		<ul className={ styles.jobList }>
 		{
@@ -29,4 +29,4 @@ const JobsList: FunctionComponent<Props> = ({ jobs }) => {
 	)
 }
 
-export default JobsList
+export default JobList

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import styles from '../styles/CategoriesList.module.scss'
 
-const CategoriesList: FunctionComponent = () => {
+const CategoryList: FunctionComponent = () => {
 	return (
 		<div className={ styles.categoriesList }>
 			<Link href="/childrens-books-and-textbooks"><a>Children&apos;s Books and Textbooks</a></Link>
@@ -12,4 +12,4 @@ const CategoriesList: FunctionComponent = () => {
 	)
 }
 
-export default CategoriesList
+export default CategoryList
