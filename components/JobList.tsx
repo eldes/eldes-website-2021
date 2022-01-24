@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import Job from '../entities/Job'
+import Job from '../model/Job'
 import styles from '../styles/JobList.module.scss'
 
 type Props = {

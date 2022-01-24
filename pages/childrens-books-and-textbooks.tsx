@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import JobList from '../components/JobList'
 import Page, { PageSection } from '../components/Page'
-import Job from '../entities/Job'
+import Job from '../model/Job'
 
 import brasilNaBagagemTextbookIllustrationsHighlight from '../public/content/brasil-na-bagagem-textbook-illustrations/highlight.jpg'
 import ajudarisChildrensBookIllustrationsHighlight from '../public/content/ajudaris-20-childrens-book-illustrations/highlight.jpg'
@@ -24,12 +24,12 @@ const jobs: Job[] = [
 	{
 		title: 'Brasil na Bagagem2',
 		subtitle: 'textbook illustrations',
-		image: brasilNaBagagemTextbookIllustrationsHighlight
+		image: brasilNaBagagemTextbookIllustrationsHighlight,
 	},
 	{
 		title: 'Histórias da Ajudaris\'20',
 		subtitle: 'children\'s book illustrations',
-		image: ajudarisChildrensBookIllustrationsHighlight
+		image: ajudarisChildrensBookIllustrationsHighlight,
 	},
 ]
 

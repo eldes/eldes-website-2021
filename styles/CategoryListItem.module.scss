@@ -1,0 +1,51 @@
+@import './variables';
+
+.categoryListItem {
+	padding-bottom: $inset_l;
+	width: 200px;
+	height: auto;
+
+	a {
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 3px 6px 0 #00000022, 0 5px 15px 0 #00000022;
+		border-radius: $inset_s;
+		overflow: hidden;
+		height: 100%;
+
+		.textLabel {
+			padding: $inset_s 0px;
+			flex-grow: 1;
+			text-align: center;
+			font-size: 0.8rem;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+
+	&.highlight-high {
+		width: 300px;
+
+		a {
+			box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000033;
+
+			.textLabel {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&.highlight-low {
+		width: 150px;
+
+		a {
+			box-shadow: 0 2px 4px 0 #00000011, 0 3px 10px 0 #00000011;
+
+			.textLabel {
+				font-size: 0.6rem;
+			}
+		}
+	}
+}

@@ -1,15 +1,36 @@
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
+import Category from '../model/Category'
 import styles from '../styles/CategoriesList.module.scss'
+import CategoryListItem from './CategoryListItem'
 
-const CategoryList: FunctionComponent = () => {
+type Props = {
+	categories: Category[]
+	highlight: CategoriesListHighlight
+}
+
+export enum CategoriesListHighlight {
+	High = 'high',
+	Medium = 'medium',
+	Low = 'low',
+}
+
+const CategoryList: FunctionComponent<Props> = ({ categories, highlight }) => {
 	return (
-		<div className={ styles.categoriesList }>
-			<Link href="/childrens-books-and-textbooks"><a>Children&apos;s Books and Textbooks</a></Link>
-			<a href="">Portraits</a>
-			<a href="">Etc</a>
-		</div>
+		<ul className={ styles.categoriesList }>
+		{
+			categories && (
+				categories.map(category =>
+					<CategoryListItem key={ category.link } category={ category } highlight={ highlight }/>
+				)
+			)
+		}
+		</ul>
 	)
+}
+
+CategoryList.defaultProps = {
+	highlight: CategoriesListHighlight.Medium
 }
 
 export default CategoryList
