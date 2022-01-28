@@ -22,7 +22,7 @@ const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
 const jobs: Job[] = [
 	{
-		title: 'Brasil na Bagagem2',
+		title: 'Brasil na Bagagem',
 		subtitle: 'textbook illustrations',
 		image: brasilNaBagagemTextbookIllustrationsHighlight,
 	},
