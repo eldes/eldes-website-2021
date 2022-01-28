@@ -14,10 +14,10 @@
 		a {
 			display: flex;
 			flex-direction: column;
-			box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000033;
     		border-radius: $inset_s;
 			overflow: hidden;
 			height: 100%;
+			background-color: #fff;
 	
 			.textLabel {
 				padding: $inset_s 0px;
