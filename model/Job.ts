@@ -1,7 +1,7 @@
 type Job = {
 	title: string
 	subtitle: string
-	image: StaticImageData
+	thumbnail: StaticImageData
 }
 
 export default Job

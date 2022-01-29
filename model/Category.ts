@@ -1,6 +1,6 @@
 type Category = {
 	title: string
-	image: StaticImageData
+	thumbnails: StaticImageData[]
 	link: string
 }
 

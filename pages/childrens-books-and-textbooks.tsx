@@ -3,8 +3,9 @@ import JobList from '../components/JobList'
 import Page, { PageSection } from '../components/Page'
 import Job from '../model/Job'
 
-import brasilNaBagagemTextbookIllustrationsHighlight from '../public/content/brasil-na-bagagem-textbook-illustrations/highlight.jpg'
-import ajudarisChildrensBookIllustrationsHighlight from '../public/content/ajudaris-20-childrens-book-illustrations/highlight.jpg'
+import brasilNaBagagemThumbnail from '../public/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg'
+import ajudaris20Thumbnail from '../public/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg'
+import ajudaris17Thumbnail from '../public/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg'
 
 const ChildrensBooksAndTextbooksPage: NextPage = () => {
 
@@ -24,12 +25,17 @@ const jobs: Job[] = [
 	{
 		title: 'Brasil na Bagagem',
 		subtitle: 'textbook illustrations',
-		image: brasilNaBagagemTextbookIllustrationsHighlight,
+		thumbnail: brasilNaBagagemThumbnail,
 	},
 	{
 		title: 'Histórias da Ajudaris\'20',
 		subtitle: 'children\'s book illustrations',
-		image: ajudarisChildrensBookIllustrationsHighlight,
+		thumbnail: ajudaris20Thumbnail,
+	},
+	{
+		title: 'Histórias da Ajudaris\'17',
+		subtitle: 'children\'s book illustrations',
+		thumbnail: ajudaris17Thumbnail,
 	},
 ]
 

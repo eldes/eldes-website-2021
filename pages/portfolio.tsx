@@ -3,14 +3,14 @@ import CategoryList, { CategoriesListHighlight } from '../components/CategoryLis
 import Page, { PageSection } from '../components/Page'
 import Category from '../model/Category'
 
-import childrensBooksAndTextBooksThumbnail from '../public/content/brasil-na-bagagem-textbook-illustrations/ventriloquist.jpg'
+import brasilNaBagagemThumbnail from '../public/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg'
+import ajudaris20Thumbnail from '../public/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg'
+import ajudaris17Thumbnail from '../public/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg'
 
 const PortfolioPage: NextPage = () => {
 	return (
 		<Page title="Portfolio" section={ PageSection.Portfolio }>
 			<CategoryList categories={ categoriesHigh } highlight={ CategoriesListHighlight.High } />
-			<CategoryList categories={ categoriesMedium } highlight={ CategoriesListHighlight.Medium } />
-			<CategoryList categories={ categoriesHigh } highlight={ CategoriesListHighlight.Low } />
 		</Page>
 	)
 }
@@ -18,31 +18,12 @@ const PortfolioPage: NextPage = () => {
 const categoriesHigh: Category[] = [
 	{
 		title: 'Children\'s Books and Textbooks',
-		image: childrensBooksAndTextBooksThumbnail,
+		thumbnails: [
+			brasilNaBagagemThumbnail,
+			ajudaris20Thumbnail,
+			ajudaris17Thumbnail,
+		],
 		link: '/childrens-books-and-textbooks',
-	},
-	{
-		title: 'Whiteboard Animation',
-		image: childrensBooksAndTextBooksThumbnail,
-		link: '/portraits',
-	},
-	{
-		title: 'Etc',
-		image: childrensBooksAndTextBooksThumbnail,
-		link: '/etc',
-	},
-]
-
-const categoriesMedium: Category[] = [
-	{
-		title: 'Portraits',
-		image: childrensBooksAndTextBooksThumbnail,
-		link: '/portraits',
-	},
-	{
-		title: 'Wall',
-		image: childrensBooksAndTextBooksThumbnail,
-		link: '/etc',
 	},
 ]
 

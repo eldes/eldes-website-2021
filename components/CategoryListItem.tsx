@@ -14,8 +14,14 @@ const CategoryListItem: FunctionComponent<Props> = ({ category, highlight }) => 
 		<li className={ `${styles.categoryListItem} ${styles[`highlight-${highlight}`]}` }>
 			<Link href={ category.link }>
 				<a>
-					<Image src={ category.image } alt={ category.title } layout="intrinsic" />
 					<span className={ styles.textLabel }>{ category.title }</span>
+					<span className={ styles.thumbnails }>
+					{
+						category.thumbnails.map(thumbnail => <Image key={thumbnail.src} src={ thumbnail } alt={ category.title } layout="intrinsic" />)
+					}
+					</span>
+					
+					
 				</a>
 			</Link>
 		</li>
