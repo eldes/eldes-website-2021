@@ -18,7 +18,7 @@ const JobList: FunctionComponent<Props> = ({ jobs }) => {
 						<Link href="/brasil-na-bagagem-textbook-illustrations">
 							<a>
 								<span className={ styles.textLabel }>{ job.title } <small>{ job.subtitle }</small></span>
-								<Image src={ job.thumbnail } alt="foo" layout="intrinsic" />
+								<Image src={ job.thumbnail } alt={ job.title } layout="intrinsic" />
 								
 							</a>
 						</Link>
