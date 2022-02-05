@@ -7,6 +7,10 @@ import brasilNaBagagemThumbnail from '../public/content/brasil-na-bagagem-textbo
 import ajudaris20Thumbnail from '../public/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg'
 import ajudaris17Thumbnail from '../public/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg'
 
+import protestWhiteboardAnimationThumbnail from '../public/content/protest-whiteboard-animation/thumbnail.jpg'
+import borealFlipBookThumbnail from '../public/content/flip-book-boreal/thumbnail.jpg'
+import limpidusWhiteboardAnimationThumbnail from '../public/content/limpidus-whiteboard-animation/thumbnail.jpg'
+
 const PortfolioPage: NextPage = () => {
 	return (
 		<Page title="Portfolio" section={ PageSection.Portfolio }>
@@ -22,6 +26,15 @@ const categoriesHigh: Category[] = [
 			brasilNaBagagemThumbnail,
 			ajudaris20Thumbnail,
 			ajudaris17Thumbnail,
+		],
+		link: '/childrens-books-and-textbooks',
+	},
+	{
+		title: 'Animation',
+		thumbnails: [
+			protestWhiteboardAnimationThumbnail,
+			limpidusWhiteboardAnimationThumbnail,
+			borealFlipBookThumbnail,
 		],
 		link: '/childrens-books-and-textbooks',
 	},
