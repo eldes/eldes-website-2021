@@ -26,16 +26,19 @@ const jobs: Job[] = [
 		title: 'Brasil na Bagagem',
 		subtitle: 'textbook illustrations',
 		thumbnail: brasilNaBagagemThumbnail,
+		link: '/brasil-na-bagagem-textbook-illustrations',
 	},
 	{
 		title: 'Histórias da Ajudaris\'20',
 		subtitle: 'children\'s book illustrations',
 		thumbnail: ajudaris20Thumbnail,
+		link: '/historias-da-ajudaris-childrens-book-illustrations',
 	},
 	{
 		title: 'Histórias da Ajudaris\'17',
 		subtitle: 'children\'s book illustrations',
 		thumbnail: ajudaris17Thumbnail,
+		link: '/brasil-na-bagagem-textbook-illustrations',
 	},
 ]
 

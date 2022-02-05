@@ -15,7 +15,7 @@ const JobList: FunctionComponent<Props> = ({ jobs }) => {
 			jobs && (
 				jobs.map( job =>
 					<li key={ job.title } className={ styles.item }>
-						<Link href="/brasil-na-bagagem-textbook-illustrations">
+						<Link href={ job.link }>
 							<a>
 								<span className={ styles.textLabel }>{ job.title } <small>{ job.subtitle }</small></span>
 								<Image src={ job.thumbnail } alt={ job.title } layout="intrinsic" />
