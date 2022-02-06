@@ -32,7 +32,7 @@ const jobs: Job[] = [
 		title: 'Histórias da Ajudaris\'20',
 		subtitle: 'children\'s book illustrations',
 		thumbnail: ajudaris20Thumbnail,
-		link: '/historias-da-ajudaris-childrens-book-illustrations',
+		link: '/historias-da-ajudaris-20-childrens-book-illustrations',
 	},
 	{
 		title: 'Histórias da Ajudaris\'17',
