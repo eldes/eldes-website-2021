@@ -21,7 +21,7 @@ const CategoryList: FunctionComponent<Props> = ({ categories, highlight }) => {
 		{
 			categories && (
 				categories.map(category =>
-					<CategoryListItem key={ category.link } category={ category } highlight={ highlight }/>
+					<CategoryListItem key={ category.slug } category={ category } highlight={ highlight }/>
 				)
 			)
 		}

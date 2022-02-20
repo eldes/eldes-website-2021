@@ -9,10 +9,10 @@ type Props = {
 	pieces: Piece[]
 }
 
-const ChildrensBooksAndTextbooksPage: NextPage<Props> = ({ category, pieces }) => <CategoryPage category={ category } pieces={ pieces } />
+const AnimationPage: NextPage<Props> = ({ category, pieces }) => <CategoryPage category={ category } pieces={ pieces } />
 
 export const getStaticProps: GetStaticProps = async (context) => {
-	const slug = 'childrens-books-and-textbooks'
+	const slug = 'animation'
 	return {
 		props: {
 			category: categoriesRepository.load(slug),
@@ -21,4 +21,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	}
 }
 
-export default ChildrensBooksAndTextbooksPage
+export default AnimationPage

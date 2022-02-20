@@ -9,19 +9,18 @@ type Props = {
 	category: Category
 	highlight: CategoriesListHighlight
 }
+
 const CategoryListItem: FunctionComponent<Props> = ({ category, highlight }) => {
 	return (
 		<li className={ `${styles.categoryListItem} ${styles[`highlight-${highlight}`]}` }>
-			<Link href={ category.link }>
+			<Link href={ `${category.slug}` }>
 				<a>
 					<span className={ styles.textLabel }>{ category.title }</span>
 					<span className={ styles.thumbnails }>
 					{
-						category.thumbnails.map(thumbnail => <Image key={thumbnail.src} src={ thumbnail } alt={ category.title } layout="intrinsic" />)
+						category.thumbnails.map(thumbnail => <Image key={thumbnail.toString()} src={ thumbnail } alt={ category.title } layout="intrinsic"/>)
 					}
 					</span>
-					
-					
 				</a>
 			</Link>
 		</li>
