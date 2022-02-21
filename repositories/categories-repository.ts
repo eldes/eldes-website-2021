@@ -24,7 +24,7 @@ const categoriesMock: Category[] = [
 		slug: 'animation',
 		thumbnails: [
 			'/content/protest-whiteboard-animation/thumbnail.jpg',
-			'/content/limpidus-whiteboard-animation/thumbnail.jpg',
+			'/content/flip-book-penguin-story/thumbnail.jpg',
 			'/content/flip-book-boreal/thumbnail.jpg',
 		]
 	},
