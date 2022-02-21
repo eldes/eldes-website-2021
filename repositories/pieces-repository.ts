@@ -44,6 +44,13 @@ const piecesMock: Piece[] = [
 		categorySlugs: ['animation'],
 	},
 	{
+		slug: 'flip-book-penguin-story',
+		title: 'Penguin Story',
+		subtitle: 'Flip book ',
+		thumbnail: '/content/flip-book-penguin-story/thumbnail.jpg',
+		categorySlugs: ['animation'],
+	},
+	{
 		slug: 'flip-book-boreal',
 		title: 'Boreal Textbook',
 		subtitle: 'Flip book',
