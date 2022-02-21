@@ -2,7 +2,7 @@ type Piece = {
 	slug: string
 	title: string
 	subtitle: string
-	thumbnailSrc: string | StaticImageData
+	thumbnail: string
 	categorySlugs: string[]
 }
 

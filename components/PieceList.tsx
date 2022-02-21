@@ -20,7 +20,7 @@ const PieceList: FunctionComponent<Props> = ({ pieces }) => {
 						<Link href={ `${piece.slug}` }>
 							<a>
 								<span className={ styles.textLabel }>{ piece.title } <small>{ piece.subtitle }</small></span>
-								<Image src={ piece.thumbnailSrc } alt={ piece.title } layout="intrinsic" />
+								<Image src={ piece.thumbnail } width={512} height={512} alt={ piece.title } layout="intrinsic" />
 								
 							</a>
 						</Link>

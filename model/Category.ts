@@ -1,7 +1,7 @@
 type Category = {
 	slug: string
 	title: string
-	thumbnails: string[] | StaticImageData[]
+	thumbnails: string[]
 }
 
 export default Category
