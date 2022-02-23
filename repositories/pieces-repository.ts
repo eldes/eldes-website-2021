@@ -17,13 +17,13 @@ const piecesMock: Piece[] = [
 	{
 		slug: 'historias-da-ajudaris-20-childrens-book-illustrations',
 		title: 'Histórias da Ajudaris\'20',
-		subtitle: 'Textbook illustrations',
+		subtitle: 'Children\'s book illustrations',
 		thumbnail: '/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
 	},
 	{
 		slug: 'historias-da-ajudaris-17-childrens-book-illustrations',
 		title: 'Histórias da Ajudaris\'17',
-		subtitle: 'Textbook illustrations',
+		subtitle: 'Children\'s book illustrations',
 		thumbnail: '/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg',
 	},
 	{
