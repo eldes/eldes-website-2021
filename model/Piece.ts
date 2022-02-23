@@ -3,7 +3,6 @@ type Piece = {
 	title: string
 	subtitle: string
 	thumbnail: string
-	categorySlugs: string[]
 }
 
 export default Piece
