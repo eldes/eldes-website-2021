@@ -27,6 +27,12 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg',
 	},
 	{
+		slug: 'gramatica-fundamental-5-moderna',
+		title: 'Gramática Fundamental 5',
+		subtitle: 'Textbook illustrations',
+		thumbnail: '/content/gramatica-fundamental-5-moderna/thumbnail.jpg',
+	},
+	{
 		slug: 'protest-whitebard-animation',
 		title: 'Protest',
 		subtitle: 'Whiteboard animation',
