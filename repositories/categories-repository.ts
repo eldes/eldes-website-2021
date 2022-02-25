@@ -20,7 +20,7 @@ const categoriesMock: Category[] = [
 		],
 		pieceSlugs: [
 			'brasil-na-bagagem-textbook-illustrations',
-			'gramatica-fundamental-5-moderna',
+			'gramatica-fundamental-5-moderna-textbook-illustrations',
 			'historias-da-ajudaris-20-childrens-book-illustrations',
 			'historias-da-ajudaris-17-childrens-book-illustrations',
 		],

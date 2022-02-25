@@ -2,6 +2,7 @@ import Piece from '../model/Piece'
 
 const piecesRepository = {
 	loadAll: () => piecesMock,
+
 	load: (slug: string) => piecesMock.find(piece => piece.slug === slug)
 }
 
@@ -27,10 +28,10 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg',
 	},
 	{
-		slug: 'gramatica-fundamental-5-moderna',
+		slug: 'gramatica-fundamental-5-moderna-textbook-illustrations',
 		title: 'Gramática Fundamental 5',
 		subtitle: 'Textbook illustrations',
-		thumbnail: '/content/gramatica-fundamental-5-moderna/thumbnail.jpg',
+		thumbnail: '/content/gramatica-fundamental-5-moderna-textbook-illustrations/thumbnail.jpg',
 	},
 	{
 		slug: 'protest-whitebard-animation',
