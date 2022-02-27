@@ -1,6 +1,8 @@
 @import 'variables';
 
 .beHeading {
+	width: 100%;
+	
 	h2 {
 		padding: $inset_xxl $inset_m $inset_xl $inset_m;
 		font-size: 1.8rem;

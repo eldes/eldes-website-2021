@@ -13,6 +13,9 @@
 		background-color: #f3f3f3;
 
 		article {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			header {
 				padding: $inset_xxl 0px;

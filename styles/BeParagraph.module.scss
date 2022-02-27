@@ -1,15 +1,11 @@
 @import 'variables.scss';
 
 .beParagraph {
+	width: 100%;
+
 	p {
 		padding: $inset_l $inset_m;
 		font-size: 1rem;
-
-		@media (min-width: $header_max_width) {
-			& {
-				padding: $inset_l 0px;
-			}
-		}
 
 		.normal {
 			font-size: 1em;
