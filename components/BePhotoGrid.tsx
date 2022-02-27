@@ -13,7 +13,7 @@ type Props = BeComponentProps & {
 const BePhotoGrid: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, images, cols, cellBackgroundColor }) => {
 	return (
 		<BeComponent subClassName={ styles.bePhotoGrid } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor }>
-			<ul className={ styles['cols-' + Math.min(Math.max(cols, 1), 3)] }>
+			<ul className={ styles['cols-' + Math.min(Math.max(cols, 1), 4)] }>
 			{ images.map(image =>
 				<li className={ styles.bePhotoGridItem } key={ image.src.src } style={{ backgroundColor: cellBackgroundColor }}><BeImage src={ image.src } alt={ image.alt } /></li>
 			)}

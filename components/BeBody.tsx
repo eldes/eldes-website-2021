@@ -6,8 +6,10 @@ type Props = {
 }
 
 export type BeImageData = {
-	src: StaticImageData,
-	alt: string,
+	src: StaticImageData
+	width?: number
+	height?: number
+	alt: string
 }
 
 const BeBody: FunctionComponent<Props> = ({ children }) => {
