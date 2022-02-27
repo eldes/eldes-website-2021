@@ -1,6 +1,8 @@
 @import 'variables';
 
 .beImage {
+	display: flex;
+	justify-content: center;
 	&>* {
 		padding: #{$inset_s} / 2;
 	}

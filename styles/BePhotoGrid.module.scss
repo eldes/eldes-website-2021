@@ -28,6 +28,11 @@
 		}
 
 		@media (min-width: $header_max_width) {
+			&.cols-4 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% / 4 - 4 * #{$items_inset} / 5);
+				}
+			}
 			&.cols-3 {
 				.bePhotoGridItem {
 					flex-basis: calc(100% / 3 - 3 * #{$items_inset} / 4);
