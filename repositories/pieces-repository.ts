@@ -46,6 +46,12 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/limpidus-whiteboard-animation/thumbnail.jpg',
 	},
 	{
+		slug: 'embrapa-whiteboard-animation',
+		title: 'Embrapa',
+		subtitle: 'Whiteboard animation',
+		thumbnail: '/content/embrapa-whiteboard-animation/thumbnail.jpg',
+	},
+	{
 		slug: 'flip-book-penguin-story',
 		title: 'Penguin Story',
 		subtitle: 'Flip book ',

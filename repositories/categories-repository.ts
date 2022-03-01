@@ -38,6 +38,7 @@ const categoriesMock: Category[] = [
 		pieceSlugs: [
 			'protest-whitebard-animation',
 			'limpidus-whiteboard-animation',
+			'embrapa-whiteboard-animation',
 			'flip-book-penguin-story',
 			'flip-book-boreal',
 		],
