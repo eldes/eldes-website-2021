@@ -19,7 +19,7 @@ const CategoryPage: FunctionComponent<Props> = ({ category, pieces }) => {
 	}
 
 	return (
-		<Page title={category.title} section={ PageSection.Portfolio } backwardLink={ backwardLink }>
+		<Page title={category.title} subtitle={category.subtitle} section={ PageSection.Portfolio } backwardLink={ backwardLink }>
 			<PieceList pieces={ pieces } />
 		</Page>
 	)

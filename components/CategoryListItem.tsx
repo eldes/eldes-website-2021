@@ -15,7 +15,7 @@ const CategoryListItem: FunctionComponent<Props> = ({ category, highlight }) => 
 		<li className={ `${styles.categoryListItem} ${styles[`highlight-${highlight}`]}` }>
 			<Link href={ `${category.slug}` }>
 				<a>
-					<span className={ styles.textLabel }>{ category.title }</span>
+					<span className={ styles.textLabel }>{ category.title } <small>{ category.subtitle }</small></span>
 					<span className={ styles.thumbnails }>
 					{
 						category.thumbnails.map(thumbnail => <Image key={ thumbnail } src={ thumbnail } width={512} height={512} alt={ category.title } layout="intrinsic"/>)

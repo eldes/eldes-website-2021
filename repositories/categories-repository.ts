@@ -11,7 +11,8 @@ export default categoriesRepository
 
 const categoriesMock: Category[] = [
 	{
-		title: 'Chidren\'s Books and Textbooks',
+		title: 'Chidren\'s Books',
+		subtitle: 'and Textbooks',
 		slug: 'childrens-books-and-textbooks',
 		thumbnails: [
 			'/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
@@ -27,6 +28,7 @@ const categoriesMock: Category[] = [
 	},
 	{
 		title: 'Animation',
+		subtitle: 'and flip book',
 		slug: 'animation',
 		thumbnails: [
 			'/content/protest-whiteboard-animation/thumbnail.jpg',
