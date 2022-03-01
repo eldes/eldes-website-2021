@@ -7,9 +7,9 @@ type Props = BeComponentProps & {
 	children: ReactNode
 }
 
-const BeEmbed: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, aspectRatioPercent, children }) => {
+const BeEmbed: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, aspectRatioPercent, children }) => {
 	return (
-		<BeComponent subClassName={ styles.beEmbed } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor }>
+		<BeComponent subClassName={ styles.beEmbed } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
 			<div style={{ paddingTop: `${aspectRatioPercent}%` }}>
 				{children}
 			</div>

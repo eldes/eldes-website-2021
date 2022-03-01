@@ -6,15 +6,17 @@ export type BeComponentProps = {
 	fill?: boolean
 	backgroundColor?: string
 	foregroundColor?: string
+	horizontalPadding?: boolean
 }
 
-export const BeComponentDefaultProps = {
+export const BeComponentDefaultProps: BeComponentProps = {
 	fill: false,
 	backgroundColor: '#fff',
 	foregroundColor: '#000',
+	horizontalPadding: false,
 }
 
-const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }> = ({ subClassName, children, fill, foregroundColor, backgroundColor }) => {
+const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }> = ({ subClassName, children, fill, foregroundColor, backgroundColor, horizontalPadding }) => {
 	let style = {}
 
 	if (fill) {
@@ -27,6 +29,10 @@ const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }>
 
 	if (backgroundColor) {
 		style = { ...style, backgroundColor: backgroundColor }
+	}
+
+	if (horizontalPadding) {
+		style = { ...style, paddingTop: '16px', paddingBottom: '16px' }
 	}
 
 	return (

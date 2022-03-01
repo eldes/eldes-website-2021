@@ -14,10 +14,10 @@ export enum BeParagaphAlign {
 	Justify = 'justify',
 }
 
-const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, align, children }) => {
+const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, align, children }) => {
 
 	return (
-		<BeComponent subClassName={ styles.beParagraph } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor }>
+		<BeComponent subClassName={ styles.beParagraph } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
 			<p style={{ color: foregroundColor, textAlign: align }}>
 				{ children }
 			</p>
