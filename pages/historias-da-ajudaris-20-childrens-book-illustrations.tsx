@@ -1,8 +1,15 @@
 import { NextPage } from 'next'
 import BeBody from '../components/BeBody'
-import BeHeading from '../components/BeHeading'
+import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import Page, { PageSection } from '../components/Page'
+import BePhotoGrid from '../components/BePhotoGrid'
+
+import animaisCacadorImage from '../public/content/ajudaris-20-childrens-book-illustrations/os-animais-e-o-cacador.jpg'
+import forestImage from '../public/content/ajudaris-20-childrens-book-illustrations/the-forest.jpg'
+import roughImage from '../public/content/ajudaris-20-childrens-book-illustrations/rough.jpg'
+import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrations/giraffe.jpg'
+import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg'
 
 const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 	const backwardLink = {
@@ -18,10 +25,45 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 			backwardLink={ backwardLink }
 		>
 			<BeBody>
+			
+				<BeImage
+					src={animaisCacadorImage}
+					alt={'Illustration for "Os animais e o caçador"'}
+				/>
 				<BeParagaph>
 					&quot;Histórias da Ajudaris&quot; (<em>&quot;Ajudaris&apos;s Stories&quot;</em>) is a collaborative book with multiple stories written by children from many public schools around Portugal.
 				</BeParagaph>
-				<BeHeading>The process</BeHeading>
+				<BeImage
+					src={coverImage}
+					alt={'Digital mockup of book'}
+				/>
+				<BeParagaph>
+				In this edition I illustrated 2 stories.
+				</BeParagaph>
+				<BeImage
+					src={forestImage}
+					alt={'Illustration for "A florestas"'}
+					horizontalPadding={ true }
+				/>
+				<BePhotoGrid images={[
+					{
+						src: roughImage,
+						alt: 'Rough'
+					},
+					{
+						src: animaisCacadorImage,
+						alt: 'Illustration for "Os animais e o caçador"	'
+					},
+				]} cols={2}>
+					
+				</BePhotoGrid>
+				
+				<BeImage
+					src={giraffeImage}
+					width={112}
+					height={246}
+					alt={'Thanks!'}
+				/>
 				<BeParagaph align={ BeParagaphAlign.Center }>
 					Thanks for taking a look at my work!
 				</BeParagaph>
