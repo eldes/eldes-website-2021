@@ -4,16 +4,10 @@
 	width: 100%;
 	
 	h2 {
-		padding: $inset_xxl $inset_m $inset_xl $inset_m;
+		padding: $inset_xxl $inset_xl;
 		font-size: 1.8rem;
 		text-align: center;
 		text-transform: lowercase;
-
-		@media (min-width: $header_max_width) {
-			& {
-				padding: $inset_xxl 0px $inset_xl 0px;
-			}
-		}
 
 		strong {
 			font-weight: 400;
