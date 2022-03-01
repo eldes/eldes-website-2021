@@ -38,6 +38,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 						<Link href="/"><a className={`${styles.menuItem} ${ section === PageSection.Home ? styles.active : ''}`}>Home</a></Link>
 						<Link href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}>Portfolio</a></Link>
 						<Link href="/fonts"><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}>Fonts</a></Link>
+						<Link href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}>About</a></Link>
 					</nav>
 					<ul className={styles.langMenu}>
 						<li><Link href={router.pathname} locale="en"><a className={`${styles.menuItem} ${router.locale === 'en'? styles.active : ''}`}>EN</a></Link></li>

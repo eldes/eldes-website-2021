@@ -9,6 +9,7 @@ export enum PageSection {
 	Home,
 	Portfolio,
 	Fonts,
+	About,
 }
 
 type Props = {
