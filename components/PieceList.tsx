@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import Category from '../model/Category'
-import Piece from '../model/Piece'
+import Piece from '../models/Piece'
 import styles from '../styles/PieceList.module.scss'
 
 type Props = {

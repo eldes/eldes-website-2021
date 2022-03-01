@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next'
 import CategoryList, { CategoriesListHighlight } from '../components/CategoryList'
 import Page, { PageSection } from '../components/Page'
-import Category from '../model/Category'
+import Category from '../models/Category'
 import categoriesRepository from '../repositories/categories-repository'
 
 type Props = {

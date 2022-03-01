@@ -1,9 +1,9 @@
 import PieceList from '../components/PieceList'
 import Page, { PageSection } from '../components/Page'
 import piecesRepository from '../repositories/pieces-repository'
-import Piece from '../model/Piece'
+import Piece from '../models/Piece'
 import { FunctionComponent } from 'react'
-import Category from '../model/Category'
+import Category from '../models/Category'
 import { PageReverseNavigationBarLink } from './PageReverseNavigationBar'
 
 type Props = {

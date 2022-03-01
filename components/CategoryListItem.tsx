@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import Category from '../model/Category'
+import Category from '../models/Category'
 import styles from '../styles/CategoryListItem.module.scss'
 import { CategoriesListHighlight } from './CategoryList'
 

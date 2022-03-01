@@ -1,4 +1,4 @@
-import Piece from '../model/Piece'
+import Piece from '../models/Piece'
 
 const piecesRepository = {
 	loadAll: () => piecesMock,

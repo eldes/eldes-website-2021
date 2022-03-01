@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import Category from '../model/Category'
+import Category from '../models/Category'
 import styles from '../styles/CategoriesList.module.scss'
 import CategoryListItem from './CategoryListItem'
 
