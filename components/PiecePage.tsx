@@ -3,17 +3,13 @@ import { useRouter } from 'next/router'
 import piecesRepository from '../repositories/pieces-repository'
 import Page, { PageSection } from './Page'
 
-type Props = {
-	slug?: string
-}
-
-const PiecePage: NextPage<Props> = ({ slug, children }) => {
+const PiecePage: NextPage = ({ children }) => {
 
 	const { asPath } = useRouter()
-	const auto_slug = asPath.substring(1)
+	const slug = asPath.substring(1)
 
-	const piece = piecesRepository.load(auto_slug)
-	const categories = piecesRepository.loadAllCategories(auto_slug)
+	const piece = piecesRepository.load(slug)
+	const categories = piecesRepository.loadAllCategories(slug)
 	const firstCategory = categories[0]
 
 	const backwardLink = {
