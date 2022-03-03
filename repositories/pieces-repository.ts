@@ -1,9 +1,12 @@
 import Piece from '../models/Piece'
+import categoriesRepository from './categories-repository'
 
 const piecesRepository = {
 	loadAll: () => piecesMock,
 
-	load: (slug: string) => piecesMock.find(piece => piece.slug === slug)
+	load: (slug: string) => piecesMock.find(piece => piece.slug === slug),
+
+	loadAllCategories: (slug: string) => categoriesRepository.loadAll().filter(category => category.pieceSlugs.includes(slug)),
 }
 
 export default piecesRepository
@@ -52,15 +55,15 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/embrapa-whiteboard-animation/thumbnail.jpg',
 	},
 	{
-		slug: 'flip-book-penguin-story',
+		slug: 'penguin-story-flip-book',
 		title: 'Penguin Story',
 		subtitle: 'Flip book ',
-		thumbnail: '/content/flip-book-penguin-story/thumbnail.jpg',
+		thumbnail: '/content/penguin-story-flip-book/thumbnail.jpg',
 	},
 	{
-		slug: 'flip-book-boreal',
+		slug: 'boreal-textbook-flip-book',
 		title: 'Boreal Textbook',
 		subtitle: 'Flip book',
-		thumbnail: '/content/flip-book-boreal/thumbnail.jpg',
+		thumbnail: '/content/boreal-textbook-flip-book/thumbnail.jpg',
 	},
 ]

@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import BeBody from '../components/BeBody'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import Page, { PageSection } from '../components/Page'
+import PiecePage from '../components/PiecePage'
 import BePhotoGrid from '../components/BePhotoGrid'
 
 import animaisCacadorImage from '../public/content/ajudaris-20-childrens-book-illustrations/os-animais-e-o-cacador.jpg'
@@ -12,18 +12,9 @@ import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrat
 import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg'
 
 const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
-	const backwardLink = {
-		text: 'Children\'s books and textbooks',
-		href: '/childrens-books-and-textbooks',	
-	}
 
 	return (
-		<Page
-			title="Histórias da Ajudaris'20"
-			subtitle="children's book illustrations"
-			section={PageSection.Portfolio}
-			backwardLink={ backwardLink }
-		>
+		<PiecePage>
 			<BeBody>
 			
 				<BeImage
@@ -68,7 +59,7 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 					Thanks for taking a look at my work!
 				</BeParagaph>
 			</BeBody>
-		</Page>
+		</PiecePage>
 	)
 }
 

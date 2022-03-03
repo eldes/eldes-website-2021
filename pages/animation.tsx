@@ -11,7 +11,7 @@ type Props = {
 
 const AnimationPage: NextPage<Props> = ({ category, pieces }) => <CategoryPage category={ category } pieces={ pieces } />
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (_) => {
 	const slug = 'animation'
 	return {
 		props: {

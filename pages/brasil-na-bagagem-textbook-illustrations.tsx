@@ -1,7 +1,11 @@
 import { NextPage } from 'next'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import Page, { PageSection } from '../components/Page'
+import BeBody from '../components/BeBody'
+import BePhotoGrid from '../components/BePhotoGrid'
+import BeHeading from '../components/BeHeading'
+import BeEmbed from '../components/BeEmbed'
+import PiecePage from '../components/PiecePage'
 
 import brokenTelephoneImage from '../public/content/brasil-na-bagagem-textbook-illustrations/broken-telephone.jpg'
 import bookCoverMockupImage from '../public/content/brasil-na-bagagem-textbook-illustrations/book-cover-mockup.jpg'
@@ -59,19 +63,11 @@ import cuicaImage from '../public/content/brasil-na-bagagem-textbook-illustratio
 import reguaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/regua.jpg'
 import locucoesLugarImage from '../public/content/brasil-na-bagagem-textbook-illustrations/locucoes-lugar.jpg'
 import fingerNamesImage from '../public/content/brasil-na-bagagem-textbook-illustrations/finger-names.jpg'
-import BeBody from '../components/BeBody'
-import BePhotoGrid from '../components/BePhotoGrid'
-import BeHeading from '../components/BeHeading'
-import BeEmbed from '../components/BeEmbed'
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
-	const backwardLink = {
-		text: 'Children\'s books and textbooks',
-		href: '/childrens-books-and-textbooks',	
-	}
 
 	return (
-		<Page title="Brasil na Bagagem" subtitle="textbook illustrations" section={ PageSection.Portfolio }  backwardLink={ backwardLink }>
+		<PiecePage>
 			<BeBody>
 				<BeImage
 					src={ brokenTelephoneImage }
@@ -373,7 +369,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					Obrigado por dar uma olhada no meu trabalho!
 				</BeParagaph>
 			</BeBody>
-		</Page>
+		</PiecePage>
 	)
 }
 export default BrasilNaBagagemTextbookIllustrationsPage

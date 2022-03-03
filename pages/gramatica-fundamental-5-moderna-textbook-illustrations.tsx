@@ -2,7 +2,8 @@ import { NextPage } from 'next'
 import BeBody from '../components/BeBody'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import Page, { PageSection } from '../components/Page'
+import BePhotoGrid from '../components/BePhotoGrid'
+import PiecePage from '../components/PiecePage'
 
 import bocarraCasinhaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/bocarra-casinha.jpg'
 import gataoGatonaPezaoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/gatona-gatao-pezao.jpg'
@@ -36,16 +37,10 @@ import skatistaImage from '../public/content/gramatica-fundamental-5-moderna-tex
 import telefoneImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/telefone.jpg'
 import placaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/placa.jpg'
 
-import BePhotoGrid from '../components/BePhotoGrid'
-
 const GramaticaFundamental5Page: NextPage = () => {
-	const backwardLink = {
-		text: 'Children\'s books and textbooks',
-		href: '/childrens-books-and-textbooks',	
-	}
 
 	return (
-		<Page title="Gramática Fundamental 5" subtitle="textbook illustrations" section={ PageSection.Portfolio }  backwardLink={ backwardLink }>
+		<PiecePage>
 			<BeBody>
 			<BeImage
 					src={ bocarraCasinhaImage }
@@ -211,7 +206,7 @@ const GramaticaFundamental5Page: NextPage = () => {
 				
 				
 				</BeBody>
-		</Page>
+		</PiecePage>
 	)
 }
 
