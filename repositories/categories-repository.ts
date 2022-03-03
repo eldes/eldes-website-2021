@@ -1,10 +1,25 @@
 import Category from '../models/Category'
+import Piece from '../models/Piece'
 import piecesRepository from './pieces-repository'
 
 const categoriesRepository = {
+	
 	loadAll: () => categoriesMock,
+	
 	load: (slug: string) => categoriesMock.find( category => category.slug === slug ),
-	loadAllPieces: (slug: string) => categoriesRepository.load(slug)?.pieceSlugs.map(pieceSlug => piecesRepository.load(pieceSlug))
+
+	loadAllPieces: (slug: string) => {
+		const pieces: Piece[] = []
+		
+		categoriesRepository.load(slug)?.pieceSlugs.forEach(pieceSlug => {
+			const piece = piecesRepository.load(pieceSlug)
+			if (piece) {
+				pieces.push(piece)
+			}
+		})
+
+		return pieces
+	}
 }
 
 export default categoriesRepository

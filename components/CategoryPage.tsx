@@ -1,25 +1,25 @@
 import PieceList from '../components/PieceList'
 import Page, { PageSection } from '../components/Page'
-import piecesRepository from '../repositories/pieces-repository'
-import Piece from '../models/Piece'
 import { FunctionComponent } from 'react'
-import Category from '../models/Category'
-import { PageReverseNavigationBarLink } from './PageReverseNavigationBar'
+import { useRouter } from 'next/router'
+import categoriesRepository from '../repositories/categories-repository'
+import Piece from '../models/Piece'
 
-type Props = {
-	category: Category
-	pieces: Piece[]
-}
+const CategoryPage: FunctionComponent = () => {
 
-const CategoryPage: FunctionComponent<Props> = ({ category, pieces }) => {
+	const { asPath } = useRouter()
+	const slug = asPath.substring(1)
 
-	const backwardLink: PageReverseNavigationBarLink = {
+	const category = categoriesRepository.load(slug)
+	const pieces: Piece[] = categoriesRepository.loadAllPieces(slug)
+
+	const backwardLink = {
 		text: 'Portfolio',
-		href: '/portfolio',	
+		href: '/portfolio',
 	}
 
 	return (
-		<Page title={category.title} subtitle={category.subtitle} section={ PageSection.Portfolio } backwardLink={ backwardLink }>
+		<Page title={category?.title ?? ''} subtitle={category?.subtitle} section={ PageSection.Portfolio } backwardLink={ backwardLink }>
 			<PieceList pieces={ pieces } />
 		</Page>
 	)
