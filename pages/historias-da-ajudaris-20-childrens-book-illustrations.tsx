@@ -10,6 +10,7 @@ import forestImage from '../public/content/ajudaris-20-childrens-book-illustrati
 import roughImage from '../public/content/ajudaris-20-childrens-book-illustrations/rough.jpg'
 import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrations/giraffe.jpg'
 import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg'
+import BeCredits from '../components/BeCredits'
 
 const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 
@@ -20,6 +21,10 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 				<BeImage
 					src={animaisCacadorImage}
 					alt={'Illustration for "Os animais e o caçador"'}
+				/>
+				<BeCredits
+					clientName="Ajudaris"
+					work="illustrations"
 				/>
 				<BeParagaph>
 					&quot;Histórias da Ajudaris&quot; (<em>&quot;Ajudaris&apos;s Stories&quot;</em>) is a collaborative book with multiple stories written by children from many public schools around Portugal.

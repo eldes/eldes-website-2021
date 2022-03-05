@@ -63,6 +63,7 @@ import cuicaImage from '../public/content/brasil-na-bagagem-textbook-illustratio
 import reguaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/regua.jpg'
 import locucoesLugarImage from '../public/content/brasil-na-bagagem-textbook-illustrations/locucoes-lugar.jpg'
 import fingerNamesImage from '../public/content/brasil-na-bagagem-textbook-illustrations/finger-names.jpg'
+import BeCredits from '../components/BeCredits'
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
@@ -72,6 +73,10 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				<BeImage
 					src={ brokenTelephoneImage }
 					alt="Broken telephone illutration"
+				/>
+				<BeCredits
+					clientName="Intercultural Language Center"
+					work="illustrations and part of interior formatting"
 				/>
 				<BeImage
 					src={ bookCoverMockupImage }

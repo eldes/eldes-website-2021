@@ -9,16 +9,20 @@ import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrati
 import familiaMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia-mockup.jpg'
 import aniversarioMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel-mockup.jpg'
 import aniversarioImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel.jpg'
+import BeCredits from '../components/BeCredits'
 
 const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
 
 	return (
 		<PiecePage>
 			<BeBody>
-			
 				<BeImage
 					src={familiaImage}
 					alt={'Illustration for "A família"'}
+				/>
+				<BeCredits
+					clientName="Ajudaris"
+					work="illustrations"
 				/>
 				<BeParagaph>
 					&quot;Histórias da Ajudaris&quot; (<em>&quot;Ajudaris&apos;s Stories&quot;</em>) is a collaborative book with multiple stories written by children from many public schools around Portugal.

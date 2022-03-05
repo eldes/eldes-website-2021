@@ -36,15 +36,20 @@ import selfieImage from '../public/content/gramatica-fundamental-5-moderna-textb
 import skatistaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/skatista.jpg'
 import telefoneImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/telefone.jpg'
 import placaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/placa.jpg'
+import BeCredits from '../components/BeCredits'
 
 const GramaticaFundamental5Page: NextPage = () => {
 
 	return (
 		<PiecePage>
 			<BeBody>
-			<BeImage
+				<BeImage
 					src={ bocarraCasinhaImage }
 					alt='Illustration for "Bocarra e casinha"'
+				/>
+				<BeCredits
+					clientName="Editora Moderna"
+					work="illustrations"
 				/>
 				<BeParagaph>
 					O livro didático Gramática Fundamental 5 é uma publicação da Editora Moderna voltada para os alunos do 5º ano do Ensino Fundamental.
