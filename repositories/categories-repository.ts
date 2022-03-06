@@ -39,6 +39,7 @@ const categoriesMock: Category[] = [
 			'gramatica-fundamental-5-moderna-textbook-illustrations',
 			'historias-da-ajudaris-20-childrens-book-illustrations',
 			'historias-da-ajudaris-17-childrens-book-illustrations',
+			'como-eram-os-animais-cordel-childrens-book',
 		],
 	},
 	{

@@ -37,6 +37,12 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/gramatica-fundamental-5-moderna-textbook-illustrations/thumbnail.jpg',
 	},
 	{
+		slug: 'como-eram-os-animais-cordel-childrens-book',
+		title: 'Como eram os animais',
+		subtitle: 'Children\'s book illustrations',
+		thumbnail: '/content/como-eram-os-animais-cordel-childrens-book/thumbnail.png',
+	},
+	{
 		slug: 'protest-whitebard-animation',
 		title: 'Protest',
 		subtitle: 'Whiteboard animation',
