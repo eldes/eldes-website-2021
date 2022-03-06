@@ -1,15 +1,17 @@
-import { FunctionComponent } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { FunctionComponent } from 'react'
+import styles from '../styles/BeImage.module.scss'
 import { BeImageData } from './BeBody'
 import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
-import styles from '../styles/BeImage.module.scss'
-import Link from 'next/link'
 
 type Props = BeComponentProps & BeImageData
 
-const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, src, width, height, alt }) => {
+const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, src, width, height, alt, round }) => {
+	const className = round ? `${styles.beImage} ${styles.round}` : styles.beImage
+
 	return (
-		<BeComponent subClassName={ styles.beImage } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
+		<BeComponent subClassName={ className } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
 			<Link href={src.src}>
 			{
 				fill ?

@@ -6,4 +6,9 @@
 	&>* {
 		padding: #{$inset_s} / 2;
 	}
+
+	&.round {
+		overflow: hidden;
+		border-radius: 50%;
+	}
 }

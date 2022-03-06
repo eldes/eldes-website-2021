@@ -10,6 +10,7 @@ export type BeImageData = {
 	width?: number
 	height?: number
 	alt: string
+	round?: boolean
 }
 
 const BeBody: FunctionComponent<Props> = ({ children }) => {
