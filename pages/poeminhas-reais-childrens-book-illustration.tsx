@@ -12,6 +12,13 @@ import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-
 import artworkPart3Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-3.jpg'
 import baronetImage from '../public/content/poeminhas-reais-childrens-book-illustration/baronet.jpg'
 import coverClosedImage from '../public/content/poeminhas-reais-childrens-book-illustration/cover-closed.jpg'
+import coverPoeminhasCelestiais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-celestiais.jpg'
+import coverPoeminhasFlorais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-florais.jpg'
+import coverPoeminhasLegais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-legais.jpg'
+import coverPoeminhasProfissionais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-profissionais.jpg'
+import coverPoeminhasReais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-reais.jpg'
+import coverPoeminhasVegetais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-vegetais.jpg'
+import marcaCorujinhaImage from '../public/content/poeminhas-reais-childrens-book-illustration/marca-corujinha-editora.png'
 import mockupAuthorsImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-authors.jpg'
 import mockupBaronetBaronImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-baronet-baron.jpg'
 import mockupCoverOpenImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-cover-open.jpg'
@@ -50,6 +57,9 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 				<BeParagaph>
 					Poeminhas Reais é um livro infantil que brinca com as características dos animais e seus títulos de nobreza.
 				</BeParagaph>
+				<BeHeading>
+					Arte-final
+				</BeHeading>
 				<BeParagaph>
 					{/* The Knight, the Baronet and the Baron: */}
 					O Cavaleiro, o Baronete e o Barão:
@@ -75,20 +85,18 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 					alt={'Part 3 of 3 of the artwork'}
 				/>
 				<BeHeading>
-					O processo
+					Desenho único
 				</BeHeading>
-				<BeParagaph>
-					Primeiro foram feitos alguns estudos para chegar ao estilo que seria usados nos personagens.
-				</BeParagaph>
 				<BeParagaph>
 					No caso desse livro, decidi criar um único desenho, composto por várias cenas que se ligam em sequência. Assim, cada poeminha seria ilustrado por uma dessas cenas, ou seja por uma parte desse grande desenho.
 				</BeParagaph>
-				<BeParagaph>
-					Após definido o estilo, foi desenhado o rough de cada uma das cenas dos poeminhas que, no caso desse livro, todas são ligadas, compondo uma grande e única ilustração.
-				</BeParagaph>
 				<BeImage
 					src={ roughImage }
-					alt={'Rough'}				/>
+					alt={'Rough'}
+				/>
+				<BeHeading>
+					Linguagem gráfica
+				</BeHeading>
 				<BeParagaph>
 					Com o rough pronto, foram feitos mais estudos, agora para definir qual linguagem gráfica seria usada na arte-final.
 				</BeParagaph>
@@ -112,9 +120,7 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 				<BeParagaph>
 					Decidida a linguagem gráfica, as ilustrações foram então arte-finalizadas.
 				</BeParagaph>
-				<BeEmbed aspectRatioPercent={56}>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/MDmYkBFR98w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-				</BeEmbed>
+				
 				<BePhotoGrid
 					images={[
 						{
@@ -156,13 +162,55 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 					]}
 					cols={3}
 				>
+				<BeEmbed aspectRatioPercent={56}>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/MDmYkBFR98w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
+				</BeEmbed>
 				</BePhotoGrid>
+				<BeHeading>
+					<strong>Design</strong> da coleção
+				</BeHeading>
 				<BeParagaph>
-					Além das ilustrações desse, também realizei a editoração dos demais livros e elaborei o projeto gráfico da coleção &quot;Poeminhas&quot;.
+					Além das ilustrações desse, também realizei a editoração dos demais livros, e elaborei o projeto gráfico, da coleção &quot;Poeminhas&quot;.
 				</BeParagaph>
+				<BePhotoGrid
+					images={[
+						{
+							src: coverPoeminhasReais,
+							alt: 'Cover of Poeminhas Reais',
+						},
+						{
+							src: coverPoeminhasFlorais,
+							alt: 'Cover of Poeminhas Florais',
+						},
+						{
+							src: coverPoeminhasVegetais,
+							alt: 'Cover of Poeminhas Vegetais',
+						},
+						{
+							src: coverPoeminhasProfissionais,
+							alt: 'Cover of Poeminhas Profisisonais',
+						},
+						{
+							src: coverPoeminhasLegais,
+							alt: 'Cover of Poeminhas Legais',
+						},
+						{
+							src: coverPoeminhasCelestiais,
+							alt: 'Cover of Poeminhas Celestiais',
+						},
+					]}
+					cols={3}
+				/>
+				<BeHeading>
+					desenvolvimento da <strong>marca</strong>
+				</BeHeading>
 				<BeParagaph>
-					Na mesma ocasião desenvolvi também o símbolo da marca &quot;Corujinha Editora&quot;.
+					Na mesma ocasião desenvolvi também o desenho da marca &quot;Corujinha Editora&quot;, que se tornou o selo da Editora Coruja voltado para a literatura infantil.
 				</BeParagaph>
+				<BeImage
+					src={ marcaCorujinhaImage }
+					alt={'Corujinha logotype'}
+				/>
 				<BeImage
 					src={ thanksImage }
 					alt={'Thanks'}
