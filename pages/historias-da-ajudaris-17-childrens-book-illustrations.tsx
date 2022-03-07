@@ -1,15 +1,16 @@
 import { NextPage } from 'next'
 import BeBody from '../components/BeBody'
+import BeCredits from '../components/BeCredits'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
+import BeThanks from '../components/BeThanks'
 import PiecePage from '../components/PiecePage'
-
-import familiaImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia.jpg'
-import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/mockup.jpg'
 import familiaMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia-mockup.jpg'
+import familiaImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia.jpg'
 import aniversarioMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel-mockup.jpg'
 import aniversarioImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel.jpg'
-import BeCredits from '../components/BeCredits'
+import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/mockup.jpg'
+
 
 const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
 
@@ -48,9 +49,7 @@ const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
 					horizontalPadding={ true }
 				/>
 				
-				<BeParagaph align={ BeParagaphAlign.Center }>
-					Thanks for taking a look at my work!
-				</BeParagaph>
+				<BeThanks />
 			</BeBody>
 		</PiecePage>
 	)

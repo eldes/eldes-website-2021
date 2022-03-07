@@ -1,15 +1,40 @@
 import { NextPage } from 'next'
+import BeBody from '../components/BeBody'
+import BeCredits from '../components/BeCredits'
+import BeEmbed from '../components/BeEmbed'
+import BeHeading from '../components/BeHeading'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import BeBody from '../components/BeBody'
 import BePhotoGrid from '../components/BePhotoGrid'
-import BeHeading from '../components/BeHeading'
-import BeEmbed from '../components/BeEmbed'
+import BeThanks from '../components/BeThanks'
 import PiecePage from '../components/PiecePage'
-
-import brokenTelephoneImage from '../public/content/brasil-na-bagagem-textbook-illustrations/broken-telephone.jpg'
+import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg'
+import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg'
+import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg'
+import boitataRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-rough.jpg'
+import boitataImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata.jpg'
 import bookCoverMockupImage from '../public/content/brasil-na-bagagem-textbook-illustrations/book-cover-mockup.jpg'
 import bookMockupImage from '../public/content/brasil-na-bagagem-textbook-illustrations/book-mockup.jpg'
+import brokenTelephoneImage from '../public/content/brasil-na-bagagem-textbook-illustrations/broken-telephone.jpg'
+import carnavalRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/carnaval--rough.jpg'
+import carnavalImage from '../public/content/brasil-na-bagagem-textbook-illustrations/carnaval.jpg'
+import correCotiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/corre-cotia.jpg'
+import cravoRosaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/cravo-e-rosa.jpg'
+import cuicaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/cuica.jpg'
+import curupiraImage from '../public/content/brasil-na-bagagem-textbook-illustrations/curupira.jpg'
+import arrozComFeijaoImage from '../public/content/brasil-na-bagagem-textbook-illustrations/feijao-com-arroz.jpg'
+import fingerNamesImage from '../public/content/brasil-na-bagagem-textbook-illustrations/finger-names.jpg'
+import indigenousRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/indigenous--rough.jpg'
+import indigenousImage from '../public/content/brasil-na-bagagem-textbook-illustrations/indigenous.jpg'
+import locucoesLugarImage from '../public/content/brasil-na-bagagem-textbook-illustrations/locucoes-lugar.jpg'
+import mapaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/mapa.jpg'
+import mulaSemCabeca1Image from '../public/content/brasil-na-bagagem-textbook-illustrations/mula-sem-cabeca-1.jpg'
+import mulaSemCabeca2Image from '../public/content/brasil-na-bagagem-textbook-illustrations/mula-sem-cabeca-2.jpg'
+import ocaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/oca.jpg'
+import playAliveOrDeadRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/play-alive-or-dead--simon-says-similar--rough.jpg'
+import playAliveOrDeadImage from '../public/content/brasil-na-bagagem-textbook-illustrations/play-alive-or-dead--simon-says-similar.jpg'
+import pombinhaBrancaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/pombinha-branca.jpg'
+import reguaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/regua.jpg'
 import roughBoitata from '../public/content/brasil-na-bagagem-textbook-illustrations/rough-boitata.jpg'
 import roughFingerNames from '../public/content/brasil-na-bagagem-textbook-illustrations/rough-finger-names.jpg'
 import roughMulaSemCabeca from '../public/content/brasil-na-bagagem-textbook-illustrations/rough-mula-sem-cabeca.jpg'
@@ -19,28 +44,6 @@ import roughWerewolf from '../public/content/brasil-na-bagagem-textbook-illustra
 import saci1Image from '../public/content/brasil-na-bagagem-textbook-illustrations/saci-1.jpg'
 import saci2Image from '../public/content/brasil-na-bagagem-textbook-illustrations/saci-2.jpg'
 import saci3Image from '../public/content/brasil-na-bagagem-textbook-illustrations/saci-3.jpg'
-import curupiraImage from '../public/content/brasil-na-bagagem-textbook-illustrations/curupira.jpg'
-import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg'
-import boitataRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-rough.jpg'
-import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg'
-import boitataImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata.jpg'
-import mulaSemCabeca1Image from '../public/content/brasil-na-bagagem-textbook-illustrations/mula-sem-cabeca-1.jpg'
-import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/vitoria-regia.jpg'
-import mulaSemCabeca2Image from '../public/content/brasil-na-bagagem-textbook-illustrations/mula-sem-cabeca-2.jpg'
-import pombinhaBrancaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/pombinha-branca.jpg'
-import cravoRosaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/cravo-e-rosa.jpg'
-import correCotiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/corre-cotia.jpg'
-import playAliveOrDeadRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/play-alive-or-dead--simon-says-similar--rough.jpg'
-import playAliveOrDeadImage from '../public/content/brasil-na-bagagem-textbook-illustrations/play-alive-or-dead--simon-says-similar.jpg'
-import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg'
-import carnavalRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/carnaval--rough.jpg'
-import carnavalImage from '../public/content/brasil-na-bagagem-textbook-illustrations/carnaval.jpg'
-import indigenousRoughImage from '../public/content/brasil-na-bagagem-textbook-illustrations/indigenous--rough.jpg'
-import indigenousImage from '../public/content/brasil-na-bagagem-textbook-illustrations/indigenous.jpg'
-import ocaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/oca.jpg'
-import tupiImage from '../public/content/brasil-na-bagagem-textbook-illustrations/tupi.jpg'
-import arrozComFeijaoImage from '../public/content/brasil-na-bagagem-textbook-illustrations/feijao-com-arroz.jpg'
-import ventriloquistImage from '../public/content/brasil-na-bagagem-textbook-illustrations/ventriloquist.jpg'
 import tremBImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-b.jpg'
 import tremCImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-c.jpg'
 import tremDImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-d.jpg'
@@ -57,13 +60,11 @@ import tremRImage from '../public/content/brasil-na-bagagem-textbook-illustratio
 import tremSImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-s.jpg'
 import tremTImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-t.jpg'
 import tremVImage from '../public/content/brasil-na-bagagem-textbook-illustrations/trem-v.jpg'
-import mapaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/mapa.jpg'
-import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg'
-import cuicaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/cuica.jpg'
-import reguaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/regua.jpg'
-import locucoesLugarImage from '../public/content/brasil-na-bagagem-textbook-illustrations/locucoes-lugar.jpg'
-import fingerNamesImage from '../public/content/brasil-na-bagagem-textbook-illustrations/finger-names.jpg'
-import BeCredits from '../components/BeCredits'
+import tupiImage from '../public/content/brasil-na-bagagem-textbook-illustrations/tupi.jpg'
+import ventriloquistImage from '../public/content/brasil-na-bagagem-textbook-illustrations/ventriloquist.jpg'
+import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/vitoria-regia.jpg'
+import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg'
+
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
@@ -366,13 +367,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					},
 				]} cols={ 2 } fill={ true } />
 
-				<BeImage
-					src={ fingerNamesImage }
-					alt="Finger names illutration"
-				/>
-				<BeParagaph align={ BeParagaphAlign.Center }>
-					Obrigado por dar uma olhada no meu trabalho!
-				</BeParagaph>
+				<BeThanks image={fingerNamesImage} />
 			</BeBody>
 		</PiecePage>
 	)

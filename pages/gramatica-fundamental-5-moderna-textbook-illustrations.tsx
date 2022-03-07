@@ -1,24 +1,17 @@
 import { NextPage } from 'next'
 import BeBody from '../components/BeBody'
+import BeCredits from '../components/BeCredits'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
+import BeThanks from '../components/BeThanks'
 import PiecePage from '../components/PiecePage'
-
-import bocarraCasinhaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/bocarra-casinha.jpg'
-import gataoGatonaPezaoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/gatona-gatao-pezao.jpg'
-import pirataImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/pirata.jpg'
-import mockupImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/mockup.jpg'
-import roughFonemasImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-fonemas.jpg'
-import roughAlfabeto from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-alfabeto.jpg'
-import roughDoutores from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-doutores.jpg'
-import galoRaposaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/o-galo-e-a-raposa.jpg'
-import fonemasImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/fonemas.jpg'
 import alfabetoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alfabeto.jpg'
 import alunosImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alunos.jpg'
 import autoEscolaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/auto-escola.jpg'
 import balaoFalaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/balao-fala.jpg'
 import batataImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/batata.jpg'
+import bocarraCasinhaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/bocarra-casinha.jpg'
 import boloImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/bolo.jpg'
 import cachorraoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/cachorrao.jpg'
 import cachorrinhoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/cachorrinho.jpg'
@@ -28,15 +21,23 @@ import dr1Image from '../public/content/gramatica-fundamental-5-moderna-textbook
 import dr2Image from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/dr-2.jpg'
 import espiaoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/espiao.jpg'
 import fechaduraImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/fechadura.jpg'
+import fonemasImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/fonemas.jpg'
+import gataoGatonaPezaoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/gatona-gatao-pezao.jpg'
 import matematicaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/matematica.jpg'
+import mockupImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/mockup.jpg'
+import galoRaposaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/o-galo-e-a-raposa.jpg'
+import pirataImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/pirata.jpg'
+import placaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/placa.jpg'
 import playgroundImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/playground.jpg'
 import presenteImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/presente.jpg'
 import redacaoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/redacao.jpg'
+import roughAlfabeto from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-alfabeto.jpg'
+import roughDoutores from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-doutores.jpg'
+import roughFonemasImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/rough-fonemas.jpg'
 import selfieImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/selfie.jpg'
 import skatistaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/skatista.jpg'
 import telefoneImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/telefone.jpg'
-import placaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/placa.jpg'
-import BeCredits from '../components/BeCredits'
+
 
 const GramaticaFundamental5Page: NextPage = () => {
 
@@ -205,12 +206,9 @@ const GramaticaFundamental5Page: NextPage = () => {
 					src={ dr2Image }
 					alt='Illustration for "Doutores"'
 				/>
-				<BeParagaph align={ BeParagaphAlign.Center }>
-					Obrigado por dar uma olhada no meu trabalho!
-				</BeParagaph>
-				
-				
-				</BeBody>
+
+				<BeThanks />
+			</BeBody>
 		</PiecePage>
 	)
 }

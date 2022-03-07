@@ -6,6 +6,7 @@ import BeHeading from '../components/BeHeading'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
+import BeThanks from '../components/BeThanks'
 import PiecePage from '../components/PiecePage'
 import artworkPart1Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-1.jpg'
 import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-2.jpg'
@@ -211,13 +212,7 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 					src={ marcaCorujinhaImage }
 					alt={'Corujinha logotype'}
 				/>
-				<BeImage
-					src={ thanksImage }
-					alt={'Thanks'}
-				/>
-				<BeParagaph align={ BeParagaphAlign.Center }>
-					Obrigado por dar uma olhada no meu trabalho!
-				</BeParagaph>
+				<BeThanks image={thanksImage} />
 			</BeBody>
 		</PiecePage>
 	)

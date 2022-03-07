@@ -5,6 +5,7 @@ import BeHeading from '../components/BeHeading'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
+import BeThanks from '../components/BeThanks'
 import PiecePage from '../components/PiecePage'
 import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png'
 import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png'
@@ -280,10 +281,7 @@ const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => (
 				]}
 				cols={3}
 			/>
-			<BeImage src={thanksImage} alt={'Thank you'} />
-			<BeParagaph align={ BeParagaphAlign.Center }>
-				Thanks for taking a look at my work!
-			</BeParagaph>
+			<BeThanks image={ thanksImage } />
 		</BeBody>
 	</PiecePage>
 )
