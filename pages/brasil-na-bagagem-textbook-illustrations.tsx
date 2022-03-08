@@ -9,7 +9,7 @@ import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage, { PiecePageI18nNamespace as piecePageI18N } from '../components/PiecePage'
+import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
 import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg'
 import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg'
 import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg'
@@ -66,7 +66,6 @@ import tupiImage from '../public/content/brasil-na-bagagem-textbook-illustration
 import ventriloquistImage from '../public/content/brasil-na-bagagem-textbook-illustrations/ventriloquist.jpg'
 import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/vitoria-regia.jpg'
 import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg'
-
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
@@ -381,7 +380,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', [...piecePageI18N, 'brasil-na-bagagem-textbook-illustrations'])),
+			...(await serverSideTranslations(locale ?? '', [...piecePageI18nNamespace, 'brasil-na-bagagem-textbook-illustrations'])),
 		}
 	}
 }
