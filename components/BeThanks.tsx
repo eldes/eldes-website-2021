@@ -1,3 +1,4 @@
+import { Trans } from 'next-i18next'
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import styles from '../styles/BeThanks.module.scss'
@@ -25,9 +26,7 @@ const BeThanks: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundC
 				layout="intrinsic"
 			/>
 		}
-			
-			<p>Obrigado por dar uma olhada no meu trabalho!</p>
-			{/* <p>Thanks for taking a look at my work!</p> */}
+			<p><Trans i18nKey="PiecePage:BeThanks.text">Thanks for taking a look at my work!</Trans></p>
 		</BeComponent>
 	)
 }

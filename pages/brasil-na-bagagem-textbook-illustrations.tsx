@@ -1,4 +1,6 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeEmbed from '../components/BeEmbed'
@@ -7,7 +9,7 @@ import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage from '../components/PiecePage'
+import PiecePage, { PiecePageI18nNamespace as piecePageI18N } from '../components/PiecePage'
 import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg'
 import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg'
 import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg'
@@ -68,6 +70,9 @@ import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustra
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
+	const { t } = useTranslation()
+	const dt = (key: string, defaultValue: string) => t(`brasil-na-bagagem-textbook-illustrations:${key}`, defaultValue)
+
 	return (
 		<PiecePage>
 			<BeBody>
@@ -76,8 +81,8 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					alt="Broken telephone illutration"
 				/>
 				<BeCredits
-					clientName="Intercultural Language Center"
-					work="illustrations and part of interior formatting"
+					clientName={dt('Credits.client', 'Intercultural Language Center')}
+					work={dt('Credits.work', 'illustrations and part of interior formatting')}
 				/>
 				<BeImage
 					src={ bookCoverMockupImage }
@@ -372,4 +377,13 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 		</PiecePage>
 	)
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', [...piecePageI18N, 'brasil-na-bagagem-textbook-illustrations'])),
+		}
+	}
+}
+
 export default BrasilNaBagagemTextbookIllustrationsPage

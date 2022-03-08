@@ -1,11 +1,12 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage from '../components/PiecePage'
+import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
 import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg'
 import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrations/giraffe.jpg'
 import animaisCacadorImage from '../public/content/ajudaris-20-childrens-book-illustrations/os-animais-e-o-cacador.jpg'
@@ -59,6 +60,14 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 			</BeBody>
 		</PiecePage>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+		}
+	}
 }
 
 export default HistoriasDaAjudaris20ChildrensBookIllustrationsPage
