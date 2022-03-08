@@ -7,7 +7,7 @@ const AbaoutPage: NextPage = () => {
 	const { t } = useTranslation()
 	
 	return (
-		<Page title={ t('common:Sections.about', 'About') } section={PageSection.Fonts}>
+		<Page title={ t('common:Sections.about', 'About') } section={PageSection.About}>
 		</Page>
 	)
 }
