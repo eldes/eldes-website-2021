@@ -1,0 +1,14 @@
+{
+	"Header": {
+		"illustrator": "Ilustrador",
+		"graphicDesigner": "Designer Gráfico",
+		"softwareEngineer": "Desenvolvedor",
+
+		"MainMenu": {
+			"home": "$t(common:Sections.home)",
+			"portfolio": "$t(common:Sections.portfolio)",
+			"fonts": "$t(common:Sections.fonts)",
+			"about": "$t(common:Sections.about)"
+		}
+	}
+}

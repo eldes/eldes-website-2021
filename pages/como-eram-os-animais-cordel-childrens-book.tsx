@@ -1,4 +1,5 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeHeading from '../components/BeHeading'
@@ -6,7 +7,7 @@ import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage from '../components/PiecePage'
+import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
 import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png'
 import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png'
 import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png'
@@ -285,5 +286,13 @@ const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => (
 		</BeBody>
 	</PiecePage>
 )
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+		}
+	}
+}
 
 export default ComoEramOsAnimaisCordelChildrensBook

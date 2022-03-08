@@ -1,9 +1,11 @@
-import PieceList from '../components/PieceList'
-import Page, { PageSection } from '../components/Page'
-import { FunctionComponent } from 'react'
 import { useRouter } from 'next/router'
-import categoriesRepository from '../repositories/categories-repository'
+import { FunctionComponent } from 'react'
+import Page, { PageSection } from '../components/Page'
+import PieceList from '../components/PieceList'
 import Piece from '../models/Piece'
+import categoriesRepository from '../repositories/categories-repository'
+
+export const categoryPageI18nNamespace = ['common', 'Page']
 
 const CategoryPage: FunctionComponent = () => {
 

@@ -1,11 +1,12 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage from '../components/PiecePage'
+import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
 import alfabetoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alfabeto.jpg'
 import alunosImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alunos.jpg'
 import autoEscolaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/auto-escola.jpg'
@@ -211,6 +212,14 @@ const GramaticaFundamental5Page: NextPage = () => {
 			</BeBody>
 		</PiecePage>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+		}
+	}
 }
 
 export default GramaticaFundamental5Page

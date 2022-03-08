@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import piecesRepository from '../repositories/pieces-repository'
 import Page, { PageSection } from './Page'
 
+export const PiecePageI18nNamespace = ['common', 'Page', 'PiecePage']
+
 const PiecePage: NextPage = ({ children }) => {
 
 	const { asPath } = useRouter()
