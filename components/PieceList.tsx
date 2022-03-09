@@ -9,7 +9,7 @@ type Props = {
 }
 
 const PieceList: FunctionComponent<Props> = ({ pieces }) => {
-	console.log(pieces)
+
 	return (
 		<ul className={ styles.pieceList }>
 		{
