@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { FunctionComponent, ReactNode } from 'react'
-import PageHeader from './PageHeader'
 import styles from '../styles/Page.module.scss'
 import PageFooter from './PageFooter'
+import PageHeader from './PageHeader'
 import PageReverseNavigationBar, { PageReverseNavigationBarLink } from './PageReverseNavigationBar'
 
 export enum PageSection {
@@ -13,6 +13,7 @@ export enum PageSection {
 }
 
 type Props = {
+	pretitle?: string
 	title: string,
 	subtitle?: string,
 	description?: string,
@@ -21,11 +22,11 @@ type Props = {
 	children?: ReactNode
 }
 
-const Page: FunctionComponent<Props> = ({ title, subtitle, description, section, backwardLink, children }) => {
+const Page: FunctionComponent<Props> = ({ pretitle, title, subtitle, description, section, backwardLink, children }) => {
 	return (
 		<div className={ styles.page }>
 			<Head>
-				<title>{ [title, subtitle].join(' ') }</title>
+				<title>{ [pretitle, title, subtitle].join(' ') }</title>
 				description && <meta name="description" content={ description } />
 			</Head>
 			<a className={ styles.skipToMain } href="#main">Skip to main content</a>
@@ -34,7 +35,7 @@ const Page: FunctionComponent<Props> = ({ title, subtitle, description, section,
 			<main role="main" id="main" className={ styles.pageMain }>
 				<article>
 					<header>
-						<h1>{ title } <small>{ subtitle }</small></h1>
+						<h1><small>{ pretitle}</small> { title } <small>{ subtitle }</small></h1>
 					</header>
 					{ children }
 				</article>
