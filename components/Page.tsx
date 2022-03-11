@@ -5,7 +5,7 @@ import PageFooter from './PageFooter'
 import PageHeader from './PageHeader'
 import PageReverseNavigationBar, { PageReverseNavigationBarLink } from './PageReverseNavigationBar'
 
-export enum PageSection {
+enum Section {
 	Home,
 	Portfolio,
 	Fonts,
@@ -17,7 +17,7 @@ type Props = {
 	title: string,
 	subtitle?: string,
 	description?: string,
-	section: PageSection,
+	section: Section,
 	backwardLink?: PageReverseNavigationBarLink
 	children?: ReactNode
 }
@@ -47,3 +47,6 @@ const Page: FunctionComponent<Props> = ({ pretitle, title, subtitle, description
 }
 
 export default Page
+export {
+	Section as PageSection
+}
