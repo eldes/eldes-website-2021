@@ -1,11 +1,8 @@
-import { FunctionComponent, ReactNode } from 'react'
+import Link from 'next/link'
+import { FunctionComponent } from 'react'
 import styles from '../styles/BeBody.module.scss'
 
-type Props = {
-	children: ReactNode
-}
-
-export type BeImageData = {
+type BeImageData = {
 	src: StaticImageData
 	width?: number
 	height?: number
@@ -13,8 +10,15 @@ export type BeImageData = {
 	round?: boolean
 }
 
-const BeBody: FunctionComponent<Props> = ({ children }) => {
-	return <div className={ styles.beBody }>{ children }</div>
+const BeBody: FunctionComponent = ({ children }) => {
+	return (
+		<div className={ styles.beBody }>
+			{ children }
+		</div>
+	)
 }
 
 export default BeBody
+export type {
+	BeImageData
+}

@@ -1,22 +1,24 @@
 import { FunctionComponent, ReactNode } from 'react'
 import styles from '../styles/BeComponent.module.scss'
 
-export type BeComponentProps = {
+type Props = {
 	subClassName?: string
 	fill?: boolean
 	backgroundColor?: string
 	foregroundColor?: string
 	horizontalPadding?: boolean
+	verticalPadding?: boolean
 }
 
-export const BeComponentDefaultProps: BeComponentProps = {
+const defaultProps: Props = {
 	fill: false,
 	backgroundColor: '#fff',
 	foregroundColor: '#000',
 	horizontalPadding: false,
+	verticalPadding: false,
 }
 
-const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }> = ({ subClassName, children, fill, foregroundColor, backgroundColor, horizontalPadding }) => {
+const BeComponent: FunctionComponent<Props & { children: ReactNode }> = ({ subClassName, children, fill, foregroundColor, backgroundColor, horizontalPadding, verticalPadding }) => {
 	let style = {}
 
 	if (fill) {
@@ -32,7 +34,11 @@ const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }>
 	}
 
 	if (horizontalPadding) {
-		style = { ...style, paddingTop: '16px', paddingBottom: '16px' }
+		style = { ...style, paddingTop: 16, paddingBottom: 16 }
+	}
+
+	if (verticalPadding) {
+		style = { ...style, paddingLeft: 32, paddingRight: 32 }
 	}
 
 	return (
@@ -41,6 +47,10 @@ const BeComponent: FunctionComponent<BeComponentProps & { children: ReactNode }>
 	)
 }
 
-BeComponent.defaultProps = BeComponentDefaultProps
+BeComponent.defaultProps = defaultProps
 
 export default BeComponent
+export {
+	type Props as BeComponentProps,
+	defaultProps as beComponentDefaultProps
+}

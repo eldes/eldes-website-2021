@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react'
 import styles from '../styles/BeParagraph.module.scss'
-import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
 
 type Props = BeComponentProps & {
 	align?: BeParagaphAlign
@@ -14,10 +14,17 @@ export enum BeParagaphAlign {
 	Justify = 'justify',
 }
 
-const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, align, children }) => {
+const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, verticalPadding, align, children }) => {
 
 	return (
-		<BeComponent subClassName={ styles.beParagraph } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
+		<BeComponent
+			subClassName={ styles.beParagraph }
+			fill={ fill }
+			foregroundColor={ foregroundColor }
+			backgroundColor={ backgroundColor }
+			horizontalPadding={ horizontalPadding }
+			verticalPadding={ verticalPadding }
+		>
 			<p style={{ color: foregroundColor, textAlign: align }}>
 				{ children }
 			</p>
@@ -27,7 +34,7 @@ const BeParagaph: FunctionComponent<Props> = ({ fill, foregroundColor, backgroun
 
 BeParagaph.defaultProps = {
 	align: BeParagaphAlign.Left,
-	...BeComponentDefaultProps
+	...beComponentDefaultProps
 }
 
 export default BeParagaph

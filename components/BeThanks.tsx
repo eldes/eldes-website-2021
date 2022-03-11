@@ -2,7 +2,7 @@ import { Trans } from 'next-i18next'
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import styles from '../styles/BeThanks.module.scss'
-import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
 
 type Props =  BeComponentProps & {
 	image?: StaticImageData
@@ -32,7 +32,7 @@ const BeThanks: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundC
 }
 
 BeThanks.defaultProps = {
-	...BeComponentDefaultProps
+	...beComponentDefaultProps
 }
 
 export default BeThanks

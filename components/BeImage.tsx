@@ -3,15 +3,22 @@ import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import styles from '../styles/BeImage.module.scss'
 import { BeImageData } from './BeBody'
-import BeComponent, { BeComponentDefaultProps, BeComponentProps } from './BeComponent'
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
 
 type Props = BeComponentProps & BeImageData
 
-const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, src, width, height, alt, round }) => {
+const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundColor, horizontalPadding, verticalPadding, src, width, height, alt, round }) => {
 	const className = round ? `${styles.beImage} ${styles.round}` : styles.beImage
 
 	return (
-		<BeComponent subClassName={ className } fill={ fill } foregroundColor={ foregroundColor } backgroundColor={ backgroundColor } horizontalPadding={ horizontalPadding }>
+		<BeComponent
+			subClassName={ className }
+			fill={ fill }
+			foregroundColor={ foregroundColor }
+			backgroundColor={ backgroundColor }
+			horizontalPadding={ horizontalPadding }
+			verticalPadding={ verticalPadding }
+		>
 			<Link href={src.src}>
 			{
 				fill ?
@@ -34,7 +41,7 @@ const BeImage: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundCo
 }
 
 BeImage.defaultProps = {
-	...BeComponentDefaultProps
+	...beComponentDefaultProps
 }
 
 export default BeImage
