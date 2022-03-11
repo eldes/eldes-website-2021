@@ -1,10 +1,11 @@
-import { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { FunctionComponent } from 'react'
 import fontsRepository from '../repositories/fonts-repository'
-import Page, { PageSection } from './Page'
+import BePage, { bePageI18nNamespace } from './BePage'
+import { PageSection } from './Page'
 
-const FontPage: NextPage = ({ children }) => {
+const FontBePage: FunctionComponent = ({ children }) => {
 
 	const { asPath } = useRouter()
 	const slug = asPath.substring(1)
@@ -16,21 +17,20 @@ const FontPage: NextPage = ({ children }) => {
 
 	const backwardLink = {
 		text: tc('Sections.fonts', 'Fonts'),
-		href: '/fonts',	
+		href: '/fonts',
 	}
 
 	return (
-		<Page
+		<BePage
 			pretitle={ tp('pretitle', 'Font Eldes') }
 			title={ font?.name ?? '' }
 			section={ PageSection.Fonts }
 			backwardLink={ backwardLink }
 		>
 			{ children }
-		</Page>
+		</BePage>
 	)
 }
 
-export default FontPage
-
-export const fontPageI18nNamespace = ['common', 'Page', 'fonts', 'FontPage']
+export default FontBePage
+export const fontPageI18nNamespace = [...bePageI18nNamespace, 'fonts', 'FontBePage']

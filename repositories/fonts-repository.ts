@@ -1,3 +1,5 @@
+import Font from '../models/Font'
+
 const fontsRepository = {
 
 	loadAll: () => fonts,
@@ -7,10 +9,10 @@ const fontsRepository = {
 
 export default fontsRepository
 
-const fonts = [
+const fonts: Font[] = [
 	{
 		slug: 'font-eldes-cordel',
 		name: 'Cordel',
-		thumbnail: '/content/font-eldes-cordel/thumbnail.png'
+		thumbnail: '/content/font-eldes-cordel/thumbnail.png',
 	}
 ]
