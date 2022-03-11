@@ -48,5 +48,6 @@ const Page: FunctionComponent<Props> = ({ pretitle, title, subtitle, description
 
 export default Page
 export {
-	Section as PageSection
+	Section as PageSection,
+	type Props as PageProps
 }

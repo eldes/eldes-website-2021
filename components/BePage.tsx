@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import BeBody, { BeLinkToComponent } from './BeBody'
+import BeBody from './BeBody'
 import Page, { PageProps } from './Page'
 
 type Props = PageProps
