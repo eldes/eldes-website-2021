@@ -1,22 +1,22 @@
 @import './variables';
 
 .beLicenseTable {
-	table {
+	& > table {
 		width: 100%;
 
 		display: flex;
 		flex-direction: column;
 
-		thead {
+		& > thead {
 			display: none;
 		}
 
-		tbody {
+		& > tbody {
 
 			display: flex;
 			flex-direction: column;
 
-			tr {
+			& > tr {
 				// border-bottom: 1px solid #000;
 				padding-bottom: $inset_m;
 
@@ -27,7 +27,7 @@
 				display: flex;
 				flex-wrap: wrap;
 
-				td {
+				& > td {
 					padding-top: $inset_s;
 					padding-bottom: $inset_s;
 
@@ -53,18 +53,8 @@
 						}
 					}
 					&:nth-child(4) { //Buy button
-						flex-grow: 0;
-						width: 120px;
-	
-						button {
-							background-color: #390;
-							border-style: none;
-							padding: $inset_s $inset_m;
-							width: 100%;
-							color: #fff;
-							text-transform: uppercase;
-							font-size: 0.7em;
-						}
+						flex-grow: 1;
+						flex-basis: 100%;
 					}				
 				}
 				

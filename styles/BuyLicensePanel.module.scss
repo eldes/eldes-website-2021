@@ -1,0 +1,88 @@
+@import './variables';
+
+.buyLicensePanel {
+	button {
+		background-color: #390;
+		border-style: none;
+		padding: $inset_s $inset_m;
+		width: 120px;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 0.7em;
+
+		&.secundary {
+			background-color: transparent;
+			border: 1px solid #390;
+			color: #390;
+		}
+	}
+
+	form {
+		border: 1px solid #390;
+		border-radius: $inset_s;
+		padding: $inset_m;
+		width: calc(100% - #{$inset_m} - #{$inset_m});
+
+		display: flex;
+		flex-direction: column;
+
+		.formTitle {
+			padding-bottom: $inset_l;
+			color: #390;
+			font-size: 1em;
+			font-weight: 400;
+		}
+
+		input {
+			margin-bottom: $inset_m;
+			font-size: 1em;
+			font-weight: 200;
+			border-style: none;
+			border-bottom: 1px solid #ccc;
+		}
+
+		& > .resume {
+			background-color: #ff9;
+			margin: $inset_m;
+			padding: $inset_l;
+			font-family: monospace;
+			font-size: 0.8em;
+			border-bottom: 6px dotted #fff;
+
+			caption {
+				padding: $inset_m;
+				background-color: #ff9;
+				font-size: 1.2em;
+				text-transform: uppercase;
+				text-align: center;
+				border-bottom: 3px dotted #fff;
+			}
+
+			thead {
+				display: none;
+			}
+
+			tbody {
+
+				tr {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					column-gap: $inset_m;
+					justify-content: space-around;
+
+					td {
+						padding-top: $inset_l;
+						padding-bottom: $inset_l;
+					}
+				}
+			}
+		}
+
+		.formFooter {
+			padding-top: $inset_l;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
