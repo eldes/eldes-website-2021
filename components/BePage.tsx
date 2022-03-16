@@ -1,20 +1,23 @@
 import { NextPage } from 'next'
-import BeBody from './BeBody'
+import BeBody, { BeBodyProps } from './BeBody'
 import Page, { PageProps } from './Page'
 
-type Props = PageProps
+type Props = PageProps & BeBodyProps
 
-const BePage: NextPage<Props> = ({ pretitle, title, subtitle, description, section, backwardLink, children }) => (
+const BePage: NextPage<Props> = (props) => (
 	<Page
-		pretitle={ pretitle }
-		title={ title }
-		subtitle={ subtitle }
-		description={ description }
-		section={ section }
-		backwardLink={ backwardLink }
+		pretitle={ props.pretitle }
+		title={ props.title }
+		subtitle={ props.subtitle }
+		description={ props.description }
+		section={ props.section }
+		backwardLink={ props.backwardLink }
 	>
-		<BeBody>
-			{ children }
+		<BeBody
+			backgroundColor={ props.backgroundColor }
+			foregroundColor={ props.foregroundColor }
+		>
+			{ props.children }
 		</BeBody>
 	</Page>
 )

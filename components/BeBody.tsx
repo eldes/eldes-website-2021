@@ -10,15 +10,27 @@ type BeImageData = {
 	round?: boolean
 }
 
-const BeBody: FunctionComponent = ({ children }) => {
+type Props = {
+	backgroundColor?: string,
+	foregroundColor?: string,
+}
+
+const BeBody: FunctionComponent<Props> = (props) => {
 	return (
-		<div className={ styles.beBody }>
-			{ children }
+		<div
+			className={ styles.beBody }
+			style={{
+				backgroundColor: props.backgroundColor,
+				color: props.foregroundColor,
+			}}
+		>
+			{ props.children }
 		</div>
 	)
 }
 
 export default BeBody
 export type {
-	BeImageData
+	BeImageData,
+	Props as BeBodyProps
 }

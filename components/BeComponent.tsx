@@ -12,8 +12,8 @@ type Props = {
 
 const defaultProps: Props = {
 	fill: false,
-	backgroundColor: '#fff',
-	foregroundColor: '#000',
+	backgroundColor: 'inherit',
+	foregroundColor: 'inherit',
 	horizontalPadding: false,
 	verticalPadding: false,
 }
