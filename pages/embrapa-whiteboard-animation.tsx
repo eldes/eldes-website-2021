@@ -1,24 +1,21 @@
 import { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
-import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
 
 const EmbrapaWhiteboardAnimationPage: NextPage = () => {
 
 	return (
-		<PiecePage>
-			<BeBody>
-				<BeCredits clientName='Embrapa' work='illustration' />
-			</BeBody>
-		</PiecePage>
+		<PieceBePage>
+			<BeCredits clientName='Embrapa' work='illustration' />
+		</PieceBePage>
 	)
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
 		}
 	}
 }

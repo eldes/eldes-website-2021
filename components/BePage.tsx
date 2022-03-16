@@ -23,5 +23,7 @@ const BePage: NextPage<Props> = (props) => (
 )
 
 export default BePage
-
+export type { 
+	Props as BePageProps
+}
 export const bePageI18nNamespace = ['common', 'Page']

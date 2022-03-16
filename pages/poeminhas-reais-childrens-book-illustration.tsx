@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeEmbed from '../components/BeEmbed'
 import BeHeading from '../components/BeHeading'
@@ -8,7 +7,7 @@ import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
 import artworkPart1Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-1.jpg'
 import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-2.jpg'
 import artworkPart3Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-3.jpg'
@@ -38,8 +37,7 @@ import thanksImage from '../public/content/poeminhas-reais-childrens-book-illust
 
 const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 	return (
-		<PiecePage>
-			<BeBody>
+		<PieceBePage>
 			<BeImage
 					src={ baronetImage }
 					alt={'Illustration of the Baronet'}
@@ -214,15 +212,14 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 					alt={'Corujinha logotype'}
 				/>
 				<BeThanks image={thanksImage} />
-			</BeBody>
-		</PiecePage>
+		</PieceBePage>
 	)
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
 		}
 	}
 }

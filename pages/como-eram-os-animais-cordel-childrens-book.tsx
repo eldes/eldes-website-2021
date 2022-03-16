@@ -1,13 +1,12 @@
 import { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeBody from '../components/BeBody'
 import BeCredits from '../components/BeCredits'
 import BeHeading from '../components/BeHeading'
 import BeImage from '../components/BeImage'
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import PiecePage, { piecePageI18nNamespace } from '../components/PiecePage'
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
 import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png'
 import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png'
 import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png'
@@ -57,240 +56,238 @@ import thanksImage from '../public/content/como-eram-os-animais-cordel-childrens
 import urubuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/urubu.png'
 
 const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => (
-	<PiecePage>
-		<BeBody>
-			<BeImage src={ratoImage} alt={'Illustration for the stanza of mouse'} />
-			<BeCredits
-				clientName='Réptil Editora'
-				work='illustrations'
-			>
-				Book selected by FNLIJ (National Foundation of Childrens and Young Adult Book) for 48th Bologna Children&apos;s Book Fair.
-			</BeCredits>
-			<BeImage src={mockupImage} alt={'Illustration for the stanza of mouse'} />
-			<BeParagaph>
-				Poems that address different animals in the form of cordel literature (six-verse stanzas). They are fun verses, full of nonsense. The poet plays with the sound of the words, and reinvents the animal world.
-			</BeParagaph>
-			<BeHeading>
-				<strong>Interior</strong> illustrations
-			</BeHeading>
-			<BeParagaph>
-				Each animal received a stanza and each stanza a full-page illustration.
-				The style of the illustrations refers to the woodcut art, characteristic of the Brazilian Cordel.
-			</BeParagaph>
-			<BePhotoGrid images={[
-				{
-					src: apresentacaoImage,
-					alt: 'Illustration of Intro stanza'
-				},
-			]} cols={1}			/>
-			<BePhotoGrid images={[
-				{
-					src: ratoImage,
-					alt: 'Illustration for the stanza of mouse'
-				},
-				{
-					src: jacareImage,
-					alt: 'Illustration for the stanza of alligator'
-				},
-				{
-					src: oncaImage,
-					alt: 'Illustration for the stanza of jaguar'
-				},
-				{
-					src: burroImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: griloImage,
-					alt: 'Illustration for the stanza of jaguar'
-				},
-				{
-					src: urubuImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: porcoImage,
-					alt: 'Illustration for the stanza of jaguar'
-				},
-				{
-					src: tartarugaImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: macacoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: guineImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: preguicaImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: mosquitoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: porcoEspinhoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: morcegoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: cobraImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: bodeImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: elefanteImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: girafaImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: cachorroImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: corujaImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: galoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: coelhoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: pavaoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: leaoImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: cigarraImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: avestruzImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: tatuImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: dinossauroImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: lobisomemImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-				{
-					src: leitorImage,
-					alt: 'Illustration for the stanza of donkey'
-				},
-			]} cols={3}>
-				
+	<PieceBePage>
+		<BeImage src={ratoImage} alt={'Illustration for the stanza of mouse'} />
+		<BeCredits
+			clientName='Réptil Editora'
+			work='illustrations'
+		>
+			Book selected by FNLIJ (National Foundation of Childrens and Young Adult Book) for 48th Bologna Children&apos;s Book Fair.
+		</BeCredits>
+		<BeImage src={mockupImage} alt={'Illustration for the stanza of mouse'} />
+		<BeParagaph>
+			Poems that address different animals in the form of cordel literature (six-verse stanzas). They are fun verses, full of nonsense. The poet plays with the sound of the words, and reinvents the animal world.
+		</BeParagaph>
+		<BeHeading>
+			<strong>Interior</strong> illustrations
+		</BeHeading>
+		<BeParagaph>
+			Each animal received a stanza and each stanza a full-page illustration.
+			The style of the illustrations refers to the woodcut art, characteristic of the Brazilian Cordel.
+		</BeParagaph>
+		<BePhotoGrid images={[
+			{
+				src: apresentacaoImage,
+				alt: 'Illustration of Intro stanza'
+			},
+		]} cols={1}			/>
+		<BePhotoGrid images={[
+			{
+				src: ratoImage,
+				alt: 'Illustration for the stanza of mouse'
+			},
+			{
+				src: jacareImage,
+				alt: 'Illustration for the stanza of alligator'
+			},
+			{
+				src: oncaImage,
+				alt: 'Illustration for the stanza of jaguar'
+			},
+			{
+				src: burroImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: griloImage,
+				alt: 'Illustration for the stanza of jaguar'
+			},
+			{
+				src: urubuImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: porcoImage,
+				alt: 'Illustration for the stanza of jaguar'
+			},
+			{
+				src: tartarugaImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: macacoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: guineImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: preguicaImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: mosquitoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: porcoEspinhoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: morcegoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: cobraImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: bodeImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: elefanteImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: girafaImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: cachorroImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: corujaImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: galoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: coelhoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: pavaoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: leaoImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: cigarraImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: avestruzImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: tatuImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: dinossauroImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: lobisomemImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+			{
+				src: leitorImage,
+				alt: 'Illustration for the stanza of donkey'
+			},
+		]} cols={3}>
+			
 
-			</BePhotoGrid>
-			<BePhotoGrid
-				images={[
-					{
-						src: autoresImage,
-						alt: 'Illustration of the authors'
-					},
-				]} cols={1}
-			/>
-			<BeHeading>
-				<strong>Cover</strong> illustration
-			</BeHeading>
-			<BePhotoGrid images={[
+		</BePhotoGrid>
+		<BePhotoGrid
+			images={[
 				{
-					src: coverRough1Image,
-					alt: 'Rough of cover',
+					src: autoresImage,
+					alt: 'Illustration of the authors'
+				},
+			]} cols={1}
+		/>
+		<BeHeading>
+			<strong>Cover</strong> illustration
+		</BeHeading>
+		<BePhotoGrid images={[
+			{
+				src: coverRough1Image,
+				alt: 'Rough of cover',
+			},
+			{
+				src: coverRough2Image,
+				alt: 'Rough of cover',
+			},
+		]} cols={2} />
+		<BeImage
+			src={coverImage}
+			alt={'Cover illustration'}				
+		/>
+		<BeHeading>
+			Dedications
+		</BeHeading>
+		<BePhotoGrid
+			images={[
+				
+				{
+					src: dedicationFloraImage,
+					alt: 'Dedication to Flora',
 				},
 				{
-					src: coverRough2Image,
-					alt: 'Rough of cover',
+					src: dedicationHelenaImage,
+					alt: 'Dedication to Helena',
 				},
-			]} cols={2} />
-			<BeImage
-				src={coverImage}
-				alt={'Cover illustration'}				
-			/>
-			<BeHeading>
-				Dedications
-			</BeHeading>
-			<BePhotoGrid
-				images={[
-					
-					{
-						src: dedicationFloraImage,
-						alt: 'Dedication to Flora',
-					},
-					{
-						src: dedicationHelenaImage,
-						alt: 'Dedication to Helena',
-					},
-					{
-						src: dedicationCidaImage,
-						alt: 'Dedication to Cida',
-					},
-					{
-						src: dedicationLuciaImage,
-						alt: 'Dedication to Lúcia',
-					},
-					{
-						src: dedicationLunaImage,
-						alt: 'Dedication to Pedro',
-					},
-					{
-						src: dedicationMagdaImage,
-						alt: 'Dedication to Magda',
-					},
-					{
-						src: dedicationMatheusImage,
-						alt: 'Dedication to Matheus',
-					},
-					{
-						src: dedicationPedroImage,
-						alt: 'Dedication to Pedro',
-					},
-					{
-						src: dedicationSilviaImage,
-						alt: 'Dedication to Sílvia',
-					},
-					{
-						src: dedicationMorganaImage,
-						alt: 'Dedication to Morgana',
-					},
-				]}
-				cols={3}
-			/>
-			<BeThanks image={ thanksImage } />
-		</BeBody>
-	</PiecePage>
+				{
+					src: dedicationCidaImage,
+					alt: 'Dedication to Cida',
+				},
+				{
+					src: dedicationLuciaImage,
+					alt: 'Dedication to Lúcia',
+				},
+				{
+					src: dedicationLunaImage,
+					alt: 'Dedication to Pedro',
+				},
+				{
+					src: dedicationMagdaImage,
+					alt: 'Dedication to Magda',
+				},
+				{
+					src: dedicationMatheusImage,
+					alt: 'Dedication to Matheus',
+				},
+				{
+					src: dedicationPedroImage,
+					alt: 'Dedication to Pedro',
+				},
+				{
+					src: dedicationSilviaImage,
+					alt: 'Dedication to Sílvia',
+				},
+				{
+					src: dedicationMorganaImage,
+					alt: 'Dedication to Morgana',
+				},
+			]}
+			cols={3}
+		/>
+		<BeThanks image={ thanksImage } />
+	</PieceBePage>
 )
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', piecePageI18nNamespace )),
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
 		}
 	}
 }
