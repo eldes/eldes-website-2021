@@ -60,4 +60,17 @@ const categoriesMock: Category[] = [
 			'boreal-textbook-flip-book',
 		],
 	},
+	{
+		title: 'Sketchbooks',
+		subtitle: 'and fine art',
+		slug: 'sketchbooks',
+		thumbnails: [
+			'/content/sketchbook-number-4/thumbnail.jpg',
+			'/content/sketchbook-number-4/thumbnail.jpg',
+			'/content/sketchbook-number-4/thumbnail.jpg',
+		],
+		pieceSlugs: [
+			'sketchbook-number-4'
+		]
+	},
 ]

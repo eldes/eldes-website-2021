@@ -1,11 +1,10 @@
 import { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeImage from '../components/BeImage'
-import BePage from '../components/BePage'
 import BeParagaph from '../components/BeParagaph'
 import BePhotoGrid from '../components/BePhotoGrid'
 import BeThanks from '../components/BeThanks'
-import { PageSection } from '../components/Page'
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
 import headerImage from '../public/content/sketchbook-number-4/header.jpg'
 import mockup200802aImage from '../public/content/sketchbook-number-4/mockup-2008-02a.jpg'
 import mockup200803aImage from '../public/content/sketchbook-number-4/mockup-2008-03a.jpg'
@@ -30,9 +29,7 @@ import thanksImage from '../public/content/sketchbook-number-4/thanks.jpg'
 
 const SketchbookNumber4Page: NextPage = () => {
 	return (
-		<BePage
-			title='Sketchbook #4'
-			section={PageSection.Portfolio}
+		<PieceBePage
 			backgroundColor='#8A9342'
 			foregroundColor='#fff'
 		>
@@ -168,14 +165,14 @@ const SketchbookNumber4Page: NextPage = () => {
 				cols={2}
 			/>
 			<BeThanks image={ thanksImage } />
-		</BePage>
+		</PieceBePage>
 	)
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', ['common', 'Page'])),
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace)),
 		}
 	}
 }

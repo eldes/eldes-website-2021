@@ -78,4 +78,10 @@ const piecesMock: Piece[] = [
 		subtitle: 'Flip book',
 		thumbnail: '/content/boreal-textbook-flip-book/thumbnail.jpg',
 	},
+	{
+		slug: 'sketchbook-number-4',
+		title: 'Sketchbook #4',
+		subtitle: '',
+		thumbnail: '/content/sketchbook-number-4/thumbnail.jpg',
+	},
 ]
