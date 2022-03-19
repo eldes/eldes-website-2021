@@ -1,6 +1,6 @@
 @import './variables';
 
-.buyLicensePanel {
+.buyFontPanel {
 	button {
 		background-color: #390;
 		border-style: none;
@@ -55,7 +55,7 @@
 				font-size: 1.2em;
 				text-transform: uppercase;
 				text-align: center;
-				border-bottom: 3px dotted #fff;
+				border-bottom: 3px dotted #000;
 			}
 
 			thead {

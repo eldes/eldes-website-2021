@@ -1,12 +1,26 @@
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
+import Font from '../models/Font'
+import FontPrice from '../models/FontPrice'
+import fontPricesRepository from '../repositories/font-prices-repository'
+import fontsRepository from '../repositories/fonts-repository'
+import licensesRepository from '../repositories/licenses-repository'
 import styles from '../styles/BeLicenseTable.module.scss'
 import BeComponent, { BeComponentProps } from './BeComponent'
-import BuyLicensePanel from './BuyLicensePanel'
+import BeLicenseListItem from './BeLicenseListItem'
+import BuyFontPanel from './BuyFontPanel'
 
-type Props = BeComponentProps & {
-}
+type Props = BeComponentProps
 
 const BeLicenseTable: FunctionComponent<Props> = (props) => {
+
+	const { asPath } = useRouter()
+	const slug = asPath.substring(1)
+
+	const font = fontsRepository.load(slug)
+
+	const fontPrices: FontPrice[] = fontPricesRepository.loadAllByFont(slug)
 	
 	return (
 		<BeComponent
@@ -17,6 +31,8 @@ const BeLicenseTable: FunctionComponent<Props> = (props) => {
 			horizontalPadding={props.horizontalPadding}
 			verticalPadding={props.verticalPadding}
 		>
+		{
+			font &&
 			<table>
 				<thead>
 					<tr>
@@ -27,32 +43,14 @@ const BeLicenseTable: FunctionComponent<Props> = (props) => {
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Desktop License</td>
-						<td>$ 12</td>
-						<td>You can install the Font software in your own computer to create graphical designs (logos, signs, etc.) and products (mugs, t-shirts, hats, etc.) for yourself or your client. <a href="">See more details...</a></td>
-						<td><BuyLicensePanel/></td>
-					</tr>
-					<tr>
-						<td>Logo License</td>
-						<td>$ 6</td>
-						<td>You can use the font to create a single logotype. <a href="">See more details...</a></td>
-						<td><BuyLicensePanel/></td>
-					</tr>
-					<tr>
-						<td>Site License</td>
-						<td>$ 6</td>
-						<td>You can embed the font in the HTML/CSS of your single site allowing your viewers to see your custom typography. <a href="">See more details...</a></td>
-						<td><BuyLicensePanel/></td>
-					</tr>
-					<tr>
-						<td>E-Book License</td>
-						<td>$ 6</td>
-						<td>You can embed the font in your single e-book allowing your readers to see your custom typography. <a href="">See more details...</a></td>
-						<td><BuyLicensePanel/></td>
-					</tr>
+					{
+						fontPrices.map((fontPrice, index) =>
+							<BeLicenseListItem key={index} fontPrice={fontPrice} />
+						)
+					}
 				</tbody>
 			</table>
+		}
 		</BeComponent>
 	)
 }
