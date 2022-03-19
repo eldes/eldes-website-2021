@@ -1,0 +1,13 @@
+{
+	"buyTitle": "Comprar",
+	"fieldNamePlaceholder": "Nome completo",
+	"fieldEmailPlaceholder": "E-mail",
+	"Resume": {
+		"title": "Resumo",
+		"fontName": "Fonte Eldes {{name}}",
+		"licenseName": "Licença {{name}}",
+		"unit_one": "{{count}} unidade",
+		"unit_other": "{{count}} unidades"
+	},
+	"cancelButtonText": "Cancelar"
+}

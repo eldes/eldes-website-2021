@@ -1,10 +1,9 @@
+import Locale from './Locale'
+
 type FontPrice = {
 	fontSlug: string
 	licenseSlug: string
-	amount: {
-		en: number
-		br: number
-	}
+	amount: Locale<number>
 }
 
 export default FontPrice

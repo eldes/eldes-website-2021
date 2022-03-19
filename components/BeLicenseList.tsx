@@ -1,17 +1,16 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
-import Font from '../models/Font'
 import FontPrice from '../models/FontPrice'
 import fontPricesRepository from '../repositories/font-prices-repository'
 import fontsRepository from '../repositories/fonts-repository'
-import licensesRepository from '../repositories/licenses-repository'
 import styles from '../styles/BeLicenseTable.module.scss'
 import BeComponent, { BeComponentProps } from './BeComponent'
-import BeLicenseListItem from './BeLicenseListItem'
-import BuyFontPanel from './BuyFontPanel'
+import BeLicenseListItem, { beLicenseListItemI18n } from './BeLicenseListItem'
 
 type Props = BeComponentProps
+
+const beLicenseListI18n = [...beLicenseListItemI18n]
 
 const BeLicenseList: FunctionComponent<Props> = (props) => {
 
@@ -55,4 +54,7 @@ const BeLicenseList: FunctionComponent<Props> = (props) => {
 	)
 }
 
+export {
+	beLicenseListI18n
+}
 export default BeLicenseList

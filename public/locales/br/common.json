@@ -4,5 +4,6 @@
 		"portfolio": "Portfólio",
 		"fonts": "Fontes",
 		"about": "Sobre"
-	}
+	},
+	"currencySymbol": "R$"
 }

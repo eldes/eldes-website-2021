@@ -13,7 +13,7 @@ const FontBePage: FunctionComponent = ({ children }) => {
 	const font = fontsRepository.load(slug)
 
 	const { t: tc } = useTranslation('common')
-	const { t: tp } = useTranslation('FontPage')
+	const { t: tp } = useTranslation(fontBePageI18nKey)
 
 	const backwardLink = {
 		text: tc('Sections.fonts', 'Fonts'),
@@ -33,4 +33,5 @@ const FontBePage: FunctionComponent = ({ children }) => {
 }
 
 export default FontBePage
-export const fontPageI18nNamespace = [...bePageI18nNamespace, 'fonts', 'FontBePage']
+export const fontBePageI18nKey = 'FontBePage'
+export const fontBePageI18nNamespace = [...bePageI18nNamespace, 'fonts', fontBePageI18nKey]
