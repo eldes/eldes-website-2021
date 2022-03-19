@@ -13,7 +13,7 @@ import BuyFontPanel from './BuyFontPanel'
 
 type Props = BeComponentProps
 
-const BeLicenseTable: FunctionComponent<Props> = (props) => {
+const BeLicenseList: FunctionComponent<Props> = (props) => {
 
 	const { asPath } = useRouter()
 	const slug = asPath.substring(1)
@@ -55,4 +55,4 @@ const BeLicenseTable: FunctionComponent<Props> = (props) => {
 	)
 }
 
-export default BeLicenseTable
+export default BeLicenseList

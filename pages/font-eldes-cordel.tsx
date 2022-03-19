@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BeHeading from '../components/BeHeading'
 import BeImage from '../components/BeImage'
-import BeLicenseTable from '../components/BeLicenseTable'
+import BeLicenseList from '../components/BeLicenseList'
 import BeMenu from '../components/BeMenu'
 import BeParagaph from '../components/BeParagaph'
 import FontBePage, { fontPageI18nNamespace } from '../components/FontBePage'
@@ -62,7 +62,7 @@ const FontEldesCordelPage: NextPage = () => (
 		</section>
 		<section id='buy'>
 			<BeHeading>Buy</BeHeading>
-			<BeLicenseTable verticalPadding={true} horizontalPadding={true} />
+			<BeLicenseList verticalPadding={true} horizontalPadding={true} />
 		</section>
 	</FontBePage>
 )
