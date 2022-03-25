@@ -1,0 +1,6 @@
+@import './variables';
+
+.formFieldRadioGroup {
+	display: flex;
+	column-gap: $inset_m;
+}
