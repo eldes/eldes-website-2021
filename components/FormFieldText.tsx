@@ -1,13 +1,14 @@
-import { ChangeEventHandler, FunctionComponent, useState } from 'react'
-import styles from '../styles/FormFieldText.module.scss'
+import { ChangeEventHandler, FunctionComponent, useState } from 'react';
+import styles from '../styles/FormFieldText.module.scss';
 
 type Props = {
 	label: string
+	value?: string
 	onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
 const FormFieldText: FunctionComponent<Props> = (props) => {
-	const [value, setValue] = useState('')
+	const [value, setValue] = useState(props.value)
 
 	const inputChanged: ChangeEventHandler<HTMLInputElement> = (event) => {
 		setValue(event.target.value)
@@ -21,13 +22,14 @@ const FormFieldText: FunctionComponent<Props> = (props) => {
 				
 			<span className={styles.label}>
 			{
-				value.trim().length > 0 &&
+				value && value.trim().length > 0 &&
 				<>{props.label}:</>
 			}
 			</span>
 			<input
 				onChange={inputChanged}
 				placeholder={props.label}
+				value={props.value}
 			/>
 		</label>
 	)
