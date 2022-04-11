@@ -12,7 +12,8 @@ const PaypalPanel: FunctionComponent<Props> = (props) => {
   
   return (
     <div>
-      <PayPalScriptProvider
+      PayPal
+      {/* <PayPalScriptProvider
         options={{
           'client-id': 'AUTk1XwjVohgW0rAb2ch9a2Tg1-dxNQB_hbiAvs7uOw0gxchwusEXrypAwN3s9Ce-aSLtH4WCSwL5hLV',
           currency: (locale === LocaleEnum.br) ? 'BRL' : 'USD'
@@ -38,7 +39,7 @@ const PaypalPanel: FunctionComponent<Props> = (props) => {
           })
         }}
       />
-          </PayPalScriptProvider>
+          </PayPalScriptProvider> */}
     </div>
   )
 }
