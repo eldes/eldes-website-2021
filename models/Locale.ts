@@ -22,7 +22,7 @@ const useLocale = () => {
 }
 
 export {
-	LocaleEnum as Locale,
+	LocaleEnum,
 	useLocale
 }
 export default Locale

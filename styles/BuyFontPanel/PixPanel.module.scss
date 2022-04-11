@@ -1,7 +1,13 @@
 @import './variables';
 
 .pixPanel {
-  button {
+
+  .qrCode {
+    margin-top: $inset_m;
+  }
+
+  .copyCodeButton {
+    margin-bottom: $inset_m;
     padding-left: 0;
     width: auto;
     color: $color_accent;

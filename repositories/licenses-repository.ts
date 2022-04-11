@@ -1,5 +1,4 @@
-import License from '../models/License'
-import { Locale } from '../models/Locale'
+import License from '../models/License';
 
 const licensesRepository = {
 	load: (slug: string) => licensesMock.find(license => license.slug === slug)

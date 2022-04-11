@@ -1,8 +1,8 @@
-@import './variables';
+@import './BuyFontPanel/variables';
 
 .buyFontPanel {
 	button {
-		background-color: #390;
+		background-color: $color_accent;
 		border-style: none;
 		padding: $inset_s $inset_m;
 		width: 120px;
@@ -10,79 +10,112 @@
 		text-transform: uppercase;
 		font-size: 0.7em;
 
+		&:disabled {
+			opacity: 0.5;
+		}
+
 		&.secundary {
 			background-color: transparent;
-			border: 1px solid #390;
-			color: #390;
+			border: 1px solid $color_accent;
+			color: $color_accent;
 		}
 	}
 
 	form {
-		border: 1px solid #390;
+		border: 1px solid $color_accent;
 		border-radius: $inset_s;
-		padding: $inset_m;
+		// padding: $inset_m;
 		width: calc(100% - #{$inset_m} - #{$inset_m});
 
 		display: flex;
 		flex-direction: column;
 
-		.formTitle {
-			padding-bottom: $inset_l;
-			color: #390;
-			font-size: 1em;
-			font-weight: 400;
+		.formHeader,
+		.formBody,
+		.formFooter {
+			padding: $inset_l $inset_m;
 		}
 
-		input {
-			margin-bottom: $inset_m;
-			font-size: 1em;
-			font-weight: 200;
-			border-style: none;
-			border-bottom: 1px solid #ccc;
-		}
-
-		& > .resume {
-			background-color: #ff9;
-			margin: $inset_m;
-			padding: $inset_l;
-			font-family: monospace;
-			font-size: 0.8em;
-			border-bottom: 6px dotted #fff;
-
-			caption {
-				padding: $inset_m;
-				background-color: #ff9;
-				font-size: 1.2em;
+		.formHeader {
+			.formTitle {
+				padding-bottom: $inset_l;
+				color: $color_accent;
+				font-size: 1em;
+				font-weight: 400;
 				text-transform: uppercase;
-				text-align: center;
-				border-bottom: 3px dotted #000;
 			}
+		}
 
-			thead {
-				display: none;
-			}
+		.formBody {
+			display: flex;
+			flex-direction: column;
+			row-gap: $inset_m;
 
-			tbody {
-
-				tr {
-					display: flex;
-					flex-direction: row;
-					flex-wrap: nowrap;
-					column-gap: $inset_m;
-					justify-content: space-around;
-
-					td {
-						padding-top: $inset_l;
-						padding-bottom: $inset_l;
-					}
-				}
+			& .formSectionTitle {
+				font-size: 0.7em;
+				font-weight: 400;
+				color: $color_accent;
+				text-transform: uppercase;
 			}
 		}
 
 		.formFooter {
-			padding-top: $inset_l;
-			display: flex;
-			justify-content: flex-end;
+
+			& > .resume {
+				background-color: #ffc;
+				margin: $inset_m;
+				padding: $inset_l;
+				font-family: monospace;
+				font-size: 0.8em;
+				border-bottom: 6px dotted #fff;
+	
+				caption {
+					padding: $inset_m;
+					background-color: #ffc;
+					font-size: 1.3em;
+					text-transform: uppercase;
+					text-align: center;
+					border-bottom: 3px dotted #993;
+				}
+	
+				thead {
+					display: none;
+				}
+	
+				tbody {
+	
+					tr {
+						display: flex;
+						flex-direction: column;
+						flex-wrap: nowrap;
+						column-gap: $inset_m;
+						justify-content: space-around;
+						border-top: 1px dotted #cc9;
+	
+						&:first-child {
+							border-top-style: none;
+						}
+	
+						td {
+							padding: $inset_s $inset_m;
+						}
+	
+						@media (min-width: 900px) {
+							flex-direction: row;
+	
+							td {
+								padding: $inset_l $inset_m;
+							}
+						}
+					}
+				}
+			}
+
+			& > .buttonsPanel {
+				display: flex;
+				justify-content: flex-end;
+				column-gap: $inset_m;
+			}
 		}
 	}
 }

@@ -13,7 +13,7 @@ type Props = {
 const PieceBePage: NextPage<Props> = (props) => {
 
 	const { asPath } = useRouter()
-	const slug = asPath.substring(1)
+	const slug = asPath.substring(1).split('#')[0]
 
 	const piece = piecesRepository.load(slug)
 	const categories = piecesRepository.loadAllCategories(slug)

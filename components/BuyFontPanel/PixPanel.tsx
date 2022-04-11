@@ -1,33 +1,37 @@
 import Image from 'next/image';
-import { FunctionComponent, useState } from 'react';
-import qrcodeDesktopBrImage from '../../public/content/font-eldes-cordel/qrcode-desktop-br.png';
+import { ChangeEventHandler, FunctionComponent, useState } from 'react';
+import QRCode from 'react-qr-code';
 import styles from '../../styles/BuyFontPanel/PixPanel.module.scss';
 import FormFieldFile from '../FormFieldFile';
 
 type Props = {
-  pixCode?: string
+  code?: string
+  receiptOnChange?: ChangeEventHandler<HTMLInputElement>
 }
 
 const PixPanel: FunctionComponent<Props> = (props) => {
 
-  const [pixCodeCopied, setPixCodeCopied] = useState(false)
+  const [codeCopied, setCodeCopied] = useState(false)
 
   const copyCodeButtonClicked = () => {
-    setPixCodeCopied(false)
-    navigator.clipboard.writeText(props.pixCode ?? '')
-    setTimeout(() => { setPixCodeCopied(true); }, 300); //animation
+    setCodeCopied(false)
+    navigator.clipboard.writeText(props.code ?? '')
+    setTimeout(() => { setCodeCopied(true); }, 300); //animation
   }
 
   return (
     <div className={styles.pixPanel}>
-      <p>Use o QR Code a seguir para pagar via Pix:</p>
-      <Image src={qrcodeDesktopBrImage} alt='' layout='intrinsic' />
+      <div className={styles.qrCode}>
+        <QRCode value={props.code ?? ''} />
+      </div>
       {
-        props.pixCode &&
+        props.code &&
         <>
-          <p>Se preferir, você também pode pagar usando o <strong>Pix Copia e Cola</strong>:</p>
-          <button type='button' onClick={copyCodeButtonClicked}>Copiar código {pixCodeCopied && <span className='material-icons'>done</span>}</button>
-          <FormFieldFile label='Comprovante' />
+          <button className={styles.copyCodeButton} type='button' onClick={copyCodeButtonClicked}>
+            Copiar código
+            {codeCopied && <span className='material-icons'>done</span>}
+          </button>
+          <FormFieldFile label='Comprovante de pagamento Pix' onChange={props.receiptOnChange} />
         </>
       }
     </div>

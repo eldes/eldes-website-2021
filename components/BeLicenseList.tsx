@@ -15,7 +15,7 @@ const beLicenseListI18n = [...beLicenseListItemI18n]
 const BeLicenseList: FunctionComponent<Props> = (props) => {
 
 	const { asPath } = useRouter()
-	const slug = asPath.substring(1)
+	const slug = asPath.substring(1).split('#')[0]
 
 	const font = fontsRepository.load(slug)
 

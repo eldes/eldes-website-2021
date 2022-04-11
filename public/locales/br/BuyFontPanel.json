@@ -1,7 +1,7 @@
 {
 	"buyTitle": "Comprar",
-	"fieldNamePlaceholder": "Nome completo",
-	"fieldEmailPlaceholder": "E-mail",
+	"fieldNameLabel": "Nome completo",
+	"fieldEmailLabel": "E-mail",
 	"Resume": {
 		"title": "Resumo",
 		"fontName": "Fonte Eldes {{name}}",
@@ -9,5 +9,6 @@
 		"unit_one": "{{count}} unidade",
 		"unit_other": "{{count}} unidades"
 	},
-	"cancelButtonText": "Cancelar"
+	"cancelButtonText": "Cancelar",
+	"fillMessage": "Por favor, preencha com os dados do LICENCIADO, ou seja, o proprietário do computador onde a fonte será instalada e usada."
 }

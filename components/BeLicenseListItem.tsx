@@ -1,13 +1,13 @@
-import { Trans, useTranslation } from 'next-i18next'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { FunctionComponent } from 'react'
-import FontPrice from '../models/FontPrice'
-import { useLocale } from '../models/Locale'
-import fontsRepository from '../repositories/fonts-repository'
-import licensesRepository from '../repositories/licenses-repository'
-import BuyFontPanel, { buyFontPanelI18n } from './BuyFontPanel'
-import { fontBePageI18nKey } from './FontBePage'
+import { Trans, useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FunctionComponent } from 'react';
+import FontPrice from '../models/FontPrice';
+import { useLocale } from '../models/Locale';
+import fontsRepository from '../repositories/fonts-repository';
+import licensesRepository from '../repositories/licenses-repository';
+import BuyFontPanel, { buyFontPanelI18n } from './BuyFontPanel';
+import { fontBePageI18nKey } from './FontBePage';
 
 type Props = {
 	fontPrice: FontPrice
