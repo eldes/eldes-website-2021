@@ -1,10 +1,11 @@
-import { ChangeEvent, ChangeEventHandler, FunctionComponent } from 'react'
-import styles from '../styles/FormFieldRadio.module.scss'
+import { ChangeEvent, ChangeEventHandler, FunctionComponent } from 'react';
+import styles from '../styles/FormFieldRadio.module.scss';
 
 type Props = {
 	label: string
 	name?: string
 	value?: string
+	checked?: boolean
 	disabled?: boolean
 	onChange?: ChangeEventHandler<HTMLInputElement>
 }
@@ -19,6 +20,7 @@ const FormFieldRadio: FunctionComponent<Props> = (props) => {
 					value={props.value}
 					disabled={props.disabled}
 					onChange={props.onChange}
+					checked={props.checked}
 				/>
 				{props.label}
 			</label>
