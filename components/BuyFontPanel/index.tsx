@@ -98,8 +98,26 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 					<div className={styles.formBody}>
 						<h5 className={styles.formSectionTitle}>Dados do licenciado</h5>
 						<LicenseePanel onChange={setLicenseePanelData}/>
-					</div>
 
+						<table className={ styles.resume }>
+							<caption><Trans t={t} i18nKey='Resume.title'>Resume</Trans></caption>
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Quantity</th>
+									<th>Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><Trans t={t} i18nKey='Resume.fontName' values={{name: props.font?.name}}>Font Eldes {props.font?.name}</Trans> - <Trans t={t} i18nKey='Resume.licenseName' values={{name: props.license?.name}}>{props.license?.name} License</Trans></td>
+									<td><Trans t={t} i18nKey='Resume.unit' count={1}>1 unit</Trans></td>
+									<td><Trans i18nKey='common:currencySymbol'>$</Trans> {locale === 'br' ? props.fontPrice.amount.br : props.fontPrice.amount.en}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
 					{
 						(licenseePanelData) && (licenseePanelData.isValid()) &&
 						<div className={styles.formBody}>
@@ -138,23 +156,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 					}
 
 					<div className={styles.formFooter}>
-						<table className={ styles.resume }>
-							<caption><Trans t={t} i18nKey='Resume.title'>Resume</Trans></caption>
-							<thead>
-								<tr>
-									<th>Product</th>
-									<th>Quantity</th>
-									<th>Amount</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><Trans t={t} i18nKey='Resume.fontName' values={{name: props.font?.name}}>Font Eldes {props.font?.name}</Trans> - <Trans t={t} i18nKey='Resume.licenseName' values={{name: props.license?.name}}>{props.license?.name} License</Trans></td>
-									<td><Trans t={t} i18nKey='Resume.unit' count={1}>1 unit</Trans></td>
-									<td><Trans i18nKey='common:currencySymbol'>$</Trans> {locale === 'br' ? props.fontPrice.amount.br : props.fontPrice.amount.en}</td>
-								</tr>
-							</tbody>
-						</table>
+						
 
 						<div className={styles.buttonsPanel}>
 							<button className={ styles.secundary } onClick={ cancelButtonClicked }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
