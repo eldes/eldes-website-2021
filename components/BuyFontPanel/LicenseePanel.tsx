@@ -28,10 +28,10 @@ class Data {
   }
 }
 
-type ChangeEventHandler = (data: Data) => void
+type ChangeDataHandler = (data: Data) => void
 
 type Props = {
-  onChange?: ChangeEventHandler
+  onChange?: ChangeDataHandler
 }
 
 const LicenseePanel: FunctionComponent<Props> = (props) => {
@@ -70,6 +70,6 @@ const LicenseePanel: FunctionComponent<Props> = (props) => {
 
 export type {
   Data as LicenseePanelData,
-  ChangeEventHandler as LicenseePanelChangeEventHandler,
+  ChangeDataHandler as LicenseePanelChangeDataHandler,
 }
 export default LicenseePanel

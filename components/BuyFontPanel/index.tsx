@@ -8,14 +8,27 @@ import { LocaleEnum, useLocale } from '../../models/Locale';
 import styles from '../../styles/BuyFontPanel.module.scss';
 import FormFieldRadioGroup from '../FormFieldRadioGroup';
 import FormFieldText from '../FormFieldText';
-import LicenseePanel, { LicenseePanelChangeEventHandler, LicenseePanelData } from './LicenseePanel';
+import LicenseePanel, { LicenseePanelChangeDataHandler, LicenseePanelData } from './LicenseePanel';
 import PaypalPanel from './PaypalPanel';
-import PixPanel from './PixPanel';
+import PixPanel, { PixPanelChangeDataHandler, PixPanelData } from './PixPanel';
 
 type Props = {
 	font: Font
 	license: License
 	fontPrice: FontPrice
+}
+
+enum PaymentMethodEnum {
+	Pix = 'Pix',
+	PayPal = 'PayPal'
+}
+
+type RequestData = {
+	fontName: string
+	licenseName: string
+	paymentMethod: string
+	licensee?: LicenseePanelData
+	pix?: PixPanelData
 }
 
 const buyFontPanelI18nKey = 'BuyFontPanel'
@@ -24,52 +37,43 @@ const buyFontPanelI18n = [buyFontPanelI18nKey]
 const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
 	const [opened, setOpened] = useState(false)
-
 	const openButtonClicked = () => setOpened(true)
 	const cancelButtonClicked = () => setOpened(false)
-
-	const font = props.font
-	const license = props.license
-	const price = props.fontPrice
 
 	const locale = useLocale()
 	const { t } = useTranslation(buyFontPanelI18nKey)
 
-	enum PaymentMethodEnum {
-		Pix,
-		PayPal
-	}
-
-	const [licenseePanelData, setLicenseePanelData] = useState<LicenseePanelData>()
-	const licenseePanelChanged: LicenseePanelChangeEventHandler = data => setLicenseePanelData(data)
-
-	const [paymentMethod, setPaymentMethod] = useState<PaymentMethodEnum | undefined>(undefined)
-	const [pixReceipt, setPixReceipt] = useState<string>()
-
-
-	const finishButtonDisabled = () => licenseePanelData?.isInvalid() || (paymentMethod === undefined) || ((paymentMethod === PaymentMethodEnum.Pix) && (pixReceipt === undefined))
-
+	const [paymentMethod, setPaymentMethod] = useState<PaymentMethodEnum>(PaymentMethodEnum.PayPal)
 	const paymentMethodChanged = (value: string) => {
 		setPaymentMethod(value === PaymentMethodEnum.Pix.toString() ? PaymentMethodEnum.Pix : PaymentMethodEnum.PayPal)
 	}
-	
-	const pixReceiptChanged: ChangeEventHandler<HTMLInputElement> = event => {
-		setPixReceipt(event.target.value)
+
+	const [licenseePanelData, setLicenseePanelData] = useState<LicenseePanelData>()
+
+	const [pixPanelData, setPixPanelData] = useState<PixPanelData>()
+	const pixPanelDataChanged: PixPanelChangeDataHandler = data => {
+		setPixPanelData(data)
 	}
+
+	const finishButtonDisabled = () => licenseePanelData?.isInvalid() || (paymentMethod === undefined) || ((paymentMethod === PaymentMethodEnum.Pix) && (pixPanelData === undefined))
 
 	const formSubmited: FormEventHandler<HTMLFormElement> = async (event) => {
 		event.preventDefault()
 
-		const jsonData = JSON.stringify(licenseePanelData)
-
+		const requestData: RequestData = {
+			fontName: props.font.name,
+			licenseName: props.license.name,
+			paymentMethod: paymentMethod.toString(),
+			licensee: licenseePanelData,
+			pix: pixPanelData,
+		}
 		const endpoint = '/api/buy-font'
-
 		const options = {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'
 			},
-			body: jsonData,
+			body: JSON.stringify(requestData),
 		}
 
 		const response = await fetch(endpoint, options)
@@ -93,7 +97,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 					</div>
 					<div className={styles.formBody}>
 						<h5 className={styles.formSectionTitle}>Dados do licenciado</h5>
-						<LicenseePanel onChange={licenseePanelChanged}/>
+						<LicenseePanel onChange={setLicenseePanelData}/>
 					</div>
 
 					{
@@ -123,18 +127,15 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
 						{
 							(paymentMethod === PaymentMethodEnum.Pix) &&
-							<PixPanel code={props.fontPrice.pixCode} receiptOnChange={pixReceiptChanged} />	
+							<PixPanel code={props.fontPrice.pixCode} onDataChange={pixPanelDataChanged} />	
 						}
 
 						{
 							((paymentMethod === PaymentMethodEnum.PayPal) || (locale === 'en')) &&
-							<PaypalPanel price={price} />
+							<PaypalPanel price={props.fontPrice} />
 						}
 						</div>
 					}
-					
-
-				
 
 					<div className={styles.formFooter}>
 						<table className={ styles.resume }>
@@ -148,9 +149,9 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 							</thead>
 							<tbody>
 								<tr>
-									<td><Trans t={t} i18nKey='Resume.fontName' values={{name: font?.name}}>Font Eldes {font?.name}</Trans> - <Trans t={t} i18nKey='Resume.licenseName' values={{name: license?.name}}>{license?.name} License</Trans></td>
+									<td><Trans t={t} i18nKey='Resume.fontName' values={{name: props.font?.name}}>Font Eldes {props.font?.name}</Trans> - <Trans t={t} i18nKey='Resume.licenseName' values={{name: props.license?.name}}>{props.license?.name} License</Trans></td>
 									<td><Trans t={t} i18nKey='Resume.unit' count={1}>1 unit</Trans></td>
-									<td><Trans i18nKey='common:currencySymbol'>$</Trans> {locale === 'br' ? price.amount.br : price.amount.en}</td>
+									<td><Trans i18nKey='common:currencySymbol'>$</Trans> {locale === 'br' ? props.fontPrice.amount.br : props.fontPrice.amount.en}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -170,7 +171,11 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
 export {
 	buyFontPanelI18n,
-	buyFontPanelI18nKey
+	buyFontPanelI18nKey,
+	PaymentMethodEnum
+}
+export type {
+	RequestData
 }
 
 export default BuyFontPanel
