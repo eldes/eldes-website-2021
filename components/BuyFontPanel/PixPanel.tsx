@@ -31,7 +31,11 @@ const PixPanel: FunctionComponent<Props> = (props) => {
             Copiar código
             {codeCopied && <span className='material-icons'>done</span>}
           </button>
-          <FormFieldFile label='Comprovante de pagamento Pix' onChange={props.receiptOnChange} />
+          <FormFieldFile
+            label='Comprovante de pagamento Pix'
+            accept={['image/png', 'image/jpeg', 'application/pdf']}
+            onChange={receiptFileChanged}
+          />
         </>
       }
     </div>
