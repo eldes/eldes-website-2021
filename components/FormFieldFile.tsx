@@ -3,6 +3,7 @@ import styles from '../styles/FormFieldFile.module.scss';
 
 type Props = {
 	label: string
+	accept?: string[]
 	onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
@@ -24,6 +25,7 @@ const FormFieldFile: FunctionComponent<Props> = (props) => {
 				type='file'
 				onChange={inputChanged}
 				placeholder={props.label}
+				accept={props.accept?.join(',')}
 			/>
 		</label>
 	)
