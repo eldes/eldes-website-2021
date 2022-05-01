@@ -19,7 +19,7 @@ const PaypalPanel: FunctionComponent<Props> = (props) => {
   return (
     <div>
       <PayPalScriptProvider options={{
-          'client-id': 'AUTk1XwjVohgW0rAb2ch9a2Tg1-dxNQB_hbiAvs7uOw0gxchwusEXrypAwN3s9Ce-aSLtH4WCSwL5hLV',
+          'client-id': 'AQGKwNuzGEW6l2cUiTWiy0eSW-RB0PE1HNc5Bv0joEt8aVPuYtQKoykE4VV9FhbOsFfnpl0_qpRmLbfw',
           currency: localizer.getLocale().currency.code
       }}>
         <PayPalButtons
