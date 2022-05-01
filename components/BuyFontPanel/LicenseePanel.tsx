@@ -38,8 +38,8 @@ const LicenseePanel: FunctionComponent<Props> = (props) => {
 
   const { t } = useTranslation(buyFontPanelI18nKey)
 
-  const [fullName, setFullName] = useState('Eldes de Paula Oliveira')
-	const [email, setEmail] = useState('eldes@eldes.com')
+  const [fullName, setFullName] = useState('')
+	const [email, setEmail] = useState('')
 
   const fireChangeEvent = () => {
     if (props.onChange) {
@@ -68,8 +68,8 @@ const LicenseePanel: FunctionComponent<Props> = (props) => {
   )
 }
 
+export default LicenseePanel;
 export type {
   Data as LicenseePanelData,
   ChangeDataHandler as LicenseePanelChangeDataHandler,
-}
-export default LicenseePanel
+};

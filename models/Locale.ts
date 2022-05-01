@@ -1,28 +1,62 @@
-import { useRouter } from 'next/router'
+import { route } from 'next/dist/server/router';
+import { NextRouter } from 'next/router';
+import { Currency } from './Price';
 
-enum LocaleEnum {
-	en = 'en',
-	br = 'br',
-	default = en,
-}
+enum LocaleCode {
+	En = 'en',
+	Br = 'br',
+	Default = En,
+};
 
-type Locale<T> = {
-	[Property in LocaleEnum]: T
-}
+type Locale = {
+	code: string,
+	currency: Currency,
+};
 
-const useLocale = () => {
-	const router = useRouter()
-	if (router.locale) {
-		if (router.locale in LocaleEnum) {
-			return router.locale as LocaleEnum
-		}
+type Localized<T> = {
+	[Property in LocaleCode]: T
+};
+
+class Localizer {
+	private router: NextRouter;
+
+	private constructor(router: NextRouter) {
+		this.router = router;
 	}
 
-	return LocaleEnum.default
+	static make(router: NextRouter) {
+		return new Localizer(router);
+	}
+
+	getLocale() {
+		return this.getValue(Locales);
+	}
+
+	getValue<T>(localized: Localized<T>) {
+		return localized[this.router.locale as LocaleCode]
+	}
 }
 
+const Locales: Localized<Locale> = {
+	br: {
+		code: LocaleCode.Br,
+		currency: {
+			code: 'BRL',
+			symbol: 'R$',
+		},
+	},
+	en : {
+		code: LocaleCode.En,
+		currency: {
+			code: 'USD',
+			symbol: '$',
+		},
+	},
+};
+
+export default Localized;
 export {
-	LocaleEnum,
-	useLocale
-}
-export default Locale
+	LocaleCode,
+	Locales,
+	Localizer,
+};

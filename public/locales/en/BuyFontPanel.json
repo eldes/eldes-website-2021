@@ -1,0 +1,14 @@
+{
+	"buyTitle": "Buy",
+	"fieldNameLabel": "Full name",
+	"fieldEmailLabel": "Email",
+	"Resume": {
+		"title": "Resume",
+		"fontName": "Font Eldes {{name}}",
+		"licenseName": "{{name}} License",
+		"unit_one": "{{count}} unit",
+		"unit_other": "{{count}} units"
+	},
+	"cancelButtonText": "Cancel",
+	"fillMessage": "Please fill in the LICENSEE data, that is, the owner of the computer where the font will be installed and used."
+}

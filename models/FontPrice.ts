@@ -1,9 +1,10 @@
-import Locale from './Locale';
+import Localized from './Locale';
+import Price from './Price';
 
 type FontPrice = {
 	fontSlug: string
 	licenseSlug: string
-	amount: Locale<number>
+	price: Localized<Price>
 	pixCode: string
 }
 

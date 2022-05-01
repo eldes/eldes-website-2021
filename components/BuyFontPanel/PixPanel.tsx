@@ -1,18 +1,14 @@
 import { ChangeEventHandler, FunctionComponent, useState } from 'react';
 import QRCode from 'react-qr-code';
+import { PixPayment } from '../../models/FontOrder';
 import styles from '../../styles/BuyFontPanel/PixPanel.module.scss';
 import FormFieldFile from '../FormFieldFile';
 
-type Data = {
-  receiptFileBase64: string
-  receiptFileType: string
-}
-
-type ChangeDataHandler = (data: Data) => void
+type ChangeHandler = (pixPayment: PixPayment) => void
 
 type Props = {
   code: string
-  onDataChange?: ChangeDataHandler
+  onChange?: ChangeHandler
 }
 
 const PixPanel: FunctionComponent<Props> = (props) => {
@@ -39,11 +35,13 @@ const PixPanel: FunctionComponent<Props> = (props) => {
             binary += String.fromCharCode(bytes[i])
           }
           
-          if (props.onDataChange) {
-            props.onDataChange({
-              receiptFileBase64: `data:${file.type};base64,${window.btoa(binary)}`,
-              receiptFileType: file.type
-            })
+          if (props.onChange) {
+            props.onChange({
+              receiptFile: {
+                base64: `data:${file.type};base64,${window.btoa(binary)}`,
+                type: file.type,
+              },
+            });
           }
         }
       }
@@ -77,8 +75,7 @@ const PixPanel: FunctionComponent<Props> = (props) => {
   )
 }
 
+export default PixPanel;
 export type {
-  Data as PixPanelData,
-  ChangeDataHandler as PixPanelChangeDataHandler,
-}
-export default PixPanel
+  ChangeHandler as PixPanelChangeDataHandler,
+};
