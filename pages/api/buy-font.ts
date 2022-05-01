@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
-import SMTPTransport, { MailOptions } from 'nodemailer/lib/smtp-transport';
-import { PaymentMethodEnum, RequestData } from '../../components/BuyFontPanel';
+import { MailOptions } from 'nodemailer/lib/smtp-transport';
+import FontOrder from '../../models/FontOrder';
+import PaymentMethod from '../../models/PaymentMethod';
 
 type ResponseData = {
   saved: boolean
@@ -12,55 +13,94 @@ type ResponseData = {
 const handler = (
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>) => {
-    const requestData: RequestData = req.body
+    const fontOrder: FontOrder = req.body
 
     const attachments: Mail.Attachment[] = []
-
-    if (requestData.paymentMethod === PaymentMethodEnum.Pix.toString()) {
-      const today = new Date()
-      const attachmentFilename = `pix-${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}.${requestData.pix?.receiptFileType.split('/')[1]}`
-      attachments.push({
-        filename: attachmentFilename,
-        path: requestData.pix?.receiptFileBase64,
-      })
-    }
 
     const transporter = nodemailer.createTransport({
       host: 'smtp.hostinger.com',
       port: 465,
       auth: {
         user: 'eldes@eldes.com',
-        pass: '-ofumJisGUePrvH6',
+        pass: 'zebMWD4NyJj.!Lt7Cub!',
       },
-    })
+    });
+
+    const fontHtml = `
+      <h2>Fonte</h2>
+      <ul>
+        <li>Fonte: ${fontOrder.fontName}</li>
+        <li>Licença: ${fontOrder.licenseName}</li>
+        <li>Quantidade: ${fontOrder.quantity} unidade</li>
+        <li>Pagamento: ${fontOrder.payment.method.toString()}</li>
+        <li>Nome: ${fontOrder.licensee?.name}</li>
+        <li>E-mail: ${fontOrder.licensee?.email}</li>
+      </ul>
+    `;
+
+    const licenseeHtml = `
+      <h2>Licenciado</h2>
+      <ul>
+        <li>Nome: ${fontOrder.licensee.name}</li>
+        <li>E-mail: ${fontOrder.licensee.email}</li>
+      </ul>
+    `;
+
+    const paymentHtml = `
+      <h2>Pagamento</h2>
+      <ul>
+        <li>Valor: ${fontOrder.payment.currency.symbol} ${fontOrder.payment.amount}</li>
+        <li>Método: ${fontOrder.payment.method}</li>
+      </ul>
+    `;
+
+    const paypalHtml = `
+      <h2>PayPal</h2>
+      <ul>
+        <li>ID: ${fontOrder.payment.paypal?.id}</li>
+        <li>Nome: ${fontOrder.payment.paypal?.payer.givenName} ${fontOrder.payment.paypal?.payer.surname}</li>
+        <li>E-mail: ${fontOrder.payment.paypal?.payer.email}</li>
+        <li>User ID: ${fontOrder.payment.paypal?.payer.id}</li>
+        <li>País: ${fontOrder.payment.paypal?.payer.address.countryCode}</li>
+      </ul>
+    `;
+
+    let html = `
+      <h1>Pedido de Licença</h1>
+      ${fontHtml}
+      ${licenseeHtml}
+      ${paymentHtml}
+    `;
+
+    if (fontOrder.payment.method === PaymentMethod.Pix.toString()) {
+      const today = new Date()
+      const attachmentFilename = `pix-${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}.${fontOrder.payment.pix?.receiptFile.type.split('/')[1]}`;
+      attachments.push({
+        filename: attachmentFilename,
+        path: fontOrder.payment.pix?.receiptFile.base64,
+      });
+    } else { //PayPal
+      html = `
+        ${html}
+        ${paypalHtml}
+      `;
+    }
     
     const options: MailOptions = {
       from: 'eldes@eldes.com',
       to: 'studio@eldes.com',
-      subject: requestData.fontName,
+      subject: fontOrder.fontName,
       text: `
         PEDIDO DE LICENÇA:
-        ${requestData.fontName}
-        ${requestData.licenseName}
+        ${fontOrder.fontName}
+        ${fontOrder.licenseName}
         1 unidade
-        Pagamento: ${requestData.paymentMethod.toString()}
-        Nome: ${requestData.licensee?.fullName}
-        E-mail: ${requestData.licensee?.email}
+        Pagamento: ${fontOrder.payment.method.toString()}
+        Nome: ${fontOrder.licensee?.name}
+        E-mail: ${fontOrder.licensee?.email}
       </div>
     `,
-      html: `
-        <div>
-          <p>Pedido de licença:</p>
-          <ul>
-            <li>${requestData.fontName}</li>
-            <li>${requestData.licenseName}</li>
-            <li>1 unidade</li>
-            <li>Pagamento: ${requestData.paymentMethod.toString()}</li>
-            <li>Nome: ${requestData.licensee?.fullName}</li>
-            <li>E-mail: ${requestData.licensee?.email}</li>
-          </ul>
-        </div>
-      `,
+      html,
       attachments: attachments,
     }
 

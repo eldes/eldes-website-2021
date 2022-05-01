@@ -148,10 +148,10 @@
   dependencies:
     promise-polyfill "^8.2.3"
 
-"@paypal/paypal-js@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@paypal/paypal-js/-/paypal-js-5.0.4.tgz#58632db297d0f58865ffaf6450d83e5f3969d68f"
-  integrity sha512-g7kGQpoy/ti1oHDqo65D765gyOXf/VaqtN6Qu0W/L6LBnENn5l5CudrQfAwdoLD/D9xKLGfaTPvXbZDzumIfRA==
+"@paypal/paypal-js@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@paypal/paypal-js/-/paypal-js-5.0.5.tgz#f2f61e6ef414847fdcae847054039a05454df8dd"
+  integrity sha512-OV+0Z2MgHVj6dQiE58x9vq6upWWvajbyuwYlDQ4aBkwj6sLLsdkXO8HDuYJPYoVzbX3+/Di6fNKvlUlCJiv+zA==
   dependencies:
     promise-polyfill "^8.2.3"
 
@@ -452,6 +452,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+
+confusing-browser-globals@^1.0.10:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
+  integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 core-js-pure@^3.19.0:
   version "3.19.3"

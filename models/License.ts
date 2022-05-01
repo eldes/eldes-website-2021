@@ -1,9 +1,9 @@
-import Locale from './Locale'
+import Localized from './Locale';
 
 type License = {
 	slug: string
 	name: string
-	resume: Locale<string>
+	resume: Localized<string>
 }
 
 export default License
