@@ -1,9 +1,4 @@
-import Document, {
-	Head,
-	Html,
-	Main,
-	NextScript
-	} from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
 	render() {
@@ -42,7 +37,7 @@ class MyDocument extends Document {
 					<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
 					{/* fonts: */}
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
-					<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400&display=swap" rel="stylesheet" />
+					<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet" />
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 				</Head>
 				<body>
