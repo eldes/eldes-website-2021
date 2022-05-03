@@ -32,9 +32,6 @@ const handler = (
         <li>Fonte: ${fontOrder.fontName}</li>
         <li>Licença: ${fontOrder.licenseName}</li>
         <li>Quantidade: ${fontOrder.quantity} unidade</li>
-        <li>Pagamento: ${fontOrder.payment.method.toString()}</li>
-        <li>Nome: ${fontOrder.licensee?.name}</li>
-        <li>E-mail: ${fontOrder.licensee?.email}</li>
       </ul>
     `;
 
@@ -43,6 +40,13 @@ const handler = (
       <ul>
         <li>Nome: ${fontOrder.licensee.name}</li>
         <li>E-mail: ${fontOrder.licensee.email}</li>
+      </ul>
+    `;
+
+    const logotypeHtml = `
+      <h2>Logotipo</h2>
+      <ul>
+        <li>Nome da marca: ${fontOrder.logotype?.name}</li>
       </ul>
     `;
 
@@ -69,6 +73,7 @@ const handler = (
       <h1>Pedido de Licença</h1>
       ${fontHtml}
       ${licenseeHtml}
+      ${logotypeHtml}
       ${paymentHtml}
     `;
 

@@ -1,4 +1,5 @@
 import Licensee from './Licensee';
+import Logotype from './Logotype';
 import PaymentMethod from './PaymentMethod';
 import { Currency } from './Price';
 
@@ -30,6 +31,7 @@ type FontOrder = {
   licenseName: string
   quantity: number
   licensee: Licensee
+  logotype?: Logotype
   payment: {
     amount: number
     currency: Currency

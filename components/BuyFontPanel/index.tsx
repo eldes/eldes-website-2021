@@ -6,10 +6,12 @@ import FontOrder, { PaypalPayment, PixPayment } from '../../models/FontOrder';
 import FontPrice from '../../models/FontPrice';
 import License from '../../models/License';
 import { LocaleCode, Localizer } from '../../models/Locale';
+import Logotype from '../../models/Logotype';
 import { PaymentMethod } from '../../models/PaymentMethod';
 import styles from '../../styles/BuyFontPanel.module.scss';
 import FormFieldRadioGroup from '../FormFieldRadioGroup';
 import LicenseePanel, { LicenseePanelData } from './LicenseePanel';
+import LogotypePanel from './LogotypePanel';
 import PaypalPanel from './PaypalPanel';
 import PixPanel, { PixPanelChangeDataHandler } from './PixPanel';
 
@@ -31,8 +33,6 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 	const localizer = Localizer.make(useRouter());
 	const { t } = useTranslation(buyFontPanelI18nKey)
 
-
-
 	const [paymentMethod, setPaymentMethod] = useState(localizer.getLocale().code === LocaleCode.Br ? PaymentMethod.Pix : PaymentMethod.PayPal);
 	const paymentMethodChanged = (value: string) => {
 		setPaymentMethod((value === PaymentMethod.Pix.toString()) ? PaymentMethod.Pix : PaymentMethod.PayPal);
@@ -40,6 +40,8 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 	}
 
 	const [licenseePanelData, setLicenseePanelData] = useState<LicenseePanelData>()
+
+  const [logotype, setLogotype] = useState<Logotype>()
 
 	const [pixPayment, setPixPayment] = useState<PixPayment>();
 	const [paypalPayment, setPaypalPayment] = useState<PaypalPayment>();
@@ -54,6 +56,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 			name: useMemo(() => licenseePanelData?.fullName ?? '', [licenseePanelData]),
 			email: useMemo(() => licenseePanelData?.email ?? '', [licenseePanelData]),
 		},
+    logotype: useMemo(() => logotype, [logotype]),
 		payment: {
 			amount: localizer.getValue(props.fontPrice.price).amount,
 			currency: localizer.getLocale().currency,
@@ -97,8 +100,18 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 					</div>
 
 					<div className={styles.formBody}>
-						<h5 className={styles.formSectionTitle}>Dados do licenciado</h5>
-						<LicenseePanel onChange={setLicenseePanelData}/>
+						<h5 className={styles.formSectionTitle}>Dados do licenciado:</h5>
+            <LicenseePanel onChange={setLicenseePanelData}/>
+          </div>
+          {
+            (props.license.slug === 'logotype-license') &&
+            <div className={styles.formBody}>
+              <h5 className={styles.formSectionTitle}>Dados do logotipo:</h5>
+              <LogotypePanel onChange={setLogotype} />
+            </div>
+          }
+
+          <div className={styles.formBody}>
 
 						<table className={ styles.resume }>
 							<caption><Trans t={t} i18nKey='Resume.title'>Resume</Trans></caption>
@@ -163,6 +176,10 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 					</div>
 				</form>
 			}
+      {
+        false &&
+        <p>Obrigado pela compra. Assim que os dados forem processados os arquivos serão enviados para o seu e-mail.</p>
+      }
 		</div>
 	)
 }
