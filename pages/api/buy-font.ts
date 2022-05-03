@@ -64,7 +64,7 @@ const handler = (
     <h1>Pedido de Licença</h1>
     ${fontHtml}
     ${licenseeHtml}
-    ${logotypeHtml}
+    ${fontOrder.logotype ? logotypeHtml : ''}
     ${paymentHtml}
   `;
 
