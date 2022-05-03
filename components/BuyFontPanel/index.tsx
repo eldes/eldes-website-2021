@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { FormEventHandler, FunctionComponent, useMemo, useState } from 'react';
+import { FormEventHandler, FunctionComponent, useEffect, useMemo, useState } from 'react';
 import Font from '../../models/Font';
 import FontOrder, { PaypalPayment, PixPayment } from '../../models/FontOrder';
 import FontPrice from '../../models/FontPrice';
@@ -75,9 +75,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
   };
   const close = () => setOpened(false);
 
-	const formSubmited: FormEventHandler<HTMLFormElement> = async (event) => {
-		event.preventDefault()
-
+  const buyFont = async () => {
     setBuyFontResult(undefined)
 
 		const endpoint = '/api/buy-font'
@@ -90,9 +88,19 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 		}
 
 		const response = await fetch(endpoint, options)
-
 		setBuyFontResult(await response.json())
-	}
+  };
+
+	const formSubmited: FormEventHandler<HTMLFormElement> = (event) => {
+		event.preventDefault();
+    buyFont();
+	};
+
+  useEffect(() => {
+    if (paypalPayment) {
+      buyFont();
+    }
+  }, [paypalPayment]);
 
 	return (
 		<div className={ styles.buyFontPanel }>
