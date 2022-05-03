@@ -42,7 +42,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 	const [pixPayment, setPixPayment] = useState<PixPayment>();
 	const [paypalPayment, setPaypalPayment] = useState<PaypalPayment>();
 
-	const finishButtonDisabled = () => licenseePanelData?.isInvalid() || (order.payment.method === undefined) || ((order.payment.method === PaymentMethod.Pix) && (pixPayment === undefined))
+	const finishButtonDisabled = () => licenseePanelData?.isInvalid() || (order.payment.method === undefined) || ((order.payment.method === PaymentMethod.Pix) && (pixPayment === undefined)) || ((order.payment.method === PaymentMethod.PayPal) && (paypalPayment === undefined))
 
   const [buyFontResult, setBuyFontResult] = useState<BuyFontResult>();
 
