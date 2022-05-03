@@ -122,4 +122,7 @@ const handler = (
     })
 }
 
-export default handler
+export default handler;
+export {
+  type ResponseData as BuyFontResult,
+};
