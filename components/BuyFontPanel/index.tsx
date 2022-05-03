@@ -128,7 +128,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
           <form onSubmit={formSubmited}>
             <div className={styles.formHeader}>
               <h4 className={styles.formTitle}>Opa!</h4>
-              <p>{licenseePanelData?.fullName}, infelizmente houve algum erro na tentativa de envio dos seus dados. Por favor tente enviar novamente ou entre em contato com o autor (studio@eldes.com).</p>
+              <p>{licenseePanelData?.fullName}, infelizmente houve algum erro na tentativa de envio dos seus dados <small>({buyFontResult.error.message})</small>. Por favor tente enviar novamente ou entre em contato com o autor (studio@eldes.com).</p>
             </div>
 
             <div className={styles.formFooter}>
