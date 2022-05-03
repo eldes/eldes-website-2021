@@ -2,7 +2,6 @@ import SendGridHelpers from '@sendgrid/helpers';
 import SendGridMail from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 import FontOrder from '../../models/FontOrder';
-import PaymentMethod from '../../models/PaymentMethod';
 
 type ResponseData = {
   saved: boolean
