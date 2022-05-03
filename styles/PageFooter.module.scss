@@ -1,0 +1,88 @@
+@import "./variables";
+
+.pageFooter {
+	color: #666;
+	background-color: #ccc;
+	padding-top: $inset_m;
+	padding-bottom: $inset_m;
+	padding-left: $inset_m;
+	padding-right: $inset_m;
+	font-size: 0.5em;
+
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: $inset_m;
+	column-gap: $inset_xl;
+	justify-content: center;
+
+	@media (min-width: $header_max_width) {
+		& {
+			padding-left: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
+			padding-right: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
+		}
+	}
+
+	h5 {
+		padding-bottom: $inset_s;
+		font-weight: 400;
+		font-size: 1em;
+	}
+
+	.siteMap {
+
+		nav {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				text-transform: uppercase;
+				padding: $inset_xs 0px;
+			}
+		}
+	}
+
+	.contact {
+
+		flex-grow: 1;
+
+		p {
+			padding: $inset_xs 0px;
+		}
+	}
+
+	.social {
+
+		.links {
+			display: flex;
+			column-gap: $inset_s;
+
+			a {
+				font-size: 0px;
+				width: $inset_l;
+				height: $inset_l;
+				margin: $inset_s 0px;
+				background-size: 100% 100%;
+
+				&.instagram {
+					background-image: url('images/awesome-brands-instagram.svg');
+				}
+				&.behance {
+					background-image: url('images/awesome-brands-behance.svg');
+				}
+				&.twitter {
+					background-image: url('images/awesome-brands-twitter.svg');
+				}
+				&.linkedIn {
+					background-image: url('images/awesome-brands-linkedin.svg');
+				}
+			}
+		}
+		
+	}
+	
+	.disclaimer {
+		border-top: 1px solid #999;
+		padding-top: $inset_m;
+		text-align: center;
+	}
+}

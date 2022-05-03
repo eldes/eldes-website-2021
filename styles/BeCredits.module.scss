@@ -1,0 +1,19 @@
+@import 'variables';
+
+.beCredits {
+	padding: $inset_xxl * 2;
+	color: #999;
+	font-size: 0.7em;
+
+	.label {
+		font-size: 0.8em;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.notes {
+		display: block;
+		padding-top: $inset_l;
+	}
+	
+}

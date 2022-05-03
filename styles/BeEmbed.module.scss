@@ -1,0 +1,17 @@
+@import 'variables';
+
+.beEmbed {
+	div {
+		padding: calc(#{$inset_s} / 2);
+		position: relative;
+		left: calc(#{$inset_s} / 2);
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: calc(100% - #{$inset_s});
+			height: calc(100% - #{$inset_s});
+		}
+	}
+}

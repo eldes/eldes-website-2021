@@ -1,0 +1,64 @@
+@import './variables';
+
+.beLicenseTable {
+	& > table {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+
+		& > thead {
+			display: none;
+		}
+
+		& > tbody {
+
+			display: flex;
+			flex-direction: column;
+
+			& > tr {
+				// border-bottom: 1px solid #000;
+				padding-bottom: $inset_m;
+
+				&:first-child {
+					// border-top: 1px solid #000;
+				}
+
+				display: flex;
+				flex-wrap: wrap;
+
+				& > td {
+					padding-top: $inset_s;
+					padding-bottom: $inset_s;
+
+					&:nth-child(1) { //License type
+						flex-grow: 1;
+						border-bottom: 1px solid #390;
+					}
+					&:nth-child(2) { //License price
+						flex-grow: 0;
+						// width: 120px;
+						border-bottom: 1px solid #390;
+					}
+					&:nth-child(3) { //License description
+						flex-grow: 1;
+						flex-basis: 100%;
+						font-size: 0.8em;
+						color: #333;
+
+						a {
+							font-size: 0.7em;
+							text-transform: uppercase;
+							text-decoration: underline;
+						}
+					}
+					&:nth-child(4) { //Buy button
+						flex-grow: 1;
+						flex-basis: 100%;
+					}				
+				}
+				
+			}
+		}
+	}
+}

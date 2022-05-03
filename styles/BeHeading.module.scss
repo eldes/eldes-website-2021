@@ -1,0 +1,18 @@
+@import 'variables';
+
+.beHeading {
+	width: 100%;
+	
+	h2 {
+		padding: $inset_xxl $inset_xl;
+		font-size: 1.8rem;
+		text-align: center;
+		text-transform: lowercase;
+		font-weight: 700;
+
+		small {
+			font-size: 1rem;
+			font-weight: 200;
+		}
+	}
+}

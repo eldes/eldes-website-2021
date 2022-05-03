@@ -1,0 +1,9 @@
+@import "./variables";
+
+.categoriesList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: $inset_m;
+	align-items: stretch;
+}

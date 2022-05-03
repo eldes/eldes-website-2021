@@ -1,0 +1,39 @@
+@import "./variables";
+
+.page {
+
+	padding-top: #{$header_height};
+	
+	.skipToMain {
+		display: none;
+	}
+
+	.pageMain {
+		color: #000;
+		background-color: #f3f3f3;
+
+		article {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			header {
+				padding: $inset_xxl 0px;
+				text-align: center;
+
+				h1 {
+					display: flex;
+					flex-direction: column;
+					font-size: 1.8rem;
+
+					small {
+						margin-top: 0.5em;
+						font-size: 0.4em;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	
+}

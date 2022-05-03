@@ -1,0 +1,19 @@
+{
+	"pretitle": "$t(fonts:fontNamePrefix)",
+	"Details": {
+		"title": "Detalhes",
+		"id": "detalhes"
+	},
+	"Characters": {
+		"title": "Caracteres",
+		"id": "caracteres"
+	},
+	"Buy": {
+		"title": "Comprar",
+		"id": "comprar"
+	},
+	"License": {
+		"name": "Licença {{name}}"
+	},
+	"seeMoreDetails": "Veja mais detalhes..."
+}

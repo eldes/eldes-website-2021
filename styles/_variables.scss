@@ -1,0 +1,16 @@
+$color_accent_fore: #fff;
+$color_accent_back: #c00;
+
+$inset_xxs: 2px;
+$inset_xs: 4px;
+$inset_s: 8px;
+$inset_m: 16px;
+$inset_l: 24px;
+$inset_xl: 32px;
+$inset_xxl: 48px;
+
+$header_max_width: 900px;
+$header_height: 64px;
+$header_max_left: calc( (100% - #{$header_max_width} ) / 2 );
+
+$article_padding: $inset_m;

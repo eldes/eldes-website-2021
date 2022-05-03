@@ -1,0 +1,19 @@
+@import './variables';
+
+.beMenu {
+	nav {
+		padding: $inset_l;
+		display: flex;
+		justify-content: center;
+		column-gap: $inset_m;
+
+		a {
+			color: #666;
+			border: 1px solid #666;
+			padding: $inset_s;
+			font-size: 0.7em;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+}

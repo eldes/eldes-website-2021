@@ -1,0 +1,121 @@
+@import './BuyFontPanel/variables';
+
+.buyFontPanel {
+	button {
+		background-color: $color_accent;
+		border-style: none;
+		padding: $inset_s $inset_m;
+		width: 120px;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 0.7em;
+
+		&:disabled {
+			opacity: 0.5;
+		}
+
+		&.secundary {
+			background-color: transparent;
+			border: 1px solid $color_accent;
+			color: $color_accent;
+		}
+	}
+
+	form {
+		border: 1px solid $color_accent;
+		border-radius: $inset_s;
+		// padding: $inset_m;
+		width: calc(100% - #{$inset_m} - #{$inset_m});
+
+		display: flex;
+		flex-direction: column;
+
+		.formHeader,
+		.formBody,
+		.formFooter {
+			padding: $inset_l $inset_m;
+		}
+
+		.formHeader {
+			.formTitle {
+				padding-bottom: $inset_l;
+				color: $color_accent;
+				font-size: 1em;
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+		}
+
+		.formBody {
+			display: flex;
+			flex-direction: column;
+			row-gap: $inset_m;
+
+			& .formSectionTitle {
+				font-size: 0.7em;
+				font-weight: 400;
+				color: $color_accent;
+				text-transform: uppercase;
+			}
+		}
+
+		.resume {
+			background-color: #ffc;
+			margin: $inset_m;
+			padding: $inset_l;
+			font-family: monospace;
+			font-size: 0.8em;
+			border-bottom: 6px dotted #fff;
+
+			caption {
+				padding: $inset_m;
+				background-color: #ffc;
+				font-size: 1.3em;
+				text-transform: uppercase;
+				text-align: center;
+				border-bottom: 3px dotted #993;
+			}
+
+			thead {
+				display: none;
+			}
+
+			tbody {
+
+				tr {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					column-gap: $inset_m;
+					justify-content: space-around;
+					border-top: 1px dotted #cc9;
+
+					&:first-child {
+						border-top-style: none;
+					}
+
+					td {
+						padding: $inset_s $inset_m;
+					}
+
+					@media (min-width: 900px) {
+						flex-direction: row;
+
+						td {
+							padding: $inset_l $inset_m;
+						}
+					}
+				}
+			}
+		}
+
+		.formFooter {
+
+			& > .buttonsPanel {
+				display: flex;
+				justify-content: flex-end;
+				column-gap: $inset_m;
+			}
+		}
+	}
+}

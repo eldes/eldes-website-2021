@@ -1,0 +1,7 @@
+@import './variables';
+
+.beComponent {
+	margin: 0;
+	padding: 0px calc((100% - #{$header_max_width}) / 2);
+	height: auto;
+}

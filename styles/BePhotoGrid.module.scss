@@ -1,0 +1,58 @@
+@import "./variables";
+
+.bePhotoGrid {
+
+	$items_inset: $inset_xxl;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: stretch;
+		column-gap: calc(#{$items_inset} / 2);
+		row-gap: calc(#{$items_inset} / 2);
+		padding-bottom: calc(#{$items_inset} / 2);
+
+		.bePhotoGridItem {
+			flex-basis: calc(100% - #{$items_inset});
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		@media (min-width: 540px) {
+			.bePhotoGridItem {
+				flex-basis: calc(100% / 2 - 2 * #{$items_inset} / 3);
+			}
+		}
+
+		@media (min-width: $header_max_width) {
+			&.cols-5 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% / 5 - 5 * #{$items_inset} / 6);
+				}
+			}
+			&.cols-4 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% / 4 - 4 * #{$items_inset} / 5);
+				}
+			}
+			&.cols-3 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% / 3 - 3 * #{$items_inset} / 4);
+				}
+			}
+			&.cols-2 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% / 2 - 2 * #{$items_inset} / 3);
+				}
+			}
+			&.cols-1 {
+				.bePhotoGridItem {
+					flex-basis: calc(100% - #{$items_inset});
+				}
+			}
+		}
+	}	
+}
