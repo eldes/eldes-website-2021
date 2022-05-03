@@ -47,24 +47,15 @@ const LicenseePanel: FunctionComponent<Props> = (props) => {
     }
   }
 
-  const fullNameChanged: React.ChangeEventHandler<HTMLInputElement> = event => {
-    setFullName(event.target.value)
-    fireChangeEvent()
-  }
-
-  const emailChanged: React.ChangeEventHandler<HTMLInputElement> = event => {
-    setEmail(event.target.value)
-    fireChangeEvent()
-  }
-
   useEffect(() => {
     fireChangeEvent()
-  }, [])
+  }, [fullName, email])
 
   return (
     <>
-      <FormFieldText label={t('fieldNameLabel', 'Full name')} onChange={fullNameChanged} value={fullName} />
-			<FormFieldText label={t('fieldEmailLabel', 'Email')} onChange={emailChanged} value={email} /></>
+      <FormFieldText label={t('fieldNameLabel', 'Full name')} onChangeText={setFullName} />
+			<FormFieldText label={t('fieldEmailLabel', 'Email')} onChangeText={setEmail}  />
+    </>
   )
 }
 
