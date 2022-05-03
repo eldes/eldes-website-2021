@@ -85,7 +85,7 @@ const handler = (
     `;
   }
 
-  SendGridMail.setApiKey(process.env.SENDGRID_API_KEY || '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');
+  SendGridMail.setApiKey(process.env.SENDGRID_API_KEY || '');
   const mailData: SendGridMail.MailDataRequired = {
     to: 'contact@salander.agency',
     cc: 'studio@eldes.com',
