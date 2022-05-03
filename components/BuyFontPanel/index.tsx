@@ -27,17 +27,12 @@ type Props = {
 
 const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
-	const [opened, setOpened] = useState(false)
-	const openButtonClicked = () => setOpened(true)
-	const cancelButtonClicked = () => setOpened(false)
-
 	const localizer = Localizer.make(useRouter());
 	const { t } = useTranslation(buyFontPanelI18nKey)
 
 	const [paymentMethod, setPaymentMethod] = useState(localizer.getLocale().code === LocaleCode.Br ? PaymentMethod.Pix : PaymentMethod.PayPal);
 	const paymentMethodChanged = (value: string) => {
 		setPaymentMethod((value === PaymentMethod.Pix.toString()) ? PaymentMethod.Pix : PaymentMethod.PayPal);
-		// order.payment.method = paymentMethod
 	}
 
 	const [licenseePanelData, setLicenseePanelData] = useState<LicenseePanelData>()
@@ -69,6 +64,17 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 		},
 	};
 
+  const [opened, setOpened] = useState(false)
+	const open = () => {
+    setPaymentMethod(localizer.getLocale().code === LocaleCode.Br ? PaymentMethod.Pix : PaymentMethod.PayPal);
+    setLicenseePanelData(undefined);
+    setLogotype(undefined);
+    setPixPayment(undefined);
+    setBuyFontResult(undefined);
+    setOpened(true)
+  };
+  const close = () => setOpened(false);
+
 	const formSubmited: FormEventHandler<HTMLFormElement> = async (event) => {
 		event.preventDefault()
 
@@ -91,7 +97,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 	return (
 		<div className={ styles.buyFontPanel }>
 			{
-				(! opened) && <button onClick={ openButtonClicked }><Trans t={t} i18nKey='buyTitle'>Buy</Trans></button>
+				(! opened) && <button onClick={ open }><Trans t={t} i18nKey='buyTitle'>Buy</Trans></button>
 			}
 			{
         opened && buyFontResult && buyFontResult.saved && (
@@ -103,7 +109,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
             <div className={styles.formFooter}>
               <div className={styles.buttonsPanel}>
-                <button type='button' onClick={() => setOpened(false)}>Close</button>
+                <button type='button' onClick={close}>Close</button>
               </div>
             </div>
           </form>
@@ -119,7 +125,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
             <div className={styles.formFooter}>
               <div className={styles.buttonsPanel}>
-                <button type='button' className={ styles.secundary } onClick={() => setOpened(false)}>Close</button>
+                <button type='button' className={ styles.secundary } onClick={close}>Close</button>
                 <button type='submit'>Enviar</button>
               </div>
             </div>
@@ -205,7 +211,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
             <div className={styles.formFooter}>
               <div className={styles.buttonsPanel}>
-                <button className={ styles.secundary } onClick={ cancelButtonClicked }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
+                <button className={ styles.secundary } onClick={ close }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
                 <button type='submit' disabled={finishButtonDisabled()}>Finish</button>
               </div>
             </div>
