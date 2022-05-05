@@ -220,7 +220,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
             <div className={styles.formFooter}>
               <div className={styles.buttonsPanel}>
                 <button className={ styles.secundary } onClick={ close }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
-                <button type='submit' disabled={finishButtonDisabled()}>Finish</button>
+                <button type='submit' disabled={finishButtonDisabled()}><Trans t={t} i18nKey='finishButtonText'>Finish</Trans></button>
               </div>
             </div>
           </form>

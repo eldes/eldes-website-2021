@@ -10,5 +10,6 @@
 		"unit_other": "{{count}} unidades"
 	},
 	"cancelButtonText": "Cancelar",
+	"finishButtonText": "Concluir",
 	"fillMessage": "Por favor, preencha com os dados do LICENCIADO, ou seja, o proprietário do computador onde a fonte será instalada e usada."
 }
