@@ -1,7 +1,6 @@
-import { loadScript } from '@paypal/paypal-js';
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { useRouter } from 'next/router';
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent } from 'react';
 import { PaypalPayment } from '../../models/FontOrder';
 import FontPrice from '../../models/FontPrice';
 import { Localizer } from '../../models/Locale';
@@ -19,7 +18,7 @@ const PaypalPanel: FunctionComponent<Props> = (props) => {
   return (
     <div>
       <PayPalScriptProvider options={{
-          'client-id': process.env.PAYPAL_CLIENT_ID ||'AUTk1XwjVohgW0rAb2ch9a2Tg1-dxNQB_hbiAvs7uOw0gxchwusEXrypAwN3s9Ce-aSLtH4WCSwL5hLV',
+          'client-id': process.env.PAYPAL_CLIENT_ID || process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || '',
           currency: localizer.getLocale().currency.code
       }}>
         <PayPalButtons
