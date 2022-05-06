@@ -75,7 +75,10 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
   };
   const close = () => setOpened(false);
 
+  const [progress, setProgress] = useState(false);
+
   const buyFont = async () => {
+    setProgress(true);
     setBuyFontResult(undefined)
 
 		const endpoint = '/api/buy-font'
@@ -89,6 +92,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
 		const response = await fetch(endpoint, options)
 		setBuyFontResult(await response.json())
+    setProgress(false);
   };
 
 	const formSubmited: FormEventHandler<HTMLFormElement> = (event) => {
@@ -218,10 +222,19 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
             }
 
             <div className={styles.formFooter}>
-              <div className={styles.buttonsPanel}>
-                <button className={ styles.secundary } onClick={ close }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
-                <button type='submit' disabled={finishButtonDisabled()}><Trans t={t} i18nKey='finishButtonText'>Finish</Trans></button>
-              </div>
+              {
+                progress && (
+                  <div className={styles.progressPanel} />
+                )
+              }
+              {
+                !progress && (
+                  <div className={styles.buttonsPanel}>
+                    <button className={ styles.secundary } onClick={ close }><Trans t={t} i18nKey='cancelButtonText'>Cancel</Trans></button>
+                    <button type='submit' disabled={finishButtonDisabled()}><Trans t={t} i18nKey='finishButtonText'>Finish</Trans></button>
+                  </div>
+                )
+              }
             </div>
           </form>
         )

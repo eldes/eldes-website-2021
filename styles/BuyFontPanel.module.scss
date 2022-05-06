@@ -111,6 +111,31 @@
 
 		.formFooter {
 
+			@keyframes loading {
+				0% {
+					background-position: 0% center;
+					background-size: 10px;
+				}
+				50% {	
+					background-size: calc(0.7em + #{$inset_m});
+				}
+				100% {
+					background-position: 100% center;
+					background-size: 10px;
+				}
+			}
+
+			& > .progressPanel {
+				height: calc(0.7em + #{$inset_m});
+				width: auto;
+				background-image: url(images/progress.svg);
+				background-size: auto;
+				background-position: 10% center;
+				background-repeat: no-repeat;
+				color: transparent;
+				animation: loading 1s infinite;
+			}
+
 			& > .buttonsPanel {
 				display: flex;
 				justify-content: flex-end;
