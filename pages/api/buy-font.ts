@@ -89,7 +89,7 @@ const handler = (
     to: 'contact@salander.agency',
     cc: 'studio@eldes.com',
     from: 'studio@eldes.com',
-    subject: fontOrder.fontName,
+    subject: `Fonte Eldes ${fontOrder.fontName}`,
     text: `
       PEDIDO DE LICENÇA:
       ${fontOrder.fontName}
