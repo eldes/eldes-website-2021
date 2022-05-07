@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 
 const PageFooter: FunctionComponent = () => {
+	const router = useRouter();
+	
 	return (
 		<footer className={ styles.pageFooter }>
 			<section className={styles.contact}>
@@ -23,9 +26,8 @@ const PageFooter: FunctionComponent = () => {
 			<section className={styles.siteMap}>
 				<h5>Language:</h5>
 				<nav>
-					<Link href={'/portfolio'}>Portfolio</Link>
-					<Link href={'/fonts'}>Fonts</Link>
-					<Link href={'/about'}>About</Link>
+					<Link href={router.pathname} locale="en">EN</Link>
+					<Link href={router.pathname} locale="br">BR</Link>
 				</nav>
 			</section>
 			<section className={styles.social}>
