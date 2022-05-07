@@ -1,6 +1,6 @@
-import Category from '../models/Category'
-import Piece from '../models/Piece'
-import piecesRepository from './pieces-repository'
+import Category from '../models/Category';
+import Piece from '../models/Piece';
+import piecesRepository from './pieces-repository';
 
 const categoriesRepository = {
 	
@@ -26,8 +26,14 @@ export default categoriesRepository
 
 const categoriesMock: Category[] = [
 	{
-		title: 'Chidren\'s Books',
-		subtitle: 'and Textbooks',
+		title: {
+			en: 'Chidren\'s Books',
+			br: 'Livros infantis',
+		},
+		subtitle: {
+			en: 'and Textbooks',
+			br: 'e Didáticos',
+		},
 		slug: 'childrens-books-and-textbooks',
 		thumbnails: [
 			'/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
@@ -44,8 +50,14 @@ const categoriesMock: Category[] = [
 		],
 	},
 	{
-		title: 'Animation',
-		subtitle: 'and flip book',
+		title: {
+			en: 'Animation',
+			br: 'Animação',
+		},
+		subtitle: {
+			en:'and flip book',
+			br: 'e flip book',
+		},
 		slug: 'animation',
 		thumbnails: [
 			'/content/protest-whiteboard-animation/thumbnail.jpg',
@@ -61,8 +73,14 @@ const categoriesMock: Category[] = [
 		],
 	},
 	{
-		title: 'Sketchbooks',
-		subtitle: 'and fine art',
+		title: {
+			en: 'Sketchbooks',
+			br: 'Sketchbooks',
+		},
+		subtitle: {
+			en:'and fine art',
+			br: 'e arte tradicional',
+		},
 		slug: 'sketchbooks',
 		thumbnails: [
 			'/content/sketchbook-number-4/thumbnail.jpg',

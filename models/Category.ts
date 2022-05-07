@@ -1,7 +1,9 @@
+import Localized from './Locale';
+
 type Category = {
 	slug: string
-	title: string
-	subtitle: string
+	title: Localized<string>
+	subtitle: Localized<string>
 	thumbnails: string[]
 	pieceSlugs: string[]
 }
