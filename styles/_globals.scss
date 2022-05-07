@@ -20,3 +20,11 @@ a {
 em {
 	font-style: italic;
 }
+
+sup {
+	font-size: 0.6em;
+	line-height: 0;
+	vertical-align: baseline;
+	position: relative;
+	top: -0.5em;
+}
