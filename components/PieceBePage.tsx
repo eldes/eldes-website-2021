@@ -28,18 +28,22 @@ const PieceBePage: NextPage<Props> = (props) => {
 		href: `/${firstCategory?.slug}`,	
 	}
 
-	return (
-		<BePage
-			title={piece?.title ?? ''}
-			subtitle={piece?.subtitle}
-			section={ PageSection.Portfolio }
-			backwardLink={ backwardLink }
-			backgroundColor={ props.backgroundColor }
-			foregroundColor={ props.foregroundColor }
-		>
-			{ props.children }
-		</BePage>
-	)
+	if (piece) {
+		return (
+			<BePage
+				title={ localizer.getValue(piece.title)}
+				subtitle={localizer.getValue(piece.subtitle)}
+				section={ PageSection.Portfolio }
+				backwardLink={ backwardLink }
+				backgroundColor={ props.backgroundColor }
+				foregroundColor={ props.foregroundColor }
+			>
+				{ props.children }
+			</BePage>
+		)
+	} else {
+		return <></>;
+	}
 }
 
 export default PieceBePage
