@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../styles/variables";
 
 .pageFooter {
 	color: #666;
@@ -28,25 +28,53 @@
 		font-size: 1em;
 	}
 
+	.contact {
+		border-bottom: 1px solid #999;
+		padding: $inset_m 0px;
+		flex-grow: 1;
+		width: 100%;
+
+		display: flex;
+
+		h5 {
+			flex-grow: 1;
+			font-size: 1.4em;
+			font-weight: 700;
+		}
+
+		address {
+			display: flex;
+			column-gap: $inset_m;
+
+			a {
+				display: flex;
+				column-gap: $inset_xs;
+			}
+
+			a[href^="mailto"]::before {
+				font-family: 'Material Icons Outlined';
+				content: "\e0be";
+			}
+			
+			a[href^="tel"]::before {
+				font-family: 'Material Icons Outlined';
+					content: "\e0cd";
+			}
+		}
+	}
+
 	.siteMap {
+
+		flex-grow: 1;
 
 		nav {
 			display: flex;
-			flex-direction: column;
+			column-gap: $inset_s;
 
 			a {
 				text-transform: uppercase;
 				padding: $inset_xs 0px;
 			}
-		}
-	}
-
-	.contact {
-
-		flex-grow: 1;
-
-		p {
-			padding: $inset_xs 0px;
 		}
 	}
 
@@ -64,16 +92,16 @@
 				background-size: 100% 100%;
 
 				&.instagram {
-					background-image: url('images/awesome-brands-instagram.svg');
+					background-image: url('../../styles/images/awesome-brands-instagram.svg');
 				}
 				&.behance {
-					background-image: url('images/awesome-brands-behance.svg');
+					background-image: url('../../styles/images/awesome-brands-behance.svg');
 				}
 				&.twitter {
-					background-image: url('images/awesome-brands-twitter.svg');
+					background-image: url('../../styles/images/awesome-brands-twitter.svg');
 				}
 				&.linkedIn {
-					background-image: url('images/awesome-brands-linkedin.svg');
+					background-image: url('../../styles/images/awesome-brands-linkedin.svg');
 				}
 			}
 		}

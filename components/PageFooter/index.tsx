@@ -1,22 +1,32 @@
-import Link from 'next/link'
-import { FunctionComponent } from 'react'
-import styles from '../styles/PageFooter.module.scss'
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import styles from './styles.module.scss';
 
 const PageFooter: FunctionComponent = () => {
 	return (
 		<footer className={ styles.pageFooter }>
+			<section className={styles.contact}>
+				<h5>Get in touch</h5>
+				<address>
+					<a href="mailto:studio@eldes.com">studio@eldes.com</a>
+					<a href="tel:+5516981618428">+55 (16) 98161-8428</a>
+				</address>
+			</section>
 			<section className={styles.siteMap}>
-				<h5>Map:</h5>
+				<h5>Sections:</h5>
 				<nav>
 					<Link href={'/portfolio'}>Portfolio</Link>
 					<Link href={'/fonts'}>Fonts</Link>
 					<Link href={'/about'}>About</Link>
 				</nav>
 			</section>
-			<section className={styles.contact}>
-				<h5>Contact:</h5>
-				<p>studio@eldes.com</p>
-				<p>+55 (16) 98161-8428</p>
+			<section className={styles.siteMap}>
+				<h5>Language:</h5>
+				<nav>
+					<Link href={'/portfolio'}>Portfolio</Link>
+					<Link href={'/fonts'}>Fonts</Link>
+					<Link href={'/about'}>About</Link>
+				</nav>
 			</section>
 			<section className={styles.social}>
 				<h5>Follow us:</h5>
