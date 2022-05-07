@@ -36,11 +36,9 @@ O Licenciado pode fazer cópias de segurança da Fonte somente para propósitos 
 
 #### 2.4	Disponibilização para terceiros
 
-O Licenciado pode disponibilizar temporariamente a Fonte para um designer gráfico, agência, gráfica ou outro fornecedor que estiver trabalhando, em seu nome, no desenvolvimento ou distribuição do Logotipo.
+O Licenciado pode disponibilizar temporariamente a Fonte para um designer gráfico, agência, gráfica ou outro fornecedor que estiver trabalhando, em seu nome, no desenvolvimento ou distribuição do Logotipo, se esse concorda em usar a Fonte exclusivamente para o trabalho do Licenciado, de acordo com os termos dessa licença, e em não reter cópias da Fonte após a conclusão do trabalho.
 
 Em caso de qualquer uso da Fonte para outros propósitos, o terceiro deve comprar sua própria licença de uso da Fonte.
-
-O Licenciado pode fornecer a Fonte a um designer gráfico, agência, gráfica ou outro fornecedor que esteja trabalhando em seu nome apenas se esse concorda em usar a Fonte exclusivamente para o trabalho do Licenciado, de acordo com os termos dessa licença, e em não reter cópias da Fonte após a conclusão do trabalho.
 
 #### 2.5	Cópias
 

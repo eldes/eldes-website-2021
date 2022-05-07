@@ -24,14 +24,14 @@ O Licenciante concede ao Licenciado uma licença não exclusiva para usar a Font
 
 O Licenciado pode incorporar a Fonte em documentos, aplicações ou Dispositivos, ou como uma forma rasterizada da Fonte (por exemplo GIF ou JPEG) ou como um subconjunto da Fonte desde que o documento, aplicação ou Dispositivo seja distribuído em um formato que permita apenas a visualização e impressão, mas não a edição do texto. O Licenciado precisa de uma licença adicional do Licenciante ou seus distribuidores autorizados para o uso da Fonte em documentos, aplicações ou Dispositivos que permitam a edição de texto, se tais documentos, aplicações ou dispositivos serão distribuídos a terceiros, ou se a Fonte não será incorporada com um subconjunto ou em forma rasterizada.
 
-Este Contrato não permite que o Licenciado incorpore a Fonte:
+_Este Contrato não permite que o Licenciado incorpore a Fonte:_
 
-- Em um website usando @fontface CSS;
-- Em uma aplicação baseada em servidor e usada por usuários remotos;
-- Em aplicativos/apps iOS, Android ou Windows RT;
-- Em publicações digitais do tipo eBooks.
+- _Em um website usando @fontface CSS;_
+- _Em uma aplicação baseada em servidor e usada por usuários remotos;_
+- _Em aplicativos/apps iOS, Android ou Windows RT;_
+- _Em publicações digitais do tipo eBooks._
 
-Para esse tipo de uso o Licenciado deve requisitar do Licenciante ou seus distribuidores autorizados uma licença apropriada. Um custo adicional pode ser cobrado por essa extensão da licença.
+_Para esse tipo de uso o Licenciado deve requisitar do Licenciante ou seus distribuidores autorizados uma licença apropriada. Um custo adicional pode ser cobrado por essa extensão da licença._
 
 #### 2.3 Cópia de segurança
 O Licenciado pode fazer cópias de segurança da Fonte somente para propósitos de arquivamento, desde que mantenha a guarda exclusiva e controle sobre tais cópias.

@@ -1,26 +1,29 @@
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { FunctionComponent, useEffect, useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import License from '../../models/License';
 import licensesRepository from '../../repositories/licenses-repository';
-import Page, { PageSection } from '../Page';
+import Page, { pageI18nNamespace, PageSection } from '../Page';
 import styles from './styles.module.scss';
 
-const LicensePage: FunctionComponent = () => {
+const i18nNamespace = [ ...pageI18nNamespace, 'fonts' ];
 
-  const { asPath } = useRouter()
+const LicensePage: FunctionComponent = () => {
+  const { asPath, locale } = useRouter();
+  const { t } = useTranslation();
+  
 	const slug = asPath.substring(1).split('#')[0]
   const license = licensesRepository.load(slug);
 
   const backwardLink = {
-		text: 'Fonts',
+		text: t('common:Sections.fonts', 'Fonts'),
 		href: '/fonts',
 	}
   const [mdText, setMdText] = useState('');
 
   useEffect(() => {
     if (license) {
-      fetch(`/content/${license.slug}/eula-br.md`)
+      fetch(`/content/${license.slug}/eula-${locale}.md`)
       .then(res => res.text())
       .then(text => setMdText(text))
     }
@@ -28,7 +31,7 @@ const LicensePage: FunctionComponent = () => {
   
   return (
     <Page
-      title={`Licença ${license?.name}` ?? ''}
+      title={t('fonts:licenseName', '', {name: license?.name})}
       section={PageSection.Fonts}
       backwardLink={backwardLink}
     >
@@ -36,10 +39,10 @@ const LicensePage: FunctionComponent = () => {
         <ReactMarkdown children={mdText} />
       </div>
     </Page>
-
-
-    
   );
 };
 
 export default LicensePage;
+export {
+  i18nNamespace as licensePageI18nNamespace
+}

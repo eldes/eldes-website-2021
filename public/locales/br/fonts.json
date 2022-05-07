@@ -1,3 +1,4 @@
 {
-	"fontNamePrefix": "Fonte Eldes"
+	"fontNamePrefix": "Fonte Eldes",
+	"licenseName": "Licença {{name}}"
 }

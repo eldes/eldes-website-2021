@@ -5,7 +5,7 @@
 	"Resume": {
 		"title": "Resumo",
 		"fontName": "Fonte Eldes {{name}}",
-		"licenseName": "Licença {{name}}",
+		"licenseName": "$t(fonts:licenseName)",
 		"unit_one": "{{count}} unidade",
 		"unit_other": "{{count}} unidades"
 	},
