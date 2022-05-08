@@ -69,7 +69,7 @@ const UltimaFlorAbrilPage: NextPage = () => {
         The cover
       </BeHeading>
       <BeParagaph>
-        And a color illustration was designed to fill the entire cover and back cover.
+        And a color illustration was designed to fill the entire front cover, back cover and flaps.
       </BeParagaph>
       <BeImage src={coverIllustrationImage} alt="cover illustration" />
     </PieceBePage>
