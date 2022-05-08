@@ -25,7 +25,6 @@ const PieceList: FunctionComponent<Props> = ({ pieces }) => {
 							<a>
 								<span className={ styles.textLabel }>{  localizer.getValue(piece.title) } <small>{ localizer.getValue(piece.subtitle) }</small></span>
 								<Image src={ piece.thumbnail } width={512} height={512} alt={ localizer.getValue(piece.title) } layout="intrinsic" />
-								
 							</a>
 						</Link>
 					</li>

@@ -85,6 +85,18 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/como-eram-os-animais-cordel-childrens-book/thumbnail.png',
 	},
 	{
+		slug: 'a-ultima-flor-de-abril-childrens-book',
+		title: {
+			en: 'A última flor de abril',
+			br: 'A última flor de abril',
+		},
+		subtitle: {
+			en: 'Children\'s book illustrations',
+			br: 'Ilustrações para livro infantil',
+		},
+		thumbnail: '/content/a-ultima-flor-de-abril-childrens-book/thumbnail.png',
+	},
+	{
 		slug: 'protest-whitebard-animation',
 		title: {
 			en: 'Protest',

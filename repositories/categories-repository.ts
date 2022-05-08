@@ -47,6 +47,7 @@ const categoriesMock: Category[] = [
 			'historias-da-ajudaris-17-childrens-book-illustrations',
 			'poeminhas-reais-childrens-book-illustration',
 			'como-eram-os-animais-cordel-childrens-book',
+			'a-ultima-flor-de-abril-childrens-book',
 		],
 	},
 	{
