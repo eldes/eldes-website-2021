@@ -37,6 +37,18 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
 	},
 	{
+		slug: 'historias-da-ajudaris-19-childrens-book-illustrations',
+		title: {
+			en: 'Histórias da Ajudaris\'19',
+			br: 'Histórias da Ajudaris\'19',
+		},
+		subtitle: {
+			en: 'Children\'s book illustrations',
+			br: 'Ilustrações para livro infantil',
+		},
+		thumbnail: '/content/historias-da-ajudaris-19-childrens-book-illustrations/thumbnail.jpg',
+	},
+	{
 		slug: 'historias-da-ajudaris-17-childrens-book-illustrations',
 		title: {
 			en: 'Histórias da Ajudaris\'17',
