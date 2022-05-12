@@ -1,15 +1,29 @@
-import { GetStaticProps, NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeCredits from '../components/BeCredits'
-import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BeCredits from '../components/BeCredits';
+import BeImage from '../components/BeImage';
+import BePhotoGrid from '../components/BePhotoGrid';
+import BeThanks from '../components/BeThanks';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import highlightImage from '../public/content/boreal-textbook-flip-book/highlight.jpg';
+import previewAniImage from '../public/content/boreal-textbook-flip-book/preview-ani.gif';
 
 const BorealTextbookFlipBookPage: NextPage = () => {
 	return (
 		<PieceBePage>
+			<BeImage src={highlightImage} alt={'Details of illustration'} />
 			<BeCredits
 				clientName='Editora Boreal'
 				work='storyboard and illustration'
 			/>
+			<BePhotoGrid
+				images={[
+					{
+						src: previewAniImage,
+						alt: 'Preview of animation'
+					}
+				]} cols={0} />
+			<BeThanks />
 		</PieceBePage>
 	)
 }
