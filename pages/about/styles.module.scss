@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+.about {
+  margin-bottom: $inset_xxl;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: $header_max_width;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: #{$header_max_width + 2 * $inset_l}) {
+    & {
+      padding: 0px $inset_l;
+    }
+  }
+
+  .resume {
+    display: flex;
+    column-gap: $inset_l;
+    align-items: flex-end;
+
+    .text {
+      flex-grow: 1;
+
+      strong {
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 1em;
+      }
+
+      em {
+        text-transform: uppercase;
+        font-style: normal;
+        font-size: 0.9em;
+        white-space: nowrap;
+      }
+    }
+
+    .photo {
+      flex-shrink: 0;
+      min-width: 320px;
+      height: auto;
+    }
+
+    @media (max-width: 720px) {
+      & {
+        flex-direction: column;
+
+        .photo {
+          order: -1;
+          margin-bottom: $inset_l;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  section {
+    margin-top: $inset_xl;
+    border-top: 1px solid #ccc;
+    padding-top: $inset_xl;
+
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: $inset_l;
+    }
+
+    p {
+      margin-bottom: $inset_m;
+    }
+  }
+}
