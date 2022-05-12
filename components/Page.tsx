@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import { FunctionComponent, ReactNode } from 'react'
-import styles from '../styles/Page.module.scss'
-import PageFooter from './PageFooter'
-import PageHeader from './PageHeader'
-import PageReverseNavigationBar, { PageReverseNavigationBarLink } from './PageReverseNavigationBar'
+import Head from 'next/head';
+import { FunctionComponent, ReactNode } from 'react';
+import styles from '../styles/Page.module.scss';
+import PageFooter from './PageFooter';
+import PageHeader from './PageHeader';
+import PageReverseNavigationBar, { PageReverseNavigationBarLink } from './PageReverseNavigationBar';
+
+const i18nNamespace = ['common', 'Page'];
 
 enum Section {
 	Home,
@@ -48,6 +50,7 @@ const Page: FunctionComponent<Props> = ({ pretitle, title, subtitle, description
 
 export default Page
 export {
+	i18nNamespace as pageI18nNamespace,
 	Section as PageSection,
 	type Props as PageProps
 }

@@ -17,6 +17,7 @@ import mockup200808aImage from '../public/content/sketchbook-number-4/mockup-200
 import mockup200904aImage from '../public/content/sketchbook-number-4/mockup-2009-04a.jpg';
 import mockup201006aImage from '../public/content/sketchbook-number-4/mockup-2010-06a.jpg';
 import mockup201807aImage from '../public/content/sketchbook-number-4/mockup-2018-07a.jpg';
+import mockup201808aImage from '../public/content/sketchbook-number-4/mockup-2018-08a.jpg';
 import mockup201808bImage from '../public/content/sketchbook-number-4/mockup-2018-08b.jpg';
 import mockup201910aImage from '../public/content/sketchbook-number-4/mockup-2019-10a.jpg';
 import mockup202004aImage from '../public/content/sketchbook-number-4/mockup-2020-04a.jpg';
@@ -39,7 +40,7 @@ const SketchbookNumber4Page: NextPage = () => {
 				alt={ 'Sketchbook #4' }
 			/>
 			<BeParagaph>
-				This 4th sketchbook of mine was made with sheets of satin coated paper. The drawings were made using a rechargeable technical pen, without a previous draft.
+				This 4<sup>th</sup> sketchbook of mine was made with sheets of satin coated paper. The drawings were made using a rechargeable technical pen, without a previous draft.
 			</BeParagaph>
 			<BePhotoGrid
 				images={[
@@ -142,7 +143,7 @@ const SketchbookNumber4Page: NextPage = () => {
 			<BePhotoGrid
 				images={[
 					{
-						src: mockup200904aImage,
+						src: mockup201808aImage,
 						alt: 'Mockup of page'
 					},
 					{

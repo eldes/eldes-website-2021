@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { FunctionComponent } from 'react'
-import styles from '../styles/PageReverseNavigationBar.module.scss'
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import styles from './styles.module.scss';
 
 export type PageReverseNavigationBarLink = {
 	text: string
@@ -18,7 +18,7 @@ const PageReverseNavigationBar: FunctionComponent<Props> = ({ backwardLink }) =>
 			backwardLink && (
 				<div className={ styles.pageReverseNavigationBar }>
 					<Link href={ backwardLink.href } >
-						<a className={ styles.backwardLink }><span className="material-icons">chevron_left</span>{ backwardLink.text }</a>
+						<a className={ styles.backwardLink }>{ backwardLink.text }</a>
 					</Link>
 				</div>
 			)

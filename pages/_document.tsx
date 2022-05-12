@@ -38,7 +38,7 @@ class MyDocument extends Document {
 					{/* fonts: */}
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet" />
-					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+					<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 				</Head>
 				<body>
 					<Main />

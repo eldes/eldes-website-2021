@@ -1,10 +1,10 @@
-import { GetStaticProps, NextPage } from 'next'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import CategoryList, { CategoriesListHighlight } from '../components/CategoryList'
-import Page, { PageSection } from '../components/Page'
-import Category from '../models/Category'
-import categoriesRepository from '../repositories/categories-repository'
+import { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import CategoryList, { CategoriesListHighlight } from '../components/CategoryList';
+import Page, { pageI18nNamespace, PageSection } from '../components/Page';
+import Category from '../models/Category';
+import categoriesRepository from '../repositories/categories-repository';
 
 type Props = {
 	categories: Category[]
@@ -23,7 +23,7 @@ const PortfolioPage: NextPage<Props> = ({ categories }) => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', ['common', 'Page'])),
+			...(await serverSideTranslations(locale ?? '', [...pageI18nNamespace])),
 			categories: categoriesRepository.loadAll(),
 		}
 	}

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FunctionComponent, useState } from 'react';
+import { ChangeEventHandler, FunctionComponent, useEffect, useState } from 'react';
 import Logotype from '../../models/Logotype';
 import FormFieldText from '../FormFieldText';
 
@@ -12,20 +12,19 @@ const LogotypePanel: FunctionComponent<Props> = (props) => {
 
   const [name, setName] = useState('');
 
-  const fireChange = () => {
+  const fireChangeEvent = () => {
     if (props.onChange) {
       props.onChange({name});
     }
   };
-  
-  const nameChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-    setName(e.target.value);
-    fireChange()
-  }
+
+  useEffect(() => {
+    fireChangeEvent()
+  }, [name]);
 
   return (
     <>
-      <FormFieldText label={'Nome da marca'} onChange={nameChanged} />
+      <FormFieldText label={'Nome da marca'} onChangeText={setName} />
     </>
   );
 };

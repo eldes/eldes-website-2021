@@ -38,7 +38,7 @@ const PixPanel: FunctionComponent<Props> = (props) => {
           if (props.onChange) {
             props.onChange({
               receiptFile: {
-                base64: `data:${file.type};base64,${window.btoa(binary)}`,
+                base64: window.btoa(binary),
                 type: file.type,
               },
             });

@@ -29,7 +29,7 @@ const BeLicenseListItem: FunctionComponent<Props> = (props) => {
 			<tr>
 				<td><Trans t={t} i18nKey={`${fontBePageI18nKey}:License.name`} values={{ name: license?.name}}>{license?.name} License</Trans></td>
 				<td>{localizer.getLocale().currency.symbol} {localizer.getValue(fontPrice.price)?.amount}</td>
-				<td>{localizer.getValue(license?.resume)} <Link href={`/${license?.slug}-details`}><a><Trans i18nKey={`${fontBePageI18nKey}:seeMoreDetails`}>See more details...</Trans></a></Link></td>
+				<td>{localizer.getValue(license?.resume)} <Link href={`/${license?.slug}`}><a><Trans i18nKey={`${fontBePageI18nKey}:seeMoreDetails`}>See more details...</Trans></a></Link></td>
 				<td>
 					<BuyFontPanel font={font} license={license} fontPrice={fontPrice} />
 				</td>

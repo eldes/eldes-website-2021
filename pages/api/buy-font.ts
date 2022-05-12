@@ -1,9 +1,7 @@
+import SendGridHelpers from '@sendgrid/helpers';
+import SendGridMail from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
-import { MailOptions } from 'nodemailer/lib/smtp-transport';
 import FontOrder from '../../models/FontOrder';
-import PaymentMethod from '../../models/PaymentMethod';
 
 type ResponseData = {
   saved: boolean
@@ -12,114 +10,115 @@ type ResponseData = {
 
 const handler = (
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>) => {
-    const fontOrder: FontOrder = req.body
+  res: NextApiResponse<ResponseData>
+) => {
+  const fontOrder: FontOrder = req.body
 
-    const attachments: Mail.Attachment[] = []
+  const attachments: SendGridHelpers.classes.Attachment[] = [];
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465,
-      auth: {
-        user: 'eldes@eldes.com',
-        pass: 'zebMWD4NyJj.!Lt7Cub!',
-      },
-    });
+  const fontHtml = `
+    <h2>Fonte</h2>
+    <ul>
+      <li>Fonte: ${fontOrder.fontName}</li>
+      <li>Licença: ${fontOrder.licenseName}</li>
+      <li>Quantidade: ${fontOrder.quantity} unidade</li>
+    </ul>
+  `;
 
-    const fontHtml = `
-      <h2>Fonte</h2>
-      <ul>
-        <li>Fonte: ${fontOrder.fontName}</li>
-        <li>Licença: ${fontOrder.licenseName}</li>
-        <li>Quantidade: ${fontOrder.quantity} unidade</li>
-      </ul>
+  const licenseeHtml = `
+    <h2>Licenciado</h2>
+    <ul>
+      <li>Nome: ${fontOrder.licensee.name}</li>
+      <li>E-mail: ${fontOrder.licensee.email}</li>
+    </ul>
+  `;
+
+  const logotypeHtml = `
+    <h2>Logotipo</h2>
+    <ul>
+      <li>Nome da marca: ${fontOrder.logotype?.name}</li>
+    </ul>
+  `;
+
+  const paymentHtml = `
+    <h2>Pagamento</h2>
+    <ul>
+      <li>Valor: ${fontOrder.payment.currency.symbol} ${fontOrder.payment.amount}</li>
+      <li>Método: ${fontOrder.payment.method}</li>
+    </ul>
+  `;
+
+  const paypalHtml = `
+    <h2>PayPal</h2>
+    <ul>
+      <li>ID: ${fontOrder.payment.paypal?.id}</li>
+      <li>Nome: ${fontOrder.payment.paypal?.payer.givenName} ${fontOrder.payment.paypal?.payer.surname}</li>
+      <li>E-mail: ${fontOrder.payment.paypal?.payer.email}</li>
+      <li>User ID: ${fontOrder.payment.paypal?.payer.id}</li>
+      <li>País: ${fontOrder.payment.paypal?.payer.address.countryCode}</li>
+    </ul>
+  `;
+
+  let html = `
+    <h1>Pedido de Licença</h1>
+    ${fontHtml}
+    ${licenseeHtml}
+    ${fontOrder.logotype ? logotypeHtml : ''}
+    ${paymentHtml}
+  `;
+
+  if (fontOrder.payment.pix) {
+    const today = new Date()
+    const attachmentFilename = `pix-${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}.${fontOrder.payment.pix?.receiptFile.type.split('/')[1]}`;
+
+    const attachment = new SendGridHelpers.classes.Attachment();
+    attachment.setContent(fontOrder.payment.pix.receiptFile.base64);
+    attachment.setFilename(attachmentFilename);
+    attachment.setType(fontOrder.payment.pix.receiptFile.type);
+    attachment.setDisposition('attachment');
+    attachments.push(attachment);
+  } else { //PayPal
+    html = `
+      ${html}
+      ${paypalHtml}
     `;
+  }
 
-    const licenseeHtml = `
-      <h2>Licenciado</h2>
-      <ul>
-        <li>Nome: ${fontOrder.licensee.name}</li>
-        <li>E-mail: ${fontOrder.licensee.email}</li>
-      </ul>
-    `;
-
-    const logotypeHtml = `
-      <h2>Logotipo</h2>
-      <ul>
-        <li>Nome da marca: ${fontOrder.logotype?.name}</li>
-      </ul>
-    `;
-
-    const paymentHtml = `
-      <h2>Pagamento</h2>
-      <ul>
-        <li>Valor: ${fontOrder.payment.currency.symbol} ${fontOrder.payment.amount}</li>
-        <li>Método: ${fontOrder.payment.method}</li>
-      </ul>
-    `;
-
-    const paypalHtml = `
-      <h2>PayPal</h2>
-      <ul>
-        <li>ID: ${fontOrder.payment.paypal?.id}</li>
-        <li>Nome: ${fontOrder.payment.paypal?.payer.givenName} ${fontOrder.payment.paypal?.payer.surname}</li>
-        <li>E-mail: ${fontOrder.payment.paypal?.payer.email}</li>
-        <li>User ID: ${fontOrder.payment.paypal?.payer.id}</li>
-        <li>País: ${fontOrder.payment.paypal?.payer.address.countryCode}</li>
-      </ul>
-    `;
-
-    let html = `
-      <h1>Pedido de Licença</h1>
-      ${fontHtml}
-      ${licenseeHtml}
-      ${logotypeHtml}
-      ${paymentHtml}
-    `;
-
-    if (fontOrder.payment.method === PaymentMethod.Pix.toString()) {
-      const today = new Date()
-      const attachmentFilename = `pix-${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}.${fontOrder.payment.pix?.receiptFile.type.split('/')[1]}`;
-      attachments.push({
-        filename: attachmentFilename,
-        path: fontOrder.payment.pix?.receiptFile.base64,
-      });
-    } else { //PayPal
-      html = `
-        ${html}
-        ${paypalHtml}
-      `;
-    }
-    
-    const options: MailOptions = {
-      from: 'eldes@eldes.com',
-      to: 'studio@eldes.com',
-      subject: fontOrder.fontName,
-      text: `
-        PEDIDO DE LICENÇA:
-        ${fontOrder.fontName}
-        ${fontOrder.licenseName}
-        1 unidade
-        Pagamento: ${fontOrder.payment.method.toString()}
-        Nome: ${fontOrder.licensee?.name}
-        E-mail: ${fontOrder.licensee?.email}
-      </div>
+  SendGridMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+  const mailData: SendGridMail.MailDataRequired = {
+    to: 'contact@salander.agency',
+    cc: 'studio@eldes.com',
+    from: 'studio@eldes.com',
+    subject: `Fonte Eldes ${fontOrder.fontName}`,
+    text: `
+      PEDIDO DE LICENÇA:
+      ${fontOrder.fontName}
+      ${fontOrder.licenseName}
+      1 unidade
+      Pagamento: ${fontOrder.payment.method.toString()}
+      Nome: ${fontOrder.licensee?.name}
+      E-mail: ${fontOrder.licensee?.email}
     `,
-      html,
-      attachments: attachments,
-    }
+    html: html,
+    attachments: attachments,
+  };
 
-    transporter.sendMail(options, (err, info)=> {
-      if (err) {
-        return res.status(400).json({saved: false, error: err})
-      } else {
-        return res.status(200).json({saved: true})
-      }
-    })
+  const responseData: ResponseData = {
+    saved: false,
+    error: new Error('ERRO#01'),
+  };
 
-    return res.status(200).json({
-      saved: true
-    })
+  SendGridMail.send(mailData)
+  .then(() => {
+    responseData.saved = true;
+    responseData.error = undefined;
+    res.status(200).json(responseData);
+  })
+  .catch(error => {
+    responseData.saved = false;
+    responseData.error = new Error('ERRO#02');
+    res.status(400).json(responseData);
+  })
 }
 
 export default handler;
