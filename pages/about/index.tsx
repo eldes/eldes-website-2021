@@ -6,7 +6,7 @@ import Page, { PageSection } from '../../components/Page';
 import eldesPhotoImage from '../../public/content/about/eldes.jpg';
 import styles from './styles.module.scss';
 
-const AbaoutPage: NextPage = () => {
+const AboutPage: NextPage = () => {
 	const { t } = useTranslation()
 	
 	return (
@@ -53,4 +53,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	}
 }
 
-export default AbaoutPage
+export default AboutPage
