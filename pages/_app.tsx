@@ -1,10 +1,10 @@
 import { appWithTranslation } from 'next-i18next';
+import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import '../styles/app.scss';
-import type { AppProps } from 'next/app'
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const MyApp: (appProps: AppProps) => JSX.Element = ({ Component, pageProps }) => {
   const router = useRouter();
   useEffect(() => {
     const routerChanged = (url: URL) => {

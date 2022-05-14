@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { FormEventHandler, FunctionComponent, useEffect, useMemo, useState } from 'react';
+import { FormEventHandler, FunctionComponent, useCallback, useEffect, useMemo, useState } from 'react';
 import Font from '../../models/Font';
 import FontOrder, { PaypalPayment, PixPayment } from '../../models/FontOrder';
 import FontPrice from '../../models/FontPrice';
@@ -46,23 +46,25 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
   const [buyFontResult, setBuyFontResult] = useState<BuyFontResult>();
 
-	const order: FontOrder = {
-		fontName: props.font.name,
-		licenseName: props.license.name,
-		quantity: 1,
-		licensee: {
-			name: useMemo(() => licenseePanelData?.fullName ?? '', [licenseePanelData]),
-			email: useMemo(() => licenseePanelData?.email ?? '', [licenseePanelData]),
-		},
-    logotype: useMemo(() => logotype, [logotype]),
-		payment: {
-			amount: localizer.getValue(props.fontPrice.price).amount,
-			currency: localizer.getLocale().currency,
-			method: useMemo(() => paymentMethod, [paymentMethod]),
-			pix: useMemo(() => pixPayment, [pixPayment]),
-			paypal: useMemo(() => paypalPayment, [paypalPayment]),
-		},
-	};
+	const order: FontOrder = useMemo(() => {
+    return {
+      fontName: props.font.name,
+      licenseName: props.license.name,
+      quantity: 1,
+      licensee: {
+        name: licenseePanelData?.fullName ?? '',
+        email: licenseePanelData?.email ?? '',
+      },
+      logotype: logotype,
+      payment: {
+        amount: localizer.getValue(props.fontPrice.price).amount,
+        currency: localizer.getLocale().currency,
+        method: paymentMethod,
+        pix: pixPayment,
+        paypal: paypalPayment,
+      },
+    }
+  }, [licenseePanelData, localizer, logotype, paymentMethod, paypalPayment, pixPayment, props.font.name, props.fontPrice.price, props.license.name]);
 
   const [opened, setOpened] = useState(false)
 	const open = () => {
@@ -77,8 +79,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
   const [progress, setProgress] = useState(false);
 
-  const buyFont = async () => {
-    setProgress(true);
+  const buyFont = useCallback(async () => {
     setBuyFontResult(undefined)
 
 		const endpoint = '/api/buy-font'
@@ -93,7 +94,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 		const response = await fetch(endpoint, options)
 		setBuyFontResult(await response.json())
     setProgress(false);
-  };
+  }, [order]);
 
 	const formSubmited: FormEventHandler<HTMLFormElement> = (event) => {
 		event.preventDefault();
@@ -104,7 +105,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
     if (paypalPayment) {
       buyFont();
     }
-  }, [paypalPayment]);
+  }, [paypalPayment, buyFont]);
 
 	return (
 		<div className={ styles.buyFontPanel }>

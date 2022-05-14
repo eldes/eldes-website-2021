@@ -27,7 +27,7 @@ const LicensePage: FunctionComponent = () => {
       .then(res => res.text())
       .then(text => setMdText(text))
     }
-  }, []);
+  }, [license, locale]);
   
   return (
     <Page
@@ -36,7 +36,7 @@ const LicensePage: FunctionComponent = () => {
       backwardLink={backwardLink}
     >
       <div className={styles.licenseDoc}>
-        <ReactMarkdown children={mdText} />
+        <ReactMarkdown>{mdText}</ReactMarkdown>
       </div>
     </Page>
   );

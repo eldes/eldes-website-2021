@@ -1,6 +1,6 @@
 import { buyFontPanelI18nKey } from '.';
 import { useTranslation } from 'next-i18next';
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import FormFieldText from '../FormFieldText';
 
 class Data {
@@ -41,15 +41,15 @@ const LicenseePanel: FunctionComponent<Props> = (props) => {
   const [fullName, setFullName] = useState('')
 	const [email, setEmail] = useState('')
 
-  const fireChangeEvent = () => {
+  const fireChangeEvent = useCallback(() => {
     if (props.onChange) {
       props.onChange(Data.make(fullName, email))
     }
-  }
+  }, [email, fullName, props]);
 
   useEffect(() => {
     fireChangeEvent()
-  }, [fullName, email])
+  }, [fireChangeEvent]);
 
   return (
     <>
