@@ -9,9 +9,11 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect(() => {
     const routerChanged = (url: URL) => {
       if (process.env.NODE_ENV === 'production') {
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-          page_path: url,
-        });
+        const gaId: string = process.env.NEXT_PUBLIC_GA_ID ?? '';
+        const configParams: Gtag.ConfigParams = {
+          page_path: url.toString(),
+        };
+        window.gtag('config', gaId, configParams);
       }
     }
     router.events.on('routeChangeComplete', routerChanged);
