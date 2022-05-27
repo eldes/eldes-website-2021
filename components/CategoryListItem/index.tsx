@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
-import Category from '../models/Category';
-import { Localizer } from '../models/Locale';
-import styles from '../styles/CategoryListItem.module.scss';
-import { CategoriesListHighlight } from './CategoryList';
+import Category from '../../models/Category';
+import { Localizer } from '../../models/Locale';
+import { CategoriesListHighlight } from '../CategoryList';
+import styles from './styles.module.scss';
 
 type Props = {
 	category: Category
