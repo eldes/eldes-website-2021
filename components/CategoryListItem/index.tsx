@@ -4,25 +4,23 @@ import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
 import Category from '../../models/Category';
 import { Localizer } from '../../models/Locale';
-import { CategoriesListHighlight } from '../CategoryList';
 import styles from './styles.module.scss';
 
 type Props = {
 	category: Category
-	highlight: CategoriesListHighlight
 }
 
-const CategoryListItem: FunctionComponent<Props> = ({ category, highlight }) => {
+const CategoryListItem: FunctionComponent<Props> = (props) => {
 	const localizer = Localizer.make(useRouter());
 
 	return (
-		<li className={ `${styles.categoryListItem} ${styles[`highlight-${highlight}`]}` }>
-			<Link href={ `${category.slug}` }>
+		<li className={ `${styles.categoryListItem} ${styles[`highlight-${props.category.highlight}`]}` }>
+			<Link href={ `${props.category.slug}` }>
 				<a>
-					<span className={ styles.textLabel }>{ localizer.getValue(category.title) } <small>{ localizer.getValue(category.subtitle) }</small></span>
+					<span className={ styles.textLabel }>{ localizer.getValue(props.category.title) } <small>{ localizer.getValue(props.category.subtitle) }</small></span>
 					<span className={ styles.thumbnails }>
 					{
-						category.thumbnails.map(thumbnail => <Image key={ thumbnail } src={ thumbnail } width={512} height={512} alt={ localizer.getValue(category.title) } layout="intrinsic"/>)
+						props.category.thumbnails.map(thumbnail => <Image key={ thumbnail } src={ thumbnail } width={512} height={512} alt={ localizer.getValue(props.category.title) } layout="intrinsic"/>)
 					}
 					</span>
 				</a>

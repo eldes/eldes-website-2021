@@ -1,4 +1,5 @@
 import Category from '../models/Category';
+import { CategoryHighlight } from '../models/CategoryHighlight';
 import Piece from '../models/Piece';
 import piecesRepository from './pieces-repository';
 
@@ -35,6 +36,7 @@ const categoriesMock: Category[] = [
 			br: 'e Didáticos',
 		},
 		slug: 'childrens-books-and-textbooks',
+		highlight: CategoryHighlight.High,
 		thumbnails: [
 			'/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
 			'/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
@@ -61,6 +63,7 @@ const categoriesMock: Category[] = [
 			br: 'e flip book',
 		},
 		slug: 'animation',
+		highlight: CategoryHighlight.High,
 		thumbnails: [
 			'/content/protest-whiteboard-animation/thumbnail.jpg',
 			'/content/penguin-story-flip-book/thumbnail.jpg',
@@ -84,8 +87,8 @@ const categoriesMock: Category[] = [
 			br: 'e arte tradicional',
 		},
 		slug: 'sketchbooks',
+		highlight: CategoryHighlight.Low,
 		thumbnails: [
-			'/content/sketchbook-number-4/thumbnail.jpg',
 			'/content/sketchbook-number-4/thumbnail.jpg',
 			'/content/sketchbook-number-4/thumbnail.jpg',
 		],
