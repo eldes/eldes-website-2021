@@ -115,7 +115,7 @@ const piecesMock: Piece[] = [
 			br: 'Revista Ilustrar 20',
 		},
 		subtitle: {
-			en: 'Magazine illustrations',
+			en: 'Illustrations for article',
 			br: 'Ilustrações para artigo',
 		},
 		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
