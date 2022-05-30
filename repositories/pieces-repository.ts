@@ -109,6 +109,18 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/a-ultima-flor-de-abril-childrens-book/thumbnail.png',
 	},
 	{
+		slug: 'ilustrar-magazine-20',
+		title: {
+			en: 'Ilustrar Magazine 20',
+			br: 'Revista Ilustrar 20',
+		},
+		subtitle: {
+			en: 'Magazine illustrations',
+			br: 'Ilustrações para artigo',
+		},
+		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
+	},
+	{
 		slug: 'protest-whitebard-animation',
 		title: {
 			en: 'Protest',

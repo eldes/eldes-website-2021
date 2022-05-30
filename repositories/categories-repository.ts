@@ -79,6 +79,26 @@ const categoriesMock: Category[] = [
 	},
 	{
 		title: {
+			en: 'Editorial',
+			br: 'Editorial',
+		},
+		subtitle: {
+			en:'magazines and newspaper',
+			br: 'revistas e jornais',
+		},
+		slug: 'editorial',
+		highlight: CategoryHighlight.High,
+		thumbnails: [
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+		],
+		pieceSlugs: [
+			'ilustrar-magazine-20'
+		]
+	},
+	{
+		title: {
 			en: 'Sketchbooks',
 			br: 'Sketchbooks',
 		},
