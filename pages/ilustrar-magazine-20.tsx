@@ -18,10 +18,6 @@ const IlustrarMagazinePage: NextPage = () => {
 				clientName="Ilustrar Magazine"
 				work="illustrations"
 			/>
-       <BeParagaph>
-        O artigo, <em>&quot;Sobre como dar Banho em Deuses&quot;</em>, escrito pelo Renato Alarcão e ilustrado por mim, foi publicado na edição 20 da <Link href="https://revistailustrar.com.br"><a target="_blank">Revista Ilustrar</a></Link>.
-      </BeParagaph>
-      <BeImage src={mockupImage} alt='Mockup' />
       <BeParagaph>
         <blockquote>Você tem ideia do tipo de ilustrador que quer ser?<br/>
         Faz ideia por onde começar?</blockquote>
@@ -29,6 +25,13 @@ const IlustrarMagazinePage: NextPage = () => {
       <BeImage src={illustration2Image} alt='2nd illustration' />
       <BeParagaph>
         A partir desses questionamentos, Alarcão faz uma reflexão sobre o ingresso na profissão de ilustrador e dá dicas valiosas para quem quer seguir nessa carreira.
+      </BeParagaph>
+       <BeParagaph>
+        O artigo, <em>&quot;Sobre como dar Banho em Deuses&quot;</em>, escrito pelo Renato Alarcão e ilustrado por mim, foi publicado na edição 20 da Revista Ilustrar.
+      </BeParagaph>
+      <BeImage src={mockupImage} alt='Mockup' />
+      <BeParagaph>
+        Confira a edição, em <Link href="https://revistailustrar.com.br"><a target="_blank">www.revistailustrar.com.br</a></Link>
       </BeParagaph>
       <BeImage src={thanksImage} alt='Thank you' />
       <BeThanks />
