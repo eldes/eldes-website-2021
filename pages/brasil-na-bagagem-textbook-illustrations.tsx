@@ -77,10 +77,43 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				src={ brokenTelephoneImage }
 				alt="Broken telephone illutration"
 			/>
-			<BeCredits
-				clientName={dt('Credits.client', 'Intercultural Language Center')}
-				work={dt('Credits.work', 'illustrations and part of interior formatting')}
-			/>
+			<BeCredits fields={[
+				{
+					label: 'Intercultural Language Center',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Erika Campanharo',
+					value: {
+						br: 'texto',
+						en: 'text',
+					}
+				},
+				{
+					label: 'Muiraquitã Editoração Gráfica',
+					value: {
+						br: 'design',
+						en: 'design',
+					}
+				},
+				{
+					label: 'Alexandre Matos',
+					value: {
+						br: 'capa',
+						en: 'book cover',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações pesonalizadas',
+						en: 'Custom illustrations',
+					}
+				},
+			]}/>
 			<BeImage
 				src={ bookCoverMockupImage }
 				alt="Book cover mockup"

@@ -58,9 +58,36 @@ import urubuImage from '../public/content/como-eram-os-animais-cordel-childrens-
 const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => (
 	<PieceBePage>
 		<BeImage src={ratoImage} alt={'Illustration for the stanza of mouse'} />
-		<BeCredits
-			clientName='Réptil Editora'
-			work='illustrations'
+		<BeCredits fields={[
+			{
+				label: 'Réptil Editora',
+				value: {
+					br: 'editora',
+					en: 'publisher',
+				}
+			},
+			{
+				label: 'Izaías Gomes',
+				value: {
+					br: 'texto',
+					en: 'text',
+				}
+			},
+			{
+				label: 'Amanda Meirinho',
+				value: {
+					br: 'design',
+					en: 'design',
+				}
+			},
+			{
+				label: 'Eldes',
+				value: {
+					br: 'ilustrações',
+					en: 'illustrations',
+				}
+			},
+		]}
 		>
 			Book selected by FNLIJ (National Foundation of Childrens and Young Adult Book) for 48th Bologna Children&apos;s Book Fair.
 		</BeCredits>

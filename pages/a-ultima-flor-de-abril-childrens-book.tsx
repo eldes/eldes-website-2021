@@ -22,10 +22,29 @@ const UltimaFlorAbrilPage: NextPage = () => {
 				src={highlightIllustrationImage}
 				alt={'Highlight illustration'}
 			/>
-      <BeCredits
-				clientName="Editora Saraiva"
-				work="illustrations"
-			/>
+      <BeCredits fields={[
+				{
+					label: 'Editora Saraiva',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+        {
+					label: 'Alexandre Azevedo e Augusto Segato',
+					value: {
+						br: 'texto',
+						en: 'text',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações',
+						en: 'illustrations',
+					}
+				},
+			]}/>
       <BeImage
 				src={mockupImage}
 				alt={'Book cover mockup'}

@@ -8,7 +8,22 @@ import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage
 const PenguinStoryFlipBookPage: NextPage = () => {
 	return (
 		<PieceBePage>
-			<BeCredits clientName='private' work='illustration' />
+			<BeCredits fields={[
+				{
+					label: 'private',
+					value: {
+						br: 'cliente',
+						en: 'client',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustração e encadernação',
+						en: 'illustration and book binding',
+					}
+				},
+			]}/>
 			<BeEmbed aspectRatioPercent={56.25} horizontalPadding={true} verticalPadding={true}>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/bFmu-1aW7qc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 			</BeEmbed>

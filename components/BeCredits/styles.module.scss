@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.beCredits {
+	margin: $inset_xxl;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: $inset_m 0px;
+	
+	table {
+		width: calc(100% - #{$inset_xxl * 2});
+		color: #999;
+		font-size: 0.7em;
+
+		caption {
+			display: none;
+		}
+	
+		tr {
+			th,td {
+				padding: $inset_xs $inset_xs;
+				font-size: 0.8em;
+			}
+	
+			th.label {
+				
+				font-weight: 600;
+				text-transform: uppercase;
+				text-align: end;
+				white-space: nowrap;
+			}
+	
+			td.value {
+				font-weight: 300;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+	
+			td.notes {
+				padding-top: $inset_l;
+				white-space: wrap;
+			}
+		}
+	}
+}

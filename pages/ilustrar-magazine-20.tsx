@@ -14,10 +14,29 @@ const IlustrarMagazinePage: NextPage = () => {
   return (
     <PieceBePage>
       <BeImage src={highlightImage} alt='1st illustration' />
-      <BeCredits
-				clientName="Ilustrar Magazine"
-				work="illustrations"
-			/>
+      <BeCredits fields={[
+				{
+					label: 'Ilustrar Magazine',
+					value: {
+						br: 'cliente',
+						en: 'client',
+					}
+				},
+        {
+					label: 'Renato Alarcão',
+					value: {
+						br: 'texto',
+						en: 'text',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustração',
+						en: 'illustration',
+					}
+				},
+			]}/>
       <BeParagaph>
         <blockquote>Você tem ideia do tipo de ilustrador que quer ser?<br/>
         Faz ideia por onde começar?</blockquote>

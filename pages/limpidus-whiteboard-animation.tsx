@@ -12,7 +12,22 @@ const LimpidusWhiteboardAnimationPage: NextPage = () => {
 	return (
 		<PieceBePage>
 			<BeImage src={highlightImage} alt={'Details of illustation'} horizontalPadding  />
-			<BeCredits clientName='Limpidus' work='storyboard, voice over direction, illustration, animation' />
+			<BeCredits fields={[
+				{
+					label: 'Limpidus',
+					value: {
+						br: 'cliente',
+						en: 'client',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustração e animação',
+						en: 'illustration and animation',
+					}
+				},
+			]}/>
 			<BeEmbed aspectRatioPercent={56.25} horizontalPadding={true} verticalPadding={true}>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/MjwyJFCH6q0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 			</BeEmbed>

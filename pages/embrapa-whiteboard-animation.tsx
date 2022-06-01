@@ -12,7 +12,22 @@ const EmbrapaWhiteboardAnimationPage: NextPage = () => {
 	return (
 		<PieceBePage>
 			<BeImage src={highlightImage} alt={'Details of illustation'} />
-			<BeCredits clientName='Embrapa' work='illustration' />
+			<BeCredits fields={[
+				{
+					label: 'Embrapa',
+					value: {
+						br: 'cliente',
+						en: 'client',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustração',
+						en: 'illustration',
+					}
+				},
+			]}/>
 			<BeEmbed aspectRatioPercent={56.25} horizontalPadding={true} verticalPadding={true}>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/LnnnHaToJJE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 			</BeEmbed>

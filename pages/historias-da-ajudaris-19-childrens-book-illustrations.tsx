@@ -21,10 +21,22 @@ const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
 				src={vigilantesIllustraImage}
 				alt={'Illustration for "Os vigilantes da floresta"'}
 			/>
-			<BeCredits
-				clientName="Ajudaris"
-				work="illustrations"
-			/>
+			<BeCredits fields={[
+				{
+					label: 'Ajudaris',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações',
+						en: 'illustrations',
+					}
+				},
+			]}/>
 			<BeParagaph>
 				&quot;Histórias da Ajudaris&quot; (<em>&quot;Ajudaris&apos;s Stories&quot;</em>) is a collaborative book with multiple stories written by children from many public schools around Portugal.
 			</BeParagaph>

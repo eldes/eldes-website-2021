@@ -1,39 +1,39 @@
-import { GetStaticProps, NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeCredits from '../components/BeCredits'
-import BeEmbed from '../components/BeEmbed'
-import BeHeading from '../components/BeHeading'
-import BeImage from '../components/BeImage'
-import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import BePhotoGrid from '../components/BePhotoGrid'
-import BeThanks from '../components/BeThanks'
-import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
-import artworkPart1Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-1.jpg'
-import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-2.jpg'
-import artworkPart3Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-3.jpg'
-import baronetImage from '../public/content/poeminhas-reais-childrens-book-illustration/baronet.jpg'
-import coverClosedImage from '../public/content/poeminhas-reais-childrens-book-illustration/cover-closed.jpg'
-import coverPoeminhasCelestiais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-celestiais.jpg'
-import coverPoeminhasFlorais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-florais.jpg'
-import coverPoeminhasLegais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-legais.jpg'
-import coverPoeminhasProfissionais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-profissionais.jpg'
-import coverPoeminhasReais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-reais.jpg'
-import coverPoeminhasVegetais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-vegetais.jpg'
-import marcaCorujinhaImage from '../public/content/poeminhas-reais-childrens-book-illustration/marca-corujinha-editora.png'
-import mockupAuthorsImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-authors.jpg'
-import mockupBaronetBaronImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-baronet-baron.jpg'
-import mockupCoverOpenImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-cover-open.jpg'
-import mockupDuchessArchdukeImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-duchess-archduke.jpg'
-import mockupFaceImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-face.jpg'
-import mockupKnightImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-knight.jpg'
-import mockupMarquisImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-marquis.jpg'
-import mockupPricessKingImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-princess-king.jpg'
-import mockupVicountCountImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-viscount-count.jpg'
-import roughImage from '../public/content/poeminhas-reais-childrens-book-illustration/rough.jpg'
-import sketches1Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-1.jpeg'
-import sketches2Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-2.jpeg'
-import sketches3Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-3.jpeg'
-import thanksImage from '../public/content/poeminhas-reais-childrens-book-illustration/thanks.jpg'
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BeCredits from '../components/BeCredits';
+import BeEmbed from '../components/BeEmbed';
+import BeHeading from '../components/BeHeading';
+import BeImage from '../components/BeImage';
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
+import BePhotoGrid from '../components/BePhotoGrid';
+import BeThanks from '../components/BeThanks';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import artworkPart1Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-1.jpg';
+import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-2.jpg';
+import artworkPart3Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-3.jpg';
+import baronetImage from '../public/content/poeminhas-reais-childrens-book-illustration/baronet.jpg';
+import coverClosedImage from '../public/content/poeminhas-reais-childrens-book-illustration/cover-closed.jpg';
+import coverPoeminhasCelestiais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-celestiais.jpg';
+import coverPoeminhasFlorais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-florais.jpg';
+import coverPoeminhasLegais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-legais.jpg';
+import coverPoeminhasProfissionais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-profissionais.jpg';
+import coverPoeminhasReais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-reais.jpg';
+import coverPoeminhasVegetais from '../public/content/poeminhas-reais-childrens-book-illustration/cover-poeminhas-vegetais.jpg';
+import marcaCorujinhaImage from '../public/content/poeminhas-reais-childrens-book-illustration/marca-corujinha-editora.png';
+import mockupAuthorsImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-authors.jpg';
+import mockupBaronetBaronImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-baronet-baron.jpg';
+import mockupCoverOpenImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-cover-open.jpg';
+import mockupDuchessArchdukeImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-duchess-archduke.jpg';
+import mockupFaceImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-face.jpg';
+import mockupKnightImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-knight.jpg';
+import mockupMarquisImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-marquis.jpg';
+import mockupPricessKingImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-princess-king.jpg';
+import mockupVicountCountImage from '../public/content/poeminhas-reais-childrens-book-illustration/mockup-viscount-count.jpg';
+import roughImage from '../public/content/poeminhas-reais-childrens-book-illustration/rough.jpg';
+import sketches1Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-1.jpeg';
+import sketches2Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-2.jpeg';
+import sketches3Image from '../public/content/poeminhas-reais-childrens-book-illustration/sketches-3.jpeg';
+import thanksImage from '../public/content/poeminhas-reais-childrens-book-illustration/thanks.jpg';
 
 const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 	return (
@@ -43,10 +43,22 @@ const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
 					alt={'Illustration of the Baronet'}
 					
 				/>
-				<BeCredits
-					clientName='Editora Coruja'
-					work='illustrations and design of colletion'
-				/>
+				<BeCredits fields={[
+				{
+					label: 'Editora Coruja',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações, projeto gráfico e identidade visual',
+						en: 'illustrations, book design and identity',
+					}
+				},
+			]}/>
 				<BeImage
 					src={ coverClosedImage }
 					alt={'Mockup of closed cover'}
