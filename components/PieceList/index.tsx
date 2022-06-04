@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
-import { Localizer } from '../models/Locale';
-import Piece from '../models/Piece';
-import styles from '../styles/PieceList.module.scss';
+import { Localizer } from '../../models/Locale';
+import Piece from '../../models/Piece';
+import styles from './styles.module.scss';
 
 type Props = {
 	pieces: Piece[]
