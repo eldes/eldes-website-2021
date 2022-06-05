@@ -23,6 +23,7 @@ const AboutPage: NextPage = () => {
 							alt={ 'Eldes' }
 							layout="responsive"
 						/>
+						<span className={styles.credits}>Photo: <a href="https://www.flickr.com/photos/194161014@N06/" target="_blank" rel="noreferrer">Will Veltroni</a></span>
 					</div>
 				</div>
 				<section>

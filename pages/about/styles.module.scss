@@ -41,6 +41,20 @@
       flex-shrink: 0;
       min-width: 320px;
       height: auto;
+
+      display: flex;
+      flex-direction: column;
+
+      .credits {
+        padding: 4px 0px;
+        font-size: 0.4em;
+        text-transform: uppercase;
+        text-align: end;
+
+        a {
+          text-decoration: underline;
+        }
+      }
     }
 
     @media (max-width: 720px) {
