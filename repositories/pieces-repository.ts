@@ -121,7 +121,19 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
 	},
 	{
-		slug: 'protest-whitebard-animation',
+		slug: 'la-maison-qui-pue-magazine',
+		title: {
+			en: 'La Maison Qui Pue Magazine',
+			br: 'Revista La Maison Qui Pue',
+		},
+		subtitle: {
+			en: 'Illustrations',
+			br: 'Ilustrações',
+		},
+		thumbnail: '/content/la-maison-qui-pue-magazine/thumbnail.png',
+	},
+	{
+		slug: 'protest-whiteboard-animation',
 		title: {
 			en: 'Protest',
 			br: 'Protest',

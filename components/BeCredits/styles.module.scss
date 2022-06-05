@@ -5,10 +5,12 @@
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	padding: $inset_m 0px;
+	opacity: 0.5;
+
+	display: flex;
+	justify-content: center;
 	
 	table {
-		width: calc(100% - #{$inset_xxl * 2});
-		color: #999;
 		font-size: 0.7em;
 
 		caption {

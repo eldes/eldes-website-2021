@@ -70,7 +70,7 @@ const categoriesMock: Category[] = [
 			'/content/boreal-textbook-flip-book/thumbnail.jpg',
 		],
 		pieceSlugs: [
-			'protest-whitebard-animation',
+			'protest-whiteboard-animation',
 			'limpidus-whiteboard-animation',
 			'embrapa-whiteboard-animation',
 			'penguin-story-flip-book',
@@ -90,11 +90,12 @@ const categoriesMock: Category[] = [
 		highlight: CategoryHighlight.High,
 		thumbnails: [
 			'/content/ilustrar-magazine-20/thumbnail.jpg',
-			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/la-maison-qui-pue-magazine/thumbnail.png',
 			'/content/ilustrar-magazine-20/thumbnail.jpg',
 		],
 		pieceSlugs: [
-			'ilustrar-magazine-20'
+			'ilustrar-magazine-20',
+			'la-maison-qui-pue-magazine',
 		]
 	},
 	{
