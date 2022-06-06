@@ -12,6 +12,11 @@ const piecesRepository = {
 export default piecesRepository
 
 const piecesMock: Piece[] = [
+
+	//
+	// Children's book and textbooks:
+	//
+
 	{
 		slug: 'brasil-na-bagagem-textbook-illustrations',
 		title: {
@@ -108,6 +113,11 @@ const piecesMock: Piece[] = [
 		},
 		thumbnail: '/content/a-ultima-flor-de-abril-childrens-book/thumbnail.png',
 	},
+
+	//
+	// Editorial:
+	//
+
 	{
 		slug: 'ilustrar-magazine-20',
 		title: {
@@ -115,8 +125,8 @@ const piecesMock: Piece[] = [
 			br: 'Revista Ilustrar 20',
 		},
 		subtitle: {
-			en: 'Illustrations for article',
-			br: 'Ilustrações para artigo',
+			en: 'Illustrations',
+			br: 'Ilustrações',
 		},
 		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
 	},
@@ -144,6 +154,11 @@ const piecesMock: Piece[] = [
 		},
 		thumbnail: '/content/hipocrisil/thumbnail.png',
 	},
+
+	//
+	// Animation:
+	//
+
 	{
 		slug: 'protest-whiteboard-animation',
 		title: {
@@ -204,6 +219,11 @@ const piecesMock: Piece[] = [
 		},
 		thumbnail: '/content/boreal-textbook-flip-book/thumbnail.jpg',
 	},
+
+	//
+	// Sketchbook:
+	//
+
 	{
 		slug: 'sketchbook-number-4',
 		title: {
