@@ -9,7 +9,7 @@ module.exports = {
 		return [
 			{
 				source: '/',
-				destination: '/portfolio',
+				destination: '/about',
 				permanent: false,
 			}
 		]
