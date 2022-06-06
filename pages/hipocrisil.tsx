@@ -1,10 +1,11 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
-import PieceBePage from '../components/PieceBePage';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import illustrationImage from '../public/content/hipocrisil/illustration.png';
 import mockupImage from '../public/content/hipocrisil/mockup.jpg';
 import sketchbook1Image from '../public/content/hipocrisil/sketchbook-1.jpg';
@@ -55,5 +56,13 @@ const HipocrisilPage: NextPage = () => {
     
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
+		}
+	}
+}
 
 export default HipocrisilPage;

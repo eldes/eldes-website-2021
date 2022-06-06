@@ -1,10 +1,11 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
-import { NextPage } from 'next/types';
+import { GetStaticProps, NextPage } from 'next/types';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BeThanks from '../components/BeThanks';
-import PieceBePage from '../components/PieceBePage';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import highlightImage from '../public/content/ilustrar-magazine-20/hightlight.png';
 import illustration2Image from '../public/content/ilustrar-magazine-20/illustration-2.png';
 import mockupImage from '../public/content/ilustrar-magazine-20/mockup.jpg';
@@ -57,5 +58,13 @@ const IlustrarMagazinePage: NextPage = () => {
     </PieceBePage>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
+		}
+	}
+}
 
 export default IlustrarMagazinePage;

@@ -1,10 +1,11 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
-import PieceBePage from '../components/PieceBePage';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import coverIllustrationImage from '../public/content/a-ultima-flor-de-abril-childrens-book/cover-illustration.jpg';
 import highlightIllustrationImage from '../public/content/a-ultima-flor-de-abril-childrens-book/ilustra-highlight.png';
 import insideIllustration1Image from '../public/content/a-ultima-flor-de-abril-childrens-book/inside-illustration-1.png';
@@ -94,5 +95,13 @@ const UltimaFlorAbrilPage: NextPage = () => {
     </PieceBePage>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
+		}
+	}
+}
 
 export default UltimaFlorAbrilPage;

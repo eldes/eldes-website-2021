@@ -1,3 +1,5 @@
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { CSSProperties } from 'react';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
@@ -5,7 +7,7 @@ import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
-import PieceBePage from '../components/PieceBePage';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import highlightImage from '../public/content/la-maison-qui-pue-magazine/highlight.png';
 import ilustra1Image from '../public/content/la-maison-qui-pue-magazine/illustra-1.png';
 import ilustra2Image from '../public/content/la-maison-qui-pue-magazine/illustra-2.png';
@@ -77,5 +79,13 @@ const LaMaisonQuiPueMagazinePage = () => {
     </PieceBePage>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	return {
+		props: {
+			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
+		}
+	}
+}
 
 export default LaMaisonQuiPueMagazinePage;
