@@ -133,6 +133,18 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/la-maison-qui-pue-magazine/thumbnail.png',
 	},
 	{
+		slug: 'hipocrisil',
+		title: {
+			en: 'Hipocrisil',
+			br: 'Hipocrisil',
+		},
+		subtitle: {
+			en: 'Illustration',
+			br: 'Ilustração',
+		},
+		thumbnail: '/content/hipocrisil/thumbnail.png',
+	},
+	{
 		slug: 'protest-whiteboard-animation',
 		title: {
 			en: 'Protest',

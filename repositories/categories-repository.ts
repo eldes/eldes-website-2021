@@ -91,11 +91,12 @@ const categoriesMock: Category[] = [
 		thumbnails: [
 			'/content/ilustrar-magazine-20/thumbnail.jpg',
 			'/content/la-maison-qui-pue-magazine/thumbnail.png',
-			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/hipocrisil/thumbnail.png',
 		],
 		pieceSlugs: [
 			'ilustrar-magazine-20',
 			'la-maison-qui-pue-magazine',
+			'hipocrisil',
 		]
 	},
 	{
