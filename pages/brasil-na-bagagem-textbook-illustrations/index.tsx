@@ -2,12 +2,13 @@ import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 import { pieceBePageI18nNamespace } from '../../components/PieceBePage';
-import BrasilNaBagagemTextbookIllustrationsBr from './br';
-import BrasilNaBagagemTextbookIllustrationsEn from './en';
+import { LocaleCode, Localizer } from '../../models/Locale';
+import PieceBePageBr from './br';
+import PieceBePageEn from './en';
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
-	const { locale } = useRouter();
-	return (locale === 'br') ? <BrasilNaBagagemTextbookIllustrationsBr /> : <BrasilNaBagagemTextbookIllustrationsEn/>
+	const localizer = Localizer.make(useRouter());
+	return (localizer.getLocale().code === LocaleCode.Br) ? <PieceBePageBr /> : <PieceBePageEn/>
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {

@@ -64,7 +64,7 @@ import ventriloquistImage from '../../public/content/brasil-na-bagagem-textbook-
 import vitoriaRegiaImage from '../../public/content/brasil-na-bagagem-textbook-illustrations/vitoria-regia.jpg';
 import werewolfImage from '../../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg';
 
-const BrasilNaBagagemTextbookIllustrationsBr: FunctionComponent = () => {
+const PieceBePageBr: FunctionComponent = () => {
   return (
 		<PieceBePage>
 			<BeImage
@@ -401,4 +401,4 @@ const BrasilNaBagagemTextbookIllustrationsBr: FunctionComponent = () => {
 	);
 };
 
-export default BrasilNaBagagemTextbookIllustrationsBr;
+export default PieceBePageBr;
