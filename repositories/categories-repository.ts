@@ -97,6 +97,7 @@ const categoriesMock: Category[] = [
 			'ilustrar-magazine-20',
 			'la-maison-qui-pue-magazine',
 			'hipocrisil',
+			'baseball-guide',
 		]
 	},
 	{

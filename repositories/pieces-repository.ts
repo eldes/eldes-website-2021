@@ -155,6 +155,19 @@ const piecesMock: Piece[] = [
 		thumbnail: '/content/hipocrisil/thumbnail.png',
 	},
 
+	{
+		slug: 'baseball-guide',
+		title: {
+			en: 'Baseball Guide',
+			br: 'Guia de Beisebol',
+		},
+		subtitle: {
+			en: 'Design and illustrations',
+			br: 'Design e ilustrações',
+		},
+		thumbnail: '/content/baseball-guide/thumbnail.png',
+	},
+
 	//
 	// Animation:
 	//
