@@ -1,4 +1,5 @@
 import Category from '../models/Category';
+import { CategoryHighlight } from '../models/CategoryHighlight';
 import Piece from '../models/Piece';
 import piecesRepository from './pieces-repository';
 
@@ -27,7 +28,7 @@ export default categoriesRepository
 const categoriesMock: Category[] = [
 	{
 		title: {
-			en: 'Chidren\'s Books',
+			en: 'Children\'s Books',
 			br: 'Livros infantis',
 		},
 		subtitle: {
@@ -35,6 +36,7 @@ const categoriesMock: Category[] = [
 			br: 'e Didáticos',
 		},
 		slug: 'childrens-books-and-textbooks',
+		highlight: CategoryHighlight.High,
 		thumbnails: [
 			'/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
 			'/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
@@ -61,18 +63,42 @@ const categoriesMock: Category[] = [
 			br: 'e flip book',
 		},
 		slug: 'animation',
+		highlight: CategoryHighlight.High,
 		thumbnails: [
 			'/content/protest-whiteboard-animation/thumbnail.jpg',
 			'/content/penguin-story-flip-book/thumbnail.jpg',
 			'/content/boreal-textbook-flip-book/thumbnail.jpg',
 		],
 		pieceSlugs: [
-			'protest-whitebard-animation',
+			'protest-whiteboard-animation',
 			'limpidus-whiteboard-animation',
 			'embrapa-whiteboard-animation',
 			'penguin-story-flip-book',
 			'boreal-textbook-flip-book',
 		],
+	},
+	{
+		title: {
+			en: 'Editorial',
+			br: 'Editorial',
+		},
+		subtitle: {
+			en:'magazines and newspaper',
+			br: 'revistas e jornais',
+		},
+		slug: 'editorial',
+		highlight: CategoryHighlight.High,
+		thumbnails: [
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/la-maison-qui-pue-magazine/thumbnail.png',
+			'/content/hipocrisil/thumbnail.png',
+		],
+		pieceSlugs: [
+			'ilustrar-magazine-20',
+			'la-maison-qui-pue-magazine',
+			'hipocrisil',
+			'baseball-guide',
+		]
 	},
 	{
 		title: {
@@ -84,8 +110,8 @@ const categoriesMock: Category[] = [
 			br: 'e arte tradicional',
 		},
 		slug: 'sketchbooks',
+		highlight: CategoryHighlight.Low,
 		thumbnails: [
-			'/content/sketchbook-number-4/thumbnail.jpg',
 			'/content/sketchbook-number-4/thumbnail.jpg',
 			'/content/sketchbook-number-4/thumbnail.jpg',
 		],

@@ -2,10 +2,10 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
 import Page, { PageSection } from '../components/Page';
-import PieceList from '../components/PieceList';
 import { Localizer } from '../models/Locale';
 import Piece from '../models/Piece';
 import categoriesRepository from '../repositories/categories-repository';
+import PieceList from './PieceList';
 
 export const categoryPageI18nNamespace = ['common', 'Page']
 

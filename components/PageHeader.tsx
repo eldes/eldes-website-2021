@@ -1,11 +1,11 @@
-import { Trans } from 'next-i18next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { FunctionComponent, useState } from 'react'
-import logotype from '../public/logotype.svg'
-import styles from '../styles/PageHeader.module.scss'
-import { PageSection } from './Page'
+import { Trans } from 'next-i18next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FunctionComponent, useState } from 'react';
+import logotype from '../public/logotype.svg';
+import styles from '../styles/PageHeader.module.scss';
+import { PageSection } from './Page';
 
 type Props = {
 	section: PageSection
@@ -23,7 +23,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 		<header className={ styles.pageHeader }>
 			<hgroup>
 				<h1>
-					<Link href="/">
+					<Link href="/about">
 						<a><Image className={ styles.logotype } src={ logotype } alt="Eldes" /></a>
 					</Link>
 				</h1>

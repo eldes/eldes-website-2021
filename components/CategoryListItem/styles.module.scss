@@ -1,9 +1,11 @@
-@import './variables';
+@import '../../styles/variables';
 
 .categoryListItem {
 	padding-bottom: $inset_l;
 	width: 200px;
 	height: auto;
+
+	$gap: 2px;
 
 	a {
 		display: flex;
@@ -16,20 +18,10 @@
 		font-size: 0.8rem;
 
 		.thumbnails {
-			$gap: 2px;
 			display: flex;
 			flex-wrap: wrap;
 			column-gap: $gap;
 			row-gap: $gap;
-
-			&>span:nth-child(3n+1) {
-				flex-basis: 100%;
-			}
-
-			&>span:nth-child(3n+2),
-			&>span:nth-child(3n) {
-				flex-basis: calc(50% - #{$gap} / 2);
-			}
 		}
 
 		.textLabel {
@@ -58,15 +50,32 @@
 			.textLabel {
 				font-size: 1em;
 			}
+
+			.thumbnails {
+				&>span:nth-child(3n+1) {
+					flex-basis: 100%;
+				}
+	
+				&>span:nth-child(3n+2),
+				&>span:nth-child(3n) {
+					flex-basis: calc(50% - #{$gap} / 2);
+				}
+			}
 		}
 	}
 
 	&.highlight-low {
-		width: 150px;
+		width: 270px;
 
 		a {
 			.textLabel {
-				font-size: 0.6em;
+				font-size: 1em;
+			}
+
+			.thumbnails {
+				&>span{
+					flex-basis: calc(50% - #{$gap} / 2);
+				}
 			}
 		}
 	}

@@ -12,10 +12,22 @@ const BorealTextbookFlipBookPage: NextPage = () => {
 	return (
 		<PieceBePage>
 			<BeImage src={highlightImage} alt={'Details of illustration'} />
-			<BeCredits
-				clientName='Editora Boreal'
-				work='storyboard and illustration'
-			/>
+			<BeCredits fields={[
+				{
+					label: 'Editora Boreal',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'storyboard e ilustração',
+						en: 'storyboard and illustration',
+					}
+				},
+			]}/>
 			<BePhotoGrid
 				images={[
 					{

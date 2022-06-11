@@ -11,7 +11,12 @@ module.exports = {
 				source: '/',
 				destination: '/portfolio',
 				permanent: false,
-			}
+			},
+			{
+				source: '/fonte-eldes-cordel',
+				destination: '/font-eldes-cordel',
+				permanent: true,
+			},
 		]
 	},
 }

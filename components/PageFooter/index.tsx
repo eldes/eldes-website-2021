@@ -1,3 +1,4 @@
+import { Trans } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
@@ -9,36 +10,36 @@ const PageFooter: FunctionComponent = () => {
 	return (
 		<footer className={ styles.pageFooter }>
 			<section className={styles.contact}>
-				<h5>Get in touch</h5>
+				<h5><Trans i18nKey="Page:Footer.getInTouch">Get in touch</Trans></h5>
 				<address>
 					<a href="mailto:studio@eldes.com">studio@eldes.com</a>
 					<a href="tel:+5516981618428">+55 (16) 98161-8428</a>
 				</address>
 			</section>
 			<section className={styles.siteMap}>
-				<h5>Sections:</h5>
+				<h5><Trans i18nKey="Page:Footer.sections">Sections</Trans>:</h5>
 				<nav>
-					<Link href={'/portfolio'}>Portfolio</Link>
-					<Link href={'/fonts'}>Fonts</Link>
-					<Link href={'/about'}>About</Link>
+					<Link href={'/portfolio'}><a><Trans i18nKey="Page:Footer.portfolio">Portfolio</Trans></a></Link>
+					<Link href={'/fonts'}><a><Trans i18nKey="Page:Footer.fonts">Fonts</Trans></a></Link>
+					<Link href={'/about'}><a><Trans i18nKey="Page:Footer.about">About</Trans></a></Link>
 				</nav>
 			</section>
 			<section className={styles.siteMap}>
-				<h5>Language:</h5>
+				<h5><Trans i18nKey="Page:Footer.language">Language</Trans>:</h5>
 				<nav>
 					<Link href={router.pathname} locale="en">EN</Link>
 					<Link href={router.pathname} locale="br">BR</Link>
 				</nav>
 			</section>
 			<section className={styles.social}>
-				<h5>Follow us:</h5>
+				<h5><Trans i18nKey="Page:Footer.followUs">Follow us</Trans>:</h5>
 				<div className={ styles.links }>
 					<Link href="https://instagram.com/eldesCOM"><a target="_blank" className={styles.instagram}>Instagram</a></Link>
 					<Link href="https://behance.net/eldes"><a target="_blank" className={styles.behance}>Behance</a></Link>
 					<Link href="https://twitter.com/eldes"><a target="_blank" className={styles.twitter}>Twitter</a></Link>	<Link href="https://linkedin.com/in/eldes"><a target="_blank" className={styles.linkedIn}>LinkedIn</a></Link>
 				</div>
 			</section>
-			<p className={styles.disclaimer}>All artworks are Copyright Protected by Eldes. These images may not be downloaded, copied, linked to, or edited in any manner or form for use on any website, image gallery, clipart collection, printed product, or other derivative uses without express written permission from the author.</p>
+			<p className={styles.disclaimer}><Trans i18nKey="Page:Footer.disclaimer">All artworks are Copyright Protected by Eldes. These images may not be downloaded, copied, linked to, or edited in any manner or form for use on any website, image gallery, clipart collection, printed product, or other derivative uses without express written permission from the author.</Trans></p>
 		</footer>
 	)
 }

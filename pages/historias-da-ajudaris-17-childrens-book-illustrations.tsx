@@ -1,15 +1,15 @@
-import { GetStaticProps, NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeCredits from '../components/BeCredits'
-import BeImage from '../components/BeImage'
-import BeParagaph from '../components/BeParagaph'
-import BeThanks from '../components/BeThanks'
-import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
-import familiaMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia-mockup.jpg'
-import familiaImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia.jpg'
-import aniversarioMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel-mockup.jpg'
-import aniversarioImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel.jpg'
-import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/mockup.jpg'
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BeCredits from '../components/BeCredits';
+import BeImage from '../components/BeImage';
+import BeParagaph from '../components/BeParagaph';
+import BeThanks from '../components/BeThanks';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import familiaMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia-mockup.jpg';
+import familiaImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia.jpg';
+import aniversarioMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel-mockup.jpg';
+import aniversarioImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel.jpg';
+import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/mockup.jpg';
 
 
 const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
@@ -20,10 +20,22 @@ const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
 				src={familiaImage}
 				alt={'Illustration for "A família"'}
 			/>
-			<BeCredits
-				clientName="Ajudaris"
-				work="illustrations"
-			/>
+			<BeCredits fields={[
+				{
+					label: 'Ajudaris',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações',
+						en: 'illustrations',
+					}
+				},
+			]}/>
 			<BeParagaph>
 				&quot;Histórias da Ajudaris&quot; (<em>&quot;Ajudaris&apos;s Stories&quot;</em>) is a collaborative book with multiple stories written by children from many public schools around Portugal.
 			</BeParagaph>

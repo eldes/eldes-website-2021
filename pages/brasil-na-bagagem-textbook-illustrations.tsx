@@ -1,5 +1,4 @@
 import { GetStaticProps, NextPage } from 'next';
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
@@ -9,6 +8,7 @@ import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SwitchLocale from '../components/SwitchLocale';
 import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg';
 import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg';
 import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg';
@@ -67,37 +67,94 @@ import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illu
 import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg';
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
-
-	const { t } = useTranslation()
-	const dt = (key: string, defaultValue: string) => t(`brasil-na-bagagem-textbook-illustrations:${key}`, defaultValue)
-
 	return (
 		<PieceBePage>
 			<BeImage
 				src={ brokenTelephoneImage }
 				alt="Broken telephone illutration"
 			/>
-			<BeCredits
-				clientName={dt('Credits.client', 'Intercultural Language Center')}
-				work={dt('Credits.work', 'illustrations and part of interior formatting')}
-			/>
+			<BeCredits fields={[
+				{
+					label: 'Intercultural Language Center',
+					value: {
+						br: 'editora',
+						en: 'publisher',
+					}
+				},
+				{
+					label: 'Erika Campanharo',
+					value: {
+						br: 'texto',
+						en: 'text',
+					}
+				},
+				{
+					label: 'Muiraquitã Editoração Gráfica',
+					value: {
+						br: 'design',
+						en: 'design',
+					}
+				},
+				{
+					label: 'Alexandre Matos',
+					value: {
+						br: 'capa',
+						en: 'book cover',
+					}
+				},
+				{
+					label: 'Eldes',
+					value: {
+						br: 'ilustrações pesonalizadas',
+						en: 'Custom illustrations',
+					}
+				},
+			]}/>
 			<BeImage
 				src={ bookCoverMockupImage }
 				alt="Book cover mockup"
 			/>
-			<BeParagaph>
-				O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil e voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
-			</BeParagaph>
+			<SwitchLocale
+				en={
+					<BeParagaph>
+						Brasil na Bagagem (Brazil in The Baggage), written by Erika Campanharo, it&apos;s a didactic book for children and teenagers living outside of Brazil and aimed at literacy, expanding and developing the Portuguese language and also strengthening the bond with Brazilian culture.
+					</BeParagaph>
+				}
+				br={
+					<BeParagaph>
+						O Brasil na Bagagem, da autora Erika Campanharo, é um livro didático dirigido a crianças e adolescentes vivendo fora do Brasil e voltado para alfabetizar, ampliar e desenvolver a linguagem em português e também estreitar o vínculo com a cultura brasileira.
+					</BeParagaph>
+				}
+			/>
+			
 			<BeImage
 				src={ bookMockupImage }
 				alt="Book mockup"
 			/>
-			<BeParagaph>
-				O processo começa com a definição de cada uma das ilustrações do livro: código, número de página e descrição da cena.
-			</BeParagaph>
-			<BeParagaph>
-				Em seguida, de acordo com a cena e o layout definido pelo designer, são então elaborados os rascunhos de todas as ilustrações.
-			</BeParagaph>
+
+			<SwitchLocale
+				en={
+					<>
+						<BeParagaph>
+							The process starts with the creation of a worksheet containing the definition of each illustration of the book: codes, page number and description of the scene.
+						</BeParagaph>
+						<BeParagaph>
+							Then, according to the description of the scene and layout defined by the designer, the roughs of all the illustrations are elaborated.
+						</BeParagaph>
+					</>
+				}
+				br={
+					<>
+						<BeParagaph>
+							O processo começa com a criação de uma planilha contendo a definição de cada uma das ilustrações do livro: código, número da página e descrição da cena.
+						</BeParagaph>
+						<BeParagaph>
+							Em seguida, de acordo com a descrição da cena e com o layout definido pelo designer, são então elaborados os rascunhos de todas as ilustrações.
+						</BeParagaph>
+					</>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: roughBoitata,
@@ -124,12 +181,32 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					alt: 'Rough of Werewolf Names page',
 				},
 			]} cols={ 3 } />
-			<BeParagaph>
-				Aprovados os rascunhos, a ilustrações são então arte-finalizadas — podendo sofrer alguns ajustes durante a pintura digital.
-			</BeParagaph>
-			<BeHeading>
-				Folclore brasileiro
-			</BeHeading>
+			<SwitchLocale
+				en={
+					<BeParagaph>
+						Rough approved, the illustrations are then inked - may undergo some adjustments during digital painting.
+					</BeParagaph>
+				}
+				br={
+					<BeParagaph>
+						Aprovados os rascunhos, as ilustrações são então arte-finalizadas — podendo sofrer alguns ajustes durante a pintura digital.
+					</BeParagaph>
+				}
+			/>
+
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Brazilian folklore
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Folclore brasileiro
+					</BeHeading>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: saci1Image,
@@ -187,9 +264,20 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 			<BeEmbed aspectRatioPercent={56.25}>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/OoVGZsGJ33E" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 			</BeEmbed>
-			<BeHeading>
-				Parlendas e cantigas da cultura brasileira:
-			</BeHeading>
+
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Brazilian culture verses and songs:
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Parlendas e cantigas da cultura brasileira:
+					</BeHeading>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: pombinhaBrancaImage,
@@ -200,9 +288,20 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 					alt: 'Illustration of O Cravo e a Rosa',
 				},
 			]} cols={ 2 } fill={ true } />
-			<BeHeading>
-				Brincadeiras tradicionais:
-			</BeHeading>
+
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Traditional games:
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Brincadeiras tradicionais:
+					</BeHeading>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: correCotiaImage,
@@ -222,9 +321,19 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				},
 			]} cols={ 2 } fill={ true }/>
 
-			<BeHeading>
-				Festas da cultura brasileira:<br/><small>[desenhos para colorir]</small>
-			</BeHeading>
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Brazillian culture celebrations:<br/><small>[drawings to color]</small>
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Festas da cultura brasileira:<br/><small>[desenhos para colorir]</small>
+					</BeHeading>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: boiBumbaImage,
@@ -240,9 +349,19 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				},
 			]} cols={ 3 } fill={ true } />
 
-			<BeHeading>
-				Povos originários do Brasil:
-			</BeHeading>
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Native people of Brazil:
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Povos originários do Brasil:
+					</BeHeading>
+				}
+			/>
+			
 			<BePhotoGrid images={[
 				{
 					src: indigenousRoughImage,
@@ -264,9 +383,19 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				},
 			]} cols={ 1 } />
 
-			<BeHeading>
-				Diversos:
-			</BeHeading>
+			<SwitchLocale
+				en={
+					<BeHeading>
+						Others:
+					</BeHeading>
+				}
+				br={
+					<BeHeading>
+						Diversos:
+					</BeHeading>
+				}
+			/>
+
 			<BePhotoGrid images={[
 				{
 					src: mapaImage,
@@ -371,15 +500,15 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 
 			<BeThanks image={fingerNamesImage} />
 		</PieceBePage>
-	)
-}
+	);
+};
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ?? '', [...pieceBePageI18nNamespace, 'brasil-na-bagagem-textbook-illustrations'])),
+			...(await serverSideTranslations(locale ?? '', [...pieceBePageI18nNamespace])),
 		}
 	}
 }
 
-export default BrasilNaBagagemTextbookIllustrationsPage
+export default BrasilNaBagagemTextbookIllustrationsPage;

@@ -10,5 +10,16 @@
 			"fonts": "$t(common:Sections.fonts)",
 			"about": "$t(common:Sections.about)"
 		}
+	},
+	"Footer": {
+		"getInTouch": "Entre em contato",
+		"sections": "Seções",
+		"home": "$t(common:Sections.home)",
+		"portfolio": "$t(common:Sections.portfolio)",
+		"fonts": "$t(common:Sections.fonts)",
+		"about": "$t(common:Sections.about)",
+		"language": "Idioma",
+		"followUs": "Siga-nos",
+		"disclaimer": "Todas as imagens são protegidas por direitos autorais por Eldes. Essas imagens não podem ser baixadas, copiadas, vinculadas ou editadas de qualquer maneira ou forma para uso em qualquer site, galeria de imagens, coleção de clipart, produto impresso ou outros usos derivados sem permissão expressa por escrito do autor."
 	}
 }

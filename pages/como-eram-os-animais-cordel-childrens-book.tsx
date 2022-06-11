@@ -1,66 +1,93 @@
-import { GetStaticProps, NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeCredits from '../components/BeCredits'
-import BeHeading from '../components/BeHeading'
-import BeImage from '../components/BeImage'
-import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph'
-import BePhotoGrid from '../components/BePhotoGrid'
-import BeThanks from '../components/BeThanks'
-import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage'
-import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png'
-import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png'
-import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png'
-import bodeImage from '../public/content/como-eram-os-animais-cordel-childrens-book/bode.png'
-import burroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/burro.png'
-import cachorroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cachorro.png'
-import cigarraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cigarra.png'
-import cobraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cobra.png'
-import coelhoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/coelho.png'
-import corujaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/coruja.png'
-import coverRough1Image from '../public/content/como-eram-os-animais-cordel-childrens-book/cover-rough-1.jpg'
-import coverRough2Image from '../public/content/como-eram-os-animais-cordel-childrens-book/cover-rough-2.jpg'
-import coverImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cover.jpg'
-import dedicationCidaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-cida.jpg'
-import dedicationFloraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-flora.jpg'
-import dedicationHelenaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-helena.jpg'
-import dedicationLuciaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-lucia.jpg'
-import dedicationLunaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-luna.jpg'
-import dedicationMagdaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-magda.jpg'
-import dedicationMatheusImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-matheus.jpg'
-import dedicationMorganaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-morgana.jpg'
-import dedicationPedroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-pedro.jpg'
-import dedicationSilviaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-silvia.jpg'
-import dinossauroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dinossauro.png'
-import elefanteImage from '../public/content/como-eram-os-animais-cordel-childrens-book/elefante.png'
-import galoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/galo.png'
-import girafaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/girafa.png'
-import griloImage from '../public/content/como-eram-os-animais-cordel-childrens-book/grilo.png'
-import guineImage from '../public/content/como-eram-os-animais-cordel-childrens-book/guine.png'
-import jacareImage from '../public/content/como-eram-os-animais-cordel-childrens-book/jacare.png'
-import leaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/leao.png'
-import leitorImage from '../public/content/como-eram-os-animais-cordel-childrens-book/leitor.png'
-import lobisomemImage from '../public/content/como-eram-os-animais-cordel-childrens-book/lobisomem.png'
-import macacoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/macaco.png'
-import mockupImage from '../public/content/como-eram-os-animais-cordel-childrens-book/mockup.jpg'
-import morcegoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/morcego.png'
-import mosquitoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/mosquito.png'
-import oncaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/onca.png'
-import pavaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/pavao.png'
-import porcoEspinhoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/porco-espinho.png'
-import porcoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/porco.png'
-import preguicaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/preguica.png'
-import ratoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/rato.png'
-import tartarugaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/tartaruga.png'
-import tatuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/tatu.png'
-import thanksImage from '../public/content/como-eram-os-animais-cordel-childrens-book/thanks.png'
-import urubuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/urubu.png'
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BeCredits from '../components/BeCredits';
+import BeHeading from '../components/BeHeading';
+import BeImage from '../components/BeImage';
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
+import BePhotoGrid from '../components/BePhotoGrid';
+import BeThanks from '../components/BeThanks';
+import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png';
+import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png';
+import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png';
+import bodeImage from '../public/content/como-eram-os-animais-cordel-childrens-book/bode.png';
+import burroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/burro.png';
+import cachorroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cachorro.png';
+import cigarraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cigarra.png';
+import cobraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cobra.png';
+import coelhoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/coelho.png';
+import corujaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/coruja.png';
+import coverRough1Image from '../public/content/como-eram-os-animais-cordel-childrens-book/cover-rough-1.jpg';
+import coverRough2Image from '../public/content/como-eram-os-animais-cordel-childrens-book/cover-rough-2.jpg';
+import coverImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cover.jpg';
+import dedicationCidaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-cida.jpg';
+import dedicationFloraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-flora.jpg';
+import dedicationHelenaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-helena.jpg';
+import dedicationLuciaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-lucia.jpg';
+import dedicationLunaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-luna.jpg';
+import dedicationMagdaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-magda.jpg';
+import dedicationMatheusImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-matheus.jpg';
+import dedicationMorganaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-morgana.jpg';
+import dedicationPedroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-pedro.jpg';
+import dedicationSilviaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dedication-silvia.jpg';
+import dinossauroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/dinossauro.png';
+import elefanteImage from '../public/content/como-eram-os-animais-cordel-childrens-book/elefante.png';
+import galoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/galo.png';
+import girafaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/girafa.png';
+import griloImage from '../public/content/como-eram-os-animais-cordel-childrens-book/grilo.png';
+import guineImage from '../public/content/como-eram-os-animais-cordel-childrens-book/guine.png';
+import jacareImage from '../public/content/como-eram-os-animais-cordel-childrens-book/jacare.png';
+import leaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/leao.png';
+import leitorImage from '../public/content/como-eram-os-animais-cordel-childrens-book/leitor.png';
+import lobisomemImage from '../public/content/como-eram-os-animais-cordel-childrens-book/lobisomem.png';
+import macacoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/macaco.png';
+import mockupImage from '../public/content/como-eram-os-animais-cordel-childrens-book/mockup.jpg';
+import morcegoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/morcego.png';
+import mosquitoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/mosquito.png';
+import oncaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/onca.png';
+import pavaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/pavao.png';
+import porcoEspinhoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/porco-espinho.png';
+import porcoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/porco.png';
+import preguicaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/preguica.png';
+import ratoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/rato.png';
+import tartarugaImage from '../public/content/como-eram-os-animais-cordel-childrens-book/tartaruga.png';
+import tatuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/tatu.png';
+import thanksImage from '../public/content/como-eram-os-animais-cordel-childrens-book/thanks.png';
+import urubuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/urubu.png';
 
 const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => (
 	<PieceBePage>
 		<BeImage src={ratoImage} alt={'Illustration for the stanza of mouse'} />
-		<BeCredits
-			clientName='Réptil Editora'
-			work='illustrations'
+		<BeCredits fields={[
+			{
+				label: 'Réptil Editora',
+				value: {
+					br: 'editora',
+					en: 'publisher',
+				}
+			},
+			{
+				label: 'Izaías Gomes',
+				value: {
+					br: 'texto',
+					en: 'text',
+				}
+			},
+			{
+				label: 'Amanda Meirinho',
+				value: {
+					br: 'design',
+					en: 'design',
+				}
+			},
+			{
+				label: 'Eldes',
+				value: {
+					br: 'ilustrações',
+					en: 'illustrations',
+				}
+			},
+		]}
 		>
 			Book selected by FNLIJ (National Foundation of Childrens and Young Adult Book) for 48th Bologna Children&apos;s Book Fair.
 		</BeCredits>
