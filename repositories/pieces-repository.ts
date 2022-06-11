@@ -28,6 +28,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro didático',
 		},
 		thumbnail: '/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'historias-da-ajudaris-20-childrens-book-illustrations',
@@ -40,6 +44,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'historias-da-ajudaris-19-childrens-book-illustrations',
@@ -52,6 +60,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/historias-da-ajudaris-19-childrens-book-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'historias-da-ajudaris-17-childrens-book-illustrations',
@@ -64,6 +76,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/ajudaris-17-childrens-book-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'gramatica-fundamental-5-moderna-textbook-illustrations',
@@ -76,6 +92,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro didático',
 		},
 		thumbnail: '/content/gramatica-fundamental-5-moderna-textbook-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'poeminhas-reais-childrens-book-illustration',
@@ -88,6 +108,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/poeminhas-reais-childrens-book-illustration/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'como-eram-os-animais-cordel-childrens-book',
@@ -100,6 +124,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/como-eram-os-animais-cordel-childrens-book/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'a-ultima-flor-de-abril-childrens-book',
@@ -112,6 +140,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações para livro infantil',
 		},
 		thumbnail: '/content/a-ultima-flor-de-abril-childrens-book/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 
 	//
@@ -129,6 +161,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações',
 		},
 		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'la-maison-qui-pue-magazine',
@@ -141,6 +177,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustrações',
 		},
 		thumbnail: '/content/la-maison-qui-pue-magazine/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'hipocrisil',
@@ -153,6 +193,10 @@ const piecesMock: Piece[] = [
 			br: 'Ilustração',
 		},
 		thumbnail: '/content/hipocrisil/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 
 	{
@@ -166,6 +210,10 @@ const piecesMock: Piece[] = [
 			br: 'Design e ilustrações',
 		},
 		thumbnail: '/content/baseball-guide/thumbnail.png',
+		description: {
+			en: 'Book design and illustrations for a booklet to introduce baseball to Physical Education professionals, schoolchildren and the general population.',
+			br: 'Projeto gráfico e ilustrações para livreto que apresenta beisebol aos profissionais de Educação Física, aos escolares e à população em geral.'
+		}
 	},
 
 	//
@@ -183,6 +231,10 @@ const piecesMock: Piece[] = [
 			br: 'Animação whiteboard',
 		},
 		thumbnail: '/content/protest-whiteboard-animation/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'limpidus-whiteboard-animation',
@@ -195,6 +247,10 @@ const piecesMock: Piece[] = [
 			br: 'Animação whiteboard',
 		},
 		thumbnail: '/content/limpidus-whiteboard-animation/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'embrapa-whiteboard-animation',
@@ -207,6 +263,10 @@ const piecesMock: Piece[] = [
 			br: 'Animação whiteboard',
 		},
 		thumbnail: '/content/embrapa-whiteboard-animation/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'penguin-story-flip-book',
@@ -219,6 +279,10 @@ const piecesMock: Piece[] = [
 			br: 'Flip book ',
 		},
 		thumbnail: '/content/penguin-story-flip-book/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		slug: 'boreal-textbook-flip-book',
@@ -231,6 +295,10 @@ const piecesMock: Piece[] = [
 			br: 'Flip book',
 		},
 		thumbnail: '/content/boreal-textbook-flip-book/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 
 	//
@@ -248,5 +316,9 @@ const piecesMock: Piece[] = [
 			br: '',
 		},
 		thumbnail: '/content/sketchbook-number-4/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 ]
