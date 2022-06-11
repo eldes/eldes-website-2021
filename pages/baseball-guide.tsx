@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import BeCredits from '../components/BeCredits';
+import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
@@ -24,6 +25,9 @@ import headerImage from '../public/content/baseball-guide/header.png';
 import hitter1Image from '../public/content/baseball-guide/hitter-1.png';
 import hitter2Image from '../public/content/baseball-guide/hitter-2.png';
 import hittingImage from '../public/content/baseball-guide/hitting.png';
+import mockupCoverAlternative1Image from '../public/content/baseball-guide/mockup-cover-alternative-1.jpg';
+import mockupCoverAlternative2Image from '../public/content/baseball-guide/mockup-cover-alternative-2.jpg';
+import mockupCoverFinalImage from '../public/content/baseball-guide/mockup-cover-final.jpg';
 import mockupPages02And03Image from '../public/content/baseball-guide/mockup-pages-02-03.jpg';
 import mockupPages04And05Image from '../public/content/baseball-guide/mockup-pages-04-05.jpg';
 import mockupPages06And07Image from '../public/content/baseball-guide/mockup-pages-06-07.jpg';
@@ -167,6 +171,35 @@ const BaseballGuidePage: NextPage = () => {
       ]} cols={2} />
       <BeImage src={mockupPages16And17Image} alt="Mockup show pages 16 and 17 (Games to learning baseball and adaptation alternatives of equipments for School)" />
       <BeImage src={mockupPages18And19Image} alt="Mockup show pages 18 and 19 (References, curiosities and glossary)" />
+
+      <SwitchLocale
+        en={ <BeHeading>Cover</BeHeading> }
+        br={ <BeHeading>Capa</BeHeading> }
+      />
+      
+      <BeParagaph>
+        Ao contrário do que normalmente acontece, nesse guia optamos por definir a capa antes do design do interior da publicação.
+      </BeParagaph>
+      <BeParagaph>
+        O motivo foi a capa servir como uma Identidade Visual do projeto do SESC, como um todo.
+      </BeParagaph>
+      <BeParagaph>
+        A seguir, algumas das variações elaboradas até se chegar na versão final:
+      </BeParagaph>
+      <BePhotoGrid images={[
+        {
+          src: mockupCoverAlternative1Image,
+          alt: 'Mockup of alternative cover'
+        },
+        {
+          src: mockupCoverAlternative2Image,
+          alt: 'Mockup of alternative cover'
+        },
+        {
+          src: mockupCoverFinalImage,
+          alt: 'Mockup of final cover'
+        },
+      ]} cols={3}/>
       
       <BeImage src={thanksImage} alt="Illustration of baseball ball" />
       <BeThanks backgroundColor='#33a3dc' foregroundColor='#fff' />
