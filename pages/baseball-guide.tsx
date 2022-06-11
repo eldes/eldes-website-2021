@@ -66,15 +66,25 @@ const BaseballGuidePage: NextPage = () => {
           {
             label: 'Eldes',
             value: {
-              en: 'illustrations and book design',
-              br: 'ilustrações e projeto gráfico',
+              en: 'design and illustrations',
+              br: 'design e ilustrações',
             }
           },
         ]}
       />
-      <BeParagaph backgroundColor='#33a3dc' foregroundColor='#fff'>
-        Pensando que o beisebol não é tão conhecido no Brasil, o SESC criou uma cartilha para apresentar esse esporte aos profisisonais de Educação Física, aos escolares e à população em geral.
-      </BeParagaph>
+      <SwitchLocale
+        en={
+          <BeParagaph backgroundColor='#33a3dc' foregroundColor='#fff'>
+            Thinking how baseball is not so well known in Brazil, SESC (<em>Social Service of Commerce</em>) created a booklet to introduce this sport to Physical Education professionals, schoolchildren and the general population.
+          </BeParagaph>
+        }
+        br={
+          <BeParagaph backgroundColor='#33a3dc' foregroundColor='#fff'>
+            Pensando que o beisebol não é tão conhecido no Brasil, o SESC criou uma cartilha para apresentar esse esporte aos profissionais de Educação Física, aos escolares e à população em geral.
+          </BeParagaph>
+        }
+      />
+      
       
       <BeImage src={mockupImage} alt="Mockup showing cover" />
       <BePhotoGrid images={[
@@ -92,9 +102,18 @@ const BaseballGuidePage: NextPage = () => {
         },
       ]} cols={3} />
 
-      <BeParagaph>
-        Para deixar a explicação, sobre regras e prática, mais acessível e agradável, optei por elaborar um design fazendo bom uso de ilustrações e seguindo uma linguagem gráfica ao estilo dos almanaques de esporte.
-      </BeParagaph>
+      <SwitchLocale
+        en={
+          <BeParagaph>
+            To make the explanation of rules and practices more accessible and enjoyable, I chose to develop a graphic project with a helpful use of illustrations and following a visual language such as sports almanacs.
+          </BeParagaph>
+        }
+        br={
+          <BeParagaph>
+            Para deixar a explicação, sobre regras e prática, mais acessível e agradável, optei por elaborar um projeto gráfico com bom uso de ilustrações e seguindo uma linguagem visual como dos almanaques de esporte.
+          </BeParagaph>
+        }
+      />
       
       <BeImage src={mockupPages02And03Image} alt="Mockup show pages 2 and 3 (Scheduling and introduction for Semana MOVE)" />
       <BeImage src={mockupPages04And05Image} alt="Mockup show pages 4 and 5 (Guide goal, history of baseball at Brazil, Introduction to baseball)" />
@@ -173,19 +192,37 @@ const BaseballGuidePage: NextPage = () => {
       <BeImage src={mockupPages18And19Image} alt="Mockup show pages 18 and 19 (References, curiosities and glossary)" />
 
       <SwitchLocale
-        en={ <BeHeading>Cover</BeHeading> }
-        br={ <BeHeading>Capa</BeHeading> }
+        en={
+          <>
+            <BeHeading>Cover</BeHeading>
+            <BeParagaph>
+              Contrary to what usually happens, in this guide we chose to define the cover before designing the interior of the publication.
+            </BeParagaph>
+            <BeParagaph>
+              The reason was that the cover serves as a visual identity for the SESC project as a whole.
+            </BeParagaph>
+            <BeParagaph>
+              Following are some of the variations elaborated until reaching the final version:
+            </BeParagaph>
+          </>
+        }
+        br={
+          <>
+            <BeHeading>Capa</BeHeading>
+            <BeParagaph>
+              Ao contrário do que normalmente acontece, nesse guia optamos por definir a capa antes do design do interior da publicação.
+            </BeParagaph>
+            <BeParagaph>
+              O motivo foi a capa servir como uma Identidade Visual do projeto do SESC, como um todo.
+            </BeParagaph>
+            <BeParagaph>
+              A seguir, algumas das variações elaboradas até se chegar na versão final:
+            </BeParagaph>
+          </>
+        }
       />
       
-      <BeParagaph>
-        Ao contrário do que normalmente acontece, nesse guia optamos por definir a capa antes do design do interior da publicação.
-      </BeParagaph>
-      <BeParagaph>
-        O motivo foi a capa servir como uma Identidade Visual do projeto do SESC, como um todo.
-      </BeParagaph>
-      <BeParagaph>
-        A seguir, algumas das variações elaboradas até se chegar na versão final:
-      </BeParagaph>
+      
       <BePhotoGrid images={[
         {
           src: mockupCoverAlternative1Image,
