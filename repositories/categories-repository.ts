@@ -28,7 +28,7 @@ export default categoriesRepository
 const categoriesMock: Category[] = [
 	{
 		title: {
-			en: 'Chidren\'s Books',
+			en: 'Children\'s Books',
 			br: 'Livros infantis',
 		},
 		subtitle: {
