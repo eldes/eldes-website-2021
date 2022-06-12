@@ -23,7 +23,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 		<header className={ styles.pageHeader }>
 			<hgroup>
 				<h1>
-					<Link href="/about">
+					<Link href="/">
 						<a><Image className={ styles.logotype } src={ logotype } alt="Eldes" /></a>
 					</Link>
 				</h1>
