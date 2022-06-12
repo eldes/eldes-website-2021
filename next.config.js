@@ -5,25 +5,19 @@ module.exports = {
 	reactStrictMode: true,
 	i18n,
 
-	async rewrites() {
-		return {
-			beforeFiles: [
-				{
-					source: '/:path*',
-					has: [
-						{
-							type: 'host',
-							value: 'eldes.com.br',
-						},
-					],
-					destination: '/br/:path*',
-				},
-			],
-		}
-	},
-
 	async redirects() {
 		return [
+			{
+				source: '/:path*',
+				has: [
+					{
+						type: 'host',
+						value: 'preview.eldes.com.br',
+					},
+				],
+				destination: '/br/:path*',
+				permanent: false,
+			},
 			{
 				source: '/',
 				destination: '/portfolio',
