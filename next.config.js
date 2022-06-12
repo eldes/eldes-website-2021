@@ -15,7 +15,7 @@ module.exports = {
 						value: 'preview.eldes.com.br',
 					},
 				],
-				destination: '/br/:path*',
+				destination: 'https://preview.eldes.com/br/:path*',
 				permanent: false,
 			},
 			{
