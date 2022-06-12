@@ -19,13 +19,24 @@ module.exports = {
 				permanent: false,
 			},
 			{
+				source: '/:path*',
+				has: [
+					{
+						type: 'host',
+						value: 'eldes.com.br',
+					},
+				],
+				destination: 'https://eldes.com/br/:path*',
+				permanent: false,
+			},
+			{
 				source: '/',
 				destination: '/portfolio',
 				permanent: false,
 			},
 			{
 				source: '/fonte-eldes-cordel',
-				destination: '/br/font-eldes-cordel',
+				destination: '/font-eldes-cordel',
 				permanent: false,
 			},
 		]
