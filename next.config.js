@@ -5,6 +5,23 @@ module.exports = {
 	reactStrictMode: true,
 	i18n,
 
+	async rewrites() {
+		return {
+			beforeFiles: [
+				{
+					source: '/:path*',
+					has: [
+						{
+							type: 'host',
+							value: 'eldes.com.br',
+						},
+					],
+					destination: '/br/:path*',
+				},
+			],
+		}
+	},
+
 	async redirects() {
 		return [
 			{
@@ -14,8 +31,8 @@ module.exports = {
 			},
 			{
 				source: '/fonte-eldes-cordel',
-				destination: '/font-eldes-cordel',
-				permanent: true,
+				destination: '/br/font-eldes-cordel',
+				permanent: false,
 			},
 		]
 	},
