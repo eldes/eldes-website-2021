@@ -117,7 +117,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 			<SwitchLocale
 				en={
 					<BeParagaph>
-						Brasil na Bagagem (Brazil in The Baggage), written by Erika Campanharo, it&apos;s a textbook for children and teenagers living outside of Brazil and aimed at literacy, expanding and developing the Portuguese language and also strengthening the bond with Brazilian culture.
+						Brasil na Bagagem (Brazil in the Baggage), written by Erika Campanharo, it&apos;s a textbook for children and teenagers living outside of Brazil and aimed at literacy, expanding and developing the Portuguese language and also strengthening the bond with Brazilian culture.
 					</BeParagaph>
 				}
 				br={
