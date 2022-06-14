@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Localizer } from '../../models/Locale';
 import piecesRepository from '../../repositories/pieces-repository';
-import BePage, { bePageI18nNamespace, BePageProps } from '../BePage';
+import BePage, { bePageI18nNamespace } from '../BePage';
 import { PageSection } from '../Page';
 
 type Props = {
