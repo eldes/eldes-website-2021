@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { FunctionComponent } from 'react'
-import styles from '../styles/BeImage.module.scss'
-import { BeImageData } from './BeBody'
-import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
+import Image from 'next/image';
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import styles from '../styles/BeImage.module.scss';
+import { BeImageData } from './BeBody';
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent';
 
 type Props = BeComponentProps & BeImageData
 

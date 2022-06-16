@@ -1,8 +1,8 @@
-import { FunctionComponent } from 'react'
-import styles from '../styles/BePhotoGrid.module.scss'
-import { BeImageData } from './BeBody'
-import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
-import BeImage from './BeImage'
+import { FunctionComponent } from 'react';
+import styles from '../styles/BePhotoGrid.module.scss';
+import { BeImageData } from './BeBody';
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent';
+import BeImage from './BeImage';
 
 type Props = BeComponentProps & {
 	images: BeImageData[]

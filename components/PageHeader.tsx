@@ -34,18 +34,18 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 				</h2>
 			</hgroup>
 			<button className={`${styles.menuButton} ${menuPanelIsOpened ? styles.close : styles.open}`} onClick={ toggleMenuPanel }>Menu</button>
-				<div className={`${styles.menuPanel} ${menuPanelIsOpened ? styles.opened : ''}`} onClick={toggleMenuPanel}>
-					<nav className={styles.mainMenu}>
-						<Link href="/"><a className={`${styles.menuItem} ${ section === PageSection.Home ? styles.active : ''}`}>Home</a></Link>
-						<Link href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.portfolio">Portfolio</Trans></a></Link>
-						<Link href="/fonts"><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.fonts">Fonts</Trans></a></Link>
-						<Link href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.about">About</Trans></a></Link>
-					</nav>
-					<ul className={styles.langMenu}>
-						<li><Link href={router.pathname} locale="en"><a className={`${styles.menuItem} ${router.locale === 'en'? styles.active : ''}`}>EN</a></Link></li>
-						<li><Link href={router.pathname} locale="br"><a className={`${styles.menuItem} ${router.locale === 'br'? styles.active : ''}`}>BR</a></Link></li>
-					</ul>
-				</div>
+			<div className={`${styles.menuPanel} ${menuPanelIsOpened ? styles.opened : ''}`} onClick={toggleMenuPanel}>
+				<nav className={styles.mainMenu}>
+					<Link href="/"><a className={`${styles.menuItem} ${ section === PageSection.Home ? styles.active : ''}`}>Home</a></Link>
+					<Link href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.portfolio">Portfolio</Trans></a></Link>
+					<Link href="/fonts"><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.fonts">Fonts</Trans></a></Link>
+					<Link href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.about">About</Trans></a></Link>
+				</nav>
+				<ul className={styles.langMenu}>
+					<li><Link href={router.pathname} locale="en"><a className={`${styles.menuItem} ${router.locale === 'en'? styles.active : ''}`}>EN</a></Link></li>
+					<li><Link href={router.pathname} locale="br"><a className={`${styles.menuItem} ${router.locale === 'br'? styles.active : ''}`}>BR</a></Link></li>
+				</ul>
+			</div>
 		</header>
 	)
 }

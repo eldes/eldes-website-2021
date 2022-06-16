@@ -1,6 +1,6 @@
-import { NextPage } from 'next'
-import BeBody, { BeBodyProps } from './BeBody'
-import Page, { PageProps } from './Page'
+import { NextPage } from 'next';
+import BeBody, { BeBodyProps } from './BeBody';
+import Page, { PageProps } from './Page';
 
 type Props = PageProps & BeBodyProps
 

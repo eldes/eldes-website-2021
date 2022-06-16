@@ -1,6 +1,5 @@
-import Link from 'next/link'
-import { FunctionComponent } from 'react'
-import styles from '../styles/BeBody.module.scss'
+import { FunctionComponent } from 'react';
+import styles from './styles.module.scss';
 
 type BeImageData = {
 	src: StaticImageData

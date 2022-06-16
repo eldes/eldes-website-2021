@@ -1,14 +1,14 @@
-@import './variables';
+@import '../../styles/variables';
 
 .beBody {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	background-color: #fff;
+	margin-bottom: $inset_l;
 
 	@media (min-width: $header_max_width) {
 		& {
-			margin-bottom: $inset_l;
 			width: $header_max_width;
 			border-radius: $inset_s;
 			box-shadow: 0px 0px 3px 0px #00000022;
