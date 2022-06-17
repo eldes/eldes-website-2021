@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .PieceListItem {
   padding-bottom: $inset_l;
@@ -10,9 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: $inset_s;
-    box-shadow: 0px 2px 4px 0px #00000022;
-    overflow: hidden;
+    @include card-box(true);
     height: 100%;
     background-color: #fff;
 

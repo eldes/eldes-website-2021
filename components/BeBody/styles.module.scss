@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .beBody {
 	display: flex;
@@ -10,9 +11,7 @@
 	@media (min-width: $header_max_width) {
 		& {
 			width: $header_max_width;
-			border-radius: $inset_s;
-			box-shadow: 0px 0px 3px 0px #00000022;
-			overflow: hidden;
+			@include card-box(true);
 		}
 	}
 
