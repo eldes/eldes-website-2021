@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.BeSeeMore {
+  padding: $inset_s $inset_m;
+  height: calc(64px + $inset_s + $inset_s);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+
+  background-color: #000;
+  @include card-box;
+
+  h4 {
+    margin-right: $inset_s;
+    color: #666;
+    font-size: 0.6em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .Thumbnails {
+    display: flex;
+    column-gap: $inset_xs;
+
+    .Thumbnail {
+      width: 64px;
+      height: 64px;
+
+      img {
+        border-radius: 32px;
+      }
+    }
+  }
+
+  .PieceList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: $inset_s;
+  }
+}

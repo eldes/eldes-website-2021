@@ -1,8 +1,10 @@
 import { NextPage } from 'next';
+import SeeMore from '../models/SeeMore';
 import BeBody, { BeBodyProps } from './BeBody';
+import BeSeeMorePanel, { BeSeeMorePanelProps } from './BeSeeMorePanel';
 import Page, { PageProps } from './Page';
 
-type Props = PageProps & BeBodyProps
+type Props = PageProps & BeBodyProps & BeSeeMorePanelProps;
 
 const BePage: NextPage<Props> = (props) => (
 	<Page
@@ -19,6 +21,7 @@ const BePage: NextPage<Props> = (props) => (
 		>
 			{ props.children }
 		</BeBody>
+		<BeSeeMorePanel seeMoreList={props.seeMoreList} />
 	</Page>
 )
 
