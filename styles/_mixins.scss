@@ -1,0 +1,7 @@
+@mixin card-box($has-shadow: false) {
+  border-radius: $inset_s;
+  @if $has-shadow {
+    box-shadow: 0px 2px 4px 0px #00000022;
+  }
+  overflow: hidden;
+}

@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.BeSeeMorePanel {
+  padding: $inset_xl $inset_s;
+  width: calc(100% - $inset_s - $inset_s);
+  max-width: $header_max_width;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: $inset_s;
+  row-gap: $inset_s;
+
+  @media (min-width: $header_max_width) {
+    padding: $inset_xl 0px;
+  }
+}

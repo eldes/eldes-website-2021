@@ -7,6 +7,7 @@ import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SwitchLocale from '../components/SwitchLocale';
+import SeeMore from '../models/SeeMore';
 import alfabetoImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alfabeto.jpg';
 import alunosImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/alunos.jpg';
 import autoEscolaImage from '../public/content/gramatica-fundamental-5-moderna-textbook-illustrations/auto-escola.jpg';
@@ -41,8 +42,30 @@ import telefoneImage from '../public/content/gramatica-fundamental-5-moderna-tex
 
 
 const GramaticaFundamental5Page: NextPage = () => {
+
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More textbook',
+				br: 'Mais livro didático',
+			},
+			slugs: ['brasil-na-bagagem-textbook-illustrations',],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'historias-da-ajudaris-17-childrens-book-illustrations',
+				'historias-da-ajudaris-20-childrens-book-illustrations',
+				'poeminhas-reais-childrens-book-illustration',
+			],
+		},
+	];
+	
 	return (
-		<PieceBePage>
+		<PieceBePage seeMoreList={seeMoreList}>
 			<BeImage
 				src={ bocarraCasinhaImage }
 				alt='Illustration for "Bocarra e casinha"'

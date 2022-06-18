@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.PieceListItem {
+  padding-bottom: $inset_l;
+  width: 256px;
+  height: auto;
+  list-style-type: none;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include card-box(true);
+    height: 100%;
+    background-color: #fff;
+
+    .textLabel {
+      padding: $inset_m $inset_s;
+      text-align: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.3em;
+
+      small {
+        font-size: 0.6em;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+}

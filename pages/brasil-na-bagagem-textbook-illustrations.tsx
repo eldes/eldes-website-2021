@@ -9,6 +9,7 @@ import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SwitchLocale from '../components/SwitchLocale';
+import SeeMore from '../models/SeeMore';
 import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg';
 import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg';
 import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg';
@@ -67,8 +68,29 @@ import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illu
 import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg';
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More textbook',
+				br: 'Mais livro didático',
+			},
+			slugs: ['gramatica-fundamental-5-moderna-textbook-illustrations',],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'historias-da-ajudaris-20-childrens-book-illustrations',
+				'baseball-guide',
+				'protest-whiteboard-animation',
+			],
+		},
+	];
+
 	return (
-		<PieceBePage>
+		<PieceBePage seeMoreList={seeMoreList}>
 			<BeImage
 				src={ brokenTelephoneImage }
 				alt="Broken telephone illutration"
@@ -117,7 +139,7 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 			<SwitchLocale
 				en={
 					<BeParagaph>
-						Brasil na Bagagem (Brazil in The Baggage), written by Erika Campanharo, it&apos;s a didactic book for children and teenagers living outside of Brazil and aimed at literacy, expanding and developing the Portuguese language and also strengthening the bond with Brazilian culture.
+						Brasil na Bagagem (Brazil in the Baggage), written by Erika Campanharo, it&apos;s a textbook for children and teenagers living outside of Brazil and aimed at literacy, expanding and developing the Portuguese language and also strengthening the bond with Brazilian culture.
 					</BeParagaph>
 				}
 				br={

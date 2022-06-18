@@ -3,10 +3,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Localizer } from '../../models/Locale';
 import piecesRepository from '../../repositories/pieces-repository';
-import BePage, { bePageI18nNamespace, BePageProps } from '../BePage';
+import BePage, { bePageI18nNamespace } from '../BePage';
+import { BeSeeMorePanelProps } from '../BeSeeMorePanel';
 import { PageSection } from '../Page';
 
-type Props = {
+type Props = BeSeeMorePanelProps & {
 	backgroundColor?: string
 	foregroundColor?: string
 };
@@ -41,6 +42,7 @@ const PieceBePage: NextPage<Props> = (props) => {
 					backwardLink={ backwardLink }
 					backgroundColor={ props.backgroundColor }
 					foregroundColor={ props.foregroundColor }
+					seeMoreList={ props.seeMoreList }
 			>
 				<Head>
 					<meta property="og:image" content={siteUrl + piece.thumbnail} key="ogimage" />

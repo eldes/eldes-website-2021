@@ -24,13 +24,13 @@ const piecesMock: Piece[] = [
 			br: 'Brasil na Bagagem',
 		},
 		subtitle: {
-			en: 'Textbook illustrations',
-			br: 'Ilustrações para livro didático',
+			en: 'textbook illustrations',
+			br: 'ilustrações para livro didático',
 		},
 		thumbnail: '/content/brasil-na-bagagem-textbook-illustrations/thumbnail.jpg',
 		description: {
-			en: '',
-			br: '',
+			en: 'Textbook illustrations for this book aimed at children and teenagers living outside of Brazil.',
+			br: 'Ilustrações para livro didático destinado a crianças e adolescentes vivendo fora do Brasil.',
 		},
 	},
 	{
@@ -40,8 +40,8 @@ const piecesMock: Piece[] = [
 			br: 'Histórias da Ajudaris\'20',
 		},
 		subtitle: {
-			en: 'Children\'s book illustrations',
-			br: 'Ilustrações para livro infantil',
+			en: 'children\'s book illustrations',
+			br: 'ilustrações para livro infantil',
 		},
 		thumbnail: '/content/ajudaris-20-childrens-book-illustrations/thumbnail.jpg',
 		description: {
