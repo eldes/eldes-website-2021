@@ -6,14 +6,36 @@ import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import illustrationImage from '../public/content/hipocrisil/illustration.png';
 import mockupImage from '../public/content/hipocrisil/mockup.jpg';
 import sketchbook1Image from '../public/content/hipocrisil/sketchbook-1.jpg';
 import sketchbook2Image from '../public/content/hipocrisil/sketchbook-2.jpg';
 
 const HipocrisilPage: NextPage = () => {
+  const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More for editorial',
+				br: 'Mais para editorial',
+			},
+			slugs: [
+        'baseball-guide',
+      ],
+		},
+		{
+			title: {
+				en: 'More in woodcut style',
+				br: 'Mais no estilo xilo',
+			},
+			slugs: [
+        'como-eram-os-animais-cordel-childrens-book',
+			],
+		},
+	];
+
   return (
-    <PieceBePage>
+    <PieceBePage seeMoreList={seeMoreList}>
       <BeImage src={illustrationImage} alt={'Illustration'} />
       <BeCredits fields={[
         {
