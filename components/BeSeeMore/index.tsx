@@ -38,11 +38,6 @@ const BeSeeMore: FunctionComponent<Props> = (props) => {
           </li>
         )}
       </ul>
-      {/* <ul className={styles.PieceList}>
-        {pieces.map(piece =>
-          <PieceListItem key={piece.slug} piece={piece} />
-        )}
-      </ul> */}
     </li>
   );
 };
