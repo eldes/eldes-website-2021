@@ -136,8 +136,8 @@ const piecesMock: Piece[] = [
 			br: 'A última flor de abril',
 		},
 		subtitle: {
-			en: 'Children\'s book illustrations',
-			br: 'Ilustrações para livro infantil',
+			en: 'children\'s book illustrations',
+			br: 'ilustrações para livro infantil',
 		},
 		thumbnail: '/content/a-ultima-flor-de-abril-childrens-book/thumbnail.png',
 		description: {
@@ -157,8 +157,8 @@ const piecesMock: Piece[] = [
 			br: 'Revista Ilustrar 20',
 		},
 		subtitle: {
-			en: 'Illustrations',
-			br: 'Ilustrações',
+			en: 'illustrations',
+			br: 'ilustrações',
 		},
 		thumbnail: '/content/ilustrar-magazine-20/thumbnail.jpg',
 		description: {
@@ -173,8 +173,8 @@ const piecesMock: Piece[] = [
 			br: 'Revista La Maison Qui Pue',
 		},
 		subtitle: {
-			en: 'Illustrations',
-			br: 'Ilustrações',
+			en: 'illustrations',
+			br: 'ilustrações',
 		},
 		thumbnail: '/content/la-maison-qui-pue-magazine/thumbnail.png',
 		description: {
@@ -189,10 +189,26 @@ const piecesMock: Piece[] = [
 			br: 'Hipocrisil',
 		},
 		subtitle: {
-			en: 'Illustration',
-			br: 'Ilustração',
+			en: 'illustration',
+			br: 'ilustração',
 		},
 		thumbnail: '/content/hipocrisil/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
+	},
+	{
+		slug: 'solidao-empresarial-editorial-illustration',
+		title: {
+			en: 'Solidão Empresarial',
+			br: 'Solidão Empresarial',
+		},
+		subtitle: {
+			en: 'illustration',
+			br: 'ilustração',
+		},
+		thumbnail: '/content/solidao-empresarial-editorial-illustration/thumbnail.png',
 		description: {
 			en: '',
 			br: '',
@@ -206,8 +222,8 @@ const piecesMock: Piece[] = [
 			br: 'Guia de Beisebol',
 		},
 		subtitle: {
-			en: 'Design and illustrations',
-			br: 'Design e ilustrações',
+			en: 'design and illustrations',
+			br: 'design e ilustrações',
 		},
 		thumbnail: '/content/baseball-guide/thumbnail.png',
 		description: {
