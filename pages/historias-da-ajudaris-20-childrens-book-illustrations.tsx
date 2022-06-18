@@ -6,6 +6,7 @@ import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg';
 import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrations/giraffe.jpg';
 import animaisCacadorImage from '../public/content/ajudaris-20-childrens-book-illustrations/os-animais-e-o-cacador.jpg';
@@ -15,8 +16,33 @@ import forestImage from '../public/content/ajudaris-20-childrens-book-illustrati
 
 const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More children\'s books',
+				br: 'Mais livros infantis',
+			},
+			slugs: [
+				'historias-da-ajudaris-17-childrens-book-illustrations',
+				'poeminhas-reais-childrens-book-illustration',
+				'como-eram-os-animais-cordel-childrens-book',
+			],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'baseball-guide',
+				'protest-whiteboard-animation',
+				'boreal-textbook-flip-book',
+			],
+		},
+	];
+
 	return (
-		<PieceBePage>
+		<PieceBePage seeMoreList={seeMoreList}>
 			<BeImage
 				src={animaisCacadorImage}
 				alt={'Illustration for "Os animais e o caçador"'}

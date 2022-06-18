@@ -9,12 +9,12 @@
   align-items: center;
   align-content: center;
 
-  background-color: #000;
+  background-color: #e6e6e6;
   @include card-box;
 
   h4 {
     margin-right: $inset_s;
-    color: #666;
+    color: #999;
     font-size: 0.6em;
     font-weight: 400;
     text-transform: uppercase;

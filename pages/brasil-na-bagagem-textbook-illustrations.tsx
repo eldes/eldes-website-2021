@@ -82,9 +82,9 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 				br: 'Mais no estilo cartoon',
 			},
 			slugs: [
-				'historias-da-ajudaris-17-childrens-book-illustrations',
 				'historias-da-ajudaris-20-childrens-book-illustrations',
-				'poeminhas-reais-childrens-book-illustration',
+				'baseball-guide',
+				'protest-whiteboard-animation',
 			],
 		},
 	];
