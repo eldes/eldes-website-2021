@@ -55,30 +55,6 @@ const categoriesMock: Category[] = [
 	},
 	{
 		title: {
-			en: 'Animation',
-			br: 'Animação',
-		},
-		subtitle: {
-			en:'and flip book',
-			br: 'e flip book',
-		},
-		slug: 'animation',
-		highlight: CategoryHighlight.High,
-		thumbnails: [
-			'/content/protest-whiteboard-animation/thumbnail.jpg',
-			'/content/penguin-story-flip-book/thumbnail.jpg',
-			'/content/boreal-textbook-flip-book/thumbnail.jpg',
-		],
-		pieceSlugs: [
-			'protest-whiteboard-animation',
-			'limpidus-whiteboard-animation',
-			'embrapa-whiteboard-animation',
-			'penguin-story-flip-book',
-			'boreal-textbook-flip-book',
-		],
-	},
-	{
-		title: {
 			en: 'Editorial',
 			br: 'Editorial',
 		},
@@ -100,6 +76,30 @@ const categoriesMock: Category[] = [
 			'hipocrisil',
 			'baseball-guide',
 		]
+	},
+	{
+		title: {
+			en: 'Animation',
+			br: 'Animação',
+		},
+		subtitle: {
+			en:'and flip book',
+			br: 'e flip book',
+		},
+		slug: 'animation',
+		highlight: CategoryHighlight.High,
+		thumbnails: [
+			'/content/protest-whiteboard-animation/thumbnail.jpg',
+			'/content/penguin-story-flip-book/thumbnail.jpg',
+			'/content/boreal-textbook-flip-book/thumbnail.jpg',
+		],
+		pieceSlugs: [
+			'protest-whiteboard-animation',
+			'limpidus-whiteboard-animation',
+			'embrapa-whiteboard-animation',
+			'penguin-story-flip-book',
+			'boreal-textbook-flip-book',
+		],
 	},
 	{
 		title: {
