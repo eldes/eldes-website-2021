@@ -6,14 +6,36 @@ import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import highlightImage from '../public/content/ilustrar-magazine-20/hightlight.png';
 import illustration2Image from '../public/content/ilustrar-magazine-20/illustration-2.png';
 import mockupImage from '../public/content/ilustrar-magazine-20/mockup.jpg';
 import thanksImage from '../public/content/ilustrar-magazine-20/thanks.jpg';
 
 const IlustrarMagazinePage: NextPage = () => {
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More for editorial',
+				br: 'Mais para editorial',
+			},
+			slugs: [
+        'la-maison-qui-pue-magazine',
+      ],
+		},
+		{
+			title: {
+				en: 'More in woodcut style',
+				br: 'Mais no estilo xilo',
+			},
+			slugs: [
+        'como-eram-os-animais-cordel-childrens-book',
+			],
+		},
+	];
+	
   return (
-    <PieceBePage>
+    <PieceBePage seeMoreList={seeMoreList}>
       <BeImage src={highlightImage} alt='1st illustration' />
       <BeCredits fields={[
 				{

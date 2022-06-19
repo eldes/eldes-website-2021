@@ -1,7 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import CategoryPage, { categoryPageI18nNamespace } from '../components/CategoryPage';
-import ChildrensBooksAndTextbooksPage from './childrens-books-and-textbooks';
 
 const EditorialPage: NextPage = () => <CategoryPage />
 

@@ -8,6 +8,7 @@ import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import artworkPart1Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-1.jpg';
 import artworkPart2Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-2.jpg';
 import artworkPart3Image from '../public/content/poeminhas-reais-childrens-book-illustration/artwork-part-3.jpg';
@@ -36,8 +37,35 @@ import sketches3Image from '../public/content/poeminhas-reais-childrens-book-ill
 import thanksImage from '../public/content/poeminhas-reais-childrens-book-illustration/thanks.jpg';
 
 const PoeminhasReaisChildrensBookIllustrationsPage: NextPage = () => {
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More children\'s books',
+				br: 'Mais livros infantis',
+			},
+			slugs: ['como-eram-os-animais-cordel-childrens-book',],
+		},
+		{
+			title: {
+				en: 'See also textbooks',
+				br: 'Veja também livros didáticos',
+			},
+			slugs: ['brasil-na-bagagem-textbook-illustrations',],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'baseball-guide',
+				'protest-whiteboard-animation',
+			],
+		},
+	];
+
 	return (
-		<PieceBePage>
+		<PieceBePage seeMoreList={seeMoreList}>
 			<BeImage
 					src={ baronetImage }
 					alt={'Illustration of the Baronet'}

@@ -22,11 +22,14 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 				en: 'More children\'s books',
 				br: 'Mais livros infantis',
 			},
-			slugs: [
-				'historias-da-ajudaris-17-childrens-book-illustrations',
-				'poeminhas-reais-childrens-book-illustration',
-				'como-eram-os-animais-cordel-childrens-book',
-			],
+			slugs: ['historias-da-ajudaris-17-childrens-book-illustrations',],
+		},
+		{
+			title: {
+				en: 'See also textbooks',
+				br: 'Veja também livros didáticos',
+			},
+			slugs: ['brasil-na-bagagem-textbook-illustrations',],
 		},
 		{
 			title: {
@@ -36,7 +39,6 @@ const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 			slugs: [
 				'baseball-guide',
 				'protest-whiteboard-animation',
-				'boreal-textbook-flip-book',
 			],
 		},
 	];

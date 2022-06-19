@@ -55,6 +55,30 @@ const categoriesMock: Category[] = [
 	},
 	{
 		title: {
+			en: 'Editorial',
+			br: 'Editorial',
+		},
+		subtitle: {
+			en:'magazines and newspaper',
+			br: 'revistas e jornais',
+		},
+		slug: 'editorial',
+		highlight: CategoryHighlight.High,
+		thumbnails: [
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/la-maison-qui-pue-magazine/thumbnail.png',
+			'/content/hipocrisil/thumbnail.png',
+		],
+		pieceSlugs: [
+			'ilustrar-magazine-20',
+			'la-maison-qui-pue-magazine',
+			'solidao-empresarial-editorial-illustration',
+			'hipocrisil',
+			'baseball-guide',
+		]
+	},
+	{
+		title: {
 			en: 'Animation',
 			br: 'Animação',
 		},
@@ -79,29 +103,6 @@ const categoriesMock: Category[] = [
 	},
 	{
 		title: {
-			en: 'Editorial',
-			br: 'Editorial',
-		},
-		subtitle: {
-			en:'magazines and newspaper',
-			br: 'revistas e jornais',
-		},
-		slug: 'editorial',
-		highlight: CategoryHighlight.High,
-		thumbnails: [
-			'/content/ilustrar-magazine-20/thumbnail.jpg',
-			'/content/la-maison-qui-pue-magazine/thumbnail.png',
-			'/content/hipocrisil/thumbnail.png',
-		],
-		pieceSlugs: [
-			'ilustrar-magazine-20',
-			'la-maison-qui-pue-magazine',
-			'hipocrisil',
-			'baseball-guide',
-		]
-	},
-	{
-		title: {
 			en: 'Sketchbooks',
 			br: 'Sketchbooks',
 		},
@@ -118,5 +119,30 @@ const categoriesMock: Category[] = [
 		pieceSlugs: [
 			'sketchbook-number-4'
 		]
+	},
+	{
+		title: {
+			en: 'Woodcut',
+			br: 'Xilo',
+		},
+		subtitle: {
+			en: 'style',
+			br: 'estilo',
+		},
+		slug: 'woodcut-style',
+		highlight: CategoryHighlight.Hidden,
+		thumbnails: [
+			'/content/la-maison-qui-pue-magazine/thumbnail.png',
+			'/content/ilustrar-magazine-20/thumbnail.jpg',
+			'/content/historias-da-ajudaris-19-childrens-book-illustrations/thumbnail.jpg',
+		],
+		pieceSlugs: [
+			'ilustrar-magazine-20',
+			'la-maison-qui-pue-magazine',
+			'solidao-empresarial-editorial-illustration',
+			'hipocrisil',
+			'como-eram-os-animais-cordel-childrens-book',
+			'historias-da-ajudaris-19-childrens-book-illustrations',
+		],
 	},
 ]

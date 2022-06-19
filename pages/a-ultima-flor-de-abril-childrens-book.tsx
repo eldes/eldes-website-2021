@@ -6,6 +6,7 @@ import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import coverIllustrationImage from '../public/content/a-ultima-flor-de-abril-childrens-book/cover-illustration.jpg';
 import highlightIllustrationImage from '../public/content/a-ultima-flor-de-abril-childrens-book/ilustra-highlight.png';
 import insideIllustration1Image from '../public/content/a-ultima-flor-de-abril-childrens-book/inside-illustration-1.png';
@@ -17,8 +18,35 @@ import insideIllustration6Image from '../public/content/a-ultima-flor-de-abril-c
 import mockupImage from '../public/content/a-ultima-flor-de-abril-childrens-book/mockup.jpg';
 
 const UltimaFlorAbrilPage: NextPage = () => {
+  const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More children\'s books',
+				br: 'Mais livros infantis',
+			},
+			slugs: ['historias-da-ajudaris-20-childrens-book-illustrations',],
+		},
+		{
+			title: {
+				en: 'See also textbooks',
+				br: 'Veja também livros didáticos',
+			},
+			slugs: ['brasil-na-bagagem-textbook-illustrations',],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'baseball-guide',
+				'protest-whiteboard-animation',
+			],
+		},
+	];
+  
   return (
-    <PieceBePage>
+    <PieceBePage seeMoreList={seeMoreList}>
       <BeImage
 				src={highlightIllustrationImage}
 				alt={'Highlight illustration'}

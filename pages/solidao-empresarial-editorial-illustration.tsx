@@ -1,18 +1,17 @@
-import { GetStaticProps, NextPage } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { NextPage } from 'next';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
-import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import PieceBePage from '../components/PieceBePage';
 import SeeMore from '../models/SeeMore';
-import illustrationImage from '../public/content/hipocrisil/illustration.png';
-import mockupImage from '../public/content/hipocrisil/mockup.jpg';
-import sketchbook1Image from '../public/content/hipocrisil/sketchbook-1.jpg';
-import sketchbook2Image from '../public/content/hipocrisil/sketchbook-2.jpg';
+import illustrationImage from '../public/content/solidao-empresarial-editorial-illustration/illustration.png';
+import mockupImage from '../public/content/solidao-empresarial-editorial-illustration/mockup.jpg';
+import sketchbook1Image from '../public/content/solidao-empresarial-editorial-illustration/sketchbook-1.jpg';
+import sketchbook2Image from '../public/content/solidao-empresarial-editorial-illustration/sketchbook-2.jpg';
 
-const HipocrisilPage: NextPage = () => {
+const SolidaoEmpresarialPage: NextPage = () => {
   const seeMoreList: SeeMore[] = [
 		{
 			title: {
@@ -20,7 +19,7 @@ const HipocrisilPage: NextPage = () => {
 				br: 'Mais para editorial',
 			},
 			slugs: [
-        'baseball-guide',
+        'hipocrisil',
       ],
 		},
 		{
@@ -33,7 +32,7 @@ const HipocrisilPage: NextPage = () => {
 			],
 		},
 	];
-
+  
   return (
     <PieceBePage seeMoreList={seeMoreList}>
       <BeImage src={illustrationImage} alt={'Illustration'} />
@@ -52,15 +51,13 @@ const HipocrisilPage: NextPage = () => {
             en: 'illustration'
           },
         },
-      ]}>
-        Esse trabalho fez parte da exposição IlustraBrasil!6, organizado pela SIB (Sociedade dos Ilustradores do Brasil).
-      </BeCredits>
+      ]} />
       <BeParagaph>
-        O artigo &quot;Hipocrisil&quot; foi escrito pelo escritor Luciano Pires e publicado na seção de artigos semanais do seu blog &quot;Café Brasil&quot;.
+        O artigo &quot;Solidão empresarial&quot; foi escrito pelo escritor Luciano Pires e publicado na seção de artigos semanais do seu blog &quot;Café Brasil&quot;.
       </BeParagaph>
       <BeImage src={mockupImage} alt="Mock-up" />
       <BeParagaph>
-        Ilustrar alguns desses artigos semanais, durante dois anos, foi importante para definir meu método de desenvolvimento de ilustrações para periódicos — quando se conta com um tempo relativamente curto, entre receber o texto e elaborar a ilustração.
+        Ilustrar alguns desses artigos semanais, durante dois anos, foi importante para definir meu método de desenvolvimento de ilustrações para periódicos — quando se conta com um tempo relativamente curto entre receber o texto e elaborar a ilustração.
       </BeParagaph>
       <BePhotoGrid images={[
         {
@@ -73,18 +70,8 @@ const HipocrisilPage: NextPage = () => {
         },
       ]} cols={2} />
       <BeThanks />
-
     </PieceBePage>
-    
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-	return {
-		props: {
-			...(await serverSideTranslations(locale ?? '', pieceBePageI18nNamespace )),
-		}
-	}
-}
-
-export default HipocrisilPage;
+export default SolidaoEmpresarialPage;

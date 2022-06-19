@@ -8,28 +8,33 @@
   flex-direction: row;
   align-items: center;
   align-content: center;
+  column-gap: $inset_m;
 
   background-color: #e6e6e6;
   @include card-box;
 
   h4 {
-    margin-right: $inset_s;
     color: #999;
     font-size: 0.6em;
     font-weight: 400;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    column-gap: $inset_s;
   }
 
   .Thumbnails {
     display: flex;
     column-gap: $inset_xs;
 
+    $thumbnail_size: 64px;
+
     .Thumbnail {
-      width: 64px;
-      height: 64px;
+      width: $thumbnail_size;
+      height: $thumbnail_size;
 
       img {
-        border-radius: 32px;
+        border-radius: #{$thumbnail_size / 2};
       }
     }
   }

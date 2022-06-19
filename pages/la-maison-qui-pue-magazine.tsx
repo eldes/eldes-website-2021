@@ -8,6 +8,7 @@ import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import highlightImage from '../public/content/la-maison-qui-pue-magazine/highlight.png';
 import ilustra1Image from '../public/content/la-maison-qui-pue-magazine/illustra-1.png';
 import ilustra2Image from '../public/content/la-maison-qui-pue-magazine/illustra-2.png';
@@ -18,8 +19,29 @@ import sketchbook4Image from '../public/content/la-maison-qui-pue-magazine/sketc
 import thanksImage from '../public/content/la-maison-qui-pue-magazine/thanks.png';
 
 const LaMaisonQuiPueMagazinePage = () => {
+  const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More for editorial',
+				br: 'Mais para editorial',
+			},
+			slugs: [
+        'solidao-empresarial-editorial-illustration',
+      ],
+		},
+		{
+			title: {
+				en: 'More in woodcut style',
+				br: 'Mais no estilo xilo',
+			},
+			slugs: [
+        'como-eram-os-animais-cordel-childrens-book',
+			],
+		},
+	];
+
   return (
-    <PieceBePage backgroundColor='#ea0f88' foregroundColor='#fff'>
+    <PieceBePage seeMoreList={seeMoreList} backgroundColor='#ea0f88' foregroundColor='#fff'>
       <BeImage src={highlightImage} alt={'Highlight of illustration'} />
       <BeCredits fields={[
         {
