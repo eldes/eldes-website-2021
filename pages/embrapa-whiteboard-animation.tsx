@@ -5,12 +5,41 @@ import BeEmbed from '../components/BeEmbed';
 import BeImage from '../components/BeImage';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import SeeMore from '../models/SeeMore';
 import highlightImage from '../public/content/embrapa-whiteboard-animation/highlight.jpg';
 
 const EmbrapaWhiteboardAnimationPage: NextPage = () => {
+	const seeMoreList: SeeMore[] = [
+		{
+			title: {
+				en: 'More whiteboard animation',
+				br: 'Mais animação whiteboard',
+			},
+			slugs: ['protest-whiteboard-animation',],
+		},
+		{
+			title: {
+				en: 'See also flip books',
+				br: 'Veja também flip books',
+			},
+			slugs: [
+				'penguin-story-flip-book',
+			],
+		},
+		{
+			title: {
+				en: 'More in cartoon style',
+				br: 'Mais no estilo cartoon',
+			},
+			slugs: [
+				'brasil-na-bagagem-textbook-illustrations',
+				'baseball-guide',
+			],
+		},
+	];
 
 	return (
-		<PieceBePage>
+		<PieceBePage seeMoreList={seeMoreList}>
 			<BeImage src={highlightImage} alt={'Details of illustation'} />
 			<BeCredits fields={[
 				{
