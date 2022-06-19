@@ -120,29 +120,4 @@ const categoriesMock: Category[] = [
 			'sketchbook-number-4'
 		]
 	},
-	{
-		title: {
-			en: 'Woodcut',
-			br: 'Xilo',
-		},
-		subtitle: {
-			en: 'style',
-			br: 'estilo',
-		},
-		slug: 'woodcut-style',
-		highlight: CategoryHighlight.Hidden,
-		thumbnails: [
-			'/content/la-maison-qui-pue-magazine/thumbnail.png',
-			'/content/ilustrar-magazine-20/thumbnail.jpg',
-			'/content/historias-da-ajudaris-19-childrens-book-illustrations/thumbnail.jpg',
-		],
-		pieceSlugs: [
-			'ilustrar-magazine-20',
-			'la-maison-qui-pue-magazine',
-			'solidao-empresarial-editorial-illustration',
-			'hipocrisil',
-			'como-eram-os-animais-cordel-childrens-book',
-			'historias-da-ajudaris-19-childrens-book-illustrations',
-		],
-	},
 ]
