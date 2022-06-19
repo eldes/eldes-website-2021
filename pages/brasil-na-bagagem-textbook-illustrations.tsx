@@ -78,11 +78,19 @@ const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
 		},
 		{
 			title: {
+				en: 'See also children\'s books',
+				br: 'Veja também livros infantis',
+			},
+			slugs: [
+				'historias-da-ajudaris-20-childrens-book-illustrations',
+			],
+		},
+		{
+			title: {
 				en: 'More in cartoon style',
 				br: 'Mais no estilo cartoon',
 			},
 			slugs: [
-				'historias-da-ajudaris-20-childrens-book-illustrations',
 				'baseball-guide',
 				'protest-whiteboard-animation',
 			],
