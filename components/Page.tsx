@@ -34,6 +34,8 @@ const Page: FunctionComponent<Props> = (props) => {
 		<div className={ styles.page }>
 			<Head>
 				<title>{ title }</title>
+				<meta property="og:type" content={ 'website' } key="ogtype" />
+				<meta property="og:site_name" content={ 'Eldes Studio' } key="ogsitename" />
 				<meta property="og:title" content={ title } key="ogtitle" />
 
 				{(props.description) && (
@@ -44,6 +46,8 @@ const Page: FunctionComponent<Props> = (props) => {
 				)} 
 				<meta property="og:url" content={siteUrl + router.asPath} key="ogurl" />
 				<meta property="og:image" content={`${siteUrl}/logotype.svg`} key="ogimage" />
+				<meta property="og:image:width" content={'512'} key="ogimagewidth" />
+				<meta property="og:image:height" content={'512'} key="ogimageheight" />
 			</Head>
 			<a className={ styles.skipToMain } href="#main">Skip to main content</a>
 			<PageHeader section={ props.section } />
@@ -61,6 +65,11 @@ const Page: FunctionComponent<Props> = (props) => {
 		</div>
 	)
 }
+
+Page.defaultProps = {
+	title: 'Eldes: illustrator, graphic designer and software engineer',
+	description: 'Illustrations, animations, fonts, apps and more from Eldes — illustrator, graphic designer and software engineer',
+};
 
 export default Page
 export {
