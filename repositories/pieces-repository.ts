@@ -214,6 +214,22 @@ const piecesMock: Piece[] = [
 			br: '',
 		},
 	},
+	{
+		slug: 'moitara-teatro-portugues-editorial-illustration',
+		title: {
+			en: 'Teatro Português',
+			br: 'Teatro Português',
+		},
+		subtitle: {
+			en: 'illustration',
+			br: 'ilustração',
+		},
+		thumbnail: '/content/moitara-teatro-portugues-editorial-illustration/thumbnail.png',
+		description: {
+			en: '',
+			br: '',
+		},
+	},
 
 	{
 		slug: 'baseball-guide',
