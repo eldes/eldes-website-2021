@@ -39,6 +39,13 @@ module.exports = {
 				destination: '/font-eldes-cordel',
 				permanent: false,
 			},
+
+			// TEMP:
+			{
+				source: '/shirt-robocop-ed-209',
+				destination: 'https://www.teepublic.com/t-shirt/32390970-blueprint-robocop-ed-209?store_id=1034820',
+				permanent: false,
+			},
 		]
 	},
 }
