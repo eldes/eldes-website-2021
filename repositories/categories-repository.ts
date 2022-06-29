@@ -74,6 +74,7 @@ const categoriesMock: Category[] = [
 			'la-maison-qui-pue-magazine',
 			'solidao-empresarial-editorial-illustration',
 			'hipocrisil',
+			'moitara-teatro-portugues-editorial-illustration',
 			'baseball-guide',
 		]
 	},

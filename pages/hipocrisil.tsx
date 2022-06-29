@@ -20,7 +20,7 @@ const HipocrisilPage: NextPage = () => {
 				br: 'Mais para editorial',
 			},
 			slugs: [
-        'baseball-guide',
+        'moitara-teatro-portugues-editorial-illustration',
       ],
 		},
 		{
