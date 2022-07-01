@@ -52,6 +52,10 @@ const categoriesMock: Category[] = [
 			'historias-da-ajudaris-19-childrens-book-illustrations',
 			'a-ultima-flor-de-abril-childrens-book',
 		],
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		title: {
@@ -76,7 +80,11 @@ const categoriesMock: Category[] = [
 			'hipocrisil',
 			'moitara-teatro-portugues-editorial-illustration',
 			'baseball-guide',
-		]
+		],
+		description: {
+			en: 'Works by the illustrator Eldes, for magazines, newspapers and periodicals.',
+			br: 'Obras do ilustrador Eldes, para revistas, jornais e periódicos.',
+		},
 	},
 	{
 		title: {
@@ -101,6 +109,10 @@ const categoriesMock: Category[] = [
 			'penguin-story-flip-book',
 			'boreal-textbook-flip-book',
 		],
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 	{
 		title: {
@@ -119,6 +131,10 @@ const categoriesMock: Category[] = [
 		],
 		pieceSlugs: [
 			'sketchbook-number-4'
-		]
+		],
+		description: {
+			en: '',
+			br: '',
+		},
 	},
 ]

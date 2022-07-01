@@ -1,6 +1,6 @@
-import { GetStaticProps, NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import CategoryPage, { categoryPageI18nNamespace } from '../components/CategoryPage'
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import CategoryPage, { categoryPageI18nNamespace } from '../components/CategoryPage';
 
 const SketchbooksPage: NextPage = () => <CategoryPage />
 
