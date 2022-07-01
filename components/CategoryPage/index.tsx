@@ -1,11 +1,11 @@
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
-import Page, { PageSection } from '../components/Page';
-import { Localizer } from '../models/Locale';
-import Piece from '../models/Piece';
-import categoriesRepository from '../repositories/categories-repository';
-import PieceList from './PieceList';
+import { Localizer } from '../../models/Locale';
+import Piece from '../../models/Piece';
+import categoriesRepository from '../../repositories/categories-repository';
+import Page, { PageSection } from '../Page';
+import PieceList from '../PieceList';
 
 export const categoryPageI18nNamespace = ['common', 'Page']
 
@@ -28,7 +28,13 @@ const CategoryPage: FunctionComponent = () => {
 
 	if (category) {
 		return (
-			<Page title={localizer.getValue(category.title)} subtitle={localizer.getValue(category.subtitle)} section={ PageSection.Portfolio } backwardLink={ backwardLink }>
+			<Page
+				title={localizer.getValue(category.title)}
+				subtitle={localizer.getValue(category.subtitle)}
+				section={ PageSection.Portfolio }
+				backwardLink={ backwardLink }
+				description={ localizer.getValue(category.description) }
+			>
 				<PieceList pieces={ pieces } />
 			</Page>
 		)
