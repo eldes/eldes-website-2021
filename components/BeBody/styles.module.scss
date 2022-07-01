@@ -7,6 +7,7 @@
 	justify-content: flex-start;
 	background-color: #fff;
 	margin-bottom: $inset_l;
+	max-width: 100%;
 
 	@media (min-width: $header_max_width) {
 		& {
