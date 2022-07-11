@@ -16,14 +16,13 @@ enum Section {
 }
 
 type Props = {
-	pretitle?: string
-	title: string,
-	subtitle?: string,
-	description?: string,
-	section: Section,
-	backwardLink?: PageReverseNavigationBarLink
-	children?: ReactNode
-}
+	pretitle?: string;
+	title: string;
+	subtitle?: string;
+	description?: string;
+	section: Section;
+	backwardLink?: PageReverseNavigationBarLink;
+};
 
 const Page: FunctionComponent<Props> = (props) => {
 	const router = useRouter();
