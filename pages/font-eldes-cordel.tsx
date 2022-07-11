@@ -1,17 +1,17 @@
-import { GetStaticProps, NextPage } from 'next'
-import { Trans, useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import BeHeading from '../components/BeHeading'
-import BeImage from '../components/BeImage'
-import BeLicenseList, { beLicenseListI18n } from '../components/BeLicenseList'
-import BeMenu from '../components/BeMenu'
-import BeParagaph from '../components/BeParagaph'
-import FontBePage, { fontBePageI18nKey, fontBePageI18nNamespace } from '../components/FontBePage'
-import accentsImage from '../public/content/font-eldes-cordel/font-eldes-cordel--accents.png'
-import lettersDigitsImage from '../public/content/font-eldes-cordel/font-eldes-cordel--letters-and-digits.png'
-import punctuationImage from '../public/content/font-eldes-cordel/font-eldes-cordel--punctuation-marks.png'
-import posterImage from '../public/content/font-eldes-cordel/font-eldes-cordel-poster.jpg'
-import sample1Image from '../public/content/font-eldes-cordel/font-eldes-cordel-sample-1-en.png'
+import { GetStaticProps, NextPage } from 'next';
+import { Trans, useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BeHeading from '../components/BeHeading';
+import BeImage from '../components/BeImage';
+import BeLicenseList, { beLicenseListI18n } from '../components/BeLicenseList';
+import BeMenu from '../components/BeMenu';
+import BeParagaph from '../components/BeParagaph';
+import FontBePage, { fontBePageI18nKey, fontBePageI18nNamespace } from '../components/FontBePage';
+import accentsImage from '../public/content/font-eldes-cordel/font-eldes-cordel--accents.png';
+import lettersDigitsImage from '../public/content/font-eldes-cordel/font-eldes-cordel--letters-and-digits.png';
+import punctuationImage from '../public/content/font-eldes-cordel/font-eldes-cordel--punctuation-marks.png';
+import posterImage from '../public/content/font-eldes-cordel/font-eldes-cordel-poster.jpg';
+import sample1Image from '../public/content/font-eldes-cordel/font-eldes-cordel-sample-1-en.png';
 
 const FontEldesCordelPage: NextPage = () => {
 

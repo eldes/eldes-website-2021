@@ -1,9 +1,9 @@
-import { useTranslation } from 'next-i18next'
-import { useRouter } from 'next/router'
-import { FunctionComponent } from 'react'
-import fontsRepository from '../repositories/fonts-repository'
-import BePage, { bePageI18nNamespace } from './BePage'
-import { PageSection } from './Page'
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { FunctionComponent } from 'react';
+import fontsRepository from '../repositories/fonts-repository';
+import BePage, { bePageI18nNamespace, BePageProps } from './BePage';
+import { PageSection } from './Page';
 
 const FontBePage: FunctionComponent = ({ children }) => {
 
