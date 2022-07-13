@@ -1,11 +1,13 @@
-import { useTranslation } from 'next-i18next'
-import { useRouter } from 'next/router'
-import { FunctionComponent } from 'react'
-import fontsRepository from '../repositories/fonts-repository'
-import BePage, { bePageI18nNamespace } from './BePage'
-import { PageSection } from './Page'
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { FunctionComponent } from 'react';
+import fontsRepository from '../repositories/fonts-repository';
+import BePage, { bePageI18nNamespace, BePageProps } from './BePage';
+import { PageSection } from './Page';
 
-const FontBePage: FunctionComponent = ({ children }) => {
+type Props = Omit<BePageProps, 'pretitle' | 'title' | 'section' | 'backwardLink'>;
+
+const FontBePage: FunctionComponent<Props> = (props) => {
 
 	const { asPath } = useRouter()
 	const slug = asPath.substring(1).split('#')[0]
@@ -24,10 +26,15 @@ const FontBePage: FunctionComponent = ({ children }) => {
 		<BePage
 			pretitle={ tp('pretitle', 'Font Eldes') }
 			title={ font?.name ?? '' }
+			subtitle={props.subtitle}
+			description={props.description}
 			section={ PageSection.Fonts }
 			backwardLink={ backwardLink }
+			backgroundColor={props.backgroundColor}
+			foregroundColor={props.foregroundColor}
+			seeMoreList={props.seeMoreList}
 		>
-			{ children }
+			{ props.children }
 		</BePage>
 	)
 }
