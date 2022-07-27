@@ -29,19 +29,21 @@ const BeCredits: FunctionComponent<Props> = (props) => {
 			<div className={ styles.beCredits }>
 				<table>
 					<caption>Credits</caption>
-				{props.fields.map((field, index) => (
-					<tr key={index}>
-						<th className={styles.label}>{field.label}:</th>
-						<td className={styles.value}>{localizer.getValue(field.value)}</td>
-					</tr>
-				))}
-				{(props.children) && (
-					<tr>
-						<td colSpan={2} className={styles.notes}>
-							<span className={ styles.notes }>{ props.children }</span>
-						</td>
-					</tr>
-				)}
+					<tbody>
+					{props.fields.map((field, index) => (
+						<tr key={index}>
+							<th className={styles.label}>{field.label}:</th>
+							<td className={styles.value}>{localizer.getValue(field.value)}</td>
+						</tr>
+					))}
+					{(props.children) && (
+						<tr>
+							<td colSpan={2} className={styles.notes}>
+								<span className={ styles.notes }>{ props.children }</span>
+							</td>
+						</tr>
+					)}
+				</tbody>
 				</table>
 			</div>
 		</BeComponent>

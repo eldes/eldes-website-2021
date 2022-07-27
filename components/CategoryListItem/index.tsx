@@ -15,12 +15,12 @@ const CategoryListItem: FunctionComponent<Props> = (props) => {
 
 	return (
 		<li className={ `${styles.categoryListItem} ${styles[`highlight-${props.category.highlight}`]}` }>
-			<Link href={ `${props.category.slug}` }>
+			<Link href={ `/${props.category.slug}` }>
 				<a>
 					<span className={ styles.textLabel }>{ localizer.getValue(props.category.title) } <small>{ localizer.getValue(props.category.subtitle) }</small></span>
 					<span className={ styles.thumbnails }>
 					{
-						props.category.thumbnails.map(thumbnail => <Image key={ thumbnail } src={ thumbnail } width={512} height={512} alt={ localizer.getValue(props.category.title) } layout="intrinsic"/>)
+						props.category.thumbnails.map((thumbnail, index) => <Image key={ index } src={ thumbnail } width={512} height={512} alt={ localizer.getValue(props.category.title) } layout="intrinsic"/>)
 					}
 					</span>
 				</a>
