@@ -15,7 +15,7 @@ const CategoryListItem: FunctionComponent<Props> = (props) => {
 
 	return (
 		<li className={ `${styles.categoryListItem} ${styles[`highlight-${props.category.highlight}`]}` }>
-			<Link href={ `${props.category.slug}` }>
+			<Link href={ `/${props.category.slug}` }>
 				<a>
 					<span className={ styles.textLabel }>{ localizer.getValue(props.category.title) } <small>{ localizer.getValue(props.category.subtitle) }</small></span>
 					<span className={ styles.thumbnails }>
