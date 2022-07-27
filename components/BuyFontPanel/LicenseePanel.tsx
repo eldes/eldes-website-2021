@@ -34,22 +34,18 @@ type Props = {
   onChange?: ChangeDataHandler
 }
 
-const LicenseePanel: FunctionComponent<Props> = (props) => {
+const LicenseePanel: FunctionComponent<Props> = ({ onChange }) => {
 
   const { t } = useTranslation(buyFontPanelI18nKey)
 
   const [fullName, setFullName] = useState('')
 	const [email, setEmail] = useState('')
-
-  const fireChangeEvent = useCallback(() => {
-    if (props.onChange) {
-      props.onChange(Data.make(fullName, email))
-    }
-  }, [email, fullName, props]);
-
+  
   useEffect(() => {
-    fireChangeEvent()
-  }, [fireChangeEvent]);
+    if (onChange) {
+      onChange(Data.make(fullName, email))
+    }
+  }, [email, fullName, onChange]);
 
   return (
     <>
