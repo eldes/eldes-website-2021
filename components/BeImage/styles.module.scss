@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.beImage {
+
+	&.round {
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	a {
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.seeMoreLink {
+  &::after {
+    padding: 0px 8px;
+    font-family: 'Material Icons Outlined';
+		content: "\e5e1";
+    color: $color_accent_back;
+    position: relative;
+    bottom: -0.15em;
+  }
+
+  .label {
+    font-size: 0px;
+  }
+}

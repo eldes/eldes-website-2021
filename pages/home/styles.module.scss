@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.home {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: $header_max_width;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: #{$header_max_width + 2 * $inset_l}) {
+    & {
+      padding: 0px $inset_l;
+    }
+  }
+
+  .intro {
+    margin-bottom: $inset_xxl;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: $inset_m;
+
+    .text {
+      strong {
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 1em;
+      }
+
+      em {
+        text-transform: uppercase;
+        font-style: normal;
+        font-size: 0.9em;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .mainSections {
+    display: flex;
+    justify-content: center;
+    column-gap: $inset_m;
+    padding-bottom: $inset_xxl;
+
+    .link {
+      width: 256px;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: $inset_m;
+
+      .label {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

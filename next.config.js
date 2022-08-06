@@ -30,11 +30,6 @@ module.exports = {
 				permanent: false,
 			},
 			{
-				source: '/',
-				destination: '/portfolio',
-				permanent: false,
-			},
-			{
 				source: '/fonte-eldes-cordel',
 				destination: '/font-eldes-cordel',
 				permanent: false,
