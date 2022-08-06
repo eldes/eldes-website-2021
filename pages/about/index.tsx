@@ -15,7 +15,7 @@ const AboutPage: NextPage = () => {
 				<div className={styles.resume}>
 					
 					<p className={styles.text}>
-						<strong>Combination of creative talent in visual arts and technological insight:</strong> <em>graphic designer</em> and <em>illustrator</em>, with over 18 years experience in Editorial, Literature and Advertising, and <em>software engineer</em>, with over 24 years experience in full-stack Web and Mobile development.
+						<strong>Combination of creative talent in visual arts and technological insight:</strong> <em>graphic designer</em> and <em>illustrator</em>, with over {(new Date().getFullYear() - 2004)} years experience in Editorial, Literature and Advertising, and <em>software engineer</em>, with over {(new Date().getFullYear() - 2000)} years experience in full-stack Web and Mobile development.
 					</p>
 					<div className={styles.photo}>
 						<Image
