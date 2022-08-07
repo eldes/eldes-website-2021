@@ -41,6 +41,14 @@
     column-gap: $inset_m;
     padding-bottom: $inset_xxl;
 
+    @media (max-width: 460px) {
+      & {
+        flex-direction: column;
+        align-items: center;
+        row-gap: $inset_xxl;
+      }
+    }
+
     .link {
       width: 256px;
       overflow: hidden;
