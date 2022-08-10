@@ -33,7 +33,7 @@ class Localizer {
 	}
 
 	getValue<T>(localized: Localized<T>) {
-		return localized[this.router.locale as LocaleCode]
+		return localized ? localized[this.router.locale as LocaleCode] : localized
 	}
 }
 
