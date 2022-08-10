@@ -15,7 +15,7 @@ const EmbrapaWhiteboardAnimationPage: NextPage = () => {
 				en: 'More whiteboard animation',
 				br: 'Mais animação whiteboard',
 			},
-			slugs: ['protest-whiteboard-animation',],
+			slugs: ['whiteboard-animation-quale-explica-eleicoes',],
 		},
 		{
 			title: {

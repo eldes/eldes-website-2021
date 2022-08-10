@@ -103,6 +103,7 @@ const categoriesMock: Category[] = [
 			'/content/boreal-textbook-flip-book/thumbnail.jpg',
 		],
 		pieceSlugs: [
+			'whiteboard-animation-quale-explica-eleicoes',
 			'protest-whiteboard-animation',
 			'limpidus-whiteboard-animation',
 			'embrapa-whiteboard-animation',
