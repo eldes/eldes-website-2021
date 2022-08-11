@@ -7,6 +7,8 @@ module.exports = {
 
 	async redirects() {
 		return [
+
+			// Locale domain:
 			{
 				source: '/:path*',
 				has: [
@@ -29,6 +31,8 @@ module.exports = {
 				destination: 'https://eldes.com/br/:path*',
 				permanent: false,
 			},
+
+			// Legacy links:
 			{
 				source: '/fonte-eldes-cordel',
 				destination: '/font-eldes-cordel',
