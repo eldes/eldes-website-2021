@@ -2,13 +2,22 @@ import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
+import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
+import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SeeMore from '../models/SeeMore';
 import highlightImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/highlight.jpg';
+import illustrationScene11Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/illustration-scene-11.png';
 import illustrationImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/illustration.jpg';
+import roughInfographicImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-infographic.jpg';
+import rough01Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-01.jpg';
+import rough04Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-04.jpg';
+import rough07Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-07.jpg';
+import rough10aImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-10a.jpg';
+import rough11Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-11.jpg';
 
 const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
 
@@ -46,14 +55,14 @@ const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
       <BeImage src={highlightImage} alt={'Details of illustation'} />
       <BeCredits fields={[
 				{
-					label: 'Qualé',
+					label: 'Revista Qualé',
 					value: {
 						br: 'conceito e texto',
 						en: 'concept and text',
 					}
 				},
         {
-					label: 'CriAudio',
+					label: 'Estúdio CriAudio',
 					value: {
 						br: 'locução',
 						en: 'voice ver',
@@ -76,10 +85,10 @@ const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
 			]}/>
 
       <BeParagaph>
-        A Revista Qualé desejava criar um material especial sobre Eleições, que poderia ser usado como início da conversa sobre o tema com as crianças e jovens, os preparando para o exercício da cidadania.
+        A Revista Qualé desejava criar um material especial sobre Eleições que pudesse ser usado como início da conversa sobre esse tema com as crianças e jovens, preparando eles para o exercício da cidadania.
       </BeParagaph>
       <BeParagaph>
-        Assim, a partir do texto eleborado pela revista, criamos e produzimos um vídeo de animação whiteboard.
+        Assim, a partir do texto elaborado pela revista, criamos e produzimos, aqui no estúdio, um vídeo de animação whiteboard.
       </BeParagaph>
 
       <BeEmbed aspectRatioPercent={56.25} horizontalPadding={true} verticalPadding={true}>
@@ -87,9 +96,56 @@ const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
 			</BeEmbed>
 
       <BeParagaph>
-        Nesse tipo de animação, as ilustrações vão sendo desenhadas de acordo com a locução e, juntas, devem formar um infográfico resumindo o texto do áudio.
+      Nesse tipo de animação, as ilustrações vão sendo desenhadas de acordo com a locução e, juntas, formam um infográfico resumindo o texto.
       </BeParagaph>
       <BeImage src={illustrationImage} alt={'Illustration'} />
+
+      <BeHeading>O processo</BeHeading>
+      <BeParagaph>
+        Com a versão final do texto em mãos, é gravada  locução e então elaborados os primeiros rascunhos para cada uma das cenas planejadas.
+      </BeParagaph>
+      <BeParagaph>
+        Abaixo, alguns dos rascunhos elaborados pela Nathalia, ilustradora aqui do estúdio, nessa etapa do projeto:
+      </BeParagaph>
+      <BePhotoGrid images={[
+        {
+          src: rough01Image,
+          alt: 'Rough of scene 1',
+        },
+        {
+          src: rough04Image,
+          alt: 'Rough of scene 4',
+        },
+        {
+          src: rough07Image,
+          alt: 'Rough of scene 7',
+        },
+        {
+          src: rough10aImage,
+          alt: 'Rough of scene 10 a',
+        },
+        {
+          src: rough11Image,
+          alt: 'Rough of scene 11',
+        },
+      ]} cols={3} />
+
+      <BeParagaph>
+        Aprovados os rascunhos das ilustrações individuais, é elaborado então o rascunho do infográfico, unindo todas as ilustrações e o texto:
+      </BeParagaph>
+      <BePhotoGrid images={[
+        {
+          src: roughInfographicImage,
+          alt: 'Infographic',
+        },
+      ]} cols={1} />
+      <BeParagaph>
+        A partir desse rascunho é então elaborada uma animação simples (<em>animatic</em>) mostrando que parte do infográfico deve aparecer em qual tempo da locução.
+      </BeParagaph>
+      <BeParagaph>
+        Aprovado o <em>animatic</em>, as ilustrações são arte-finalizadas e a animação produzida. 
+      </BeParagaph>
+      <BeImage src={illustrationScene11Image} alt='Final illustration of scene 11' />
       <BeThanks />
     </PieceBePage>
   );
