@@ -253,7 +253,7 @@ const piecesMock: Piece[] = [
 	//
 
 	{
-		slug: 'whiteboard-animation-quale-explica-eleicoes',
+		slug: 'whiteboard-animation-quale-magazine-elections',
 		title: {
 			en: 'Qualé Magazine: Elections',
 			br: 'Revista Qualé: Eleições',
@@ -262,7 +262,7 @@ const piecesMock: Piece[] = [
 			en: 'Whiteboard animation',
 			br: 'Animação whiteboard',
 		},
-		thumbnail: '/content/whiteboard-animation-quale-explica-eleicoes/thumbnail.jpg',
+		thumbnail: '/content/whiteboard-animation-quale-magazine-elections/thumbnail.jpg',
 		description: {
 			en: 'Whiteboard animation for Qualé Magazine as special material for you to know how to start this conversation with children and young people, preparing them for the exercise of citizenship.',
 			br: 'Animação whiteboard para a Revista Qualé como material especial para que você saiba como iniciar essa conversa com as crianças e jovens, preparando eles para o exercício da cidadania.'
