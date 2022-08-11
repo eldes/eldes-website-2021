@@ -9,15 +9,15 @@ import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SeeMore from '../models/SeeMore';
-import highlightImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/highlight.jpg';
-import illustrationScene11Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/illustration-scene-11.png';
-import illustrationImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/illustration.jpg';
-import roughInfographicImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-infographic.jpg';
-import rough01Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-01.jpg';
-import rough04Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-04.jpg';
-import rough07Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-07.jpg';
-import rough10aImage from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-10a.jpg';
-import rough11Image from '../public/content/whiteboard-animation-quale-explica-eleicoes/rough-scene-11.jpg';
+import highlightImage from '../public/content/whiteboard-animation-quale-magazine-elections/highlight.jpg';
+import illustrationScene11Image from '../public/content/whiteboard-animation-quale-magazine-elections/illustration-scene-11.png';
+import illustrationImage from '../public/content/whiteboard-animation-quale-magazine-elections/illustration.jpg';
+import roughInfographicImage from '../public/content/whiteboard-animation-quale-magazine-elections/rough-infographic.jpg';
+import rough01Image from '../public/content/whiteboard-animation-quale-magazine-elections/rough-scene-01.jpg';
+import rough04Image from '../public/content/whiteboard-animation-quale-magazine-elections/rough-scene-04.jpg';
+import rough07Image from '../public/content/whiteboard-animation-quale-magazine-elections/rough-scene-07.jpg';
+import rough10aImage from '../public/content/whiteboard-animation-quale-magazine-elections/rough-scene-10a.jpg';
+import rough11Image from '../public/content/whiteboard-animation-quale-magazine-elections/rough-scene-11.jpg';
 
 const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
 
@@ -62,7 +62,7 @@ const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
 					}
 				},
         {
-					label: 'Estúdio CriAudio',
+					label: 'CriAudio Produções',
 					value: {
 						br: 'locução',
 						en: 'voice ver',
