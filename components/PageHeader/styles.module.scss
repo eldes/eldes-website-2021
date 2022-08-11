@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../styles/variables";
 
 .pageHeader {
 	$h2_min_width: 120px;
@@ -15,12 +15,13 @@
 	height: $header_height;
 	font-size: 18px;
 	font-weight: 400;
+	box-shadow: 0px 1px 1px #fff9;
 
 	.skipToMain {
 		display: none;
 	}
 
-	hgroup {
+	.masthead {
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -35,7 +36,8 @@
 			}
 		}
 
-		h1 {
+		.title {
+			display: block;
 			width: $header_height;
 			height: $header_height;
 			background-color: #c00;
@@ -46,7 +48,7 @@
 			}
 		}
 
-		h2 {
+		.subtitle {
 			box-sizing: border-box;
 			position: fixed;
 			left: $header_height;
