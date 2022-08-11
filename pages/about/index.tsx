@@ -29,7 +29,7 @@ const AboutPage: NextPage = () => {
 				<section>
 					<h2>Currently</h2>
 					<p>
-						He works at his illustration studio/design office/creative agency, Frux, developing several illustration, graphic design and multimedia projects.
+						He works at his illustration studio developing several illustration, graphic design and multimedia projects.
 					</p>
 					<p>
 						He is a professor at Senac, teaching system development, graphic design and drawing classes.
