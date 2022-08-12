@@ -9,10 +9,10 @@ import styles from './styles.module.scss';
 const i18nNamespace = [ ...pageI18nNamespace, 'fonts' ];
 
 const LicensePage: FunctionComponent = () => {
-  const { asPath, locale } = useRouter();
+  const { pathname, locale } = useRouter();
   const { t } = useTranslation();
   
-	const slug = asPath.substring(1).split('#')[0]
+	const slug = pathname.substring(1).split('#')[0]
   const license = licensesRepository.load(slug);
 
   const backwardLink = {

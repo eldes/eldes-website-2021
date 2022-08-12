@@ -15,8 +15,8 @@ type Props = BeSeeMorePanelProps & {
 const PieceBePage: NextPage<Props> = (props) => {
 
 	const router = useRouter();
-	const { asPath } = router;
-	const slug = asPath.substring(1).split('#')[0]
+	const { pathname } = router;
+	const slug = pathname.substring(1).split('#')[0]
 
 	const piece = piecesRepository.load(slug)
 	const categories = piecesRepository.loadAllCategories(slug)
