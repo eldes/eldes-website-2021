@@ -9,8 +9,8 @@ type Props = Omit<BePageProps, 'pretitle' | 'title' | 'section' | 'backwardLink'
 
 const FontBePage: FunctionComponent<Props> = (props) => {
 
-	const { asPath } = useRouter()
-	const slug = asPath.substring(1).split('#')[0]
+	const { pathname } = useRouter()
+	const slug = pathname.substring(1).split('#')[0]
 
 	const font = fontsRepository.load(slug)
 
