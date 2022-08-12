@@ -43,7 +43,7 @@ const Page: FunctionComponent<Props> = (props) => {
 						<meta property="og:description" content={ props.description } key="ogdescription" />
 					</>
 				)} 
-				<meta property="og:url" content={siteUrl + router.asPath} key="ogurl" />
+				<meta property="og:url" content={siteUrl + router.pathname} key="ogurl" />
 				<meta property="og:image" content={`${siteUrl}/logotype.svg`} key="ogimage" />
 				<meta property="og:image:width" content={'512'} key="ogimagewidth" />
 				<meta property="og:image:height" content={'512'} key="ogimageheight" />
