@@ -12,8 +12,8 @@ export const categoryPageI18nNamespace = ['common', 'Page']
 const CategoryPage: FunctionComponent = () => {
 
 	const router = useRouter();
-	const { asPath } = router;
-	const slug = asPath.substring(1)
+	const { pathname } = router;
+	const slug = pathname.substring(1)
 
 	const category = categoriesRepository.load(slug)
 	const pieces: Piece[] = categoriesRepository.loadAllPieces(slug)
