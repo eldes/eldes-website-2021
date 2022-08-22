@@ -92,16 +92,19 @@
 				background-size: 100% 100%;
 
 				&.instagram {
-					background-image: url('../../styles/images/awesome-brands-instagram.svg');
+					background-image: url('./images/awesome-brands-instagram.svg');
 				}
 				&.behance {
-					background-image: url('../../styles/images/awesome-brands-behance.svg');
+					background-image: url('./images/awesome-brands-behance.svg');
 				}
 				&.twitter {
-					background-image: url('../../styles/images/awesome-brands-twitter.svg');
+					background-image: url('./images/awesome-brands-twitter.svg');
+				}
+				&.gitHub {
+					background-image: url('./images/awesome-brands-github.svg');
 				}
 				&.linkedIn {
-					background-image: url('../../styles/images/awesome-brands-linkedin.svg');
+					background-image: url('./images/awesome-brands-linkedin.svg');
 				}
 			}
 		}
