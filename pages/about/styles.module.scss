@@ -76,16 +76,80 @@
 
   section {
     margin-top: $inset_xl;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #000;
     padding-top: $inset_xl;
 
     h2 {
       font-size: 1.4em;
-      margin-bottom: $inset_l;
+      margin-bottom: $inset_xxl;
+    }
+
+    .experience {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;;
+    }
+
+    h3 {
+      font-size: 0.7em;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: $inset_m;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;;
+
+      .date,
+      .rule {
+        font-size: 0.7em;
+      }
+
+      .date {
+        text-transform: none;
+      }
     }
 
     p {
       margin-bottom: $inset_m;
+    }
+
+    .secIntro {
+      margin-bottom: $inset_xl;
+    }
+
+    .secSkills {
+      display: flex;
+      flex-direction: column;
+      row-gap: $inset_xl;
+    }
+
+    li {
+      border-top: 1px dotted #999;
+      padding: $inset_xs 0px;
+      font-size: 0.7em;
+      line-height: 1.4em;
+
+      &:last-child {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+
+  .sectionLink {
+    display: inline-block;
+    margin-top: $inset_l;
+    padding: $inset_m 0px;
+    font-size: 0.8em;
+    font-weight: 700;
+
+    &::after {
+      padding: 0px 8px;
+      font-family: 'Material Icons Outlined';
+      content: "\e5e1";
+      color: $color_accent_back;
+      position: relative;
+      bottom: -0.15em;
     }
   }
 }
