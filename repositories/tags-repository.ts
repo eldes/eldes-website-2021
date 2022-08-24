@@ -30,7 +30,6 @@ const tags: Tag[] = [
 			'historias-da-ajudaris-20-childrens-book-illustrations',
 			'historias-da-ajudaris-17-childrens-book-illustrations',
 			'poeminhas-reais-childrens-book-illustration',
-			'historias-da-ajudaris-19-childrens-book-illustrations',
 			'a-ultima-flor-de-abril-childrens-book',
       'baseball-guide',
       'whiteboard-animation-quale-magazine-elections',
