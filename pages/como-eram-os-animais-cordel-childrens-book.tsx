@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
@@ -7,7 +8,9 @@ import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-childrens-book/apresentacao.png';
 import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png';
 import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png';
@@ -57,35 +60,12 @@ import thanksImage from '../public/content/como-eram-os-animais-cordel-childrens
 import urubuImage from '../public/content/como-eram-os-animais-cordel-childrens-book/urubu.png';
 
 const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => {
-
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More children\'s books',
-				br: 'Mais livros infantis',
-			},
-			slugs: ['historias-da-ajudaris-19-childrens-book-illustrations',],
-		},
-		{
-			title: {
-				en: 'See also textbooks',
-				br: 'Veja também livros didáticos',
-			},
-			slugs: ['brasil-na-bagagem-textbook-illustrations',],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-				'ilustrar-magazine-20',
-			],
-		},
-	];
 	
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.WoodcutStyle,
+			TagSlug.Textbook,
+		])}>
 			<BeImage src={ratoImage} alt={'Illustration for the stanza of mouse'} />
 			<BeCredits fields={[
 				{

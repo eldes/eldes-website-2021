@@ -1,43 +1,23 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 
 const PenguinStoryFlipBookPage: NextPage = () => {
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More flip book',
-				br: 'Mais flip book',
-			},
-			slugs: [
-				'boreal-textbook-flip-book',
-			],
-		},
-		{
-			title: {
-				en: 'See also whiteboard animation',
-				br: 'Vja também animação whiteboard',
-			},
-			slugs: ['protest-whiteboard-animation',],
-		},
-		{
-			title: {
-				en: 'More in cartoon style',
-				br: 'Mais no estilo cartoon',
-			},
-			slugs: [
-				'brasil-na-bagagem-textbook-illustrations',
-				'baseball-guide',
-			],
-		},
-	];
 	
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.Flipbook,
+        TagSlug.CartoonStyle,
+      ])}
+		>
 			<BeCredits fields={[
 				{
 					label: 'private',

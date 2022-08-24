@@ -1,40 +1,27 @@
 import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import illustrationImage from '../public/content/solidao-empresarial-editorial-illustration/illustration.png';
 import mockupImage from '../public/content/solidao-empresarial-editorial-illustration/mockup.jpg';
 import sketchbook1Image from '../public/content/solidao-empresarial-editorial-illustration/sketchbook-1.jpg';
 import sketchbook2Image from '../public/content/solidao-empresarial-editorial-illustration/sketchbook-2.jpg';
 
 const SolidaoEmpresarialPage: NextPage = () => {
-  const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More for editorial',
-				br: 'Mais para editorial',
-			},
-			slugs: [
-        'hipocrisil',
-      ],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-        'como-eram-os-animais-cordel-childrens-book',
-			],
-		},
-	];
   
   return (
-    <PieceBePage seeMoreList={seeMoreList}>
+    <PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.WoodcutStyle,
+      ])}
+    >
       <BeImage src={illustrationImage} alt={'Illustration'} />
       <BeCredits fields={[
         {

@@ -1,12 +1,15 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import coverImage from '../public/content/ajudaris-20-childrens-book-illustrations/cover.jpg';
 import giraffeImage from '../public/content/ajudaris-20-childrens-book-illustrations/giraffe.jpg';
 import animaisCacadorImage from '../public/content/ajudaris-20-childrens-book-illustrations/os-animais-e-o-cacador.jpg';
@@ -16,35 +19,11 @@ import forestImage from '../public/content/ajudaris-20-childrens-book-illustrati
 
 const HistoriasDaAjudaris20ChildrensBookIllustrationsPage: NextPage = () => {
 
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More children\'s books',
-				br: 'Mais livros infantis',
-			},
-			slugs: ['historias-da-ajudaris-17-childrens-book-illustrations',],
-		},
-		{
-			title: {
-				en: 'See also textbooks',
-				br: 'Veja também livros didáticos',
-			},
-			slugs: ['brasil-na-bagagem-textbook-illustrations',],
-		},
-		{
-			title: {
-				en: 'More in cartoon style',
-				br: 'Mais no estilo cartoon',
-			},
-			slugs: [
-				'baseball-guide',
-				'protest-whiteboard-animation',
-			],
-		},
-	];
-
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.CartoonStyle,
+			TagSlug.Textbook,
+		])}>
 			<BeImage
 				src={animaisCacadorImage}
 				alt={'Illustration for "Os animais e o caçador"'}

@@ -1,11 +1,14 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import lutraMockupImage from '../public/content/historias-da-ajudaris-19-childrens-book-illustrations/a-viagem-da-lutra-mockup.jpg';
 import lutraIllustraImage from '../public/content/historias-da-ajudaris-19-childrens-book-illustrations/a-viagem-da-lutra.jpg';
 import choooroMockupImage from '../public/content/historias-da-ajudaris-19-childrens-book-illustrations/chooo-ro-esperanca-mockup.jpg';
@@ -15,34 +18,12 @@ import vigilantesMockupImage from '../public/content/historias-da-ajudaris-19-ch
 import vigilantesIllustraImage from '../public/content/historias-da-ajudaris-19-childrens-book-illustrations/os-vigilantes-da-floresta.jpg';
 
 const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More children\'s books',
-				br: 'Mais livros infantis',
-			},
-			slugs: ['a-ultima-flor-de-abril-childrens-book',],
-		},
-		{
-			title: {
-				en: 'See also textbooks',
-				br: 'Veja também livros didáticos',
-			},
-			slugs: ['brasil-na-bagagem-textbook-illustrations',],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-				'ilustrar-magazine-20',
-			],
-		},
-	];
 
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.WoodcutStyle,
+			TagSlug.Textbook,
+		])}>
 			<BeImage
 				src={vigilantesIllustraImage}
 				alt={'Illustration for "Os vigilantes da floresta"'}

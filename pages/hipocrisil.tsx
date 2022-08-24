@@ -1,41 +1,28 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import illustrationImage from '../public/content/hipocrisil/illustration.png';
 import mockupImage from '../public/content/hipocrisil/mockup.jpg';
 import sketchbook1Image from '../public/content/hipocrisil/sketchbook-1.jpg';
 import sketchbook2Image from '../public/content/hipocrisil/sketchbook-2.jpg';
 
 const HipocrisilPage: NextPage = () => {
-  const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More for editorial',
-				br: 'Mais para editorial',
-			},
-			slugs: [
-        'moitara-teatro-portugues-editorial-illustration',
-      ],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-        'como-eram-os-animais-cordel-childrens-book',
-			],
-		},
-	];
 
   return (
-    <PieceBePage seeMoreList={seeMoreList}>
+    <PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.WoodcutStyle,
+      ])}
+    >
       <BeImage src={illustrationImage} alt={'Illustration'} />
       <BeCredits fields={[
         {
