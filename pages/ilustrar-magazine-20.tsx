@@ -1,41 +1,26 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { GetStaticProps, NextPage } from 'next/types';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import highlightImage from '../public/content/ilustrar-magazine-20/hightlight.png';
 import illustration2Image from '../public/content/ilustrar-magazine-20/illustration-2.png';
 import mockupImage from '../public/content/ilustrar-magazine-20/mockup.jpg';
 import thanksImage from '../public/content/ilustrar-magazine-20/thanks.jpg';
 
 const IlustrarMagazinePage: NextPage = () => {
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More for editorial',
-				br: 'Mais para editorial',
-			},
-			slugs: [
-        'la-maison-qui-pue-magazine',
-      ],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-        'como-eram-os-animais-cordel-childrens-book',
-			],
-		},
-	];
 	
   return (
-    <PieceBePage seeMoreList={seeMoreList}>
+    <PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.WoodcutStyle,
+		])}>
       <BeImage src={highlightImage} alt='1st illustration' />
       <BeCredits fields={[
 				{

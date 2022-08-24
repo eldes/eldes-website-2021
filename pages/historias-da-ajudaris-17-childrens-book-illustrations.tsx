@@ -1,11 +1,14 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import familiaMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia-mockup.jpg';
 import familiaImage from '../public/content/ajudaris-17-childrens-book-illustrations/a-familia.jpg';
 import aniversarioMockupImage from '../public/content/ajudaris-17-childrens-book-illustrations/aniversario-terrivel-mockup.jpg';
@@ -14,35 +17,12 @@ import mockupImage from '../public/content/ajudaris-17-childrens-book-illustrati
 
 
 const HistoriasDaAjudaris17ChildrensBookIllustrationsPage: NextPage = () => {
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More children\'s books',
-				br: 'Mais livros infantis',
-			},
-			slugs: ['poeminhas-reais-childrens-book-illustration',],
-		},
-		{
-			title: {
-				en: 'See also textbooks',
-				br: 'Veja também livros didáticos',
-			},
-			slugs: ['brasil-na-bagagem-textbook-illustrations',],
-		},
-		{
-			title: {
-				en: 'More in cartoon style',
-				br: 'Mais no estilo cartoon',
-			},
-			slugs: [
-				'baseball-guide',
-				'protest-whiteboard-animation',
-			],
-		},
-	];
 
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.CartoonStyle,
+			TagSlug.Textbook,
+		])}>
 			<BeImage
 				src={familiaImage}
 				alt={'Illustration for "A família"'}

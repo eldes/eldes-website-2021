@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
-import { Localizer } from '../../models/Locale';
 import SeeMore from '../../models/SeeMore';
 import BeSeeMore from '../BeSeeMore';
 import styles from './styles.module.scss';
@@ -10,9 +9,8 @@ type Props = {
 }
 
 const BeSeeMorePanel: FunctionComponent<Props> = (props) => {
-  const localizer = Localizer.make(useRouter());
 
-  return (
+  return (props.seeMoreList?.length) ? (
     <ul className={styles.BeSeeMorePanel}>
       {(props.seeMoreList) && (
         props.seeMoreList.map((seeMore, index) => (
@@ -20,6 +18,8 @@ const BeSeeMorePanel: FunctionComponent<Props> = (props) => {
         )
       ))}
     </ul>
+  ) : (
+    <></>
   );
 };
 

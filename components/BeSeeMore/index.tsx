@@ -5,7 +5,7 @@ import { FunctionComponent } from 'react';
 import { Localizer } from '../../models/Locale';
 import Piece from '../../models/Piece';
 import SeeMore from '../../models/SeeMore';
-import piecesRepository from '../../repositories/pieces-repository';
+import PiecesRepository from '../../repositories/pieces-repository';
 import PieceList from '../PieceList';
 import PieceListItem from '../PieceListItem';
 import styles from './styles.module.scss';
@@ -18,7 +18,7 @@ const BeSeeMore: FunctionComponent<Props> = (props) => {
   const localizer = Localizer.make(useRouter());
   const pieces: Piece[] = [];
   props.seeMore.slugs.forEach(slug => {
-    const piece = piecesRepository.load(slug);
+    const piece = PiecesRepository.load(slug);
     if (piece) {
       pieces.push(piece);
     }

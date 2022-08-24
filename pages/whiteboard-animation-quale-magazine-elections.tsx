@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
 import BeHeading from '../components/BeHeading';
@@ -8,7 +9,9 @@ import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import highlightImage from '../public/content/whiteboard-animation-quale-magazine-elections/highlight.jpg';
 import illustrationScene11Image from '../public/content/whiteboard-animation-quale-magazine-elections/illustration-scene-11.png';
 import illustrationImage from '../public/content/whiteboard-animation-quale-magazine-elections/illustration.jpg';
@@ -51,7 +54,14 @@ const WhiteboardAnimationQualeExplicaEleicoes: NextPage = function () {
   ];
   
   return (
-    <PieceBePage seeMoreList={seeMoreList} backgroundColor='#000' foregroundColor='#fff'>
+    <PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.Whiteboard,
+        TagSlug.CartoonStyle,
+      ])}
+      backgroundColor='#000'
+      foregroundColor='#fff'
+    >
       <BeImage src={highlightImage} alt={'Details of illustation'} />
       <BeCredits fields={[
 				{

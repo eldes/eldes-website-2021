@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Localizer } from '../../models/Locale';
-import piecesRepository from '../../repositories/pieces-repository';
+import PiecesRepository from '../../repositories/pieces-repository';
 import BePage, { bePageI18nNamespace } from '../BePage';
 import { BeSeeMorePanelProps } from '../BeSeeMorePanel';
 import { PageSection } from '../Page';
@@ -18,8 +18,8 @@ const PieceBePage: NextPage<Props> = (props) => {
 	const { pathname } = router;
 	const slug = pathname.substring(1).split('#')[0]
 
-	const piece = piecesRepository.load(slug)
-	const categories = piecesRepository.loadAllCategories(slug)
+	const piece = PiecesRepository.load(slug)
+	const categories = PiecesRepository.loadAllCategories(slug)
 	const firstCategory = categories[0]
 
 	const localizer = Localizer.make(router);

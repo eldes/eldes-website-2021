@@ -1,7 +1,7 @@
 import Category from '../models/Category';
 import { CategoryHighlight } from '../models/CategoryHighlight';
 import Piece from '../models/Piece';
-import piecesRepository from './pieces-repository';
+import PiecesRepository from './pieces-repository';
 
 const categoriesRepository = {
 	
@@ -13,14 +13,14 @@ const categoriesRepository = {
 		const pieces: Piece[] = []
 		
 		categoriesRepository.load(slug)?.pieceSlugs.forEach(pieceSlug => {
-			const piece = piecesRepository.load(pieceSlug)
+			const piece = PiecesRepository.load(pieceSlug)
 			if (piece) {
 				pieces.push(piece)
 			}
 		})
 
 		return pieces
-	}
+	},
 }
 
 export default categoriesRepository

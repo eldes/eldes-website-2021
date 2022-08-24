@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
 import BeHeading from '../components/BeHeading';
@@ -9,7 +10,9 @@ import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SwitchLocale from '../components/SwitchLocale';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import bilingueImage from '../public/content/brasil-na-bagagem-textbook-illustrations/bilingue.jpg';
 import boiBumbaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boi-bumba.jpg';
 import boitataColorsImage from '../public/content/brasil-na-bagagem-textbook-illustrations/boitata-colors.jpg';
@@ -66,39 +69,16 @@ import tupiImage from '../public/content/brasil-na-bagagem-textbook-illustration
 import ventriloquistImage from '../public/content/brasil-na-bagagem-textbook-illustrations/ventriloquist.jpg';
 import vitoriaRegiaImage from '../public/content/brasil-na-bagagem-textbook-illustrations/vitoria-regia.jpg';
 import werewolfImage from '../public/content/brasil-na-bagagem-textbook-illustrations/werewolf.jpg';
+import PiecesRepository from '../repositories/pieces-repository';
+import TagsRepository from '../repositories/tags-repository';
 
 const BrasilNaBagagemTextbookIllustrationsPage: NextPage = () => {
-	const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More textbook',
-				br: 'Mais livro didático',
-			},
-			slugs: ['gramatica-fundamental-5-moderna-textbook-illustrations',],
-		},
-		{
-			title: {
-				en: 'See also children\'s books',
-				br: 'Veja também livros infantis',
-			},
-			slugs: [
-				'historias-da-ajudaris-20-childrens-book-illustrations',
-			],
-		},
-		{
-			title: {
-				en: 'More in cartoon style',
-				br: 'Mais no estilo cartoon',
-			},
-			slugs: [
-				'baseball-guide',
-				'protest-whiteboard-animation',
-			],
-		},
-	];
 
 	return (
-		<PieceBePage seeMoreList={seeMoreList}>
+		<PieceBePage seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+			TagSlug.Textbook,
+			TagSlug.CartoonStyle,
+		])}>
 			<BeImage
 				src={ brokenTelephoneImage }
 				alt="Broken telephone illutration"

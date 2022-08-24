@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
@@ -8,7 +9,9 @@ import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';
 import SwitchLocale from '../components/SwitchLocale';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import aniHittingImage from '../public/content/baseball-guide/ani-hitting.gif';
 import aniPitchingImage from '../public/content/baseball-guide/ani-pitching.gif';
 import bottleBatImage from '../public/content/baseball-guide/bottle-bat.png';
@@ -46,29 +49,13 @@ import sockBallImage from '../public/content/baseball-guide/sock-ball.png';
 import thanksImage from '../public/content/baseball-guide/thanks.png';
 
 const BaseballGuidePage: NextPage = () => {
-  const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More for editorial',
-				br: 'Mais para editorial',
-			},
-			slugs: [
-        'ilustrar-magazine-20',
-      ],
-		},
-		{
-			title: {
-				en: 'More in cartoon style',
-				br: 'Mais no estilo cartoon',
-			},
-			slugs: [
-        'boreal-textbook-flip-book',
-        'brasil-na-bagagem-textbook-illustrations',
-			],
-		},
-	];
+
   return (
-    <PieceBePage seeMoreList={seeMoreList}>
+    <PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.CartoonStyle,
+      ])}
+    >
       <SwitchLocale
         en={<BeImage src={headerImage} alt="Baseball Guide" />}
         br={<BeImage src={headerBrImage} alt="Beisebol - Guia" />}

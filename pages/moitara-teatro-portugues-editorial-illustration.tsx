@@ -1,41 +1,27 @@
 import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
 import BeParagaph from '../components/BeParagaph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage from '../components/PieceBePage';
+import Helpers from '../lib/Helpers';
 import SeeMore from '../models/SeeMore';
+import { TagSlug } from '../models/Tag';
 import illustrationImage from '../public/content/moitara-teatro-portugues-editorial-illustration/illustration.png';
 import mockupSketchbook1Image from '../public/content/moitara-teatro-portugues-editorial-illustration/mockup-sketchbook-1.jpg';
 import mockupSketchbook2Image from '../public/content/moitara-teatro-portugues-editorial-illustration/mockup-sketchbook-2.jpg';
 import mockupImage from '../public/content/moitara-teatro-portugues-editorial-illustration/mockup.jpg';
 
 const MoitaraTeatroPortuguesEditorialNewspaperPage: NextPage = function () {
-
-  const seeMoreList: SeeMore[] = [
-		{
-			title: {
-				en: 'More for editorial',
-				br: 'Mais para editorial',
-			},
-			slugs: [
-        'baseball-guide',
-      ],
-		},
-		{
-			title: {
-				en: 'More in woodcut style',
-				br: 'Mais no estilo xilo',
-			},
-			slugs: [
-        'como-eram-os-animais-cordel-childrens-book',
-			],
-		},
-	];
   
   return (
-    <PieceBePage seeMoreList={seeMoreList}>
+    <PieceBePage
+      seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
+        TagSlug.WoodcutStyle,
+      ])}
+    >
       <BeImage src={illustrationImage} alt={'Illustration'} />
       <BeCredits fields={[
         {
