@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config')
+const { i18n, i18nRoutes } = require('./next-i18next.config')
 
 module.exports = {
 	reactStrictMode: true,
@@ -33,11 +33,7 @@ module.exports = {
 			},
 
 			// Legacy links:
-			{
-				source: '/fonte-eldes-cordel',
-				destination: '/font-eldes-cordel',
-				permanent: false,
-			},
+			// ...
 
 			// TEMP:
 			{
@@ -45,6 +41,26 @@ module.exports = {
 				destination: 'https://www.teepublic.com/t-shirt/32390970-blueprint-robocop-ed-209?store_id=1034820',
 				permanent: false,
 			},
-		]
+		].concat(i18nRoutes.br.map((route) => { // Locale routes:
+			return {
+				source: `/br/${route.destination}`,
+				destination: `/br/${route.source}`,
+				locale: false,
+				permanent: true,
+			}
+		}))
 	},
+
+	async rewrites() {
+    return {
+			fallback: [
+			].concat(i18nRoutes.br.map((route) => { // Locale routes:
+				return {
+					source: `/br/${route.source}`,
+					destination: `/br/${route.destination}`,
+					locale: false,
+				}
+			})),
+		}
+  },
 }
