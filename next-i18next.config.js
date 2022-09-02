@@ -6,12 +6,24 @@ module.exports = {
 	i18nRoutes: {
 		br: [
 			{
-				source: 'fontes',
-				destination: 'fonts',
+				source: '/livros-infantis-e-didaticos',
+				destination: '/childrens-books-and-textbooks',
 			},
 			{
-				source: 'fonte-eldes-cordel',
-				destination: 'font-eldes-cordel',
+				source: '/animacao',
+				destination: '/animation',
+			},
+			{
+				source: '/fontes',
+				destination: '/fonts',
+			},
+			{
+				source: '/fonte-eldes-cordel',
+				destination: '/font-eldes-cordel',
+			},
+			{
+				source: '/sobre',
+				destination: '/about',
 			},
 		]
 	},

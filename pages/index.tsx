@@ -1,6 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
-import Link from 'next/link';
+import LocaleLink from '../components/LocaleLink';
 import Page, { PageSection } from '../components/Page';
 import SeeMoreLink from '../components/SeeMoreLink';
 import iconAboutImage from '../public/content/home/icon-about.svg';
@@ -20,24 +20,24 @@ const Home: NextPage = () => {
 					</p>
 				</section>
 				<section className={styles.mainSections}>
-					<Link href='/portfolio'>
+					<LocaleLink href='/portfolio'>
 						<a className={styles.link}>
 							<Image src={iconPortfolioImage} width={512} height={512} alt='Portfolio'/>
 							<span className={styles.label}>Portfolio</span>
 						</a>
-					</Link>
-					<Link href='/fonts'>
+					</LocaleLink>
+					<LocaleLink href='/fonts'>
 						<a className={styles.link}>
 							<Image src={iconFontsImage} width={512} height={512} alt='Fonts'/>
 							<span className={styles.label}>Fonts</span>
 						</a>
-					</Link>
-					<Link href='/about'>
+					</LocaleLink>
+					<LocaleLink href='/about'>
 						<a className={styles.link}>
 							<Image src={iconAboutImage} width={512} height={512} alt='About'/>
 							<span className={styles.label}>About</span>
 						</a>
-					</Link>
+					</LocaleLink>
 				</section>
 			</div>
 		</Page>

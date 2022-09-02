@@ -1,5 +1,5 @@
-import { route } from 'next/dist/server/router';
 import { NextRouter } from 'next/router';
+import { i18nRoutes } from '../next-i18next.config';
 import { Currency } from './Price';
 
 enum LocaleCode {
@@ -15,6 +15,11 @@ type Locale = {
 
 type Localized<T> = {
 	[Property in LocaleCode]: T
+};
+
+type I18nRoute = {
+	source: string;
+	destination: string;
 };
 
 class Localizer {
@@ -34,6 +39,10 @@ class Localizer {
 
 	getValue<T>(localized: Localized<T>) {
 		return localized ? localized[this.router.locale as LocaleCode] : localized
+	}
+
+	getRoute(destination: string, localeCode?: string) {
+		return (i18nRoutes[localeCode ? localeCode : this.getLocale().code] as I18nRoute[])?.filter(route => route.destination === destination)[0]?.source ?? destination;
 	}
 }
 
