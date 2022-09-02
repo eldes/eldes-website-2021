@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FunctionComponent, useState } from 'react';
 import logotype from '../../public/logotype.svg';
+import LocaleLink from '../LocaleLink';
 import { PageSection } from '../Page';
 import styles from './styles.module.scss';
 
@@ -37,13 +38,13 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 			<div className={`${styles.menuPanel} ${menuPanelIsOpened ? styles.opened : ''}`} onClick={toggleMenuPanel}>
 				<nav className={styles.mainMenu}>
 					<Link href="/"><a className={`${styles.menuItem} ${ section === PageSection.Home ? styles.active : ''}`}>Home</a></Link>
-					<Link href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.portfolio">Portfolio</Trans></a></Link>
-					<Link href="/fonts"><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.fonts">Fonts</Trans></a></Link>
-					<Link href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.about">About</Trans></a></Link>
+					<LocaleLink href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.portfolio">Portfolio</Trans></a></LocaleLink>
+					<LocaleLink href='/fonts'><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.fonts">Fonts</Trans></a></LocaleLink>
+					<LocaleLink href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.about">About</Trans></a></LocaleLink>
 				</nav>
 				<ul className={styles.langMenu}>
-					<li><Link href={router.pathname} locale="en"><a className={`${styles.menuItem} ${router.locale === 'en'? styles.active : ''}`}>EN</a></Link></li>
-					<li><Link href={router.pathname} locale="br"><a className={`${styles.menuItem} ${router.locale === 'br'? styles.active : ''}`}>BR</a></Link></li>
+					<li><LocaleLink href={router.pathname} locale="en"><a className={`${styles.menuItem} ${router.locale === 'en'? styles.active : ''}`}>EN</a></LocaleLink></li>
+					<li><LocaleLink href={router.pathname} locale="br"><a className={`${styles.menuItem} ${router.locale === 'br'? styles.active : ''}`}>BR</a></LocaleLink></li>
 				</ul>
 			</div>
 		</header>

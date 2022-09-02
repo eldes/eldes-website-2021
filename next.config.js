@@ -43,8 +43,8 @@ module.exports = {
 			},
 		].concat(i18nRoutes.br.map((route) => { // Locale routes:
 			return {
-				source: `/br/${route.destination}`,
-				destination: `/br/${route.source}`,
+				source: `/br${route.destination}`,
+				destination: `/br${route.source}`,
 				locale: false,
 				permanent: true,
 			}
@@ -56,8 +56,8 @@ module.exports = {
 			fallback: [
 			].concat(i18nRoutes.br.map((route) => { // Locale routes:
 				return {
-					source: `/br/${route.source}`,
-					destination: `/br/${route.destination}`,
+					source: `/br${route.source}`,
+					destination: `/br${route.destination}`,
 					locale: false,
 				}
 			})),

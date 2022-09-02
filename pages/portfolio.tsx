@@ -3,7 +3,6 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import CategoryList from '../components/CategoryList';
 import Page, { pageI18nNamespace, PageSection } from '../components/Page';
-import Category from '../models/Category';
 import { CategoryHighlight } from '../models/CategoryHighlight';
 import categoriesRepository from '../repositories/categories-repository';
 
