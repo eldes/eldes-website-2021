@@ -1,5 +1,5 @@
 import { Trans } from 'next-i18next';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { FunctionComponent } from 'react';
 import styles from '../styles/BeThanks.module.scss';
 import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent';
