@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 
