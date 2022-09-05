@@ -10,6 +10,10 @@ module.exports = {
 				destination: '/childrens-books-and-textbooks',
 			},
 			{
+				source: '/poeminhas-florais-ilustracoes-livros-infantis',
+				destination: '/poeminhas-florais-childrens-book-illustrations',
+			},
+			{
 				source: '/animacao',
 				destination: '/animation',
 			},

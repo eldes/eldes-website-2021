@@ -114,6 +114,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'poeminhas-florais-childrens-book-illustrations',
+		title: {
+			en: 'Poeminhas Florais',
+			br: 'Poeminhas Florais',
+		},
+		subtitle: {
+			en: 'Children\'s book illustrations',
+			br: 'Ilustrações para livro infantil',
+		},
+		thumbnail: '/content/poeminhas-florais-childrens-book-illustrations/thumbnail.jpg',
+		description: {
+			en: '',
+			br: '',
+		},
+	},
+	{
 		slug: 'como-eram-os-animais-cordel-childrens-book',
 		title: {
 			en: 'Como eram os animais',

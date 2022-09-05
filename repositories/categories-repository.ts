@@ -48,6 +48,7 @@ const categoriesMock: Category[] = [
 			'historias-da-ajudaris-20-childrens-book-illustrations',
 			'historias-da-ajudaris-17-childrens-book-illustrations',
 			'poeminhas-reais-childrens-book-illustration',
+			'poeminhas-florais-childrens-book-illustrations',
 			'como-eram-os-animais-cordel-childrens-book',
 			'historias-da-ajudaris-19-childrens-book-illustrations',
 			'a-ultima-flor-de-abril-childrens-book',
