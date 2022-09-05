@@ -33,7 +33,11 @@ module.exports = {
 			},
 
 			// Legacy links:
-			// ...
+			{
+				source: '/poeminhas-florais',
+				destination: '/br/poeminhas-florais-ilustracoes-livros-infantis',
+				permanent: false,
+			},
 
 			// TEMP:
 			{
