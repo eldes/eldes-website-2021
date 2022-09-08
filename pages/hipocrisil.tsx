@@ -12,6 +12,7 @@ import SeeMore from '../models/SeeMore';
 import { TagSlug } from '../models/Tag';
 import illustrationImage from '../public/content/hipocrisil/illustration.png';
 import mockupImage from '../public/content/hipocrisil/mockup.jpg';
+import sibLogotypeImage from '../public/content/hipocrisil/sib-logotype.png';
 import sketchbook1Image from '../public/content/hipocrisil/sketchbook-1.jpg';
 import sketchbook2Image from '../public/content/hipocrisil/sketchbook-2.jpg';
 
@@ -39,7 +40,7 @@ const HipocrisilPage: NextPage = () => {
             en: 'illustration'
           },
         },
-      ]}>
+      ]} image={sibLogotypeImage}>
         Esse trabalho fez parte da exposição IlustraBrasil!6, organizado pela SIB (Sociedade dos Ilustradores do Brasil).
       </BeCredits>
       <BeParagaph>
