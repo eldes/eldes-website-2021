@@ -54,8 +54,8 @@ const categoriesMock: Category[] = [
 			'a-ultima-flor-de-abril-childrens-book',
 		],
 		description: {
-			en: '',
-			br: '',
+			en: 'Portfolio of children\'s books and textbooks by the illustrator and designer Eldes.',
+			br: 'Portfólio de livros infantis e livros didáticos do ilustrador e designer Eldes.',
 		},
 	},
 	{
