@@ -1,4 +1,5 @@
 import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
 import { Localizer } from '../../models/Locale';
@@ -8,6 +9,8 @@ import Page, { PageSection } from '../Page';
 import PieceList from '../PieceList';
 
 export const categoryPageI18nNamespace = ['common', 'Page']
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 const CategoryPage: FunctionComponent = () => {
 
@@ -35,6 +38,9 @@ const CategoryPage: FunctionComponent = () => {
 				backwardLink={ backwardLink }
 				description={ localizer.getValue(category.description) }
 			>
+				<Head>
+					<meta property="og:image" content={siteUrl + category.thumbnails[0]} key="ogimage" />
+				</Head>
 				<PieceList pieces={ pieces } />
 			</Page>
 		)
