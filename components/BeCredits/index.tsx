@@ -1,3 +1,4 @@
+import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/router';
 import { FunctionComponent } from 'react';
 import Localized, { Localizer } from '../../models/Locale';
@@ -5,13 +6,14 @@ import BeComponent, { BeComponentProps } from '../BeComponent';
 import styles from './styles.module.scss';
 
 type Field = {
-	label: string
-	value: Localized<string>
-}
+	label: string;
+	value: Localized<string>;
+};
 
 type Props = BeComponentProps & {
-	fields: Field[]
-}
+	fields: Field[];
+	image?: StaticImageData;
+};
 
 const BeCredits: FunctionComponent<Props> = (props) => {
 	const router = useRouter();
@@ -36,15 +38,16 @@ const BeCredits: FunctionComponent<Props> = (props) => {
 							<td className={styles.value}>{localizer.getValue(field.value)}</td>
 						</tr>
 					))}
-					{(props.children) && (
-						<tr>
-							<td colSpan={2} className={styles.notes}>
-								<span className={ styles.notes }>{ props.children }</span>
-							</td>
-						</tr>
-					)}
-				</tbody>
+					</tbody>
 				</table>
+				{(props.children) && (
+					<div className={styles.notes}>
+						{(props.image) && (
+							<span className={styles.image}><Image src={props.image} layout='responsive' alt=''/></span>
+						)}
+						<span className={styles.text}>{ props.children }</span>
+					</div>
+				)}
 			</div>
 		</BeComponent>
 	)

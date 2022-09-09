@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
@@ -15,6 +16,7 @@ import apresentacaoImage from '../public/content/como-eram-os-animais-cordel-chi
 import autoresImage from '../public/content/como-eram-os-animais-cordel-childrens-book/autores.png';
 import avestruzImage from '../public/content/como-eram-os-animais-cordel-childrens-book/avestruz.png';
 import bodeImage from '../public/content/como-eram-os-animais-cordel-childrens-book/bode.png';
+import bolognaChildrensBookFairLogotypeImage from '../public/content/como-eram-os-animais-cordel-childrens-book/bologna-childrens-book-fair-logotype.png';
 import burroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/burro.png';
 import cachorroImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cachorro.png';
 import cigarraImage from '../public/content/como-eram-os-animais-cordel-childrens-book/cigarra.png';
@@ -97,6 +99,7 @@ const ComoEramOsAnimaisCordelChildrensBook: NextPage = () => {
 					}
 				},
 			]}
+			image={bolognaChildrensBookFairLogotypeImage}
 			>
 				Book selected by FNLIJ (National Foundation of Childrens and Young Adult Book) for 48th Bologna Children&apos;s Book Fair.
 			</BeCredits>
