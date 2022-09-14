@@ -231,6 +231,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'moitara-danca-editorial-illustration',
+		title: {
+			en: 'Dance',
+			br: 'Dança',
+		},
+		subtitle: {
+			en: 'illustration',
+			br: 'ilustração',
+		},
+		thumbnail: '/content/moitara-danca-editorial-illustration/thumbnail.png',
+		description: {
+			en: 'Illustration for the article "Dança" from the culture section of the newspaper A Folha, in São Carlos.',
+			br: 'Ilustração para o artigo "Dança" do caderno de cultura do jornal A Folha, de São Carlos.',
+		},
+	},
+	{
 		slug: 'moitara-teatro-portugues-editorial-illustration',
 		title: {
 			en: 'Teatro Português',
@@ -242,8 +258,8 @@ const piecesMock: Piece[] = [
 		},
 		thumbnail: '/content/moitara-teatro-portugues-editorial-illustration/thumbnail.png',
 		description: {
-			en: '',
-			br: '',
+			en: 'Illustration for the article "Teatro português em cena na cidade" from the culture section of the newspaper A Folha, in São Carlos.',
+			br: 'Ilustração para o artigo "Teatro português em cena na cidade" do caderno de cultura do jornal A Folha, de São Carlos.',
 		},
 	},
 

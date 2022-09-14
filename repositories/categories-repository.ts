@@ -77,9 +77,10 @@ const categoriesMock: Category[] = [
 		pieceSlugs: [
 			'ilustrar-magazine-20',
 			'la-maison-qui-pue-magazine',
+			'moitara-danca-editorial-illustration',
+			'moitara-teatro-portugues-editorial-illustration',
 			'solidao-empresarial-editorial-illustration',
 			'hipocrisil',
-			'moitara-teatro-portugues-editorial-illustration',
 			'baseball-guide',
 		],
 		description: {
