@@ -2,118 +2,167 @@
 
 .pageFooter {
 	color: #666;
-	background-color: #ccc;
-	padding-top: $inset_m;
-	padding-bottom: $inset_m;
-	padding-left: $inset_m;
-	padding-right: $inset_m;
 	font-size: 0.5em;
 
 	display: flex;
-	flex-wrap: wrap;
-	row-gap: $inset_m;
-	column-gap: $inset_xl;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: stretch;
 
-	@media (min-width: $header_max_width) {
-		& {
-			padding-left: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
-			padding-right: calc( (100% - #{$header_max_width}) / 2 + #{$inset_m});
+	$link_to_top_width: 128px;
+
+	.linkToTop {
+		flex-grow: 1;
+		flex-basis: $link_to_top_width;
+		width: $link_to_top_width;
+		order: 1;
+		font-size: 0px;
+		text-align: center;
+		border-left: 1px solid #999;
+		animation-name: bounce;
+		animation-duration: 2s;
+		animation-direction: backwards;
+		animation-iteration-count: infinite;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@keyframes bounce {
+			0% {
+				padding-top: 40px;
+				padding-bottom: 0px;
+			}
+
+			50% {
+				padding-top: 0px;
+				padding-bottom: 40px;
+			}
+		
+			100% {
+				padding-top: 40px;
+				padding-bottom: 0px;
+			}
+		}
+
+		&::before {
+			position: relative;
+			display: block;
+			font-family: 'Material Icons Outlined';
+			font-size: 20px;
+			content:  "\e5d8";
 		}
 	}
 
-	h5 {
-		padding-bottom: $inset_s;
-		font-weight: 400;
-		font-size: 1em;
-	}
-
-	.contact {
-		border-bottom: 1px solid #999;
-		padding: $inset_m 0px;
-		flex-grow: 1;
-		width: 100%;
-
+	.content {
 		display: flex;
+		flex-wrap: wrap;
+		row-gap: $inset_m;
+		column-gap: $inset_xl;
+		justify-content: center;
+		padding-right: $inset_s;
+		padding-top: $inset_m;
+		padding-bottom: $inset_m;
+
+		@media (min-width: $header_max_width) {
+			& {
+				padding-left: calc((100% - #{$header_max_width}) / 2 + #{$inset_m});
+				padding-right: calc((100% - #{$header_max_width}) / 2 + #{$inset_m} - #{$link_to_top_width / 2});
+			}
+		}
 
 		h5 {
-			flex-grow: 1;
-			font-size: 1.4em;
-			font-weight: 700;
+			padding-bottom: $inset_s;
+			font-weight: 400;
+			font-size: 1em;
 		}
-
-		address {
+	
+		.contact {
+			border-bottom: 1px solid #999;
+			padding: $inset_m 0px;
+			flex-grow: 1;
+			width: 100%;
+	
 			display: flex;
-			column-gap: $inset_m;
-
-			a {
-				display: flex;
-				column-gap: $inset_xs;
+	
+			h5 {
+				flex-grow: 1;
+				font-size: 1.4em;
+				font-weight: 700;
 			}
-
-			a[href^="mailto"]::before {
-				font-family: 'Material Icons Outlined';
-				content: "\e0be";
+	
+			address {
+				display: flex;
+				column-gap: $inset_m;
+	
+				a {
+					display: flex;
+					column-gap: $inset_xs;
+				}
+	
+				a[href^="mailto"]::before {
+					font-family: 'Material Icons Outlined';
+					content: "\e0be";
+				}
+				
+				a[href^="tel"]::before {
+					font-family: 'Material Icons Outlined';
+						content: "\e0cd";
+				}
+			}
+		}
+	
+		.siteMap {
+	
+			flex-grow: 1;
+	
+			nav {
+				display: flex;
+				column-gap: $inset_s;
+	
+				a {
+					text-transform: uppercase;
+					padding: $inset_xs 0px;
+				}
+			}
+		}
+	
+		.social {
+	
+			.links {
+				display: flex;
+				column-gap: $inset_s;
+	
+				a {
+					font-size: 0px;
+					width: $inset_l;
+					height: $inset_l;
+					margin: $inset_s 0px;
+					background-size: 100% 100%;
+	
+					&.instagram {
+						background-image: url('./images/awesome-brands-instagram.svg');
+					}
+					&.behance {
+						background-image: url('./images/awesome-brands-behance.svg');
+					}
+					&.twitter {
+						background-image: url('./images/awesome-brands-twitter.svg');
+					}
+					&.gitHub {
+						background-image: url('./images/awesome-brands-github.svg');
+					}
+					&.linkedIn {
+						background-image: url('./images/awesome-brands-linkedin.svg');
+					}
+				}
 			}
 			
-			a[href^="tel"]::before {
-				font-family: 'Material Icons Outlined';
-					content: "\e0cd";
-			}
-		}
-	}
-
-	.siteMap {
-
-		flex-grow: 1;
-
-		nav {
-			display: flex;
-			column-gap: $inset_s;
-
-			a {
-				text-transform: uppercase;
-				padding: $inset_xs 0px;
-			}
-		}
-	}
-
-	.social {
-
-		.links {
-			display: flex;
-			column-gap: $inset_s;
-
-			a {
-				font-size: 0px;
-				width: $inset_l;
-				height: $inset_l;
-				margin: $inset_s 0px;
-				background-size: 100% 100%;
-
-				&.instagram {
-					background-image: url('./images/awesome-brands-instagram.svg');
-				}
-				&.behance {
-					background-image: url('./images/awesome-brands-behance.svg');
-				}
-				&.twitter {
-					background-image: url('./images/awesome-brands-twitter.svg');
-				}
-				&.gitHub {
-					background-image: url('./images/awesome-brands-github.svg');
-				}
-				&.linkedIn {
-					background-image: url('./images/awesome-brands-linkedin.svg');
-				}
-			}
 		}
 		
-	}
-	
-	.disclaimer {
-		border-top: 1px solid #999;
-		padding-top: $inset_m;
-		text-align: center;
+		.disclaimer {
+			border-top: 1px solid #999;
+			padding-top: $inset_m;
+			text-align: center;
+		}
 	}
 }
