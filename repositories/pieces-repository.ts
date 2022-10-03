@@ -199,6 +199,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'info-corporate-magazine-illustrations',
+		title: {
+			en: 'INFO Corporate Magazine',
+			br: 'Revista INFO Corporate',
+		},
+		subtitle: {
+			en: 'illustrations',
+			br: 'ilustrações',
+		},
+		thumbnail: '/content/info-corporate-magazine-illustrations/thumbnail.jpg',
+		description: {
+			en: 'Illustrations for articles in issue 37 of INFO Corporate magazine, by Editora Abril.',
+			br: 'Ilustrações para artigos da edição 37 da revista INFO Corporate, da Editora Abril.',
+		},
+	},
+	{
 		slug: 'hipocrisil',
 		title: {
 			en: 'Hipocrisil',
