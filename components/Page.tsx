@@ -30,7 +30,7 @@ const Page: FunctionComponent<Props> = (props) => {
 	const title = [props.pretitle, props.title, props.subtitle].join(' ')
 
 	return (
-		<div className={ styles.page }>
+		<div className={ styles.page } id='top'>
 			<Head>
 				<title>{ title }</title>
 				<meta property="og:type" content={ 'website' } key="ogtype" />
