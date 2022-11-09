@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Trans, useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { FormEventHandler, FunctionComponent, useCallback, useEffect, useMemo, useState } from 'react';
@@ -78,23 +79,23 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
   const close = () => setOpened(false);
 
   const [progress, setProgress] = useState(false);
-
-  const buyFont = useCallback(async () => {
+  
+  const buyFont = () => {
+    setProgress(true);
     setBuyFontResult(undefined)
 
-		const endpoint = '/api/buy-font'
-		const options = {
-			method: 'POST',
-			headers: {
-				'Content-type': 'application/json'
-			},
-			body: JSON.stringify(order),
-		}
-
-		const response = await fetch(endpoint, options)
-		setBuyFontResult(await response.json())
-    setProgress(false);
-  }, [order]);
+		const endpoint = '/api/buy-font';
+    axios.post(endpoint, order)
+    .then((response) => {
+      setBuyFontResult(response.data);
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+    .finally(() => {
+      setProgress(false);
+    });
+  };
 
 	const formSubmited: FormEventHandler<HTMLFormElement> = (event) => {
 		event.preventDefault();
@@ -105,7 +106,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
     if (paypalPayment) {
       buyFont();
     }
-  }, [paypalPayment, buyFont]);
+  }, [paypalPayment]);
 
 	return (
 		<div className={ styles.buyFontPanel }>

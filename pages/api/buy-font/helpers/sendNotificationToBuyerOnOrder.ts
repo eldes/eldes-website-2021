@@ -5,12 +5,7 @@ import fromTemplate from './from-template';
 import sendMail, { Message } from './sendMail';
 
 const sendNotificationToBuyerOnOder = (fontOrder: FontOrder) => new Promise<void>((resolve, reject) => {
-  //TODO: i18n
-  if (fontOrder.payment.currency !== Locales.br.currency) {
-    resolve();
-  }
-  
-  const filename = 'notification-to-buyer-on-order-br.html';
+  const filename = `notification-to-buyer-on-order-${fontOrder.payment.currency === Locales.br.currency ? 'br' : 'en'}.html`;
   const filePath = path.join(process.cwd(), 'pages', 'api', 'buy-font', 'helpers', filename);
   fromTemplate(filePath, [
     {

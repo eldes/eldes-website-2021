@@ -19,18 +19,20 @@ const handler = (
     error: new Error('ERRO#01'),
   };
 
-  sendNotificationToBuyerOnOder(fontOrder);
-  sendNotificationToAgencyOnOrder(fontOrder)
-  .then(() => {
-    responseData.saved = true;
-    responseData.error = undefined;
-    res.status(200).json(responseData);
-  })
-  .catch(() => {
-    responseData.saved = false;
-    responseData.error = new Error('ERRO#02');
-    res.status(400).json(responseData);
-  })
+  sendNotificationToBuyerOnOder(fontOrder)
+  .finally(() => {
+    sendNotificationToAgencyOnOrder(fontOrder)
+    .then(() => {
+      responseData.saved = true;
+      responseData.error = undefined;
+      res.status(200).json(responseData);
+    })
+    .catch(() => {
+      responseData.saved = false;
+      responseData.error = new Error('ERRO#02');
+      res.status(400).json(responseData);
+    })
+  });
 }
 
 export default handler;
