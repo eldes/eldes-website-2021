@@ -37,18 +37,17 @@ const PaypalPanel: FunctionComponent<Props> = (props) => {
           onApprove={(data, actions) => {
             return actions.order!.capture()
             .then((details) => {
-              console.log(details)
-              const name = details.payer.name.given_name
+              const name = details.payer.name?.given_name
               if (props.onChange) {
                 props.onChange({
                   id: details.id,
                   payer: {
-                    givenName: details.payer.name.given_name,
-                    surname: details.payer.name.surname,
-                    email: details.payer.email_address,
-                    id: details.payer.payer_id,
+                    givenName: details.payer.name?.given_name ?? 'undefined give name',
+                    surname: details.payer.name?.surname ?? 'undefined surname',
+                    email: details.payer.email_address ?? 'undefined email',
+                    id: details.payer.payer_id ?? 'undefined id',
                     address: {
-                      countryCode: details.payer.address.country_code
+                      countryCode: details.payer.address?.country_code ?? 'undefined country code'
                     }
                   },
                   status: details.status,
