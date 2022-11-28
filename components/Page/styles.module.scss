@@ -1,14 +1,18 @@
-@import "./variables";
+@import "../../styles/variables";
 
 .page {
 
 	padding-top: #{$header_height};
+	height: calc(100vh - #{$header_height});
+	display: flex;
+	flex-direction: column;
 	
 	.skipToMain {
 		display: none;
 	}
 
 	.pageMain {
+		flex-grow: 1;
 		color: #000;
 		background-color: #f3f3f3;
 

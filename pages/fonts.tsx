@@ -1,10 +1,10 @@
-import { GetStaticProps, NextPage } from 'next'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import FontList from '../components/FontList'
-import Page, { PageSection } from '../components/Page'
-import Font from '../models/Font'
-import fontsRepository from '../repositories/fonts-repository'
+import { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import FontList from '../components/FontList';
+import Page, { PageSection } from '../components/Page';
+import Font from '../models/Font';
+import fontsRepository from '../repositories/fonts-repository';
 
 type Props = {
 	fonts: Font[]

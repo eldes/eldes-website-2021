@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FunctionComponent, ReactNode } from 'react';
-import styles from '../styles/Page.module.scss';
-import PageFooter from './PageFooter';
-import PageHeader from './PageHeader';
-import PageReverseNavigationBar, { PageReverseNavigationBarLink } from './PageReverseNavigationBar';
+import PageFooter from '../PageFooter';
+import PageHeader from '../PageHeader';
+import PageReverseNavigationBar, { PageReverseNavigationBarLink } from '../PageReverseNavigationBar';
+import styles from './styles.module.scss';
 
 const i18nNamespace = ['common', 'Page'];
 
