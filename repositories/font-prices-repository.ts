@@ -1,6 +1,5 @@
 import FontPrice from '../models/FontPrice';
 import { Locales } from '../models/Locale';
-import { Currency } from '../models/Price';
 
 const fontPricesRepository = {
 	loadAllByFont: (fontSlug: string) => fontPricesMockup.filter( price => price.fontSlug === fontSlug)

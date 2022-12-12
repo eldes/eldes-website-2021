@@ -1,4 +1,4 @@
-import Font from '../models/Font'
+import Font from '../models/Font';
 
 const fontsRepository = {
 
@@ -14,5 +14,10 @@ const fonts: Font[] = [
 		slug: 'font-eldes-cordel',
 		name: 'Cordel',
 		thumbnail: '/content/font-eldes-cordel/thumbnail.png',
+	},
+	{
+		slug: 'font-eldes-grunge',
+		name: 'Grunge',
+		thumbnail: '/content/font-eldes-grunge/thumbnail.jpg',
 	}
 ]
