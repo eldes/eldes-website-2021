@@ -5,7 +5,7 @@ import BeCredits from '../components/BeCredits';
 import BeEmbed from '../components/BeEmbed';
 import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
-import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagraph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';

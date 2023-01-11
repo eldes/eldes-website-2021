@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
-import BeParagaph from '../components/BeParagaph';
+import BeParagaph from '../components/BeParagraph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage, { pieceBePageI18nNamespace } from '../components/PieceBePage';

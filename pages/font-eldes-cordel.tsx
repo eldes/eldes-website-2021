@@ -7,7 +7,7 @@ import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
 import BeLicenseList, { beLicenseListI18n } from '../components/BeLicenseList';
 import BeMenu from '../components/BeMenu';
-import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagraph';
 import FontBePage, { fontBePageI18nKey, fontBePageI18nNamespace } from '../components/FontBePage';
 import { LocaleCode } from '../models/Locale';
 import accentsImage from '../public/content/font-eldes-cordel/font-eldes-cordel--accents.png';

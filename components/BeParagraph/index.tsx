@@ -1,6 +1,6 @@
-import { FunctionComponent, ReactNode } from 'react'
-import styles from '../styles/BeParagraph.module.scss'
-import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent'
+import { FunctionComponent, ReactNode } from 'react';
+import BeComponent, { beComponentDefaultProps, BeComponentProps } from '../BeComponent';
+import styles from './styles.module.scss';
 
 type Props = BeComponentProps & {
 	align?: BeParagaphAlign
