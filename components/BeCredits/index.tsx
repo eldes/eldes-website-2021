@@ -13,6 +13,7 @@ type Field = {
 type Props = BeComponentProps & {
 	fields: Field[];
 	image?: StaticImageData;
+	title?: Localized<string>;
 };
 
 const BeCredits: FunctionComponent<Props> = (props) => {
@@ -33,6 +34,9 @@ const BeCredits: FunctionComponent<Props> = (props) => {
 			verticalPadding={ props.verticalPadding }
 		>
 			<div className={ styles.beCredits } style={{borderTopColor: `rgba(${foregroundRed}, ${foregroundGreen}, ${foregroundBlue}, 0.3)`, borderBottomColor: `rgba(${foregroundRed}, ${foregroundGreen}, ${foregroundBlue}, 0.3)`}}>
+				{(props.title) && (
+					<h2>{localizer.getValue(props.title)}</h2>
+				)}
 				<table>
 					<caption>Credits</caption>
 					<tbody>

@@ -13,6 +13,10 @@
 		.small {
 			font-size: 0.5em;
 		}
+
+		a:link {
+			text-decoration: underline;
+		}
 	}
 
 	& + .beParagraph {
