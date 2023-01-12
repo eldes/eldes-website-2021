@@ -18,6 +18,10 @@ type Props = BeComponentProps & {
 const BeCredits: FunctionComponent<Props> = (props) => {
 	const router = useRouter();
 	const localizer = Localizer.make(router);
+
+	const foregroundRed = parseInt(props.foregroundColor?.substring(1, 3) ?? '00', 16);
+	const foregroundGreen = parseInt(props.foregroundColor?.substring(3, 5) ?? '00', 16);
+	const foregroundBlue = parseInt(props.foregroundColor?.substring(5, 7) ?? '00', 16);
 	
 	return (
 		<BeComponent
@@ -28,7 +32,7 @@ const BeCredits: FunctionComponent<Props> = (props) => {
 			horizontalPadding={ props.horizontalPadding }
 			verticalPadding={ props.verticalPadding }
 		>
-			<div className={ styles.beCredits }>
+			<div className={ styles.beCredits } style={{borderTopColor: `rgba(${foregroundRed}, ${foregroundGreen}, ${foregroundBlue}, 0.3)`, borderBottomColor: `rgba(${foregroundRed}, ${foregroundGreen}, ${foregroundBlue}, 0.3)`}}>
 				<table>
 					<caption>Credits</caption>
 					<tbody>
