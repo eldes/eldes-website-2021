@@ -6,7 +6,7 @@ import BeHeading from '../components/BeHeading';
 import BeImage from '../components/BeImage';
 import { beLicenseListI18n } from '../components/BeLicenseList';
 import BeMenu from '../components/BeMenu';
-import BeParagaph from '../components/BeParagaph';
+import BeParagaph from '../components/BeParagraph';
 import FontBePage, { fontBePageI18nKey, fontBePageI18nNamespace } from '../components/FontBePage';
 import SwitchLocale from '../components/SwitchLocale';
 import charsetBasicImage from '../public/content/font-eldes-grunge/eldes-grunge-basic-characters.png';

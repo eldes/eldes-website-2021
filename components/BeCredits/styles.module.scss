@@ -3,14 +3,24 @@
 .beCredits {
 	margin: $inset_xxl;
 	font-size: 0.55em;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	-webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 	padding: $inset_m 0px;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	h2 {
+		opacity: 0.5;
+		font-size: 1.87em;
+		margin-bottom: $inset_l;
+	}
 	
 	table {
 		opacity: 0.5;

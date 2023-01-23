@@ -5,7 +5,7 @@ import Link from 'next/link';
 import BeImage from '../components/BeImage';
 import { beLicenseListI18n } from '../components/BeLicenseList';
 import BePage from '../components/BePage';
-import BeParagaph, { BeParagaphAlign } from '../components/BeParagaph';
+import BeParagaph, { BeParagaphAlign } from '../components/BeParagraph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import { fontBePageI18nKey, fontBePageI18nNamespace } from '../components/FontBePage';

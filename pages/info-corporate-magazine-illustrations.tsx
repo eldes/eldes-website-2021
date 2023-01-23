@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import BeCredits from '../components/BeCredits';
 import BeImage from '../components/BeImage';
-import BeParagaph from '../components/BeParagaph';
+import BeParagaph from '../components/BeParagraph';
 import BePhotoGrid from '../components/BePhotoGrid';
 import BeThanks from '../components/BeThanks';
 import PieceBePage from '../components/PieceBePage';
