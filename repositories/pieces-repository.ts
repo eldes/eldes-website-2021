@@ -387,13 +387,13 @@ const piecesMock: Piece[] = [
 			br: 'Livro didático Boreal',
 		},
 		subtitle: {
-			en: 'Flip book',
-			br: 'Flip book',
+			en: 'Flip-book',
+			br: 'Flip-book',
 		},
 		thumbnail: '/content/boreal-textbook-flip-book/thumbnail.jpg',
 		description: {
-			en: '',
-			br: '',
+			en: 'Flip-book for textbook of the publisher Boreal.',
+			br: 'Flip-book para livo didático da editora Boreal.',
 		},
 	},
 
