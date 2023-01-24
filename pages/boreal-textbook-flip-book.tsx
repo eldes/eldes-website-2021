@@ -31,8 +31,15 @@ import thanksImage from '../public/content/boreal-textbook-flip-book/thanks.png'
 
 const BorealTextbookFlipBookPage: NextPage = () => {
 
-	const textStyles = {
+	const introTextStyles = {
 		backgroundColor: '#8eb94d',
+	};
+
+	const finalTextStyles = {
+		backgroundColor: '#000',
+		foregroundColor: '#8eb94d',
+		verticalPadding: true,
+		horizontalPadding: true,
 	};
 	
 	return (
@@ -40,7 +47,7 @@ const BorealTextbookFlipBookPage: NextPage = () => {
       seeMoreList={Helpers.makeSeeMoreListForPieceBePage(useRouter(), [
         TagSlug.Flipbook,
         TagSlug.CartoonStyle,
-      ])} {...textStyles}
+      ])} {...introTextStyles}
 		>
 			<BeImage src={highlightImage} alt={'Details of illustration'} />
 			<BeCredits fields={[
@@ -77,12 +84,12 @@ const BorealTextbookFlipBookPage: NextPage = () => {
 			<BeImage src={inner414243Image} alt={'Pages 41, 42 and 43'} />
 			<BeImage src={inner444546Image} alt={'Pages 44, 45 and 46'} />
 			
-			<BeHeading backgroundColor='#000' foregroundColor='#8eb94d'>Animação final</BeHeading>
-			<BeImage src={previewAniImage} alt={'Preview of animation'} verticalPadding horizontalPadding backgroundColor='#000' />
-			<BeImage src={frame05Image} alt={'Details of illustration'} verticalPadding horizontalPadding backgroundColor='#000' />
-			<BeImage src={frame31Image} alt={'Details of illustration'} verticalPadding horizontalPadding backgroundColor='#000' />
-			<BeImage src={frame39Image} alt={'Details of illustration'} verticalPadding horizontalPadding backgroundColor='#000' />
-			<BeImage src={frame55Image} alt={'Details of illustration'} verticalPadding horizontalPadding backgroundColor='#000' />
+			<BeHeading {...finalTextStyles}>Animação final</BeHeading>
+			<BeImage src={frame05Image} alt={'Details of illustration'} {...finalTextStyles} />
+			<BeImage src={frame31Image} alt={'Details of illustration'} {...finalTextStyles} />
+			<BeImage src={frame39Image} alt={'Details of illustration'} {...finalTextStyles} />
+			<BeImage src={frame55Image} alt={'Details of illustration'} {...finalTextStyles} />
+			<BeImage src={previewAniImage} alt={'Preview of animation'} {...finalTextStyles} />
 			
 			<BeHeading backgroundColor='#be7eb6'>Storyboard e estudos</BeHeading>
 			<BeImage src={stoyboardImage} alt={'Storyboard frames'} verticalPadding horizontalPadding backgroundColor='#be7eb6' />

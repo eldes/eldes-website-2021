@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import SeeMore from '../models/SeeMore';
 import BeBody, { BeBodyProps } from './BeBody';
 import BeSeeMorePanel, { BeSeeMorePanelProps } from './BeSeeMorePanel';
 import Page, { PageProps } from './Page';
