@@ -1,7 +1,6 @@
 import { NextRouter } from 'next/router';
 import SeeMore from '../models/SeeMore';
-import Tag, { TagSlug } from '../models/Tag';
-import categoriesRepository from '../repositories/categories-repository';
+import { TagSlug } from '../models/Tag';
 import piecesRepository from '../repositories/pieces-repository';
 import TagsRepository from '../repositories/tags-repository';
 
