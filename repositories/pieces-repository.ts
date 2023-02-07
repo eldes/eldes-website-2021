@@ -263,6 +263,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'podcast-max-gehringer',
+		title: {
+			en: 'Podcast Max Gehringer',
+			br: 'Podcast Max Gehringer',
+		},
+		subtitle: {
+			en: 'illustrations',
+			br: 'ilustrações',
+		},
+		thumbnail: '/content/podcast-max-gehringer/thumbnail.png',
+		description: {
+			en: 'Illustrations inspired by Max Gehringer\'s "Professional Career" podcast.',
+			br: 'Ilustrações inspiradas no podcast "Carreira Profissional" de Max Gehringer.',
+		},
+	},
+	{
 		slug: 'moitara-teatro-portugues-editorial-illustration',
 		title: {
 			en: 'Teatro Português',
