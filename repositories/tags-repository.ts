@@ -54,6 +54,7 @@ const tags: Tag[] = [
 			'la-maison-qui-pue-magazine',
 			'solidao-empresarial-editorial-illustration',
 			'hipocrisil',
+      'podcast-max-gehringer',
 			'moitara-teatro-portugues-editorial-illustration',
     ],
   },
