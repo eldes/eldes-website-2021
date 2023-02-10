@@ -31,6 +31,17 @@ module.exports = {
 				destination: 'https://eldes.com/br/:path*',
 				permanent: false,
 			},
+			{
+				source: '/:path*',
+				has: [
+					{
+						type: 'host',
+						value: 'www.eldes.com.br',
+					},
+				],
+				destination: 'https://www.eldes.com/br/:path*',
+				permanent: false,
+			},
 
 			// Legacy links:
 			{
