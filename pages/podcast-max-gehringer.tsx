@@ -77,10 +77,10 @@ const PodcastMaxGehringerPage: NextPage = () => {
         </>
       } br={
         <>
-          <BeParagaph backgroundColor='#fff'>
+          <BeParagaph>
             No podcast &quot;Carreira Profissional&quot;, da Rádio CBN, Max Gehringer dá dicas e orientações valiosas para quem quer investir na carreira. 
           </BeParagaph>
-          <BeParagaph backgroundColor='#fff'>
+          <BeParagaph>
             Inspiradas nos episódios desse podcast, desenvolvi uma série de ilustrações.
           </BeParagaph>
           <BeImage src={mockupImage} alt={'Maquete digital mostrando algumas das ilustrações sendo aplicadas no site do podcast.'} />
