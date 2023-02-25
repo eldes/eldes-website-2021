@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.beList {
+	width: 100%;
+
+	ul {
+		padding-top: 0px;
+		padding-bottom: $inset_xxl;
+		padding-left: #{2 * $inset_xxl};
+		padding-right: #{2 * $inset_xxl};
+		font-size: 0.7rem;
+
+		li {
+			padding-top: $inset_m;
+			list-style-type: disc;
+			list-style-position: inside;
+
+			strong {
+				font-weight: 700;
+			}
+		}
+
+		a:link {
+			text-decoration: underline;
+		}
+	}
+}
