@@ -12,6 +12,7 @@ enum Section {
 	Home,
 	Portfolio,
 	Fonts,
+	Apps,
 	About,
 }
 

@@ -40,6 +40,7 @@ const PageHeader: FunctionComponent<Props> = ({ section }) => {
 					<Link href="/"><a className={`${styles.menuItem} ${ section === PageSection.Home ? styles.active : ''}`}>Home</a></Link>
 					<LocaleLink href="/portfolio"><a className={`${styles.menuItem} ${ section === PageSection.Portfolio ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.portfolio">Portfolio</Trans></a></LocaleLink>
 					<LocaleLink href='/fonts'><a className={`${styles.menuItem} ${ section === PageSection.Fonts ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.fonts">Fonts</Trans></a></LocaleLink>
+					<LocaleLink href='/apps'><a className={`${styles.menuItem} ${ section === PageSection.Apps ? styles.active : ''}`}>Apps</a></LocaleLink>
 					<LocaleLink href="/about"><a className={`${styles.menuItem} ${ section === PageSection.About ? styles.active : ''}`}><Trans i18nKey="Page:Header.MainMenu.about">About</Trans></a></LocaleLink>
 				</nav>
 				<ul className={styles.langMenu}>
