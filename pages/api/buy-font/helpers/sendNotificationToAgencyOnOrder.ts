@@ -34,7 +34,11 @@ const sendNotificationToAgencyOnOrder = (fontOrder: FontOrder) => new Promise<vo
     },
     {
       name: 'LOGOTYPE_NAME',
-      value: fontOrder.logotype?.name ?? '(is not Logotype License)',
+      value: fontOrder.logotype?.name ?? '(is not a Logotype License)',
+    },
+    {
+      name: 'SITE_URL',
+      value: fontOrder.site?.url ?? '(is not a Site License)',
     },
     {
       name: 'PAYMENT_CURRENCY_SYMBOL',
