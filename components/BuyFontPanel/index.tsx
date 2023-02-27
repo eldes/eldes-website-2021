@@ -16,6 +16,8 @@ import LicenseePanel, { LicenseePanelData } from './LicenseePanel';
 import LogotypePanel from './LogotypePanel';
 import PaypalPanel from './PaypalPanel';
 import PixPanel, { PixPanelChangeDataHandler } from './PixPanel';
+import SitePanel from './SitePanel';
+import Site from '../../models/Site';
 
 const buyFontPanelI18nKey = 'BuyFontPanel'
 const buyFontPanelI18n = [buyFontPanelI18nKey]
@@ -38,7 +40,8 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
 	const [licenseePanelData, setLicenseePanelData] = useState<LicenseePanelData>()
 
-  const [logotype, setLogotype] = useState<Logotype>()
+  const [logotype, setLogotype] = useState<Logotype>();
+  const [site, setSite] = useState<Site>();
 
 	const [pixPayment, setPixPayment] = useState<PixPayment>();
 	const [paypalPayment, setPaypalPayment] = useState<PaypalPayment>();
@@ -57,6 +60,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
         email: licenseePanelData?.email ?? '',
       },
       logotype: logotype,
+      site: site,
       payment: {
         amount: localizer.getValue(props.fontPrice.price).amount,
         currency: localizer.getLocale().currency,
@@ -65,7 +69,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
         paypal: paypalPayment,
       },
     }
-  }, [licenseePanelData, localizer, logotype, paymentMethod, paypalPayment, pixPayment, props.font.name, props.fontPrice.price, props.license.name]);
+  }, [licenseePanelData, localizer, logotype, site, paymentMethod, paypalPayment, pixPayment, props.font.name, props.fontPrice.price, props.license.name]);
 
   const [opened, setOpened] = useState(false)
 	const open = () => {
@@ -163,6 +167,13 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
               <div className={styles.formBody}>
                 <h5 className={styles.formSectionTitle}>Dados do logotipo:</h5>
                 <LogotypePanel onChange={setLogotype} />
+              </div>
+            }
+            {
+              (props.license.slug === 'site-license') &&
+              <div className={styles.formBody}>
+                <h5 className={styles.formSectionTitle}>Dados do site:</h5>
+                <SitePanel onChange={setSite} />
               </div>
             }
 

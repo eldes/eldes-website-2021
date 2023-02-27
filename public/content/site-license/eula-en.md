@@ -12,19 +12,20 @@ By downloading the Font or opening the package, the Licensee agree to be bound b
 
 “User” means an individual giving commands (whether y keyboard or otherwise) to a Device on which the Font is installed, regardless of the locations of the individual, the Device, or the Font.
 
+"Site" means a collection of web pages organized and located on a server on the network, usually under the same domain.
+
 ### 2. Grant of License
 
 #### 2.1	Grants
 
-Licensor grants Licensee a perpetual, non-exclusive, non-transferable license to use the Font for development and distribution only, in raster (eg PNG, JPEG, TIFF etc.) or vector (eg. : EPS, SVG etc.), of said Logo for your own personal or commercial purposes in accordance with the terms of this Agreement.
+Licensor grants Licensee a perpetual, non-exclusive, non-transferable license to use the Font for development and distribution only, of said Site for your own personal or commercial purposes in accordance with the terms of this Agreement.
 
 #### 2.2	Embedding
 
-The Licensee may embed the Font in documents, applications, or devices either as a rasterized representation of the Font (e. g., a GIF or JPEG) or as a subset of the Font if the document, application, or device is distributed in a secure format the permits only the viewing and printing but not the editing of the text. The Licensee need an additional license from Licensor or its Distributors for the use of the Font in documents, applications or devices permitting editing of the text, if such documents, applications, or devices shall be distributed to third parties or if the Font is embedded neither as a subset nor as a rasterized representation.
+The Licensee may only embed the Font on pages of said Site using the _@font-face_ CSS directive.
 
 _This Agreement does not allow you embed the Font:_
 
-- _On a website using @fontface CSS;_
 - _In server based applications used by remote users;_
 - _In iOS, Android, or Windows RT apps;_
 - _An eBook type publication._
@@ -37,7 +38,7 @@ You may make back-up copies of the Font for archival purposes only, provided tha
 
 #### 2.4 Third parties
 
-Licensee may temporarily make the Font available to a graphic designer, agency, printer or other vendor working on its behalf on the development or distribution of the Logo, if the third party agrees to use the Font solely for Licensee's work in accordance with Licensee's the terms of that license, and not to retain copies of the Source upon completion of the work.
+Licensee may temporarily make the Font available to a graphic designer, agency, printer or other vendor working on its behalf on the development or distribution of the Site, if the third party agrees to use the Font solely for Licensee's work in accordance with Licensee's the terms of that license, and not to retain copies of the Source upon completion of the work.
 
 In case of any use of the Font for other purposes, the third party must purchase its own license to use the Font.
 

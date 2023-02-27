@@ -2,6 +2,7 @@ import Licensee from './Licensee';
 import Logotype from './Logotype';
 import PaymentMethod from './PaymentMethod';
 import { Currency } from './Price';
+import Site from './Site';
 
 type PixPayment = {
   receiptFile: {
@@ -32,6 +33,7 @@ type FontOrder = {
   quantity: number
   licensee: Licensee
   logotype?: Logotype
+  site?: Site
   payment: {
     amount: number
     currency: Currency
