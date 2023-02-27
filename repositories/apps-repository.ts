@@ -22,4 +22,17 @@ const appsMock: App[] = [
     },
     thumbnail: '/content/presbyopia-garmin-watch-face-app/thumbnail.jpg',
   },
+  {
+    slug: 'n-cloud-app',
+    name: 'N-Cloud',
+    subtitle: {
+      en: 'mobile App',
+      br: 'App mobile',
+    },
+    description: {
+      en: 'Development of a smartphone app to Nikon Lenswear.',
+      br: 'Desenvolvimento de um aplicativo para smartphone para a Nikon Lenswear.',
+    },
+    thumbnail: '/content/n-cloud-app/thumbnail.png',
+  },
 ];
