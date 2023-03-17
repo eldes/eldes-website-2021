@@ -1,5 +1,5 @@
 import { ChangeEventHandler, FunctionComponent, useState } from 'react';
-import styles from '../styles/FormFieldText.module.scss';
+import styles from './styles.module.scss';
 
 type Props = {
 	label: string
