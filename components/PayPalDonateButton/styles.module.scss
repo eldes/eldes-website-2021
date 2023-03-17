@@ -1,0 +1,19 @@
+.payPalDonateButton {
+  background-color: rgb(255, 209, 64);
+  margin-top: 16px;
+  padding: 10px 30px;
+  width: auto;
+  height: 24px;
+  border-radius: 1000px;
+
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  
+  color: rgb(0, 48, 135);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: normal;
+  text-decoration: none !important;
+}
