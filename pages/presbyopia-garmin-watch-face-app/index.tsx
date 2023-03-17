@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import BePage from '../../components/BePage';
 import { PageSection } from '../../components/Page';
 import { Localizer } from '../../models/Locale';
@@ -21,6 +22,8 @@ import Helpers from '../../lib/Helpers';
 import AppsRepository from '../../repositories/apps-repository';
 import BeList from '../../components/BeList';
 import BeThanks from '../../components/BeThanks';
+import PayPalDonateButton from '../../components/PayPalDonateButton';
+import GarminConnectIqButton from '../../components/GarminConnectIqButton';
 
 const Page: NextPage = function () {
   const router = useRouter();
@@ -122,12 +125,14 @@ const Page: NextPage = function () {
       <section id='download'>
         <BeHeading>Download</BeHeading>
         <BeParagaph>
-          The Presbyopia app can be downloaded directly from the <a href="https://apps.garmin.com/en-US/apps/799627ae-7229-4981-95b6-984458c1a587">Garmin&apos;s Connect IQ store</a>.
+          The Presbyopia app can be downloaded directly from the Garmin Connect IQ store:<br/>
+          <GarminConnectIqButton appId={'799627ae-7229-4981-95b6-984458c1a587'} />
         </BeParagaph>
-        <BeList>
-          <li>This watch face is FREE.</li>
-          <li>If you enjoyed using it, please consider a <a href="https://www.paypal.com/donate/?hosted_button_id=K9EE8WAUFQ3WJ">DONATION</a> ☕️.</li>
-        </BeList>
+        <BeParagaph>
+          This watch face is <strong>FREE</strong>.<br/>
+          If you enjoyed using it, please consider a <strong>DONATION ☕️</strong>:<br/>
+          <PayPalDonateButton buttonId={'K9EE8WAUFQ3WJ'} style={{maxWidth: 359}} />
+        </BeParagaph>
       </section>
       <section id="source">
         <BeHeading>Source code</BeHeading>
@@ -135,7 +140,7 @@ const Page: NextPage = function () {
           The Presbyopia app was developed by me in Monkey C language, using Garmin&apos;s Connect IQ™ SDK.
         </BeParagaph>
         <BeParagaph>
-        For various reasons, such as security and commercial reasons, I don&apos;t open source all of my projects.
+          For various reasons, such as security and commercial reasons, I don&apos;t open source all of my projects.
         </BeParagaph>
         <BeParagaph>
           However, due to the scarcity of documentation, open sourcing this application can be a great resource for novice developers to learn how certain things should be achieved.
