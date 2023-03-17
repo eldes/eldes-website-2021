@@ -8,6 +8,7 @@
 			"home": "$t(common:Sections.home)",
 			"portfolio": "$t(common:Sections.portfolio)",
 			"fonts": "$t(common:Sections.fonts)",
+			"apps": "$t(common:Sections.apps)",
 			"about": "$t(common:Sections.about)"
 		}
 	},

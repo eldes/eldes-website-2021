@@ -23,6 +23,7 @@ const PageFooter: FunctionComponent = () => {
 					<nav>
 						<Link href={'/portfolio'}><a><Trans i18nKey="Page:Footer.portfolio">Portfolio</Trans></a></Link>
 						<Link href={'/fonts'}><a><Trans i18nKey="Page:Footer.fonts">Fonts</Trans></a></Link>
+						<Link href={'/apps'}><a><Trans i18nKey="Page:Footer.apps">Apps</Trans></a></Link>
 						<Link href={'/about'}><a><Trans i18nKey="Page:Footer.about">About</Trans></a></Link>
 					</nav>
 				</section>
