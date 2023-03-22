@@ -39,7 +39,7 @@ const FontEldesCordelPage: NextPage = () => {
 					id: t('FontBePage:Buy.id', 'buy')
 				},
 			]} />
-			<section id={t('FontBePage:Details.id', 'details')}>
+			<section id={t('FontBePage:Details.id', 'details') ?? 'details'}>
 				<BeHeading><Trans i18nKey='FontBePage:Details.title'>Details</Trans></BeHeading>
 				<BeParagaph>
 					<Trans i18nKey="font-eldes-cordel:details" >Font inspired directly in the woodcut — especially in the covers of the Cordel literature booklets — and originally created mainly to compose graphic pieces that have Brazilian culture as reference and or that want to transmit the concept of handmade, this type brings some of the visual characteristic of such printing technique, such as the gaps and inaccuracies of the notch in the wood matrix.</Trans>
@@ -75,7 +75,7 @@ const FontEldesCordelPage: NextPage = () => {
 				</section>
 			)}
 			
-			<section id={t('FontBePage:Characters.id', 'characters')}>
+			<section id={t('FontBePage:Characters.id', 'characters') ?? 'characters'}>
 				<BeHeading><Trans i18nKey='FontBePage:Characters.title'>Characters</Trans></BeHeading>
 				<BeImage
 					src={ lettersDigitsImage }
@@ -96,7 +96,7 @@ const FontEldesCordelPage: NextPage = () => {
 					horizontalPadding
 				/>
 			</section>
-			<section id={t('FontBePage:Buy.id', 'buy')}>
+			<section id={t('FontBePage:Buy.id', 'buy') ?? 'buy'}>
 				<BeHeading><Trans i18nKey='FontBePage:Buy.title'>Buy</Trans></BeHeading>
 				<BeLicenseList verticalPadding={true} horizontalPadding={true} />
 			</section>

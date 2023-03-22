@@ -1,13 +1,14 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from '../styles/BeComponent.module.scss'
 
 type Props = {
-	subClassName?: string
-	fill?: boolean
-	backgroundColor?: string
-	foregroundColor?: string
-	horizontalPadding?: boolean
-	verticalPadding?: boolean
+	subClassName?: string;
+	fill?: boolean;
+	backgroundColor?: string;
+	foregroundColor?: string;
+	horizontalPadding?: boolean;
+	verticalPadding?: boolean;
+	children?: ReactNode;
 }
 
 const defaultProps: Props = {
@@ -18,32 +19,32 @@ const defaultProps: Props = {
 	verticalPadding: false,
 }
 
-const BeComponent: FunctionComponent<Props & { children: ReactNode }> = ({ subClassName, children, fill, foregroundColor, backgroundColor, horizontalPadding, verticalPadding }) => {
+const BeComponent: FC<Props> = (props) => {
 	let style = {}
 
-	if (fill) {
+	if (props.fill) {
 		style = { ...style, padding: 0 }
 	}
 
-	if (foregroundColor) {
-		style = {...style, color: foregroundColor }
+	if (props.foregroundColor) {
+		style = {...style, color: props.foregroundColor }
 	}
 
-	if (backgroundColor) {
-		style = { ...style, backgroundColor: backgroundColor }
+	if (props.backgroundColor) {
+		style = { ...style, backgroundColor: props.backgroundColor }
 	}
 
-	if (horizontalPadding) {
+	if (props.horizontalPadding) {
 		style = { ...style, paddingTop: 16, paddingBottom: 16 }
 	}
 
-	if (verticalPadding) {
+	if (props.verticalPadding) {
 		style = { ...style, paddingLeft: 32, paddingRight: 32 }
 	}
 
 	return (
-		<div className={ `${styles.beComponent} ${subClassName}` } style={ style }
-		>{ children }</div>
+		<div className={ `${styles.beComponent} ${props.subClassName}` } style={ style }
+		>{ props.children }</div>
 	)
 }
 
