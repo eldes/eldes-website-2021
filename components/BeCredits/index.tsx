@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/router';
-import { FunctionComponent } from 'react';
+import { FC, ReactNode } from 'react';
 import Localized, { Localizer } from '../../models/Locale';
 import BeComponent, { BeComponentProps } from '../BeComponent';
 import styles from './styles.module.scss';
@@ -14,9 +14,10 @@ type Props = BeComponentProps & {
 	fields: Field[];
 	image?: StaticImageData;
 	title?: Localized<string>;
+	children?: ReactNode;
 };
 
-const BeCredits: FunctionComponent<Props> = (props) => {
+const BeCredits: FC<Props> = (props) => {
 	const router = useRouter();
 	const localizer = Localizer.make(router);
 

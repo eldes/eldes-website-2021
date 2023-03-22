@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Localizer } from '../../models/Locale';
@@ -6,13 +5,15 @@ import PiecesRepository from '../../repositories/pieces-repository';
 import BePage, { bePageI18nNamespace } from '../BePage';
 import { BeSeeMorePanelProps } from '../BeSeeMorePanel';
 import { PageSection } from '../Page';
+import { FC, ReactNode } from 'react';
 
 type Props = BeSeeMorePanelProps & {
-	backgroundColor?: string
-	foregroundColor?: string
+	backgroundColor?: string;
+	foregroundColor?: string;
+	children: ReactNode;
 };
 
-const PieceBePage: NextPage<Props> = (props) => {
+const PieceBePage: FC<Props> = (props) => {
 
 	const router = useRouter();
 	const { pathname } = router;

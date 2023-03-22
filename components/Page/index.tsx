@@ -23,6 +23,7 @@ type Props = {
 	description?: string;
 	section: Section;
 	backwardLink?: PageReverseNavigationBarLink;
+	children: ReactNode;
 };
 
 const Page: FunctionComponent<Props> = (props) => {

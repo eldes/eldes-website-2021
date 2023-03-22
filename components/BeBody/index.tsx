@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { FunctionComponent } from 'react';
+import { FC, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 type BeImageData = {
@@ -11,11 +11,12 @@ type BeImageData = {
 }
 
 type Props = {
-	backgroundColor?: string,
-	foregroundColor?: string,
+	backgroundColor?: string;
+	foregroundColor?: string;
+	children: ReactNode;
 }
 
-const BeBody: FunctionComponent<Props> = (props) => {
+const BeBody: FC<Props> = (props) => {
 	return (
 		<div
 			className={ styles.beBody }
