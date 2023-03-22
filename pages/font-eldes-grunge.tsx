@@ -30,7 +30,7 @@ const FontEldesGrungePage: NextPage = () => {
 					id: t('FontBePage:Characters.id', 'characters')
 				},
 			]} />
-			<section id={t('FontBePage:Details.id', 'details')}>
+			<section id={t('FontBePage:Details.id', 'details') ?? 'details'}>
 				<BeHeading><Trans i18nKey='FontBePage:Details.title'>Details</Trans></BeHeading>
 				<SwitchLocale
 					br={
@@ -45,7 +45,7 @@ const FontEldesGrungePage: NextPage = () => {
 					} />
 			</section>
 			
-			<section id={t('FontBePage:Characters.id', 'characters')}>
+			<section id={t('FontBePage:Characters.id', 'characters') ?? 'characters'}>
 				<BeHeading><Trans i18nKey='FontBePage:Characters.title'>Characters</Trans></BeHeading>
 				<BeImage
 					src={ charsetBasicImage }

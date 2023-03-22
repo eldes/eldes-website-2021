@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import '../styles/app.scss';
 
-const MyApp: (appProps: AppProps) => JSX.Element = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   useEffect(() => {
     const routerChanged = (url: URL) => {

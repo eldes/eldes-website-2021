@@ -84,7 +84,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
 
   const [progress, setProgress] = useState(false);
   
-  const buyFont = () => {
+  const buyFont = useCallback(() => {
     setProgress(true);
     setBuyFontResult(undefined)
 
@@ -99,7 +99,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
     .finally(() => {
       setProgress(false);
     });
-  };
+  }, [order]);
 
 	const formSubmited: FormEventHandler<HTMLFormElement> = (event) => {
 		event.preventDefault();
@@ -110,7 +110,7 @@ const BuyFontPanel: FunctionComponent<Props> = (props) => {
     if (paypalPayment) {
       buyFont();
     }
-  }, [paypalPayment]);
+  }, [buyFont, paypalPayment]);
 
 	return (
 		<div className={ styles.buyFontPanel }>

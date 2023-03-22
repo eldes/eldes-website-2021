@@ -24,7 +24,7 @@ const FontBePage: FunctionComponent<Props> = (props) => {
 
 	return (
 		<BePage
-			pretitle={ tp('pretitle', 'Font Eldes') }
+			pretitle={ tp('pretitle', 'Font Eldes') ?? 'Font Eldes' }
 			title={ font?.name ?? '' }
 			subtitle={props.subtitle}
 			description={props.description}
