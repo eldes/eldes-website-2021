@@ -51,6 +51,7 @@ const categoriesMock: Category[] = [
 			'poeminhas-florais-childrens-book-illustrations',
 			'como-eram-os-animais-cordel-childrens-book',
 			'historias-da-ajudaris-19-childrens-book-illustrations',
+			'water-sustainability-textbook-cover-illustration',
 			'a-ultima-flor-de-abril-childrens-book',
 		],
 		description: {

@@ -3,10 +3,8 @@
 .beCredits {
 	margin: $inset_xxl;
 	font-size: 0.55em;
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+	border-top: 1px solid color-mix(in srgb, currentColor 20%, currentColor 30%);
+	border-bottom: 1px solid color-mix(in srgb, currentColor 20%, currentColor 30%);
 	-webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 	padding: $inset_m 0px;

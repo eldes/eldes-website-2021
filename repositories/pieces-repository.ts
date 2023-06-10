@@ -50,6 +50,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'water-sustainability-textbook-cover-illustration',
+		title: {
+			en: 'Water and Sustainability',
+			br: 'Água e Sustentabilidade',
+		},
+		subtitle: {
+			en: 'textbook cover illustrations',
+			br: 'ilustrações para capa de livro didático',
+		},
+		thumbnail: '/content/water-sustainability-textbook-cover-illustration/thumbnail.png',
+		description: {
+			en: 'Illustration and design of book covers in the Water and Sustainability series, by ProfCiAmb.',
+			br: 'Ilustração e design das capas dos livros da série Água e Sustentabilidade, do ProfCiAmb.',
+		},
+	},
+	{
 		slug: 'historias-da-ajudaris-19-childrens-book-illustrations',
 		title: {
 			en: 'Histórias da Ajudaris\'19',
