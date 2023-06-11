@@ -14,6 +14,10 @@ module.exports = {
 				destination: '/poeminhas-florais-childrens-book-illustrations',
 			},
 			{
+				source: '/agua-sustentabilidade-ilustracao-capa-livro-didatico',
+				destination: '/water-sustainability-textbook-cover-illustration',
+			},
+			{
 				source: '/animacao',
 				destination: '/animation',
 			},
