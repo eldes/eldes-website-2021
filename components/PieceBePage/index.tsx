@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { FC, ReactNode } from 'react';
 import { Localizer } from '../../models/Locale';
 import PiecesRepository from '../../repositories/pieces-repository';
 import BePage, { bePageI18nNamespace } from '../BePage';
 import { BeSeeMorePanelProps } from '../BeSeeMorePanel';
 import { PageSection } from '../Page';
-import { FC, ReactNode } from 'react';
 
 type Props = BeSeeMorePanelProps & {
 	backgroundColor?: string;
@@ -47,6 +47,9 @@ const PieceBePage: FC<Props> = (props) => {
 			>
 				<Head>
 					<meta property="og:image" content={siteUrl + piece.thumbnail} key="ogimage" />
+					<meta property="og:image:width" content={'512'} key="ogimagewidth" />
+					<meta property="og:image:height" content={'512'} key="ogimageheight" />
+					<meta property="twitter:image" content={`${siteUrl}/logotype.svg`} />
 				</Head>	
 				{ props.children }
 			</BePage>

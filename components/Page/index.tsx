@@ -38,17 +38,22 @@ const Page: FunctionComponent<Props> = (props) => {
 				<meta property="og:type" content={ 'website' } key="ogtype" />
 				<meta property="og:site_name" content={ 'Eldes Studio' } key="ogsitename" />
 				<meta property="og:title" content={ title } key="ogtitle" />
+				<meta property="twitter:title" content={ title } key="ogtitle" />
 
 				{(props.description) && (
 					<>
 						<meta name="description" content={ props.description } />
 						<meta property="og:description" content={ props.description } key="ogdescription" />
+						<meta property="twitter:description" content={ props.description } />
 					</>
 				)} 
 				<meta property="og:url" content={siteUrl + router.pathname} key="ogurl" />
+				<meta property="og:type" content="website" />
 				<meta property="og:image" content={`${siteUrl}/logotype.svg`} key="ogimage" />
 				<meta property="og:image:width" content={'512'} key="ogimagewidth" />
 				<meta property="og:image:height" content={'512'} key="ogimageheight" />
+				<meta property="twitter:image" content={`${siteUrl}/logotype.svg`} />
+				<meta name="twitter:card" content="summary" />
 			</Head>
 			<a className={ styles.skipToMain } href="#main">Skip to main content</a>
 			<PageHeader section={ props.section } />
