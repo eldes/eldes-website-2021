@@ -49,7 +49,7 @@ const PieceBePage: FC<Props> = (props) => {
 					<meta property="og:image" content={siteUrl + piece.thumbnail} key="ogimage" />
 					<meta property="og:image:width" content={'512'} key="ogimagewidth" />
 					<meta property="og:image:height" content={'512'} key="ogimageheight" />
-					<meta property="twitter:image" content={`${siteUrl}/logotype.svg`} />
+					<meta property="twitter:image" content={`${siteUrl}/logotype.svg`} key="twitterimage" />
 				</Head>	
 				{ props.children }
 			</BePage>
