@@ -18,7 +18,7 @@ enum Section {
 
 type Props = {
 	pretitle?: string;
-	title?: string;
+	title: string;
 	subtitle?: string;
 	description?: string;
 	section: Section;
@@ -29,7 +29,7 @@ type Props = {
 const Page: FunctionComponent<Props> = (props) => {
 	const router = useRouter();
 	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-	const title = props.title ? [props.pretitle, props.title, props.subtitle].join(' ').trim() : 'Eldes Studio';
+	const title = (props.title.trim().length > 0) ? [props.pretitle, props.title, props.subtitle].join(' ').trim() : 'Eldes Studio';
 
 	return (
 		<div className={ styles.page } id='top'>
