@@ -11,7 +11,7 @@ import type { GetStaticProps, NextPage } from 'next';
 
 const Home: NextPage = () => {
 	return (
-		<Page title="Eldes Studio" section={ PageSection.Home }>
+		<Page title="" section={ PageSection.Home }>
 			<div className={styles.home}>
 				<section className={styles.intro}>
 					<p className={styles.text}>

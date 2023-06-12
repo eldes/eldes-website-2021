@@ -29,12 +29,12 @@ type Props = {
 const Page: FunctionComponent<Props> = (props) => {
 	const router = useRouter();
 	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-	const title = [props.pretitle, props.title, props.subtitle].join(' ')
+	const title = [props.pretitle, props.title, props.subtitle].join(' ').trim();
 
 	return (
 		<div className={ styles.page } id='top'>
 			<Head>
-				<title>{ title }</title>
+				<title>{ title.length === 0 ? 'Eldes Studio' : title }</title>
 				<meta property="og:type" content={ 'website' } key="ogtype" />
 				<meta property="og:site_name" content={ 'Eldes Studio' } key="ogsitename" />
 				<meta property="og:title" content={ title } key="ogtitle" />
@@ -74,7 +74,7 @@ const Page: FunctionComponent<Props> = (props) => {
 
 Page.defaultProps = {
 	title: 'Eldes: illustrator, graphic designer and software engineer',
-	description: 'Illustrations, animations, fonts, apps and more from Eldes — illustrator, graphic designer and software engineer',
+	description: 'Illustrations, animations, fonts, apps and more from Eldes — illustrator, graphic designer and software engineer',
 };
 
 export default Page
