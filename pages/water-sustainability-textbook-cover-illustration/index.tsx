@@ -7,6 +7,7 @@ import BeParagaph from '../../components/BeParagraph';
 import BePhotoGrid from '../../components/BePhotoGrid';
 import BeThanks from '../../components/BeThanks';
 import PieceBePage from '../../components/PieceBePage';
+import SwitchLocale from '../../components/SwitchLocale';
 import Helpers from '../../lib/Helpers';
 import { TagSlug } from '../../models/Tag';
 import colorPalette2Image from '../../public/content/water-sustainability-textbook-cover-illustration/color-palette-2.png';
@@ -44,6 +45,8 @@ import volume3Cover from '../../public/content/water-sustainability-textbook-cov
 import volume4CoverIllustrationRoughimage from '../../public/content/water-sustainability-textbook-cover-illustration/volume-4-cover-illustration-rough.jpg';
 import volume4Cover from '../../public/content/water-sustainability-textbook-cover-illustration/volume-4-cover.png';
 import piecesRepository from '../../repositories/pieces-repository';
+import ContentBr from './content-br';
+import ContentEn from './content-en';
 
 const TextbookAguaSustentabilidadePage: NextPage = function () {
 
@@ -86,162 +89,7 @@ const TextbookAguaSustentabilidadePage: NextPage = function () {
 					}
 				},
 			]} {...blueColorSchema} title={piece?.description}/>
-      <BeParagaph>
-        Para fortalecer a gestão de recursos hídricos a partir da base da formação do cidadão por meio da educação, o ProfCiAmb (Curso de Mestrado Profissional em Rede Nacional para Ensino das Ciências Ambientais) decidiu produzir e publicar materiais pedagógicos a partir das pesquisas e trabalhos realizados, surgindo assim a <strong>Coleção ProfCiAmb</strong>.
-      </BeParagaph>
-      <BeParagaph>
-        A publicação <em>Água e Sustentabilidade</em>, composta por 4 volumes, foi a primeira da <em>Série Guias Educacionais</em> dessa coleção.
-      </BeParagaph>
-      <BeParagaph>
-        Além da criação do <em>Selo ProfCiAmb</em>, para ser usado como marca dessa coleção, nosso estúdio também foi responsável pelo projeto gáfico, ilustrações e diagramação das capas desses 4 volumes.
-      </BeParagaph>
-      <BeImage
-				src={ bookCoverMockupImage }
-				alt="Book cover mockup"
-			/>
-
-      <BeHeading>
-        Processo
-      </BeHeading>
-      <BeParagaph>
-        A ideia foi criar uma ilustração de capa do tipo <em>search and find</em> para cada volume da publicação, composta por várias cenas de situações abordadas no respectivo volume.
-      </BeParagaph>
-      <BeParagaph>
-        Abaixo a paleta de cores e o rascunho iniciais da ilustração e do design da capa do volume 2.
-      </BeParagaph>
-      <BeImage
-				src={ illustrationRough }
-				alt="Illustration rough"
-        verticalPadding
-			/>
-      <BeImage
-				src={ coverDesignRoughImage }
-				alt="Cover design rough"
-        verticalPadding
-			/>
-      <BeImage
-				src={ colorPaletteImage }
-				alt="Color palette"
-        verticalPadding
-			/>
-      <BeParagaph>
-        Com o avanço do projeto, foram redefinidas as cenas e a paleta de cores.
-      </BeParagaph>
-      <BePhotoGrid images={[
-        {
-          src: volume1CoverIllustrationRoughimage,
-          alt: 'Rough of cover illustration for volume 1'
-        },
-        {
-          src: volume2And3CoverIllustrationRoughimage,
-          alt: 'Rough of cover illustration for volumes 2 and 3'
-        },
-        {
-          src: volume4CoverIllustrationRoughimage,
-          alt: 'Rough of cover illustration for volume 4'
-        },
-        {
-          src: colorPalette2Image,
-          alt: 'Color palette'
-        },
-        
-      ]} cols={4} />
-      <BeParagaph>
-        Foi elaborado também o desenho do título da publicação, com lettering personalizado.
-      </BeParagaph>
-      <BePhotoGrid images={[
-        {
-          src: logotypeRoughImage,
-          alt: 'Rough of logotype'
-        },
-        {
-          src: logotypeArtworkImage,
-          alt: 'Artwork of logotype'
-        },
-      ]} cols={1} />
-
-      <BeHeading>
-        Arte-final
-      </BeHeading>
-      <BePhotoGrid images={[
-        {
-          src: illustrationVolume1GirlsDrinking,
-          alt: 'Illustration of volume 1 - Two girls drinking water'
-        },
-        {
-          src: illustrationVolume2Teacher,
-          alt: 'Illustration of volume 2 - Teacher and water cycle on the board'
-        },
-        {
-          src: illustrationVolume3GirlAndBoy,
-          alt: 'Illustration of volume 3 - Girl and boy'
-        },
-        {
-          src: illustrationVolume4Foz,
-          alt: 'Illustration of volume 4 - Foz do Iguaçu'
-        },
-        {
-          src: illustrationVolume1Canoe,
-          alt: 'Illustration of volume 1 - Indian in a canoe'
-        },
-        {
-          src: illustrationVolume2Composter,
-          alt: 'Illustration of volume 2 - Composter'
-        },
-        {
-          src: illustrationVolume3Grab,
-          alt: 'Illustration of volume 3 - Girl with a magnifying glass looking at a crab'
-        },
-        {
-          src: illustrationVolume4Planting,
-          alt: 'Illustration of volume 4 - Man planting'
-        },
-        {
-          src: illustrationVolume1Animals,
-          alt: 'Illustration of volume 1 - Frog, seagull, dog, manatee'
-        },
-        {
-          src: illustrationVolume2Rain,
-          alt: 'Illustration of volume 2 - Teacher and water cycle on the board'
-        },
-        {
-          src: illustrationVolume3RainWatchers,
-          alt: 'Illustration of volume 3 - Girl with a magnifying glass looking at a crab'
-        },
-        {
-          src: illustrationVolume4Fertilizing,
-          alt: 'Illustration of volume 4 - Man fertilizing'
-        },
-        {
-          src: illustrationVolume1Coocks,
-          alt: 'Illustration of volume 1 - Coocks'
-        },
-        {
-          src: illustrationVolume2Ac,
-          alt: 'Illustration of volume 2 - Girl taking a picture of a suspended vegetable garden watered with water coming out of the ac'
-        },
-        {
-          src: illustrationVolume3WateringCan,
-          alt: 'Illustration of volume 3 - Watering can'
-        },
-
-        {
-          src: illustrationVolume4Recycle,
-          alt: 'Illustration of volume 4 - Recycle'
-        },
-        {
-          src: illustrationVolume1Ods,
-          alt: 'Illustration of volume 1 - Teacher'
-        },
-        {
-          src: illustrationVolume4Meeting,
-          alt: 'Illustration of volume 4 - Meeting'
-        },
-      ]} cols={2} />
-      <BeImage src={volume1Cover} alt={'Volume 1 cover artwork'} horizontalPadding verticalPadding />
-      <BeImage src={volume2Cover} alt={'Volume 2 cover artwork'} horizontalPadding verticalPadding />
-      <BeImage src={volume3Cover} alt={'Volume 3 cover artwork'} horizontalPadding verticalPadding />
-      <BeImage src={volume4Cover} alt={'Volume 4 cover artwork'} horizontalPadding verticalPadding />
+      <SwitchLocale en={ContentEn} br={ContentBr} />
       <BeThanks image={thanksImage} />
     </PieceBePage>
   );
