@@ -15,6 +15,24 @@ import coverDesignRoughImage from '../../public/content/water-sustainability-tex
 import bookCoverMockupImage from '../../public/content/water-sustainability-textbook-cover-illustration/covers-mockup.jpg';
 import headerImage from '../../public/content/water-sustainability-textbook-cover-illustration/header.png';
 import illustrationRough from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-rough.jpg';
+import illustrationVolume1Animals from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-1-animals.png';
+import illustrationVolume1Canoe from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-1-canoe.png';
+import illustrationVolume1Coocks from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-1-coocks.png';
+import illustrationVolume1GirlsDrinking from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-1-girls-drinking.png';
+import illustrationVolume1Ods from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-1-ods.png';
+import illustrationVolume2Ac from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-2-ac.png';
+import illustrationVolume2Composter from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-2-composter.png';
+import illustrationVolume2Rain from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-2-rain.png';
+import illustrationVolume2Teacher from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-2-teacher.png';
+import illustrationVolume3Grab from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-3-crab.png';
+import illustrationVolume3GirlAndBoy from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-3-girl-and-boy.png';
+import illustrationVolume3RainWatchers from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-3-rain-watchers.png';
+import illustrationVolume3WateringCan from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-3-watering-can.png';
+import illustrationVolume4Fertilizing from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-4-fertilizing.png';
+import illustrationVolume4Foz from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-4-foz.png';
+import illustrationVolume4Meeting from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-4-meeting.png';
+import illustrationVolume4Planting from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-4-planting.png';
+import illustrationVolume4Recycle from '../../public/content/water-sustainability-textbook-cover-illustration/illustration-volume-4-recycle.png';
 import logotypeArtworkImage from '../../public/content/water-sustainability-textbook-cover-illustration/logotype-artwork.png';
 import logotypeRoughImage from '../../public/content/water-sustainability-textbook-cover-illustration/logotype-rough.jpg';
 import thanksImage from '../../public/content/water-sustainability-textbook-cover-illustration/thanks.png';
@@ -145,6 +163,81 @@ const TextbookAguaSustentabilidadePage: NextPage = function () {
       <BeHeading>
         Arte-final
       </BeHeading>
+      <BePhotoGrid images={[
+        {
+          src: illustrationVolume1GirlsDrinking,
+          alt: 'Illustration of volume 1 - Two girls drinking water'
+        },
+        {
+          src: illustrationVolume2Teacher,
+          alt: 'Illustration of volume 2 - Teacher and water cycle on the board'
+        },
+        {
+          src: illustrationVolume3GirlAndBoy,
+          alt: 'Illustration of volume 3 - Girl and boy'
+        },
+        {
+          src: illustrationVolume4Foz,
+          alt: 'Illustration of volume 4 - Foz do Iguaçu'
+        },
+        {
+          src: illustrationVolume1Canoe,
+          alt: 'Illustration of volume 1 - Indian in a canoe'
+        },
+        {
+          src: illustrationVolume2Composter,
+          alt: 'Illustration of volume 2 - Composter'
+        },
+        {
+          src: illustrationVolume3Grab,
+          alt: 'Illustration of volume 3 - Girl with a magnifying glass looking at a crab'
+        },
+        {
+          src: illustrationVolume4Planting,
+          alt: 'Illustration of volume 4 - Man planting'
+        },
+        {
+          src: illustrationVolume1Animals,
+          alt: 'Illustration of volume 1 - Frog, seagull, dog, manatee'
+        },
+        {
+          src: illustrationVolume2Rain,
+          alt: 'Illustration of volume 2 - Teacher and water cycle on the board'
+        },
+        {
+          src: illustrationVolume3RainWatchers,
+          alt: 'Illustration of volume 3 - Girl with a magnifying glass looking at a crab'
+        },
+        {
+          src: illustrationVolume4Fertilizing,
+          alt: 'Illustration of volume 4 - Man fertilizing'
+        },
+        {
+          src: illustrationVolume1Coocks,
+          alt: 'Illustration of volume 1 - Coocks'
+        },
+        {
+          src: illustrationVolume2Ac,
+          alt: 'Illustration of volume 2 - Girl taking a picture of a suspended vegetable garden watered with water coming out of the ac'
+        },
+        {
+          src: illustrationVolume3WateringCan,
+          alt: 'Illustration of volume 3 - Watering can'
+        },
+
+        {
+          src: illustrationVolume4Recycle,
+          alt: 'Illustration of volume 4 - Recycle'
+        },
+        {
+          src: illustrationVolume1Ods,
+          alt: 'Illustration of volume 1 - Teacher'
+        },
+        {
+          src: illustrationVolume4Meeting,
+          alt: 'Illustration of volume 4 - Meeting'
+        },
+      ]} cols={2} />
       <BeImage src={volume1Cover} alt={'Volume 1 cover artwork'} horizontalPadding verticalPadding />
       <BeImage src={volume2Cover} alt={'Volume 2 cover artwork'} horizontalPadding verticalPadding />
       <BeImage src={volume3Cover} alt={'Volume 3 cover artwork'} horizontalPadding verticalPadding />
