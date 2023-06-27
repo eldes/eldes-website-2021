@@ -17,7 +17,7 @@ const appsMock: App[] = [
       br: 'Garmin Watch Face App',
     },
     description: {
-      en: 'Development of a watch face for Garmin: the Presbyopia app.',
+      en: 'Development of a watch face app for Garmin: the Presbyopia app.',
       br: 'Desenvolvimento de um mostrador de relógio para Garmin: o aplicativo Presbyopia.',
     },
     thumbnail: '/content/presbyopia-garmin-watch-face-app/thumbnail.jpg',
