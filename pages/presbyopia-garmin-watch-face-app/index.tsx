@@ -1,29 +1,29 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import BePage from '../../components/BePage';
-import { PageSection } from '../../components/Page';
-import { Localizer } from '../../models/Locale';
 import { useRouter } from 'next/router';
-import BeHeading from '../../components/BeHeading';
 import BeCredits from '../../components/BeCredits';
+import BeHeading from '../../components/BeHeading';
 import BeImage from '../../components/BeImage';
+import BeList from '../../components/BeList';
+import BeMenu from '../../components/BeMenu';
+import BePage from '../../components/BePage';
+import BeParagaph from '../../components/BeParagraph';
+import BeThanks from '../../components/BeThanks';
+import GarminConnectIqButton from '../../components/GarminConnectIqButton';
+import { PageSection } from '../../components/Page';
+import PayPalDonateButton from '../../components/PayPalDonateButton';
+import Helpers from '../../lib/Helpers';
+import { Localizer } from '../../models/Locale';
 import coverImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-cover.jpg';
-import photoImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-photo.jpg';
-import essentialImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-essential-watch-information.jpg';
-import colorSchemesImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-readable-color-schemes.jpg';
 import darkModeImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-dark-mode.jpg';
+import essentialImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-essential-watch-information.jpg';
 import lightModeImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-light-mode.jpg';
 import lowPowerModeImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-low-power-mode.jpg';
+import photoImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-photo.jpg';
+import colorSchemesImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-readable-color-schemes.jpg';
 import setttingsImage from '../../public/content/presbyopia-garmin-watch-face-app/presbyopia-garmin-watch-face-app-settings.jpg';
 import thanksImage from '../../public/content/presbyopia-garmin-watch-face-app/thanks.png';
-import BeParagaph from '../../components/BeParagraph';
-import BeMenu from '../../components/BeMenu';
-import Helpers from '../../lib/Helpers';
 import AppsRepository from '../../repositories/apps-repository';
-import BeList from '../../components/BeList';
-import BeThanks from '../../components/BeThanks';
-import PayPalDonateButton from '../../components/PayPalDonateButton';
-import GarminConnectIqButton from '../../components/GarminConnectIqButton';
 
 const Page: NextPage = function () {
   const router = useRouter();
@@ -46,7 +46,7 @@ const Page: NextPage = function () {
       foregroundColor='#9aa6b2'
       backwardLink={backwardLink}
     >
-      <BeImage src={coverImage} alt={''}/>
+      <BeImage src={coverImage} alt={'Development of a watch face app for Garmin: the Presbyopia app.'}/>
       <BeCredits fields={[
         {
           label: 'Garmin',
@@ -79,46 +79,46 @@ const Page: NextPage = function () {
       ]}/>
 
       <BeHeading>
-        Simple and large. Seeing the time and date... without glasses!
+        Simple and large. See the time and date... without glasses!
       </BeHeading>
 
       <BeParagaph>
-        The idea is a design that allows you to see, without the need for glasses, the essential information of the watch: time, date, battery, steps and heart.
+        The idea behind this design is to allow users to see essential information on their watch without needing glasses, including time, date, battery level, steps, and heart rate.
       </BeParagaph>
       <BeImage src={essentialImage} alt={''} verticalPadding/>
       <BeParagaph>
-        For that, a family of readable types was selected, mainly in relation to numerical digits, and the layout was thought of in order to accommodate the largest size for the characters, within the restricted space of the screen.
+        To achieve this, a selection of easily readable fonts was made, with a focus on numeric digits. The layout was carefully designed to accommodate larger characters within the limited screen space.
       </BeParagaph>
       <BeImage src={photoImage} alt={''} verticalPadding/>
       <BeParagaph>
-        The color schemes have been selected to make the information more readable.
+        Color schemes were chosen to enhance readability.
       </BeParagaph>
       <BeImage src={colorSchemesImage} alt={''} verticalPadding horizontalPadding/>
       <BeImage src={darkModeImage} alt={''} verticalPadding horizontalPadding/>
       <BeImage src={lightModeImage} alt={''} verticalPadding horizontalPadding/>
       <BeParagaph>
-        To prevent wear down the display and save battery power, watches with an AMOLED display typically turn off the screen when not in use.
+        To preserve battery power and prevent screen burn-in, watches with AMOLED displays typically turn off the screen when not in use.
       </BeParagaph>
       <BeParagaph>
-        For this type of watches, Garmin&apos;s Connect IQ has special rules for apps when the watch enters always-on mode:
+        For this type of watch, Garmin&apos;s Connect IQ has special rules for apps when the watch enters always-on mode:
       </BeParagaph>
       <BeList>
-          <li>the watch face will only update every minute</li>
-          <li>only 10% of pixels can be lit</li>
-          <li>no pixel can be lit for more than 3 minutes</li>
+          <li>The watch face updates only once a minute.</li>
+          <li>Only 10% of pixels can be lit.</li>
+          <li>No pixel can remain lit for more than 3 minutes.</li>
       </BeList>
       <BeImage src={lowPowerModeImage} alt={''} verticalPadding horizontalPadding/>
       <section id='settings'>
         <BeHeading>Settings</BeHeading>
         <BeParagaph>
-          The Presbyopia app allows the user to modify a set of properties via the mobile phone:
+          The Presbyopia app allows users to modify a set of properties via their mobile phones:
         </BeParagaph>
         <BeList>
-          <li><strong>Top field:</strong> defines which information will be displayed above the time (battery level, date, step counter or heart rate).</li>
-          <li><strong>Bottom field:</strong> defines which information will be displayed below the time (battery level, date, step counter or heart rate).</li>
-          <li><strong>Color scheme:</strong> defines the colors that will be used in the time and in the top and bottom fields.</li>
-          <li><strong>Use leading zero:</strong> if on, displays a leading zero to always keep the same number of digits in numeric fields.</li>
-          <li><strong>Keep the display always on (just for MIP screens):</strong> if on, it always keeps the display in high power mode (this option does not work for watches with an LCD or AMOLED type screen).</li>
+          <li><strong>Top field:</strong> Choose which information will be displayed above the time (battery level, date, step counter, or heart rate).</li>
+          <li><strong>Bottom field:</strong> Choose which information will be displayed below the time (battery level, date, step counter, or heart rate).</li>
+          <li><strong>Color scheme:</strong> Define the colors used for the time and the top and bottom fields.</li>
+          <li><strong>Use leading zero:</strong> When enabled, a leading zero is displayed to always maintain the same number of digits in numeric fields.</li>
+          <li><strong>Keep the display always on (for MIP screens only):</strong> When enabled, the display remains in high power mode at all times (this option does not work for watches with an LCD or AMOLED screen).</li>
         </BeList>
         <BeImage src={setttingsImage} alt={'Settings'} verticalPadding horizontalPadding/>
       </section>
@@ -130,29 +130,27 @@ const Page: NextPage = function () {
         </BeParagaph>
         <BeParagaph>
           This watch face is <strong>FREE</strong>.<br/>
-          If you enjoyed using it, please consider a <strong>DONATION ☕️</strong>:<br/>
+          If you enjoyed using it, please consider making a <strong>DONATION ☕️</strong>:<br/>
           <PayPalDonateButton buttonId={'K9EE8WAUFQ3WJ'} style={{maxWidth: 359}} />
         </BeParagaph>
       </section>
       <section id="source">
         <BeHeading>Source code</BeHeading>
         <BeParagaph>
-          The Presbyopia app was developed by me in Monkey C language, using Garmin&apos;s Connect IQ™ SDK.
+          The Presbyopia app was developed by me using the Monkey C language and Garmin&apos;s Connect IQ™ SDK.
         </BeParagaph>
         <BeParagaph>
-          For various reasons, such as security and commercial reasons, I don&apos;t open source all of my projects.
+          Due to various reasons, including security and commercial considerations, I cannot open-source all of my projects.
         </BeParagaph>
         <BeParagaph>
-          However, due to the scarcity of documentation, open sourcing this application can be a great resource for novice developers to learn how certain things should be achieved.
+          However, given the limited documentation available, open-sourcing this application can be a valuable resource for novice developers to learn how to achieve certain functionalities.
         </BeParagaph>
         <BeParagaph>
-          The source code for the Presbyopia app can be found on my <a href="https://github.com/eldes/presbyopia-watch-face">GitHub</a>.
+        The source code for the Presbyopia app can be found on my <a href="https://github.com/eldes/presbyopia-watch-face">GitHub</a>.
         </BeParagaph>
       </section>
 
       <BeThanks image={thanksImage} />
-      
-      
     </BePage>
   );
 };
