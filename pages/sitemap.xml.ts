@@ -1,8 +1,8 @@
 import { GetServerSideProps } from 'next';
-import piecesRepository from '../repositories/pieces-repository';
-import fontsRepository from '../repositories/fonts-repository';
-import { LocaleCode, Localizer } from '../models/Locale';
+import { LocaleCode } from '../models/Locale';
 import categoriesRepository from '../repositories/categories-repository';
+import fontsRepository from '../repositories/fonts-repository';
+import piecesRepository from '../repositories/pieces-repository';
 
 const { i18nRoutes } = require('../next-i18next.config');
 
