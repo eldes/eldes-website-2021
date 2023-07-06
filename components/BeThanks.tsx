@@ -1,8 +1,8 @@
-import { Trans } from 'next-i18next';
 import Image, { StaticImageData } from 'next/image';
 import { FunctionComponent } from 'react';
 import styles from '../styles/BeThanks.module.scss';
 import BeComponent, { beComponentDefaultProps, BeComponentProps } from './BeComponent';
+import SwitchLocale from './SwitchLocale';
 
 type Props =  BeComponentProps & {
 	image?: StaticImageData
@@ -26,7 +26,12 @@ const BeThanks: FunctionComponent<Props> = ({ fill, foregroundColor, backgroundC
 				layout="intrinsic"
 			/>
 		}
-			<p><Trans i18nKey="PieceBePage:BeThanks.text">Thanks for taking a look at my work!</Trans></p>
+			<SwitchLocale en={
+				<p>Thanks for taking a look at my work!</p>
+			} br={
+				<p>Obrigado por dar uma olhada no meu trabalho!</p>
+			} />
+			
 		</BeComponent>
 	)
 }
