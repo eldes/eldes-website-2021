@@ -1,9 +1,9 @@
 {
 	"name": "eldes-website",
-	"version": "1.16.6",
+	"version": "1.17.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev -p 4000",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"

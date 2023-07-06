@@ -3,14 +3,14 @@ import { useRouter } from 'next/router';
 import BeCredits from '../../components/BeCredits';
 import BeImage from '../../components/BeImage';
 import BeThanks from '../../components/BeThanks';
-import ContentBr from '../../components/pages/water-sustainability-textbook-cover-illustration/content-br';
-import ContentEn from '../../components/pages/water-sustainability-textbook-cover-illustration/content-en';
+import ContentBr from '../../components/pages/water-sustainability-textbook-illustrations/content-br';
+import ContentEn from '../../components/pages/water-sustainability-textbook-illustrations/content-en';
 import PieceBePage from '../../components/PieceBePage';
 import SwitchLocale from '../../components/SwitchLocale';
 import Helpers from '../../lib/Helpers';
 import { TagSlug } from '../../models/Tag';
-import headerImage from '../../public/content/water-sustainability-textbook-cover-illustration/header.png';
-import thanksImage from '../../public/content/water-sustainability-textbook-cover-illustration/thanks.png';
+import headerImage from '../../public/content/water-sustainability-textbook-illustrations/header.jpg';
+import thanksImage from '../../public/content/water-sustainability-textbook-illustrations/thanks.jpg';
 import piecesRepository from '../../repositories/pieces-repository';
 
 const TextbookAguaSustentabilidadePage: NextPage = function () {
@@ -20,8 +20,8 @@ const TextbookAguaSustentabilidadePage: NextPage = function () {
   const piece = piecesRepository.load(slug);
 
   const colorSchema = {
-    backgroundColor:'#1b76bc',
-    foregroundColor:'#fff',
+    backgroundColor:'#fff',
+    foregroundColor:'#000',
   };
 
   return (
@@ -44,8 +44,8 @@ const TextbookAguaSustentabilidadePage: NextPage = function () {
 				{
 					label: 'Eldes',
 					value: {
-						br: 'ilustrações e design de capa',
-						en: 'book cover illustrations and design',
+						br: 'ilustrações',
+						en: 'illustrations',
 					}
 				},
 			]} title={piece?.description}/>
