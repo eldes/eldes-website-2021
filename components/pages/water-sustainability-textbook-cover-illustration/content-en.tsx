@@ -39,7 +39,7 @@ export default function ContentEn() {
   return (
     <>
       <BeParagaph>
-        To strengthen the management of water resources based on citizen training through education, ProfCiAmb (Professional Master&apos;s Course in the National Network for Teaching Environmental Sciences) decided to produce and publish pedagogical materials based on research and work carried out, thus appearing the ProfCiAmb Collection..
+        To strengthen the management of water resources based on citizen training through education, ProfCiAmb (Professional Master&apos;s Course in the National Network for Teaching Environmental Sciences) decided to produce and publish pedagogical materials based on research and work carried out, thus appearing the ProfCiAmb Collection.
       </BeParagaph>
       <BeParagaph>
         The publication &quot;Água e Sustentabilidade&quot; (Water and Sustainability), comprising 4 volumes, was the first of the &quot;Guias Educacionais&quot; (Educational Guides) series in this collection.
