@@ -66,6 +66,22 @@ const piecesMock: Piece[] = [
 		},
 	},
 	{
+		slug: 'get-connected-with-physical-education-textbook-illustrations',
+		title: {
+			en: 'Se Liga na Educação Física',
+			br: 'Se Liga na Educação Física',
+		},
+		subtitle: {
+			en: 'textbook illustrations',
+			br: 'ilustrações para livro didático',
+		},
+		thumbnail: '/content/get-connected-with-physical-education-textbook-illustrations/thumbnail.jpg',
+		description: {
+			en: 'Illustrations for the "Se Liga na Educação Física" (Get Connected with Physical Education) textbook, by Editora Moderna.',
+			br: 'Ilustrações para o livro didático Se Liga na Educação Física, da Editora Moderna.',
+		},
+	},
+	{
 		slug: 'water-sustainability-textbook-illustrations',
 		title: {
 			en: 'Water and Sustainability',
