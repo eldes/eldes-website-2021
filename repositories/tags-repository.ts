@@ -16,6 +16,9 @@ const tags: Tag[] = [
     pieceSlugs: [
       'brasil-na-bagagem-textbook-illustrations',
       'gramatica-fundamental-5-moderna-textbook-illustrations',
+      'get-connected-with-physical-education-textbook-illustrations',
+      'water-sustainability-textbook-illustrations',
+      'water-sustainability-textbook-cover-illustration',
     ],
   },
   {
@@ -27,6 +30,9 @@ const tags: Tag[] = [
     pieceSlugs: [
       'brasil-na-bagagem-textbook-illustrations',
       'gramatica-fundamental-5-moderna-textbook-illustrations',
+      'get-connected-with-physical-education-textbook-illustrations',
+      'water-sustainability-textbook-illustrations',
+      'water-sustainability-textbook-cover-illustration',
 			'historias-da-ajudaris-20-childrens-book-illustrations',
 			'historias-da-ajudaris-17-childrens-book-illustrations',
 			'poeminhas-reais-childrens-book-illustration',
