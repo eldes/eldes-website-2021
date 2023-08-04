@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { appWithTranslation } from 'next-i18next';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -21,7 +22,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       router.events.on('routeChangeComplete', routerChanged);
     };
   }, [router.events]);
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  )
 };
 
 export default appWithTranslation(MyApp);
