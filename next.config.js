@@ -47,7 +47,12 @@ module.exports = {
 			{
 				source: '/poeminhas-florais',
 				destination: '/br/poeminhas-florais-ilustracoes-livros-infantis',
-				permanent: false,
+				permanent: true,
+			},
+			{
+				source: '/tipografia-fonte-eldes-cordel',
+				destination: '/font-eldes-cordel',
+				permanent: true,
 			},
 
 			// TEMP:
