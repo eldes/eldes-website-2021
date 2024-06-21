@@ -54,6 +54,11 @@ module.exports = {
 				destination: '/font-eldes-cordel',
 				permanent: true,
 			},
+			{
+				source: '/font-eldes-grunge',
+				destination: '/font-gritty-ink',
+				permanent: true,
+			},
 
 			// TEMP:
 			{

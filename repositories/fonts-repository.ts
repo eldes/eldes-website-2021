@@ -16,8 +16,8 @@ const fonts: Font[] = [
 		thumbnail: '/content/font-eldes-cordel/thumbnail.png',
 	},
 	{
-		slug: 'font-eldes-grunge',
-		name: 'Grunge',
-		thumbnail: '/content/font-eldes-grunge/thumbnail.jpg',
+		slug: 'font-gritty-ink',
+		name: 'Gritty Ink',
+		thumbnail: '/content/font-gritty-ink/thumbnail.jpg',
 	}
 ]
