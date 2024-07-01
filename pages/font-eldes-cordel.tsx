@@ -20,7 +20,7 @@ import horrorFontImage from '../public/content/font-eldes-cordel/horror-font.jpg
 const FontEldesCordelPage: NextPage = () => {
 
 	const { locale } = useRouter();
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 	
 	return (
 		<FontBePage>
