@@ -15,6 +15,7 @@ import posterGrungeImage from '../public/content/font-gritty-ink/font-gritty-ink
 import posterHanselUndGretelImage from '../public/content/font-gritty-ink/font-gritty-ink-poster-hansel-und-gretel.jpg';
 import posterComicsImage from '../public/content/font-gritty-ink/font-gritty-ink-poster-comics.png';
 import posterLogotypeImage from '../public/content/font-gritty-ink/font-gritty-ink-poster-logotype.png';
+import posterMultilingualImage from '../public/content/font-gritty-ink/font-gritty-ink-multilingual.jpg';
 import BePhotoGrid from '../components/BePhotoGrid';
 
 const FontGrittyInkPage: NextPage = () => {
@@ -79,6 +80,12 @@ const FontGrittyInkPage: NextPage = () => {
 					src={ charsetBasicImage }
 					alt={ 'Letters and digits' }
 					horizontalPadding
+				/>
+				<BeImage
+					src={ posterMultilingualImage }
+					alt={ 'Multilingual support' }
+					horizontalPadding
+					verticalPadding
 				/>
 			</section>
 			<section id={t('FontBePage:Buy.id', 'buy') ?? 'buy'}>
